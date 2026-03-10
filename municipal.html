@@ -886,6 +886,25 @@
     background: var(--charcoal); overflow: hidden;
     max-width: 900px; margin: 0 auto;
   }
+
+  /* ════════════════════════════════
+     NAV — SCROLL-AWARE COMPRESSION
+  ════════════════════════════════ */
+  nav {
+    transition: height 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+                background 0.35s ease,
+                box-shadow 0.35s ease;
+  }
+  nav.scrolled {
+    height: 58px;
+    background: rgba(28, 28, 28, 0.98);
+    box-shadow: 0 4px 40px rgba(0, 0, 0, 0.45);
+  }
+  nav.scrolled .nav-brand-icon {
+    width: 26px;
+    height: 26px;
+    transition: width 0.35s ease, height 0.35s ease;
+  }
   </style>
 </head>
 <body>
@@ -1159,6 +1178,15 @@ function handleFormSubmit(e) {
   document.getElementById('contact-form-wrap').style.display = 'none';
   document.getElementById('form-success').style.display = 'block';
 }
+
+// ── Scroll-aware nav compression ──
+(function () {
+  const nav = document.querySelector('nav');
+  const onScroll = () => {
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+})();
 </script>
 </body>
 </html>
