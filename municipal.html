@@ -97,9 +97,14 @@
     .nav-links > li > a:hover::after { width: 100%; }
 
     .nav-dropdown { position: relative; }
+    .nav-dropdown > a { padding-bottom: 1.2rem; }
+    .nav-dropdown-menu::before {
+      content: ""; position: absolute;
+      top: -12px; left: 0; right: 0; height: 12px;
+    }
     .nav-dropdown-menu {
       display: none; position: absolute;
-      top: calc(100% + 18px); left: 50%; transform: translateX(-50%);
+      top: 100%; left: 50%; transform: translateX(-50%); margin-top: 0;
       background: var(--charcoal-mid); border: 1px solid var(--gold-border);
       min-width: 230px; padding: 0.5rem 0;
     }
