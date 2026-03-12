@@ -690,110 +690,7 @@
     .d5 { animation-delay: 0.72s; }
 
     /* ════════════════════════════════
-       HAMBURGER BUTTON
-    ════════════════════════════════ */
-    .nav-hamburger {
-      display: none;
-      flex-direction: column; justify-content: center; align-items: center;
-      gap: 5px;
-      width: 44px; height: 44px;
-      background: none; border: none; cursor: pointer;
-      padding: 0; flex-shrink: 0;
-    }
-    .nav-hamburger span {
-      display: block;
-      width: 22px; height: 1.5px;
-      background: var(--cream);
-      transition: transform 0.35s cubic-bezier(0.4,0,0.2,1),
-                  opacity 0.25s ease,
-                  width 0.25s ease;
-      transform-origin: center;
-    }
-    .nav-hamburger.is-open span:nth-child(1) {
-      transform: translateY(6.5px) rotate(45deg);
-    }
-    .nav-hamburger.is-open span:nth-child(2) {
-      opacity: 0; width: 0;
-    }
-    .nav-hamburger.is-open span:nth-child(3) {
-      transform: translateY(-6.5px) rotate(-45deg);
-    }
-
-    /* ════════════════════════════════
-       MOBILE MENU DRAWER
-    ════════════════════════════════ */
-    .mobile-menu {
-      display: none;
-      position: fixed; top: 74px; right: 0; bottom: 0;
-      width: min(340px, 85vw);
-      background: var(--charcoal-mid);
-      border-left: 1px solid var(--gold-border);
-      z-index: 199;
-      transform: translateX(100%);
-      transition: transform 0.4s cubic-bezier(0.4,0,0.2,1);
-      overflow-y: auto;
-      -webkit-overflow-scrolling: touch;
-    }
-    .mobile-menu.is-open {
-      transform: translateX(0);
-    }
-    .mobile-overlay {
-      display: none;
-      position: fixed; inset: 0;
-      background: rgba(0,0,0,0.55);
-      z-index: 198;
-      opacity: 0;
-      transition: opacity 0.35s ease;
-      backdrop-filter: blur(2px);
-    }
-    .mobile-overlay.is-open {
-      opacity: 1;
-    }
-    .mobile-menu-inner {
-      display: flex; flex-direction: column;
-      padding: 2rem 1.8rem 3rem;
-      min-height: 100%;
-    }
-    .mobile-nav { flex: 1; }
-    .mobile-nav-section {
-      padding: 1.4rem 0;
-      border-bottom: 1px solid rgba(201,168,76,0.1);
-    }
-    .mobile-nav-section:last-child { border-bottom: none; }
-    .mobile-nav-label {
-      font-family: var(--font-ui);
-      font-size: 0.6rem; font-weight: 800;
-      letter-spacing: 0.22em; text-transform: uppercase;
-      color: var(--gold); margin-bottom: 0.9rem;
-    }
-    .mobile-nav-link {
-      display: block;
-      font-family: var(--font-body);
-      font-size: 1.05rem; font-weight: 300;
-      color: rgba(247,247,245,0.75);
-      text-decoration: none; letter-spacing: 0.01em;
-      padding: 0.55rem 0;
-      border-bottom: 1px solid transparent;
-      transition: color 0.2s, padding-left 0.2s;
-    }
-    .mobile-nav-link:hover { color: var(--cream); padding-left: 0.5rem; }
-    .mobile-nav-section > .mobile-nav-link:only-child {
-      font-size: 1.15rem;
-    }
-    .mobile-cta {
-      display: block; margin-top: 2.5rem;
-      padding: 1rem 1.5rem; text-align: center;
-      border: 1px solid var(--gold);
-      font-family: var(--font-ui);
-      font-size: 0.72rem; font-weight: 800;
-      letter-spacing: 0.16em; text-transform: uppercase;
-      color: var(--gold); text-decoration: none;
-      transition: background 0.2s, color 0.2s;
-    }
-    .mobile-cta:hover { background: var(--gold); color: var(--charcoal); }
-
-    /* ════════════════════════════════
-       RESPONSIVE — 1100px (tablet landscape)
+       RESPONSIVE
     ════════════════════════════════ */
     @media (max-width: 1100px) {
       nav { padding: 0 2rem; }
@@ -808,89 +705,15 @@
       .practice-grid { grid-template-columns: 1fr; }
       .ai-gateway { grid-template-columns: 1fr; }
       .svc-grid { grid-template-columns: 1fr 1fr; }
-      .about-grid { gap: 4rem; }
-      .portrait-badge { left: 0; bottom: 1.5rem; }
     }
-
-    /* ════════════════════════════════
-       RESPONSIVE — 768px (tablet portrait)
-    ════════════════════════════════ */
-    @media (max-width: 768px) {
-      nav { padding: 0 1.5rem; }
-      .wrap { padding: 0 1.5rem; }
-      .nav-links { display: none; }
-      .nav-hamburger { display: flex; }
-      .mobile-menu { display: block; }
-      .mobile-overlay { display: block; }
-
-      /* Hero */
-      .hero-left { padding: 8rem 1.5rem 5rem; }
-      .hero-stats {
-        position: static;
-        grid-template-columns: repeat(3,1fr);
-        border-right: none;
-      }
-      .hero-stat { padding: 1.2rem 1rem; }
-      .stat-num { font-size: 2rem; }
-
-      /* Sections */
-      .practices { padding: 5rem 0; }
-      .crisis { padding: 5rem 0; }
-      .ai-section { padding: 5rem 0; }
-      .about { padding: 5rem 0; }
-      .contact { padding: 5rem 0; }
-
-      /* Practice cards */
-      .practice-card { padding: 2.5rem 2rem; }
-      .pc-num { font-size: 3.5rem; }
-
-      /* Services grid */
-      .svc-grid { grid-template-columns: 1fr; gap: 1px; }
-      .svc-tile { padding: 2.2rem 1.8rem; }
-
-      /* Contact form */
-      .contact-form-row { grid-template-columns: 1fr; }
-      .contact-grid { gap: 3rem; }
-
-      /* About */
-      .about-grid { grid-template-columns: 1fr; gap: 3rem; }
-      .portrait-wrap { max-width: 420px; margin: 0 auto; }
-      .portrait-badge { left: 0; }
-      .portrait-frame { display: none; }
-
-      /* Footer */
-      .footer-inner { flex-direction: column; gap: 1.2rem; align-items: flex-start; }
-    }
-
-    /* ════════════════════════════════
-       RESPONSIVE — 480px (mobile)
-    ════════════════════════════════ */
-    @media (max-width: 480px) {
-      nav { padding: 0 1.2rem; height: 64px; }
+    @media (max-width: 640px) {
+      nav { padding: 0 1.2rem; }
       .wrap { padding: 0 1.2rem; }
-      .mobile-menu { top: 64px; }
-
-      .hero-left { padding: 7rem 1.2rem 4rem; }
-      .hero-sub { font-size: 0.92rem; }
-      .hero-actions { flex-direction: column; align-items: flex-start; gap: 1.2rem; }
+      .nav-links { display: none; }
+      .svc-grid { grid-template-columns: 1fr; }
       .hero-stats { grid-template-columns: 1fr 1fr; }
-      .hero-stat:last-child {
-        grid-column: 1 / -1;
-        border-right: none;
-        border-top: 1px solid var(--gold-border);
-      }
-
-      .practices-header, .crisis-header, .ai-intro { gap: 2rem; }
-      .practice-card { padding: 2rem 1.5rem; }
-
-      .gateway-card-inner { padding: 1.8rem 1.5rem; }
-      .gateway-tags { gap: 0.35rem; }
-
-      .contact-form input,
-      .contact-form textarea,
-      .contact-form select { font-size: 16px; /* prevents iOS zoom */ }
-
-      .footer-links { gap: 1.2rem; }
+      .contact-actions { align-items: flex-start; }
+      .footer-inner { flex-direction: column; gap: 1.2rem; }
     }
 
   /* ════════════════════════════════
@@ -913,6 +736,196 @@
   }
 
   </style>
+
+  <!-- ══ WebMCP / AI-CRAWLER STRUCTURED DATA ══
+       JSON-LD schema for AI platform visibility (ChatGPT, Perplexity, Gemini).
+       Tells AI crawlers exactly who SMC is, what they do, and who they serve.
+       Do NOT remove — this is the foundation of WebMCP SEO.
+  ══════════════════════════════════════════════ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://spencermorleyconsulting.ca/#organization",
+        "name": "Spencer Morley Consulting",
+        "alternateName": "SMC",
+        "url": "https://spencermorleyconsulting.ca/",
+        "logo": "https://spencermorleyconsulting.ca/wp-content/uploads/2023/12/cheryl-300x300.jpg",
+        "description": "Spencer Morley Consulting (SMC) provides expert crisis communications and AI consulting for organizations that cannot afford to be unprepared. Crisis expertise rooted in Alberta. AI consulting for small and rural municipalities across Canada and small businesses across Alberta.",
+        "slogan": "Helping You Navigate the Chaos",
+        "foundingLocation": {
+          "@type": "Place",
+          "name": "Edmonton, Alberta, Canada"
+        },
+        "areaServed": [
+          {
+            "@type": "Place",
+            "name": "Alberta, Canada"
+          },
+          {
+            "@type": "Place",
+            "name": "Canada"
+          }
+        ],
+        "knowsAbout": [
+          "Crisis Communications",
+          "Crisis Management",
+          "Media Relations Training",
+          "AI Consulting",
+          "WebMCP Readiness",
+          "Municipal AI Frameworks",
+          "Small Business AI Adoption",
+          "Workflow Automation",
+          "Staff AI Training",
+          "Prompt Engineering",
+          "Public Sector Communications",
+          "Emergency Management"
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "SMC Services",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Crisis Communications Management",
+                "description": "End-to-end crisis planning, response, and media relations for governments, school boards, and public institutions across Alberta. 25+ years of frontline experience."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Media Relations Training",
+                "description": "Spokesperson coaching and media training that builds confidence and capability for high-pressure public situations."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "On-Demand Communications Counsel",
+                "description": "Retained strategic communications support for organizations that need expert counsel available when it matters most."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Municipal AI Consulting",
+                "description": "Compliance-first AI adoption framework for small and rural municipalities across Canada. Covers privacy legislation, workflow automation, and responsible AI governance."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Small Business AI Consulting",
+                "description": "Practical AI adoption for Alberta small and medium businesses. AI readiness assessments, WebMCP optimization, staff training, and workflow automation."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "WebMCP Readiness Assessment",
+                "description": "Audit and optimization of your digital presence for AI platform visibility. Ensures your business is discoverable and recommendable by ChatGPT, Perplexity, Gemini, and other AI assistants."
+              }
+            }
+          ]
+        },
+        "email": "cheryl@spencermorleyconsulting.ca",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Edmonton",
+          "addressRegion": "AB",
+          "addressCountry": "CA"
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://spencermorleyconsulting.ca/#cheryl",
+        "name": "Cheryl Spencer-Morley",
+        "jobTitle": "Principal Consultant",
+        "worksFor": {
+          "@id": "https://spencermorleyconsulting.ca/#organization"
+        },
+        "description": "Cheryl Spencer-Morley brings over 25 years of senior-level communications experience across federal, provincial, and municipal government in Alberta. Certified in emergency management and traumatic event systems. Principal of Spencer Morley Consulting.",
+        "knowsAbout": [
+          "Crisis Communications",
+          "Emergency Management",
+          "Municipal Government Communications",
+          "AI Consulting",
+          "Public Sector Strategy",
+          "Media Relations"
+        ],
+        "email": "cheryl@spencermorleyconsulting.ca"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://spencermorleyconsulting.ca/#website",
+        "url": "https://spencermorleyconsulting.ca/",
+        "name": "Spencer Morley Consulting",
+        "description": "Crisis communications and AI consulting for Alberta organizations and Canadian municipalities.",
+        "publisher": {
+          "@id": "https://spencermorleyconsulting.ca/#organization"
+        },
+        "inLanguage": "en-CA"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://spencermorleyconsulting.ca/#webpage",
+        "url": "https://spencermorleyconsulting.ca/",
+        "name": "Spencer Morley Consulting — Helping You Navigate the Chaos",
+        "description": "Expert crisis communications and AI consulting for organizations that cannot afford to be unprepared. Based in Edmonton, Alberta. Serving Alberta and Canada.",
+        "isPartOf": {
+          "@id": "https://spencermorleyconsulting.ca/#website"
+        },
+        "about": {
+          "@id": "https://spencermorleyconsulting.ca/#organization"
+        },
+        "primaryImageOfPage": {
+          "@type": "ImageObject",
+          "url": "https://spencermorleyconsulting.ca/wp-content/uploads/2023/12/cheryl-300x300.jpg"
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://spencermorleyconsulting.ca/" />
+  <meta property="og:title" content="Spencer Morley Consulting — Crisis Communications & AI Consulting" />
+  <meta property="og:description" content="Expert crisis communications and AI consulting for Alberta organizations and Canadian municipalities. 25+ years experience. Based in Edmonton, AB." />
+  <meta property="og:image" content="https://spencermorleyconsulting.ca/wp-content/uploads/2023/12/cheryl-300x300.jpg" />
+  <meta property="og:locale" content="en_CA" />
+  <meta property="og:site_name" content="Spencer Morley Consulting" />
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Spencer Morley Consulting — Crisis Communications & AI Consulting" />
+  <meta name="twitter:description" content="Expert crisis communications and AI consulting for Alberta organizations and Canadian municipalities." />
+  <meta name="twitter:image" content="https://spencermorleyconsulting.ca/wp-content/uploads/2023/12/cheryl-300x300.jpg" />
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://spencermorleyconsulting.ca/" />
+
+  <!-- Robots -->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+
+  <!-- Author & Publisher -->
+  <meta name="author" content="Cheryl Spencer-Morley, Spencer Morley Consulting" />
+  <meta name="publisher" content="Spencer Morley Consulting" />
+
+  <!-- Geo targeting -->
+  <meta name="geo.region" content="CA-AB" />
+  <meta name="geo.placename" content="Edmonton, Alberta" />
+  <meta name="geo.position" content="53.5461;-113.4938" />
+  <meta name="ICBM" content="53.5461, -113.4938" />
 </head>
 <body>
 
@@ -954,38 +967,7 @@
     <li><a href="#about">About</a></li>
     <li><a href="#contact" class="nav-cta">Get a Consultation</a></li>
   </ul>
-
-  <!-- Hamburger button — mobile only -->
-  <button class="nav-hamburger" id="nav-hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
 </nav>
-
-<!-- ══════════ MOBILE MENU DRAWER ══════════ -->
-<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
-  <div class="mobile-menu-inner">
-    <nav class="mobile-nav">
-      <div class="mobile-nav-section">
-        <div class="mobile-nav-label">Crisis Communications</div>
-        <a href="#crisis-mgmt" class="mobile-nav-link">Crisis Management</a>
-        <a href="#media-relations" class="mobile-nav-link">Media Relations Training</a>
-        <a href="#on-demand" class="mobile-nav-link">On-Demand Communications</a>
-      </div>
-      <div class="mobile-nav-section">
-        <div class="mobile-nav-label">AI Consulting</div>
-        <a href="municipal.html" class="mobile-nav-link">Municipal Track</a>
-        <a href="small-business.html" class="mobile-nav-link">Small Business Track</a>
-      </div>
-      <div class="mobile-nav-section">
-        <a href="#about" class="mobile-nav-link">About</a>
-      </div>
-    </nav>
-    <a href="#contact" class="mobile-cta">Get a Consultation</a>
-  </div>
-</div>
-<div class="mobile-overlay" id="mobile-overlay"></div>
 
 <!-- ══════════════════════════════════════════════════
      HERO
@@ -1335,45 +1317,6 @@ function handleFormSubmit(e) {
     nav.classList.toggle('scrolled', window.scrollY > 60);
   };
   window.addEventListener('scroll', onScroll, { passive: true });
-})();
-
-// ── Mobile Menu ──
-(function () {
-  const btn      = document.getElementById('nav-hamburger');
-  const menu     = document.getElementById('mobile-menu');
-  const overlay  = document.getElementById('mobile-overlay');
-  const links    = menu.querySelectorAll('a');
-
-  function openMenu() {
-    btn.classList.add('is-open');
-    menu.classList.add('is-open');
-    overlay.classList.add('is-open');
-    btn.setAttribute('aria-expanded', 'true');
-    menu.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeMenu() {
-    btn.classList.remove('is-open');
-    menu.classList.remove('is-open');
-    overlay.classList.remove('is-open');
-    btn.setAttribute('aria-expanded', 'false');
-    menu.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
-  }
-
-  btn.addEventListener('click', () => {
-    btn.classList.contains('is-open') ? closeMenu() : openMenu();
-  });
-
-  overlay.addEventListener('click', closeMenu);
-
-  links.forEach(link => link.addEventListener('click', closeMenu));
-
-  // Close on ESC
-  document.addEventListener('keydown', e => {
-    if (e.key === 'Escape' && menu.classList.contains('is-open')) closeMenu();
-  });
 })();
 </script>
 </body>
