@@ -1082,125 +1082,40 @@
   </div>
 </section>
 
-<!-- AI BLIND SPOT AUDIT ENTRY POINT -->
-<style>
-  #sb-audit {
-    background: var(--charcoal-mid);
-    padding: 7rem 0;
-  }
-  .sb-audit-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 6rem;
-    align-items: center;
-  }
-  @media (max-width: 1100px) {
-    .sb-audit-grid { grid-template-columns: 1fr; gap: 3rem; }
-  }
-  .sb-audit-hl {
-    font-family: var(--font-display);
-    font-size: clamp(2.2rem, 4vw, 3.4rem);
-    font-weight: 400;
-    color: var(--cream);
-    line-height: 1.18;
-    margin-bottom: 1.4rem;
-  }
-  .sb-audit-hl em { font-style: italic; color: var(--gold-light); }
-  .sb-audit-body {
-    font-family: var(--font-body);
-    font-size: 0.95rem;
-    font-weight: 300;
-    color: rgba(247,247,245,0.60);
-    line-height: 1.82;
-    margin-bottom: 2rem;
-  }
-  .sb-audit-note {
-    font-family: var(--font-body);
-    font-size: 0.8rem;
-    color: rgba(247,247,245,0.38);
-    margin-top: 0.75rem;
-  }
-  .sb-audit-box {
-    border: 1px solid var(--gold-border);
-    padding: 2.8rem;
-    position: relative;
-    overflow: hidden;
-  }
-  .sb-audit-box-heading {
-    font-family: var(--font-ui);
-    font-size: 0.65rem;
-    font-weight: 800;
-    color: var(--gold);
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    margin-bottom: 1.2rem;
-  }
-  .sb-audit-glow {
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(circle at top right, rgba(201,168,76,0.06), transparent 70%);
-    pointer-events: none;
-  }
-  .sb-audit-box .ai-svc-title {
-    font-size: 0.8rem;
-    text-transform: uppercase;
-  }
-</style>
-
-<section id="sb-audit">
+<section id="sb-audit" style="padding: 7rem 0; background: var(--charcoal-mid); position: relative; overflow: hidden;">
+  <div style="position:absolute;top:0;right:0;width:600px;height:600px;background:radial-gradient(circle at top right,rgba(201,168,76,0.06),transparent 70%);pointer-events:none;"></div>
   <div class="wrap">
-    <div class="sb-audit-grid">
-
-      <!-- LEFT: Copy -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center;">
       <div>
-        <div class="eyebrow">Start Here</div>
-        <h2 class="sb-audit-hl">Your Business Is <em>Invisible</em> to AI. Find Out Why.</h2>
-        <p class="sb-audit-body">When a potential customer asks ChatGPT, Perplexity, or Gemini to recommend a service in your city, what happens? For most Alberta businesses, the answer is nothing — your name doesn't come up at all. The AI Blind Spot Audit shows you exactly where you stand, why you're not appearing, and what it will take to change that.</p>
-        <a href="#contact" class="btn-gold">Book Your Audit — $597</a>
-        <p class="sb-audit-note">Credit applied if you proceed to any service</p>
+        <p class="eyebrow">Start Here</p>
+        <h2 style="font-family:var(--font-display);font-size:clamp(2.2rem,3vw,3.4rem);font-weight:400;color:var(--cream);line-height:1.2;margin:0 0 1.6rem;">Your Business Is <em style="font-style:italic;color:var(--gold-light);">Invisible</em> to AI.<br>Find Out Why.</h2>
+        <p style="font-family:var(--font-body);font-size:0.95rem;font-weight:300;color:rgba(247,247,245,0.6);line-height:1.82;margin:0 0 2.4rem;">When a potential customer asks ChatGPT, Perplexity, or Gemini to recommend a service in your city, what happens? For most Alberta businesses, the answer is nothing — your name doesn't come up at all. The AI Blind Spot Audit shows you exactly where you stand, why you're not appearing, and what it will take to change that.</p>
+        <div style="display:flex;align-items:center;gap:2rem;flex-wrap:wrap;">
+          <a href="#contact" style="display:inline-block;background:var(--gold);color:var(--charcoal);font-family:var(--font-ui);font-size:0.72rem;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;padding:0.9rem 2.2rem;text-decoration:none;">Book Your Audit — $597</a>
+          <span style="font-family:var(--font-body);font-size:0.8rem;color:rgba(247,247,245,0.38);">Credit applied if you proceed to any service</span>
+        </div>
       </div>
-
-      <!-- RIGHT: What's included box -->
-      <div class="sb-audit-box">
-        <div class="sb-audit-glow"></div>
-        <div class="sb-audit-box-heading">What the Audit Includes</div>
-
-        <div class="ai-svc">
-          <div class="ai-svc-n">01</div>
-          <div>
-            <div class="ai-svc-title">30–50 AI Queries Run on Your Behalf</div>
-            <div class="ai-svc-desc">We simulate real customer searches across ChatGPT, Perplexity, and Gemini for your service category and city.</div>
-          </div>
+      <div style="border:1px solid var(--gold-border);padding:2.8rem;">
+        <p style="font-family:var(--font-ui);font-size:0.65rem;font-weight:800;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin:0 0 2rem;">What the Audit Includes</p>
+        <div style="display:grid;grid-template-columns:38px 1fr;gap:1.2rem;padding:1.4rem 0;border-bottom:1px solid rgba(201,168,76,0.08);align-items:start;">
+          <span style="font-family:var(--font-display);font-size:1.7rem;font-weight:300;color:var(--gold);line-height:1;">01</span>
+          <div><p style="font-family:var(--font-ui);font-size:0.8rem;font-weight:800;color:var(--cream);margin:0 0 0.3rem;text-transform:uppercase;letter-spacing:0.06em;">30–50 AI Queries Run on Your Behalf</p><p style="font-family:var(--font-body);font-size:0.8rem;color:rgba(247,247,245,0.45);margin:0;line-height:1.65;">We simulate real customer searches across ChatGPT, Perplexity, and Gemini for your service category and city.</p></div>
         </div>
-
-        <div class="ai-svc">
-          <div class="ai-svc-n">02</div>
-          <div>
-            <div class="ai-svc-title">Full Visibility Gap Analysis</div>
-            <div class="ai-svc-desc">We audit your Google Business Profile, schema markup, review volume, and web content against what AI platforms are actually using to make recommendations.</div>
-          </div>
+        <div style="display:grid;grid-template-columns:38px 1fr;gap:1.2rem;padding:1.4rem 0;border-bottom:1px solid rgba(201,168,76,0.08);align-items:start;">
+          <span style="font-family:var(--font-display);font-size:1.7rem;font-weight:300;color:var(--gold);line-height:1;">02</span>
+          <div><p style="font-family:var(--font-ui);font-size:0.8rem;font-weight:800;color:var(--cream);margin:0 0 0.3rem;text-transform:uppercase;letter-spacing:0.06em;">Full Visibility Gap Analysis</p><p style="font-family:var(--font-body);font-size:0.8rem;color:rgba(247,247,245,0.45);margin:0;line-height:1.65;">We audit your Google Business Profile, schema markup, review volume, and web content against what AI platforms are actually using to make recommendations.</p></div>
         </div>
-
-        <div class="ai-svc">
-          <div class="ai-svc-n">03</div>
-          <div>
-            <div class="ai-svc-title">AI Visibility Report + Debrief Call</div>
-            <div class="ai-svc-desc">A clear one-page report showing where you rank, where you're missing, and a prioritized fix list — reviewed together on a 60-minute call.</div>
-          </div>
+        <div style="display:grid;grid-template-columns:38px 1fr;gap:1.2rem;padding:1.4rem 0;border-bottom:1px solid rgba(201,168,76,0.08);align-items:start;">
+          <span style="font-family:var(--font-display);font-size:1.7rem;font-weight:300;color:var(--gold);line-height:1;">03</span>
+          <div><p style="font-family:var(--font-ui);font-size:0.8rem;font-weight:800;color:var(--cream);margin:0 0 0.3rem;text-transform:uppercase;letter-spacing:0.06em;">AI Visibility Report + Debrief Call</p><p style="font-family:var(--font-body);font-size:0.8rem;color:rgba(247,247,245,0.45);margin:0;line-height:1.65;">A clear one-page report showing where you rank, where you're missing, and a prioritized fix list — reviewed together on a 60-minute call.</p></div>
         </div>
-
-        <div class="ai-svc">
-          <div class="ai-svc-n">04</div>
-          <div>
-            <div class="ai-svc-title">Before &amp; After AI Query Screenshots</div>
-            <div class="ai-svc-desc">Documented proof of your current AI presence — and a baseline to measure against once work begins.</div>
-          </div>
+        <div style="display:grid;grid-template-columns:38px 1fr;gap:1.2rem;padding:1.4rem 0;align-items:start;">
+          <span style="font-family:var(--font-display);font-size:1.7rem;font-weight:300;color:var(--gold);line-height:1;">04</span>
+          <div><p style="font-family:var(--font-ui);font-size:0.8rem;font-weight:800;color:var(--cream);margin:0 0 0.3rem;text-transform:uppercase;letter-spacing:0.06em;">Before &amp; After AI Query Screenshots</p><p style="font-family:var(--font-body);font-size:0.8rem;color:rgba(247,247,245,0.45);margin:0;line-height:1.65;">Documented proof of your current AI presence — and a baseline to measure against once work begins.</p></div>
         </div>
-
-      </div><!-- /sb-audit-box -->
-
-    </div><!-- /sb-audit-grid -->
-  </div><!-- /wrap -->
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- SMALL BUSINESS TRACK CONTENT -->
@@ -1242,7 +1157,7 @@
               <div class="ai-svc-desc">If you've invested in SEO, you already understand why being found matters. WebMCP — Model Context Protocol — is the next stage of that. It's the emerging standard that lets AI platforms like ChatGPT, Gemini, and Perplexity read, understand, and recommend your business directly in conversation.</div>
               <div class="ai-svc-desc" style="margin-top:0.6rem;">When someone asks ChatGPT "who's the best plumber in Lethbridge" or "where should I eat in Red Deer tonight," the businesses that show up aren't the ones with the most Google reviews — they're the ones whose digital presence is structured for AI to read. WebMCP is how you get there.</div>
               <div class="ai-svc-desc" style="margin-top:0.6rem;">This matters because AI recommendations carry a different kind of weight with consumers. Unlike a sponsored search result or a boosted post, a recommendation from an AI assistant is perceived as independent and genuine — which means it converts differently. SMC's WebMCP Readiness Assessment evaluates your current digital presence, identifies what needs to change, and maps out exactly what to implement to make your business visible and recommendable to AI platforms before your competitors get there. WebMCP only became available in February 2026. The window to move first is open right now.</div>
-              <span class="ai-svc-tag" style="background:rgba(201,168,76,0.18); border-color:rgba(201,168,76,0.4);">New for 2026</span>
+              <span class="ai-svc-tag" style="background:rgba(201,168,76,0.18); border-color:rgba(201,168,76,0.4);">NEW FOR 2026</span>
             </div>
           </div>
 
@@ -1275,96 +1190,28 @@
             </div>
           </div>
 
-          <style>
-            .addon-bar {
-              border: 1px solid rgba(201,168,76,0.15);
-              background: rgba(201,168,76,0.04);
-              padding: 2.4rem 3rem;
-              display: grid;
-              grid-template-columns: 1fr auto;
-              gap: 3rem;
-              align-items: center;
-              margin-top: 1.4rem;
-            }
-            .addon-bar-label {
-              font-family: var(--font-ui);
-              font-size: 0.6rem;
-              font-weight: 800;
-              color: var(--gold);
-              letter-spacing: 0.2em;
-              text-transform: uppercase;
-              margin-bottom: 0.45rem;
-            }
-            .addon-bar-title {
-              font-family: var(--font-display);
-              font-size: 1.4rem;
-              font-weight: 400;
-              color: var(--cream);
-              margin-bottom: 0.55rem;
-            }
-            .addon-bar-body {
-              font-family: var(--font-body);
-              font-size: 0.84rem;
-              font-weight: 300;
-              color: rgba(247,247,245,0.50);
-              line-height: 1.72;
-            }
-            .addon-bar-right {
-              text-align: right;
-              white-space: nowrap;
-            }
-            .addon-bar-price {
-              font-family: var(--font-display);
-              font-size: 1.6rem;
-              font-weight: 300;
-              color: var(--gold);
-            }
-            .addon-bar-price-unit {
-              font-family: var(--font-body);
-              font-size: 0.72rem;
-              color: rgba(247,247,245,0.30);
-            }
-            .addon-bar-link {
-              display: block;
-              margin-top: 0.6rem;
-              font-family: var(--font-ui);
-              font-size: 0.65rem;
-              font-weight: 800;
-              color: rgba(247,247,245,0.45);
-              text-decoration: none;
-              text-transform: uppercase;
-              letter-spacing: 0.12em;
-            }
-            .addon-bar-link:hover { color: var(--gold); }
-            @media (max-width: 1100px) {
-              .addon-bar {
-                grid-template-columns: 1fr;
-                gap: 1.4rem;
-              }
-              .addon-bar-right { text-align: left; }
-            }
-          </style>
-
-          <div class="addon-bar">
-            <div>
-              <div class="addon-bar-label">Add-On — AI Readiness Maintenance</div>
-              <div class="addon-bar-title">Keep Your Investment Current.</div>
-              <div class="addon-bar-body">AI platforms update how they crawl and index constantly. The Maintenance tier keeps your schema, MCP configuration, and structured data current as the protocol evolves — plus a quarterly re-audit so you always know where you stand.</div>
-            </div>
-            <div class="addon-bar-right">
-              <div>
-                <span class="addon-bar-price">$400 – $600</span><span class="addon-bar-price-unit">/mo</span>
-              </div>
-              <a href="#contact" class="addon-bar-link">Ask About This →</a>
-            </div>
-          </div>
-
         </div>
       </div>
 
     </div><!-- /ai-tracks -->
   </div>
 </section>
+
+<div style="background:var(--charcoal);padding:0 0 4rem;">
+  <div class="wrap">
+    <div style="border:1px solid rgba(201,168,76,0.15);background:rgba(201,168,76,0.04);padding:2.4rem 3rem;display:grid;grid-template-columns:1fr auto;gap:3rem;align-items:center;">
+      <div>
+        <p style="font-family:var(--font-ui);font-size:0.6rem;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin:0 0 0.6rem;">Add-On — AI Readiness Maintenance</p>
+        <p style="font-family:var(--font-display);font-size:1.4rem;font-weight:400;color:var(--cream);margin:0 0 0.6rem;">Keep Your Investment Current.</p>
+        <p style="font-family:var(--font-body);font-size:0.84rem;font-weight:300;color:rgba(247,247,245,0.5);margin:0;line-height:1.72;">AI platforms update how they crawl and index constantly. The Maintenance tier keeps your schema, MCP configuration, and structured data current as the protocol evolves — plus a quarterly re-audit so you always know where you stand.</p>
+      </div>
+      <div style="text-align:right;white-space:nowrap;">
+        <p style="font-family:var(--font-display);font-size:1.6rem;font-weight:300;color:var(--gold);margin:0 0 0.4rem;">$400 – $600<span style="font-family:var(--font-body);font-size:0.72rem;color:rgba(247,247,245,0.3);">/mo</span></p>
+        <a href="#contact" style="font-family:var(--font-ui);font-size:0.65rem;font-weight:800;color:rgba(247,247,245,0.45);text-decoration:none;text-transform:uppercase;letter-spacing:0.12em;">Ask About This →</a>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- ══════════════════════════════════════════════════
      ABOUT
@@ -1541,15 +1388,15 @@ function handleFormSubmit(e) {
               <input type="text" id="cf-org" placeholder="Business name *" required />
             </div>
             <select id="cf-service">
-              <option value="" disabled selected>Which service are you interested in? *</option>
-              <option value="AI Blind Spot Audit">AI Blind Spot Audit</option>
-              <option value="AI Presence &amp; Reputation">AI Presence &amp; Reputation</option>
-              <option value="WebMCP Readiness">WebMCP Readiness</option>
-              <option value="AI Readiness Assessment">AI Readiness Assessment</option>
-              <option value="Staff AI Training &amp; Prompt Engineering">Staff AI Training &amp; Prompt Engineering</option>
-              <option value="Workflow Automation">Workflow Automation</option>
-              <option value="AI Readiness Maintenance (Add-On)">AI Readiness Maintenance (Add-On)</option>
-              <option value="General Inquiry">General Inquiry</option>
+              <option value="">Which service are you interested in? *</option>
+              <option>AI Blind Spot Audit</option>
+              <option>AI Presence &amp; Reputation</option>
+              <option>WebMCP Readiness</option>
+              <option>AI Readiness Assessment</option>
+              <option>Staff AI Training &amp; Prompt Engineering</option>
+              <option>Workflow Automation</option>
+              <option>AI Readiness Maintenance (Add-On)</option>
+              <option>General Inquiry</option>
             </select>
             <textarea id="cf-message" placeholder="Tell us about your business and what you're hoping AI can help with *" required></textarea>
             <button class="btn-submit" onclick="handleFormSubmit(event)">Send Message</button>
