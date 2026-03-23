@@ -916,7 +916,7 @@
       </div>
     </li>
     <li><a href="#about">About</a></li>
-    <li><a href="#contact" class="nav-cta">Get a Consultation</a></li>
+    <li><a href="#contact" class="nav-cta" onclick="gtag('event', 'cta_click', {'event_category': 'nav', 'event_label': 'get_a_consultation', 'page': 'homepage'})">Get a Consultation</a></li>
   </ul>
 </nav>
 
@@ -943,7 +943,7 @@
       Expert crisis communications and AI consulting for organizations that can't afford to be unprepared. Crisis expertise rooted in Alberta. AI consulting for municipalities across Canada.
     </p>
     <div class="hero-actions fu d4">
-      <a href="#contact" class="btn-gold">Book a Consultation</a>
+      <a href="#contact" class="btn-gold" onclick="gtag('event', 'cta_click', {'event_category': 'hero', 'event_label': 'book_consultation', 'page': 'homepage'})">Book a Consultation</a>
       <a href="#practices" class="btn-text-link">
         View Services
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
@@ -1290,6 +1290,11 @@ function handleFormSubmit(e) {
   window.location.href = 'mailto:cheryl@spencermorleyconsulting.ca?subject=' + subject + '&body=' + body;
   document.getElementById('contact-form-wrap').style.display = 'none';
   document.getElementById('form-success').style.display = 'block';
+  gtag('event', 'generate_lead', {
+    'event_category': 'contact_form',
+    'event_label': service,
+    'page': 'homepage'
+  });
 }
 
 // ── Scroll-aware nav compression ──

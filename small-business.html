@@ -311,7 +311,7 @@
       </div>
     </li>
     <li><a href="#about">About</a></li>
-    <li><a href="#contact" class="nav-cta">Get a Consultation</a></li>
+    <li><a href="#contact" class="nav-cta" onclick="gtag('event', 'cta_click', {'event_category': 'nav', 'event_label': 'get_a_consultation', 'page': 'small_business'})">Get a Consultation</a></li>
   </ul>
 </nav>
 
@@ -328,7 +328,7 @@
     <h1>AI that works for<br/><em>your</em> business.</h1>
     <p class="page-hero-sub">You don&#8217;t need enterprise software or a dedicated IT team. You need practical AI that saves time, cuts costs, and gets your business found &#8212; including by AI platforms your competitors haven&#8217;t heard of yet.</p>
     <div class="page-hero-actions">
-      <a href="index.html#contact" class="btn-gold">Book a Consultation</a>
+      <a href="index.html#contact" class="btn-gold" onclick="gtag('event', 'cta_click', {'event_category': 'hero', 'event_label': 'book_consultation', 'page': 'small_business'})">Book a Consultation</a>
     </div>
   </div>
 </section>
@@ -343,7 +343,7 @@
         <h2 style="font-family:var(--font-display);font-size:clamp(2.2rem,3vw,3.4rem);font-weight:400;color:var(--cream);line-height:1.2;margin:0 0 1.6rem;">Your Business Is <em style="font-style:italic;color:var(--gold-light);">Invisible</em> to AI.<br>Find Out Why.</h2>
         <p style="font-family:var(--font-body);font-size:0.95rem;font-weight:300;color:rgba(247,247,245,0.6);line-height:1.82;margin:0 0 2.4rem;">When a potential customer asks ChatGPT, Perplexity, or Gemini to recommend a service in your city, what happens? For most Alberta businesses, the answer is nothing &#8212; your name doesn&#8217;t come up at all. The AI Blind Spot Audit shows you exactly where you stand, why you&#8217;re not appearing, and what it will take to change that.</p>
         <div style="display:flex;align-items:center;gap:2rem;flex-wrap:wrap;">
-          <a href="#contact" style="display:inline-block;background:var(--gold);color:var(--charcoal);font-family:var(--font-ui);font-size:0.72rem;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;padding:0.9rem 2.2rem;text-decoration:none;">Book Your Audit &#8212; $597</a>
+          <a href="#contact" style="display:inline-block;background:var(--gold);color:var(--charcoal);font-family:var(--font-ui);font-size:0.72rem;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;padding:0.9rem 2.2rem;text-decoration:none;" onclick="gtag('event', 'cta_click', {'event_category': 'audit', 'event_label': 'book_audit_597', 'page': 'small_business'})">Book Your Audit &#8212; $597</a>
           <span style="font-family:var(--font-body);font-size:0.8rem;color:rgba(247,247,245,0.38);">Credit applied if you proceed to any service</span>
         </div>
       </div>
@@ -582,6 +582,11 @@ function handleFormSubmit(e) {
   window.location.href = 'mailto:cheryl@spencermorleyconsulting.ca?subject=' + subject + '&body=' + body;
   document.getElementById('contact-form-wrap').style.display = 'none';
   document.getElementById('form-success').style.display = 'block';
+  gtag('event', 'generate_lead', {
+    'event_category': 'contact_form',
+    'event_label': service,
+    'page': 'small_business'
+  });
 }
 (function () {
   var nav = document.querySelector('nav');

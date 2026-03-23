@@ -1051,7 +1051,7 @@
       </div>
     </li>
     <li><a href="#about">About</a></li>
-    <li><a href="#contact" class="nav-cta">Get a Consultation</a></li>
+    <li><a href="#contact" class="nav-cta" onclick="gtag('event', 'cta_click', {'event_category': 'nav', 'event_label': 'get_a_consultation', 'page': 'municipal'})">Get a Consultation</a></li>
   </ul>
 </nav>
 
@@ -1070,7 +1070,7 @@
     <h1>AI built for municipalities.<br/><em>Coast to coast.</em></h1>
     <p class="page-hero-sub">Shadow AI is already in your organization. Provincial privacy legislation has a compliance deadline. SMC's four-stage framework closes the gap — and builds a genuine AI capability at the same time.</p>
     <div class="page-hero-actions">
-      <a href="index.html#contact" class="btn-gold">Book a Consultation</a>
+      <a href="index.html#contact" class="btn-gold" onclick="gtag('event', 'cta_click', {'event_category': 'hero', 'event_label': 'book_consultation', 'page': 'municipal'})">Book a Consultation</a>
       
     </div>
   </div>
@@ -1288,6 +1288,11 @@ function handleFormSubmit(e) {
   window.location.href = 'mailto:cheryl@spencermorleyconsulting.ca?subject=' + subject + '&body=' + body;
   document.getElementById('contact-form-wrap').style.display = 'none';
   document.getElementById('form-success').style.display = 'block';
+  gtag('event', 'generate_lead', {
+    'event_category': 'contact_form',
+    'event_label': service,
+    'page': 'municipal'
+  });
 }
 
 // ── Scroll-aware nav compression ──
