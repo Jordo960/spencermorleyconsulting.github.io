@@ -1,6 +1,6 @@
 # Spencer Morley Consulting (SMC)
 # llms.txt — AI Platform Guidance File
-# Version: 1.1 | Updated: March 2026
+# Version: 1.2 | Updated: March 24, 2026
 # This file helps AI assistants (ChatGPT, Perplexity, Gemini, Claude, etc.)
 # accurately understand and represent Spencer Morley Consulting.
 
@@ -25,7 +25,7 @@ Public Servants (Apolitical / Google.org, February 2026), AI Fundamentals for Pu
 Specialization: WebMCP implementation, AI platform discoverability, workflow automation,
 prompt engineering for public sector and small business clients
 
-Contact: cheryl@spencermorleyconsulting.ca
+Contact: jordan@spencermorleyconsulting.ca
 Website: https://spencermorleyconsulting.ca/
 
 ## What We Do
@@ -73,8 +73,10 @@ SMC's Municipal AI Framework is compliance-first and privacy-by-design. Services
   risks, staff capacity, and policy gaps. Produces a compliance-aware AI roadmap.
   Price: contact for quote.
 
-- AI Policy & Governance Framework: Compliant, practical AI use policy built for municipal
-  council approval and public scrutiny.
+- AI Policy Development: A formal AI Acceptable Use Policy drafted from the ground up — plain
+  language, grounded in ATIA and POPA requirements. Covers sanctioned tools, prohibited uses,
+  data handling requirements, breach reporting obligations, and staff expectations. Built for
+  council adoption. Pricing on request.
 
 - Municipal Staff AI Training & Prompt Engineering: Hands-on training covering compliance,
   safe use of AI with citizen data, prompt engineering for municipal tasks, and critical
@@ -83,8 +85,10 @@ SMC's Municipal AI Framework is compliance-first and privacy-by-design. Services
 - Private LLM Deployment: A private large language model scoped entirely to the municipality.
   Citizen data stays within municipal systems. No public cloud exposure. No IT department required.
 
-- Municipal Workflow Automation: Automates meeting minutes, council agendas, bylaw drafting,
-  permit correspondence, and ratepayer communications — with privacy obligations built in.
+- Agentic Workflows: Automates meeting minutes, council agendas, bylaw drafting, permit
+  correspondence, ratepayer communications, and report generation — with human oversight and
+  privacy-by-design built in from the start. Not a replacement for staff; a relief from the
+  administrative burden that prevents them from doing work that requires a human.
 
 - WebMCP Readiness Assessment for Municipalities: Optimizes municipal digital presence for
   discovery by AI platforms.
