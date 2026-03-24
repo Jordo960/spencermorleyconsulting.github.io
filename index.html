@@ -1061,7 +1061,7 @@
         <div class="eyebrow">AI Consulting</div>
         <h2 class="ai-hl">Practical AI adoption.<br/><em>Built for your context.</em></h2>
       </div>
-      <p class="ai-body">SMC's AI consulting practice serves two distinct audiences — each with their own pressures, language, and definition of success. Choose the track that fits your world.</p>
+      <p class="ai-body">AI is already in your organization. The question is whether it&#8217;s working for you &#8212; or creating risk you don&#8217;t know about yet. SMC works with two kinds of clients. Each faces a different version of the same challenge. Choose your track.</p>
     </div>
 
     <div class="ai-gateway">
@@ -1074,7 +1074,7 @@
           </div>
           <div class="gateway-track-label">Municipal Track</div>
           <div class="gateway-track-sub">Municipalities across Canada</div>
-          <p class="gateway-desc">Shadow AI is already in your organization. Provincial privacy legislation has a compliance deadline. SMC's four-stage framework closes the gap — and builds a genuine AI capability alongside it.</p>
+          <p class="gateway-desc">Your staff are already using AI. Provincial privacy legislation has a compliance deadline. Let&#8217;s close the gap before it becomes a council issue.</p>
           <div class="gateway-tags">
             <span>ATIA / POPA</span>
             <span>Privacy compliance</span>
@@ -1082,7 +1082,7 @@
             <span>Private LLM</span>
           </div>
           <div class="gateway-cta">
-            Explore Municipal Track
+            Check Your Compliance Position
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
           </div>
         </div>
@@ -1096,7 +1096,7 @@
           </div>
           <div class="gateway-track-label">Small Business Track</div>
           <div class="gateway-track-sub">Alberta small &amp; medium businesses</div>
-          <p class="gateway-desc">Save time, reduce repetitive work, and get your business found by AI platforms before your competitors do. Start with the AI Blind Spot Audit to see exactly where you stand — then build from there. Whether you're brand new to AI or already using it occasionally, SMC meets you where you are.</p>
+          <p class="gateway-desc">Your competitors are getting found by AI. Your business might not be. Find out where you stand &#8212; and what it takes to show up.</p>
           <div class="gateway-tags">
             <span class="tag-new">AI Blind Spot Audit</span>
             <span class="tag-new">AI Presence &amp; Reputation</span>
@@ -1105,7 +1105,7 @@
             <span>Workflow Automation</span>
           </div>
           <div class="gateway-cta">
-            Explore Small Business Track
+            See Where Your Business Stands
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
           </div>
         </div>
@@ -1277,22 +1277,42 @@ function handleFormSubmit(e) {
     alert('Please fill in all required fields.');
     return;
   }
-  var subject = encodeURIComponent('SMC Website Inquiry — ' + service);
-  var body = encodeURIComponent(
-    'Name: ' + name + '\n' +
-    'Email: ' + email + '\n' +
-    'Phone: ' + (document.getElementById('cf-phone').value || 'Not provided') + '\n' +
-    'Organization: ' + org + '\n' +
-    'Service: ' + service + '\n\n' +
-    'Message:\n' + message
-  );
-  window.location.href = 'mailto:cheryl@spencermorleyconsulting.ca?subject=' + subject + '&body=' + body;
-  document.getElementById('contact-form-wrap').style.display = 'none';
-  document.getElementById('form-success').style.display = 'block';
-  gtag('event', 'generate_lead', {
-    'event_category': 'contact_form',
-    'event_label': service,
-    'page': 'homepage'
+  var btn = e.target;
+  btn.disabled = true;
+  btn.textContent = 'Sending\u2026';
+  fetch('https://formspree.io/f/xojpaekn', {
+    method: 'POST',
+    headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      name: name,
+      email: email,
+      phone: document.getElementById('cf-phone').value || 'Not provided',
+      organization: org,
+      service: service,
+      message: message,
+      _subject: 'SMC Website Inquiry \u2014 ' + service,
+      source: 'Homepage'
+    })
+  })
+  .then(function(r) {
+    if (r.ok) {
+      document.getElementById('contact-form-wrap').style.display = 'none';
+      document.getElementById('form-success').style.display = 'block';
+      gtag('event', 'generate_lead', {
+        'event_category': 'contact_form',
+        'event_label': service,
+        'page': 'homepage'
+      });
+    } else {
+      btn.disabled = false;
+      btn.textContent = 'Send Message';
+      alert('Something went wrong. Please try again or email jordan@spencermorleyconsulting.ca directly.');
+    }
+  })
+  .catch(function() {
+    btn.disabled = false;
+    btn.textContent = 'Send Message';
+    alert('Something went wrong. Please try again or email jordan@spencermorleyconsulting.ca directly.');
   });
 }
 

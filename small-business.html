@@ -86,6 +86,64 @@
     .track-intro p { font-family: var(--font-body); font-size: 0.83rem; line-height: 1.75; color: rgba(247,247,245,0.52); }
     .track-intro p.lead { color: rgba(247,247,245,0.72); font-style: italic; }
     .track-services { padding: 0 2rem 2rem; }
+
+    /* ── Stats box (ported from municipal.html) ── */
+    .shadow-ai-label {
+      font-family: var(--font-ui);
+      font-size: 0.65rem; font-weight: 800;
+      letter-spacing: 0.16em; text-transform: uppercase;
+      color: rgba(247,247,245,0.5);
+      display: flex; align-items: center; gap: 0.7rem;
+      margin-bottom: 1.1rem;
+    }
+    .shadow-ai-badge {
+      background: rgba(201,168,76,0.15);
+      border: 1px solid var(--gold-border);
+      color: var(--gold);
+      padding: 0.18rem 0.65rem;
+      font-size: 0.6rem; font-weight: 800;
+      letter-spacing: 0.18em; text-transform: uppercase;
+    }
+    .shadow-ai-stats {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 1px; background: rgba(201,168,76,0.1);
+      border: 1px solid rgba(201,168,76,0.1);
+      margin-bottom: 1rem;
+    }
+    .shadow-stat {
+      padding: 1rem 1.1rem;
+      background: var(--charcoal-mid);
+    }
+    .shadow-stat--highlight {
+      background: rgba(201,168,76,0.08);
+    }
+    .shadow-stat-num {
+      font-family: var(--font-display);
+      font-size: 2.2rem; font-weight: 500;
+      color: var(--gold); line-height: 1; margin-bottom: 0.35rem;
+    }
+    .shadow-stat--highlight .shadow-stat-num {
+      color: var(--gold-light);
+    }
+    .shadow-stat-desc {
+      font-family: var(--font-body);
+      font-size: 0.75rem; line-height: 1.55;
+      color: rgba(247,247,245,0.5);
+    }
+    .compliance-callout {
+      margin: 1.4rem 2rem 0;
+      padding: 1.3rem 1.4rem;
+      background: rgba(201,168,76,0.05);
+      border: 1px solid var(--gold-border);
+    }
+    .compliance-callout-source {
+      font-family: var(--font-body);
+      font-size: 0.72rem; line-height: 1.55;
+      color: rgba(247,247,245,0.4);
+      border-top: 1px solid rgba(201,168,76,0.12);
+      padding-top: 0.7rem; margin-top: 0.7rem;
+    }
+
     .ai-svc { display: grid; grid-template-columns: 38px 1fr; gap: 1.2rem; align-items: start; padding: 1.4rem 0; border-bottom: 1px solid rgba(201,168,76,0.08); }
     .ai-svc:last-child { border-bottom: none; }
     .ai-svc-n { font-family: var(--font-display); font-size: 1.7rem; font-weight: 300; color: var(--gold); line-height: 1; }
@@ -325,10 +383,10 @@
       <a href="index.html">Home</a> &#8250; <a href="index.html#ai-section">AI Consulting</a> &#8250; <span>Small Business Track</span>
     </div>
     <div class="page-hero-eyebrow">AI Consulting &#8212; Small Business Track</div>
-    <h1>AI that works for<br/><em>your</em> business.</h1>
-    <p class="page-hero-sub">You don&#8217;t need enterprise software or a dedicated IT team. You need practical AI that saves time, cuts costs, and gets your business found &#8212; including by AI platforms your competitors haven&#8217;t heard of yet.</p>
+    <h1>Your competitors are using AI.<br/><em>You&#8217;re about to catch up &#8212; and pass them.</em></h1>
+    <p class="page-hero-sub">More hours in your day. Less time on tasks that don&#8217;t need you. Found by the AI platforms your competitors haven&#8217;t figured out yet. That&#8217;s what working with SMC looks like.</p>
     <div class="page-hero-actions">
-      <a href="index.html#contact" class="btn-gold" onclick="gtag('event', 'cta_click', {'event_category': 'hero', 'event_label': 'book_consultation', 'page': 'small_business'})">Book a Consultation</a>
+      <a href="#sb-audit" class="btn-gold" onclick="gtag('event', 'cta_click', {'event_category': 'hero', 'event_label': 'see_where_business_stands', 'page': 'small_business'})">See Where Your Business Stands</a>
     </div>
   </div>
 </section>
@@ -340,8 +398,8 @@
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center;">
       <div>
         <p class="eyebrow">Start Here</p>
-        <h2 style="font-family:var(--font-display);font-size:clamp(2.2rem,3vw,3.4rem);font-weight:400;color:var(--cream);line-height:1.2;margin:0 0 1.6rem;">Your Business Is <em style="font-style:italic;color:var(--gold-light);">Invisible</em> to AI.<br>Find Out Why.</h2>
-        <p style="font-family:var(--font-body);font-size:0.95rem;font-weight:300;color:rgba(247,247,245,0.6);line-height:1.82;margin:0 0 2.4rem;">When a potential customer asks ChatGPT, Perplexity, or Gemini to recommend a service in your city, what happens? For most Alberta businesses, the answer is nothing &#8212; your name doesn&#8217;t come up at all. The AI Blind Spot Audit shows you exactly where you stand, why you&#8217;re not appearing, and what it will take to change that.</p>
+        <h2 style="font-family:var(--font-display);font-size:clamp(2.2rem,3vw,3.4rem);font-weight:400;color:var(--cream);line-height:1.2;margin:0 0 1.6rem;">Your Business Is <em style="font-style:italic;color:var(--gold-light);">Invisible</em> to AI.<br>Here&#8217;s What That&#8217;s Costing You.</h2>
+        <p style="font-family:var(--font-body);font-size:0.95rem;font-weight:300;color:rgba(247,247,245,0.6);line-height:1.82;margin:0 0 2.4rem;">AI platforms are already recommending businesses to your potential customers. If your business isn&#8217;t structured for AI to find, read, and trust &#8212; you&#8217;re invisible in a conversation you don&#8217;t know is happening. The $597 AI Blind Spot Audit tells you exactly where you stand and what to do about it.</p>
         <div style="display:flex;align-items:center;gap:2rem;flex-wrap:wrap;">
           <a href="#contact" style="display:inline-block;background:var(--gold);color:var(--charcoal);font-family:var(--font-ui);font-size:0.72rem;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;padding:0.9rem 2.2rem;text-decoration:none;" onclick="gtag('event', 'cta_click', {'event_category': 'audit', 'event_label': 'book_audit_597', 'page': 'small_business'})">Book Your Audit &#8212; $597</a>
           <span style="font-family:var(--font-body);font-size:0.8rem;color:rgba(247,247,245,0.38);">Credit applied if you proceed to any service</span>
@@ -351,19 +409,19 @@
         <p style="font-family:var(--font-ui);font-size:0.65rem;font-weight:800;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin:0 0 2rem;">What the Audit Includes</p>
         <div style="display:grid;grid-template-columns:38px 1fr;gap:1.2rem;padding:1.4rem 0;border-bottom:1px solid rgba(201,168,76,0.08);align-items:start;">
           <span style="font-family:var(--font-display);font-size:1.7rem;font-weight:300;color:var(--gold);line-height:1;">01</span>
-          <div><p style="font-family:var(--font-ui);font-size:0.8rem;font-weight:800;color:var(--cream);margin:0 0 0.3rem;text-transform:uppercase;letter-spacing:0.06em;">30&#8211;50 AI Queries Run on Your Behalf</p><p style="font-family:var(--font-body);font-size:0.8rem;color:rgba(247,247,245,0.45);margin:0;line-height:1.65;">We simulate real customer searches across ChatGPT, Perplexity, and Gemini for your service category and city.</p></div>
-        </div>
-        <div style="display:grid;grid-template-columns:38px 1fr;gap:1.2rem;padding:1.4rem 0;border-bottom:1px solid rgba(201,168,76,0.08);align-items:start;">
-          <span style="font-family:var(--font-display);font-size:1.7rem;font-weight:300;color:var(--gold);line-height:1;">02</span>
           <div><p style="font-family:var(--font-ui);font-size:0.8rem;font-weight:800;color:var(--cream);margin:0 0 0.3rem;text-transform:uppercase;letter-spacing:0.06em;">Full Visibility Gap Analysis</p><p style="font-family:var(--font-body);font-size:0.8rem;color:rgba(247,247,245,0.45);margin:0;line-height:1.65;">We audit your Google Business Profile, schema markup, review volume, and web content against what AI platforms are actually using to make recommendations.</p></div>
         </div>
         <div style="display:grid;grid-template-columns:38px 1fr;gap:1.2rem;padding:1.4rem 0;border-bottom:1px solid rgba(201,168,76,0.08);align-items:start;">
+          <span style="font-family:var(--font-display);font-size:1.7rem;font-weight:300;color:var(--gold);line-height:1;">02</span>
+          <div><p style="font-family:var(--font-ui);font-size:0.8rem;font-weight:800;color:var(--cream);margin:0 0 0.3rem;text-transform:uppercase;letter-spacing:0.06em;">AI Recommendation Score</p><p style="font-family:var(--font-body);font-size:0.8rem;color:rgba(247,247,245,0.45);margin:0;line-height:1.65;">We test how your business appears when AI platforms are asked about your category and location. You see exactly what they see.</p></div>
+        </div>
+        <div style="display:grid;grid-template-columns:38px 1fr;gap:1.2rem;padding:1.4rem 0;border-bottom:1px solid rgba(201,168,76,0.08);align-items:start;">
           <span style="font-family:var(--font-display);font-size:1.7rem;font-weight:300;color:var(--gold);line-height:1;">03</span>
-          <div><p style="font-family:var(--font-ui);font-size:0.8rem;font-weight:800;color:var(--cream);margin:0 0 0.3rem;text-transform:uppercase;letter-spacing:0.06em;">AI Visibility Report + Debrief Call</p><p style="font-family:var(--font-body);font-size:0.8rem;color:rgba(247,247,245,0.45);margin:0;line-height:1.65;">A clear one-page report showing where you rank, where you&#8217;re missing, and a prioritized fix list &#8212; reviewed together on a 60-minute call.</p></div>
+          <div><p style="font-family:var(--font-ui);font-size:0.8rem;font-weight:800;color:var(--cream);margin:0 0 0.3rem;text-transform:uppercase;letter-spacing:0.06em;">Priority Fix List</p><p style="font-family:var(--font-body);font-size:0.8rem;color:rgba(247,247,245,0.45);margin:0;line-height:1.65;">Not a list of everything that could be better. The three to five changes that will move the needle fastest.</p></div>
         </div>
         <div style="display:grid;grid-template-columns:38px 1fr;gap:1.2rem;padding:1.4rem 0;align-items:start;">
           <span style="font-family:var(--font-display);font-size:1.7rem;font-weight:300;color:var(--gold);line-height:1;">04</span>
-          <div><p style="font-family:var(--font-ui);font-size:0.8rem;font-weight:800;color:var(--cream);margin:0 0 0.3rem;text-transform:uppercase;letter-spacing:0.06em;">Before &amp; After AI Query Screenshots</p><p style="font-family:var(--font-body);font-size:0.8rem;color:rgba(247,247,245,0.45);margin:0;line-height:1.65;">Documented proof of your current AI presence &#8212; and a baseline to measure against once work begins.</p></div>
+          <div><p style="font-family:var(--font-ui);font-size:0.8rem;font-weight:800;color:var(--cream);margin:0 0 0.3rem;text-transform:uppercase;letter-spacing:0.06em;">45-Minute Briefing</p><p style="font-family:var(--font-body);font-size:0.8rem;color:rgba(247,247,245,0.45);margin:0;line-height:1.65;">We walk you through the findings live. No jargon. Clear next steps.</p></div>
         </div>
       </div>
     </div>
@@ -385,15 +443,41 @@
           </div>
         </div>
         <div class="track-intro">
-          <p class="lead">You&#8217;ve probably heard that AI can save time and money. You may have tried ChatGPT once or twice. But between running your business, managing your team, and serving your customers, figuring out what AI can actually do for <em>you</em> &#8212; and where to even start &#8212; hasn&#8217;t made it to the top of the list.</p>
-          <p>That&#8217;s exactly where SMC comes in. We don&#8217;t hand you a list of tools and wish you luck. We assess your business, identify where AI makes the most practical difference, and build your capability step by step &#8212; at a pace that works for a small team with a real budget. No jargon. No wasted spend. No getting it wrong.</p>
+          <p class="lead">AI adoption among Canadian businesses doubled in a single year &#8212; from 6% to 12%. The businesses moving first aren&#8217;t necessarily the biggest ones. They&#8217;re the ones that found someone to show them where to start.</p>
+          <p>Every week without AI costs you time you&#8217;re spending on work that a system could do in seconds. Every week your competitors experiment and learn. The gap between businesses that use AI well and businesses that don&#8217;t is already showing up in the numbers. SMC works with Alberta small businesses to close that gap &#8212; quickly, practically, and without the enterprise price tag.</p>
         </div>
+
+        <!-- Small Business AI Stats Box -->
+        <div class="shadow-ai-label" style="padding: 0 0 0 2rem; margin-top: 0.2rem;">
+          AI Adoption in Canada
+          <span class="shadow-ai-badge">CFIB &amp; Canada.ca Research</span>
+        </div>
+        <div class="shadow-ai-stats" style="margin-left: 2rem; margin-right: 2rem;">
+          <div class="shadow-stat">
+            <div class="shadow-stat-num">12.2%</div>
+            <div class="shadow-stat-desc">of Canadian businesses have adopted AI &#8212; a figure that doubled in just one year</div>
+          </div>
+          <div class="shadow-stat shadow-stat--highlight">
+            <div class="shadow-stat-num">10%</div>
+            <div class="shadow-stat-desc">only 1 in 10 Canadian SMEs are fully integrated &#8220;Digital Leaders&#8221; &#8212; the other 90% are leaving measurable gains on the table</div>
+          </div>
+          <div class="shadow-stat shadow-stat--highlight">
+            <div class="shadow-stat-num">$2.40</div>
+            <div class="shadow-stat-desc">returned for every $1 invested by Digital Leaders in technology &#8212; vs. $1.20 for early-stage adopters</div>
+          </div>
+          <div class="shadow-stat">
+            <div class="shadow-stat-num">1.08 hrs</div>
+            <div class="shadow-stat-desc">average time generative AI saves a Canadian SME owner, every day</div>
+          </div>
+        </div>
+        <div class="compliance-callout-source" style="margin: 0 2rem 1.4rem; padding-top: 0.7rem; border-top: 1px solid rgba(201,168,76,0.12);">CFIB Digital Transformation Report 2025 / Canada.ca SME AI Adoption Blueprint</div>
         <div class="track-services">
           <div class="ai-svc">
             <div class="ai-svc-n">01</div>
             <div>
               <div class="ai-svc-title">AI Readiness Assessment</div>
-              <div class="ai-svc-desc">Most small business owners don&#8217;t know what they don&#8217;t know about AI &#8212; and that&#8217;s the right place to start. SMC conducts a focused diagnostic of your business: your current tools, your team&#8217;s capacity, your biggest time drains, and your growth goals. We identify exactly where AI can make a meaningful difference for your specific business &#8212; not a generic list of possibilities, but a prioritized, plain-language roadmap built around how you actually operate. Delivered remotely, efficiently, and without disrupting your day.</div>
+              <div class="ai-svc-desc"><strong style="color:rgba(247,247,245,0.72);">Find out exactly where AI can save you the most time &#8212; in your business, not in theory.</strong></div>
+              <div class="ai-svc-desc">Most tools that promise to &#8220;use AI&#8221; were built for someone else&#8217;s business. The question isn&#8217;t whether AI works &#8212; it&#8217;s whether it works for a business like yours, run the way you run it. SMC conducts a focused diagnostic of your business: your current tools, your team&#8217;s capacity, your biggest time drains, and your growth goals. We identify exactly where AI can make a meaningful difference for your specific operation &#8212; not a generic list of possibilities, but a prioritized, plain-language roadmap built around how you actually work. Delivered remotely, efficiently, and without disrupting your day.</div>
               <span class="ai-svc-tag">Start Here</span>
             </div>
           </div>
@@ -401,9 +485,10 @@
             <div class="ai-svc-n">02</div>
             <div>
               <div class="ai-svc-title">WebMCP Readiness</div>
-              <div class="ai-svc-desc">If you&#8217;ve invested in SEO, you already understand why being found matters. WebMCP &#8212; Model Context Protocol &#8212; is the next stage of that. It&#8217;s the emerging standard that lets AI platforms like ChatGPT, Gemini, and Perplexity read, understand, and recommend your business directly in conversation.</div>
-              <div class="ai-svc-desc" style="margin-top:0.6rem;">When someone asks ChatGPT &#8220;who&#8217;s the best plumber in Lethbridge&#8221; or &#8220;where should I eat in Red Deer tonight,&#8221; the businesses that show up aren&#8217;t the ones with the most Google reviews &#8212; they&#8217;re the ones whose digital presence is structured for AI to read. WebMCP is how you get there.</div>
-              <div class="ai-svc-desc" style="margin-top:0.6rem;">This matters because AI recommendations carry a different kind of weight with consumers. Unlike a sponsored search result or a boosted post, a recommendation from an AI assistant is perceived as independent and genuine &#8212; which means it converts differently. SMC&#8217;s WebMCP Readiness Assessment evaluates your current digital presence, identifies what needs to change, and maps out exactly what to implement to make your business visible and recommendable to AI platforms before your competitors get there. WebMCP only became available in February 2026. The window to move first is open right now.</div>
+              <div class="ai-svc-desc"><strong style="color:rgba(247,247,245,0.72);">Someone in your city is asking an AI platform to recommend your service right now. Are you showing up &#8212; or is your competitor?</strong></div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;">WebMCP only became available in February 2026. Most Alberta businesses haven&#8217;t heard of it yet. Businesses that move now will be the default recommendation before the competition knows the game changed &#8212; the same window that existed with mobile-responsive design in the early 2010s.</div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;">WebMCP (Web Model Context Protocol) is the emerging standard that makes your business readable and recommendable by AI platforms &#8212; backed by Google, Microsoft, and the W3C. Think of it as the next generation of local SEO: instead of ranking in a list of links, your business gets recommended directly in conversation.</div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;">When someone asks ChatGPT &#8220;who&#8217;s the best electrician in Red Deer&#8221; or &#8220;where should I eat in Lethbridge tonight,&#8221; the businesses that come up aren&#8217;t necessarily the ones with the most reviews. They&#8217;re the ones whose digital presence is structured so AI platforms can read it, trust it, and recommend it. An AI recommendation converts differently than a sponsored result &#8212; it reads as independent and genuine, because to the consumer, it is. SMC evaluates your current digital presence, identifies exactly what needs to change, and implements the infrastructure to make your business visible and recommendable to AI platforms before your competitors get there.</div>
               <span class="ai-svc-tag" style="background:rgba(201,168,76,0.18);border-color:rgba(201,168,76,0.4);">NEW FOR 2026</span>
             </div>
           </div>
@@ -411,7 +496,9 @@
             <div class="ai-svc-n">03</div>
             <div>
               <div class="ai-svc-title">AI Presence &amp; Reputation</div>
-              <div class="ai-svc-desc">AI platforms recommend businesses based on the signals they can find &#8212; reviews, structured content, and schema data. Once the Blind Spot Audit identifies your gaps, we build and maintain those signals on your behalf so your business appears when customers ask. Includes Google Business Profile management, review velocity program, schema markup, AI-optimized content, and monthly before/after AI query reporting.</div>
+              <div class="ai-svc-desc"><strong style="color:rgba(247,247,245,0.72);">Get recommended by AI, not just found by Google.</strong></div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;">Being found in a Google search and being recommended by an AI assistant are two different things &#8212; and they require two different kinds of presence. AI platforms pull their recommendations from reviews, structured data, schema markup, and content that signals what your business does and for whom. Once your WebMCP Readiness Assessment identifies your gaps, SMC builds and maintains those signals on your behalf.</div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;">What&#8217;s included: Google Business Profile management, review velocity program, schema markup, AI-optimized content, and monthly before/after AI query reporting so you can see exactly how your visibility is changing.</div>
               <span class="ai-svc-tag">Monthly Retainer</span>
             </div>
           </div>
@@ -419,8 +506,24 @@
             <div class="ai-svc-n">04</div>
             <div>
               <div class="ai-svc-title">Staff AI Training &amp; Prompt Engineering</div>
-              <div class="ai-svc-desc">The biggest reason AI tools don&#8217;t stick in small businesses isn&#8217;t resistance &#8212; it&#8217;s that nobody was shown how to use them well. A staff member who gets a mediocre result from AI once or twice concludes that AI isn&#8217;t useful. The problem is almost always the prompt, not the tool.</div>
-              <div class="ai-svc-desc" style="margin-top:0.6rem;">SMC&#8217;s training is hands-on and built around your team&#8217;s actual job functions &#8212; customer communications, scheduling, content creation, quoting, reporting, whatever eats the most time. Staff learn how to get genuinely useful output from AI tools on the first try: how to structure a prompt, how to give the AI the right context, how to critically evaluate what comes back, and how to handle customer information safely. Available remotely or on-site. Skills your team uses the next day.</div>
+              <div class="ai-svc-desc"><strong style="color:rgba(247,247,245,0.72);">Your team will use AI every day &#8212; once someone shows them how to do it for their actual job.</strong></div>
+              <!-- KPMG Stats Box -->
+              <div class="shadow-ai-label" style="margin-top:0.9rem; margin-bottom:0.8rem;">
+                Training Gap
+                <span class="shadow-ai-badge">KPMG Canada 2025</span>
+              </div>
+              <div class="shadow-ai-stats">
+                <div class="shadow-stat shadow-stat--highlight">
+                  <div class="shadow-stat-num">83%</div>
+                  <div class="shadow-stat-desc">of Canadian employees want to use AI more effectively</div>
+                </div>
+                <div class="shadow-stat">
+                  <div class="shadow-stat-num">48%</div>
+                  <div class="shadow-stat-desc">say their employer gave them what they needed to get there</div>
+                </div>
+              </div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;">The problem isn&#8217;t resistance. It&#8217;s that a generic AI tutorial doesn&#8217;t tell a trades scheduler, a salon receptionist, or a retail buyer how to use AI for their specific work. They try it once, get a mediocre result, and conclude it&#8217;s not for them. The problem was never the tool.</div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;">SMC&#8217;s training is built around your team&#8217;s actual job functions &#8212; customer communications, scheduling, quoting, content creation, reporting, whatever eats the most time. Staff learn how to get genuinely useful output from AI on the first try: how to structure a prompt, how to give the AI the right context, how to evaluate what comes back, and how to handle customer information safely. Available remotely or on-site. Skills your team uses the next day.</div>
               <span class="ai-svc-tag">Foundation</span>
             </div>
           </div>
@@ -428,8 +531,9 @@
             <div class="ai-svc-n">05</div>
             <div>
               <div class="ai-svc-title">Workflow Automation</div>
-              <div class="ai-svc-desc">This is where small businesses get their time back. Once your team knows how to use AI and the right tools are in place, SMC identifies the repetitive tasks that are eating your hours and automates them &#8212; customer inquiry responses, appointment follow-ups, quote generation, social media content, internal reporting, onboarding new staff, and more.</div>
-              <div class="ai-svc-desc" style="margin-top:0.6rem;">The goal isn&#8217;t to replace your people. It&#8217;s to eliminate the work that prevents them &#8212; and you &#8212; from focusing on the parts of the business that actually require a human. Built for small business scale. No enterprise software. No IT department. Just automation that works.</div>
+              <div class="ai-svc-desc"><strong style="color:rgba(247,247,245,0.72);">Stop spending hours on work that takes seconds when AI does it.</strong></div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;">This is where the time comes back. Once your team knows how to use AI and the right tools are in place, SMC maps the work that&#8217;s eating your hours and automates it: customer inquiry responses, appointment follow-ups, quote generation, social media content, internal reporting, onboarding, and more.</div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;">The goal isn&#8217;t to replace your people. It&#8217;s to remove the work that prevents them &#8212; and you &#8212; from focusing on the parts of the business that actually require a human. Built for small business scale. No enterprise software. No IT department. Just automation that works.</div>
               <span class="ai-svc-tag">Transformation</span>
             </div>
           </div>
@@ -445,8 +549,8 @@
     <div style="border:1px solid rgba(201,168,76,0.15);background:rgba(201,168,76,0.04);padding:2.4rem 3rem;display:grid;grid-template-columns:1fr auto;gap:3rem;align-items:center;">
       <div>
         <p style="font-family:var(--font-ui);font-size:0.6rem;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin:0 0 0.6rem;">Add-On &#8212; AI Readiness Maintenance</p>
-        <p style="font-family:var(--font-display);font-size:1.4rem;font-weight:400;color:var(--cream);margin:0 0 0.6rem;">Keep Your Investment Current.</p>
-        <p style="font-family:var(--font-body);font-size:0.84rem;font-weight:300;color:rgba(247,247,245,0.5);margin:0;line-height:1.72;">AI platforms update how they crawl and index constantly. The Maintenance tier keeps your schema, MCP configuration, and structured data current as the protocol evolves &#8212; plus a quarterly re-audit so you always know where you stand.</p>
+        <p style="font-family:var(--font-display);font-size:1.4rem;font-weight:400;color:var(--cream);margin:0 0 0.6rem;">Keep Your Visibility Current.</p>
+        <p style="font-family:var(--font-body);font-size:0.84rem;font-weight:300;color:rgba(247,247,245,0.5);margin:0;line-height:1.72;">WebMCP is a protocol in active development. How AI platforms crawl, index, and recommend businesses will continue to change as the standard matures. The Maintenance tier keeps your schema, MCP configuration, and structured data current &#8212; so the work you&#8217;ve done doesn&#8217;t quietly become outdated. Includes a quarterly re-audit so you always know where you stand.</p>
       </div>
       <div style="text-align:right;white-space:nowrap;">
         <p style="font-family:var(--font-display);font-size:1.6rem;font-weight:300;color:var(--gold);margin:0 0 0.4rem;">$400 &#8211; $600<span style="font-family:var(--font-body);font-size:0.72rem;color:rgba(247,247,245,0.3);">/mo</span></p>
@@ -499,8 +603,9 @@
       <div>
         <div class="eyebrow dark">Get in Touch</div>
         <h2 class="contact-hl">Let&#8217;s find your first win with AI.</h2>
-        <p class="contact-sub">Whether you&#8217;ve never touched AI or you&#8217;re already using ChatGPT occasionally, SMC can show you what&#8217;s actually possible for your business &#8212; and build it with you.</p>
-        <p class="contact-sub" style="margin-top:1rem;">Fill out the form and Cheryl will be in touch within one business day.</p>
+        <p class="contact-sub">Whether you&#8217;ve never touched AI tools or you&#8217;re already using them occasionally, SMC can show you exactly what&#8217;s possible for your business &#8212; and get it running.</p>
+        <p class="contact-sub" style="margin-top:0.6rem;">Not sure where to start? The $597 Audit answers that.</p>
+        <p class="contact-sub" style="margin-top:1rem;">Fill out the form and we&#8217;ll be in touch within one business day.</p>
       </div>
       <div>
         <div id="contact-form-wrap">
@@ -525,13 +630,13 @@
               <option>General Inquiry</option>
             </select>
             <textarea id="cf-message" placeholder="Tell us about your business and what you&#8217;re hoping AI can help with *" required></textarea>
-            <button class="btn-submit" onclick="handleFormSubmit(event)">Send Message</button>
+            <button class="btn-submit" onclick="handleFormSubmit(event)">Request a Conversation</button>
             <p class="form-note">We respect your privacy. Your information will never be shared.</p>
           </div>
         </div>
         <div class="form-success" id="form-success">
           <div class="form-success-title">Message received.</div>
-          <div class="form-success-body">Thank you for reaching out. Cheryl will be in touch within one business day.</div>
+          <div class="form-success-body">Thank you for reaching out. We&#8217;ll be in touch within one business day.</div>
         </div>
       </div>
     </div>
@@ -570,22 +675,42 @@ function handleFormSubmit(e) {
     alert('Please fill in all required fields.');
     return;
   }
-  var subject = encodeURIComponent('SMC Small Business Inquiry — ' + service);
-  var body = encodeURIComponent(
-    'Name: ' + name + '\n' +
-    'Email: ' + email + '\n' +
-    'Phone: ' + (document.getElementById('cf-phone').value || 'Not provided') + '\n' +
-    'Business: ' + org + '\n' +
-    'Service: ' + service + '\n\n' +
-    'Message:\n' + message
-  );
-  window.location.href = 'mailto:cheryl@spencermorleyconsulting.ca?subject=' + subject + '&body=' + body;
-  document.getElementById('contact-form-wrap').style.display = 'none';
-  document.getElementById('form-success').style.display = 'block';
-  gtag('event', 'generate_lead', {
-    'event_category': 'contact_form',
-    'event_label': service,
-    'page': 'small_business'
+  var btn = e.target;
+  btn.disabled = true;
+  btn.textContent = 'Sending\u2026';
+  fetch('https://formspree.io/f/xojpaekn', {
+    method: 'POST',
+    headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      name: name,
+      email: email,
+      phone: document.getElementById('cf-phone').value || 'Not provided',
+      business: org,
+      service: service,
+      message: message,
+      _subject: 'SMC Small Business Inquiry \u2014 ' + service,
+      source: 'Small Business Track'
+    })
+  })
+  .then(function(r) {
+    if (r.ok) {
+      document.getElementById('contact-form-wrap').style.display = 'none';
+      document.getElementById('form-success').style.display = 'block';
+      gtag('event', 'generate_lead', {
+        'event_category': 'contact_form',
+        'event_label': service,
+        'page': 'small_business'
+      });
+    } else {
+      btn.disabled = false;
+      btn.textContent = 'Request a Conversation';
+      alert('Something went wrong. Please try again or email jordan@spencermorleyconsulting.ca directly.');
+    }
+  })
+  .catch(function() {
+    btn.disabled = false;
+    btn.textContent = 'Request a Conversation';
+    alert('Something went wrong. Please try again or email jordan@spencermorleyconsulting.ca directly.');
   });
 }
 (function () {
