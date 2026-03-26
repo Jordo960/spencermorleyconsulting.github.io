@@ -694,9 +694,10 @@
       .hero-left { padding: 9rem 2rem 5rem; }
       .hero-right { height: 380px; }
       .hero-watermark { display: none; }
-      .practices-header, .crisis-header, .ai-intro, .about-grid, .contact-grid {
+      .practices-header, .crisis-header, .ai-intro, .contact-grid {
         grid-template-columns: 1fr; gap: 2.5rem;
       }
+      .about-grid { grid-template-columns: 1fr !important; gap: 2.5rem !important; }
       .practice-grid { grid-template-columns: 1fr; }
       .ai-gateway { grid-template-columns: 1fr; }
       .svc-grid { grid-template-columns: 1fr 1fr; }
@@ -714,8 +715,11 @@
       .nav-dropdown-menu a { padding: 0.5rem 0 !important; font-size: 0.78rem !important; opacity: 0.7; }
       .nav-dropdown > a { padding-bottom: 0; }
       .svc-grid { grid-template-columns: 1fr; }
-      .hero-stats { grid-template-columns: 1fr 1fr; }
+      .hero-stats { grid-template-columns: 1fr; right: 0; }
       .contact-actions { align-items: flex-start; }
+      .contact-form-row { grid-template-columns: 1fr; }
+      .hero-actions { flex-direction: column; align-items: flex-start; gap: 1rem; }
+      .portrait-badge { position: relative !important; left: auto !important; bottom: auto !important; display: inline-block; margin-top: 0.75rem; }
       .footer-inner { flex-direction: column; gap: 1.2rem; }
       input, select, textarea { font-size: 16px !important; }
     }
@@ -1157,7 +1161,7 @@
 <!-- ===================== ABOUT ===================== -->
 <section id="about" style="padding:8rem 0;background:var(--charcoal)">
   <div class="wrap">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start">
+    <div class="about-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start">
 
       <!-- Cheryl -->
       <div>
@@ -1167,7 +1171,7 @@
               alt="Cheryl Spencer-Morley, Crisis Communications Lead"
               style="width:100%;aspect-ratio:4/5;object-fit:cover;object-position:top;display:block;filter:grayscale(15%);position:relative;z-index:1;clip-path:inset(0 0 7% 0)">
             <div style="position:absolute;bottom:-18px;right:-18px;width:100%;height:100%;border:1px solid rgba(201,168,76,0.22);z-index:0;pointer-events:none"></div>
-            <div style="position:absolute;bottom:2rem;left:-2rem;background:#C9A84C;color:#1C1C1C;padding:1.1rem 1.6rem;z-index:2">
+            <div class="portrait-badge" style="position:absolute;bottom:2rem;left:-2rem;background:#C9A84C;color:#1C1C1C;padding:1.1rem 1.6rem;z-index:2">
               <div style="font-family:'Cormorant Garamond',Georgia,serif;font-size:2.4rem;font-weight:600;line-height:1">25+</div>
               <div style="font-family:'Nunito','Century Gothic',sans-serif;font-size:0.62rem;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;line-height:1.4">Years<br>Experience</div>
             </div>
