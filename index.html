@@ -697,12 +697,11 @@
       .practices-header, .crisis-header, .ai-intro, .contact-grid {
         grid-template-columns: 1fr; gap: 2.5rem;
       }
-      .about-grid { grid-template-columns: 1fr !important; gap: 2.5rem !important; }
       .practice-grid { grid-template-columns: 1fr; }
       .ai-gateway { grid-template-columns: 1fr; }
       .svc-grid { grid-template-columns: 1fr 1fr; }
     }
-    @media (max-width: 1024px) {
+    @media (max-width: 1280px) {
       nav { padding: 0 1.2rem; }
       .wrap { padding: 0 1.2rem; }
       .nav-brand { flex-shrink: 1; min-width: 0; overflow: hidden; max-width: calc(100% - 50px); }
@@ -714,6 +713,9 @@
       .nav-dropdown-menu { display: block !important; position: static !important; transform: none !important; background: none !important; border: none !important; padding: 0 0 0.75rem 0.75rem !important; min-width: auto !important; box-shadow: none !important; }
       .nav-dropdown-menu a { padding: 0.5rem 0 !important; font-size: 0.78rem !important; opacity: 0.7; }
       .nav-dropdown > a { padding-bottom: 0; }
+    }
+    @media (max-width: 760px) {
+      .about-grid { grid-template-columns: 1fr !important; gap: 2.5rem !important; }
     }
     @media (max-width: 640px) {
       .svc-grid { grid-template-columns: 1fr; }
