@@ -28,7 +28,7 @@
       --font-body:      'Lato', 'Helvetica Neue', 'Arial', sans-serif;
     }
     html { scroll-behavior: smooth; overflow-x: hidden; }
-    body { font-family: var(--font-body); background: var(--charcoal); color: var(--cream); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+    body { font-family: var(--font-body); background: var(--charcoal); color: var(--cream); overflow-x: hidden; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-synthesis: none; }
     .smc-sym { display: block; width: 100%; height: 100%; }
     .smc-sym path { fill: currentColor; }
     nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: 74px; display: flex; align-items: center; justify-content: space-between; padding: 0 4rem; background: rgba(28,28,28,0.94); backdrop-filter: blur(18px); border-bottom: 1px solid var(--gold-border); transition: height 0.35s cubic-bezier(0.4,0,0.2,1), background 0.35s ease, box-shadow 0.35s ease; }
@@ -37,10 +37,10 @@
     .nav-brand { display: flex; align-items: center; gap: 0.85rem; text-decoration: none; flex-shrink: 0; }
     .nav-brand-icon { width: 34px; height: 34px; color: var(--gold); flex-shrink: 0; }
     .nav-brand-text { line-height: 1.25; }
-    .nav-brand-name { font-family: var(--font-ui); font-size: 0.78rem; font-weight: 900; letter-spacing: 0.14em; text-transform: uppercase; color: var(--cream); display: block; }
+    .nav-brand-name { font-family: var(--font-ui); font-size: 0.78rem; font-weight: 900; letter-spacing: 0.1em; text-transform: uppercase; color: var(--cream); display: block; }
     .nav-brand-tagline { font-family: var(--font-body); font-size: 0.6rem; font-weight: 300; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); display: block; }
-    .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
-    .nav-links > li > a { font-family: var(--font-ui); font-size: 0.72rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--cream); text-decoration: none; opacity: 0.65; transition: opacity 0.2s; position: relative; }
+    .nav-links { display: flex; align-items: center; gap: 1.4rem; list-style: none; white-space: nowrap; }
+    .nav-links > li > a { font-family: var(--font-ui); font-size: 0.72rem; font-weight: 800; letter-spacing: 0.07em; text-transform: uppercase; color: var(--cream); text-decoration: none; opacity: 0.65; transition: opacity 0.2s; position: relative; white-space: nowrap; }
     .nav-links > li > a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 1px; background: var(--gold); transition: width 0.3s; }
     .nav-links > li > a:hover { opacity: 1; }
     .nav-links > li > a:hover::after { width: 100%; }
@@ -51,7 +51,7 @@
     .nav-dropdown:hover .nav-dropdown-menu { display: block; }
     .nav-dropdown-menu a { display: block; padding: 0.6rem 1.4rem; font-family: var(--font-body); font-size: 0.78rem; font-weight: 400; letter-spacing: 0.04em; color: var(--cream); text-decoration: none; opacity: 0.72; transition: opacity 0.2s, background 0.2s; }
     .nav-dropdown-menu a:hover { opacity: 1; background: var(--gold-dim); color: var(--gold); }
-    .nav-cta { font-family: var(--font-ui) !important; padding: 0.5rem 1.4rem !important; border: 1px solid var(--gold) !important; color: var(--gold) !important; opacity: 1 !important; font-size: 0.68rem !important; font-weight: 800 !important; letter-spacing: 0.14em !important; text-transform: uppercase; text-decoration: none; transition: background 0.2s, color 0.2s !important; }
+    .nav-cta { font-family: var(--font-ui) !important; padding: 0.5rem 1.2rem !important; border: 1px solid var(--gold) !important; color: var(--gold) !important; opacity: 1 !important; font-size: 0.68rem !important; font-weight: 800 !important; letter-spacing: 0.1em !important; text-transform: uppercase; text-decoration: none; transition: background 0.2s, color 0.2s !important; }
     .nav-cta:hover { background: var(--gold) !important; color: var(--charcoal) !important; }
     .nav-cta::after { display: none !important; }
     /* ── HAMBURGER ── */
@@ -203,7 +203,11 @@
       .wrap { padding: 0 2rem; }
       .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
     }
-    @media (max-width: 1280px) {
+    @media (min-width: 1381px) and (max-width: 1600px) {
+      nav { padding: 0 2rem; }
+      .nav-links { gap: 1rem; }
+    }
+    @media (max-width: 1380px) {
       nav { padding: 0 1.2rem; }
       .wrap { padding: 0 1.2rem; }
       .nav-brand { flex-shrink: 1; min-width: 0; overflow: hidden; max-width: calc(100% - 50px); }
@@ -211,7 +215,7 @@
       .nav-links { display: none; position: fixed; top: 74px; left: 0; right: 0; height: calc(100vh - 74px); background: var(--charcoal); flex-direction: column; align-items: flex-start; padding: 1.5rem 1.2rem 3rem; gap: 0; overflow-y: auto; z-index: 199; }
       nav.nav-open .nav-links { display: flex; }
       .nav-links > li { width: 100%; border-bottom: 1px solid rgba(201,168,76,0.15); }
-      .nav-links > li > a { display: block; padding: 1rem 0; font-size: 0.85rem !important; opacity: 1; letter-spacing: 0.08em; }
+      .nav-links > li > a { display: block; padding: 1rem 0; font-size: 0.85rem !important; opacity: 1; letter-spacing: 0.08em; white-space: normal; }
       .nav-dropdown-menu { display: block !important; position: static !important; transform: none !important; background: none !important; border: none !important; padding: 0 0 0.75rem 0.75rem !important; min-width: auto !important; box-shadow: none !important; }
       .nav-dropdown-menu a { padding: 0.5rem 0 !important; font-size: 0.78rem !important; opacity: 0.7; }
       .nav-dropdown > a { padding-bottom: 0; }
@@ -249,7 +253,7 @@
       {
         "@type": "Service",
         "@id": "https://spencermorleyconsulting.ca/small-business.html#service",
-        "name": "Small Business AI Consulting — SMC Small Business Track",
+        "name": "Small Business AI Consulting — Spencer Morley Consulting Small Business Track",
         "url": "https://spencermorleyconsulting.ca/small-business.html",
         "provider": {
           "@id": "https://spencermorleyconsulting.ca/#organization"
@@ -422,11 +426,11 @@
   </button>
   <ul class="nav-links">
     <li class="nav-dropdown">
-      <a href="index.html#crisis">Communications and Crisis Management &#9660;</a>
+      <a href="index.html#crisis">Strategic Communications &amp; Crisis Management &#9660;</a>
       <div class="nav-dropdown-menu">
         <a href="index.html#crisis-mgmt">Crisis Management</a>
         <a href="index.html#media-relations">Media Relations Training</a>
-        <a href="index.html#on-demand">On-Demand Communications</a>
+        <a href="index.html#on-demand">Retained Communications Counsel</a>
       </div>
     </li>
     <li class="nav-dropdown">
@@ -452,7 +456,7 @@
     </div>
     <div class="page-hero-eyebrow">AI Consulting &#8212; Small Business Track</div>
     <h1>Your competitors are using AI.<br/><em>You&#8217;re about to catch up &#8212; and pass them.</em></h1>
-    <p class="page-hero-sub">More hours in your day. Less time on tasks that don&#8217;t need you. Found by the AI platforms your competitors haven&#8217;t figured out yet. That&#8217;s what working with SMC looks like.</p>
+    <p class="page-hero-sub">More hours in your day. Less time on tasks that don&#8217;t need you. Found by the AI platforms your competitors haven&#8217;t figured out yet. That&#8217;s what working with Spencer Morley Consulting looks like.</p>
     <div class="page-hero-actions">
       <a href="#sb-audit" class="btn-gold" onclick="gtag('event', 'cta_click', {'event_category': 'hero', 'event_label': 'see_where_business_stands', 'page': 'small_business'})">See Where Your Business Stands</a>
     </div>
@@ -512,7 +516,7 @@
         </div>
         <div class="track-intro">
           <p class="lead">AI adoption among Canadian businesses doubled in a single year &#8212; from 6% to 12%. The businesses moving first aren&#8217;t necessarily the biggest ones. They&#8217;re the ones that found someone to show them where to start.</p>
-          <p>Every week without AI costs you time you&#8217;re spending on work that a system could do in seconds. Every week your competitors experiment and learn. The gap between businesses that use AI well and businesses that don&#8217;t is already showing up in the numbers. SMC works with small businesses across Canada to close that gap &#8212; quickly, practically, and without the enterprise price tag.</p>
+          <p>Every week without AI costs you time you&#8217;re spending on work that a system could do in seconds. Every week your competitors experiment and learn. The gap between businesses that use AI well and businesses that don&#8217;t is already showing up in the numbers. Spencer Morley Consulting works with small businesses across Canada to close that gap &#8212; quickly, practically, and without the enterprise price tag.</p>
         </div>
 
         <!-- Small Business AI Stats Box -->
@@ -545,7 +549,7 @@
             <div>
               <div class="ai-svc-title">AI Readiness Assessment</div>
               <div class="ai-svc-desc"><strong style="color:rgba(247,247,245,0.72);">Find out exactly where AI can save you the most time &#8212; in your business, not in theory.</strong></div>
-              <div class="ai-svc-desc">Most tools that promise to &#8220;use AI&#8221; were built for someone else&#8217;s business. The question isn&#8217;t whether AI works &#8212; it&#8217;s whether it works for a business like yours, run the way you run it. SMC conducts a focused diagnostic of your business: your current tools, your team&#8217;s capacity, your biggest time drains, and your growth goals. We identify exactly where AI can make a meaningful difference for your specific operation &#8212; not a generic list of possibilities, but a prioritized, plain-language roadmap built around how you actually work. Delivered remotely, efficiently, and without disrupting your day.</div>
+              <div class="ai-svc-desc">Most tools that promise to &#8220;use AI&#8221; were built for someone else&#8217;s business. The question isn&#8217;t whether AI works &#8212; it&#8217;s whether it works for a business like yours, run the way you run it. Spencer Morley Consulting conducts a focused diagnostic of your business: your current tools, your team&#8217;s capacity, your biggest time drains, and your growth goals. We identify exactly where AI can make a meaningful difference for your specific operation &#8212; not a generic list of possibilities, but a prioritized, plain-language roadmap built around how you actually work. Delivered remotely, efficiently, and without disrupting your day.</div>
               <span class="ai-svc-tag">Start Here</span>
             </div>
           </div>
@@ -556,7 +560,7 @@
               <div class="ai-svc-desc"><strong style="color:rgba(247,247,245,0.72);">Someone in your city is asking an AI platform to recommend your service right now. Are you showing up &#8212; or is your competitor?</strong></div>
               <div class="ai-svc-desc" style="margin-top:0.6rem;">WebMCP only became available in February 2026. Most businesses haven&#8217;t heard of it yet. Businesses that move now will be the default recommendation before the competition knows the game changed &#8212; the same window that existed with mobile-responsive design in the early 2010s.</div>
               <div class="ai-svc-desc" style="margin-top:0.6rem;">WebMCP (Web Model Context Protocol) is the emerging standard that makes your business readable and recommendable by AI platforms &#8212; backed by Google, Microsoft, and the W3C. Think of it as the next generation of local SEO: instead of ranking in a list of links, your business gets recommended directly in conversation.</div>
-              <div class="ai-svc-desc" style="margin-top:0.6rem;">When someone asks ChatGPT &#8220;who&#8217;s the best electrician in Red Deer&#8221; or &#8220;where should I eat in Lethbridge tonight,&#8221; the businesses that come up aren&#8217;t necessarily the ones with the most reviews. They&#8217;re the ones whose digital presence is structured so AI platforms can read it, trust it, and recommend it. An AI recommendation converts differently than a sponsored result &#8212; it reads as independent and genuine, because to the consumer, it is. SMC evaluates your current digital presence, identifies exactly what needs to change, and implements the infrastructure to make your business visible and recommendable to AI platforms before your competitors get there.</div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;">When someone asks ChatGPT &#8220;who&#8217;s the best electrician in Red Deer&#8221; or &#8220;where should I eat in Lethbridge tonight,&#8221; the businesses that come up aren&#8217;t necessarily the ones with the most reviews. They&#8217;re the ones whose digital presence is structured so AI platforms can read it, trust it, and recommend it. An AI recommendation converts differently than a sponsored result &#8212; it reads as independent and genuine, because to the consumer, it is. Spencer Morley Consulting evaluates your current digital presence, identifies exactly what needs to change, and implements the infrastructure to make your business visible and recommendable to AI platforms before your competitors get there.</div>
               <span class="ai-svc-tag" style="background:rgba(201,168,76,0.18);border-color:rgba(201,168,76,0.4);">NEW FOR 2026</span>
             </div>
           </div>
@@ -565,7 +569,7 @@
             <div>
               <div class="ai-svc-title">AI Presence &amp; Reputation</div>
               <div class="ai-svc-desc"><strong style="color:rgba(247,247,245,0.72);">Get recommended by AI, not just found by Google.</strong></div>
-              <div class="ai-svc-desc" style="margin-top:0.6rem;">Being found in a Google search and being recommended by an AI assistant are two different things &#8212; and they require two different kinds of presence. AI platforms pull their recommendations from reviews, structured data, schema markup, and content that signals what your business does and for whom. Once your WebMCP Readiness Assessment identifies your gaps, SMC builds and maintains those signals on your behalf.</div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;">Being found in a Google search and being recommended by an AI assistant are two different things &#8212; and they require two different kinds of presence. AI platforms pull their recommendations from reviews, structured data, schema markup, and content that signals what your business does and for whom. Once your WebMCP Readiness Assessment identifies your gaps, Spencer Morley Consulting builds and maintains those signals on your behalf.</div>
               <div class="ai-svc-desc" style="margin-top:0.6rem;">What&#8217;s included: Google Business Profile management, review velocity program, schema markup, AI-optimized content, and monthly before/after AI query reporting so you can see exactly how your visibility is changing.</div>
               <span class="ai-svc-tag">Monthly Retainer</span>
             </div>
@@ -591,7 +595,7 @@
                 </div>
               </div>
               <div class="ai-svc-desc" style="margin-top:0.6rem;">The problem isn&#8217;t resistance. It&#8217;s that a generic AI tutorial doesn&#8217;t tell a trades scheduler, a salon receptionist, or a retail buyer how to use AI for their specific work. They try it once, get a mediocre result, and conclude it&#8217;s not for them. The problem was never the tool.</div>
-              <div class="ai-svc-desc" style="margin-top:0.6rem;">SMC&#8217;s training is built around your team&#8217;s actual job functions &#8212; customer communications, scheduling, quoting, content creation, reporting, whatever eats the most time. Staff learn how to get genuinely useful output from AI on the first try: how to structure a prompt, how to give the AI the right context, how to evaluate what comes back, and how to handle customer information safely. Available remotely or on-site. Skills your team uses the next day.</div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;">Spencer Morley Consulting&#8217;s training is built around your team&#8217;s actual job functions &#8212; customer communications, scheduling, quoting, content creation, reporting, whatever eats the most time. Staff learn how to get genuinely useful output from AI on the first try: how to structure a prompt, how to give the AI the right context, how to evaluate what comes back, and how to handle customer information safely. Available remotely or on-site. Skills your team uses the next day.</div>
               <span class="ai-svc-tag">Foundation</span>
             </div>
           </div>
@@ -600,7 +604,7 @@
             <div>
               <div class="ai-svc-title">Workflow Automation</div>
               <div class="ai-svc-desc"><strong style="color:rgba(247,247,245,0.72);">Stop spending hours on work that takes seconds when AI does it.</strong></div>
-              <div class="ai-svc-desc" style="margin-top:0.6rem;">This is where the time comes back. Once your team knows how to use AI and the right tools are in place, SMC maps the work that&#8217;s eating your hours and automates it: customer inquiry responses, appointment follow-ups, quote generation, social media content, internal reporting, onboarding, and more.</div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;">This is where the time comes back. Once your team knows how to use AI and the right tools are in place, Spencer Morley Consulting maps the work that&#8217;s eating your hours and automates it: customer inquiry responses, appointment follow-ups, quote generation, social media content, internal reporting, onboarding, and more.</div>
               <div class="ai-svc-desc" style="margin-top:0.6rem;">The goal isn&#8217;t to replace your people. It&#8217;s to remove the work that prevents them &#8212; and you &#8212; from focusing on the parts of the business that actually require a human. Built for small business scale. No enterprise software. No IT department. Just automation that works.</div>
               <span class="ai-svc-tag">Transformation</span>
             </div>
@@ -639,12 +643,12 @@
       <div>
         <div class="eyebrow">About</div>
         <h2 class="about-hl">Leading the next frontier of business strategy &#8212; where AI meets real-world results.</h2>
-        <p class="about-body">Jordan Morley leads SMC&#8217;s AI consulting practice, helping small businesses and municipalities across Canada navigate the practical realities of AI adoption. His work focuses on making AI accessible and actionable for organizations that don&#8217;t have enterprise budgets or dedicated IT teams &#8212; from readiness assessments and staff training to WebMCP infrastructure and workflow automation.</p>
+        <p class="about-body">Jordan Morley leads Spencer Morley Consulting&#8217;s AI consulting practice, helping small businesses and municipalities across Canada navigate the practical realities of AI adoption. His work focuses on making AI accessible and actionable for organizations that don&#8217;t have enterprise budgets or dedicated IT teams &#8212; from readiness assessments and staff training to WebMCP infrastructure and workflow automation.</p>
         <p class="about-body">With deep expertise in how AI platforms discover and recommend businesses, Jordan brings a builder&#8217;s approach to consulting: identify the highest-value opportunity, implement it cleanly, and make sure the client can sustain it without ongoing dependency.</p>
         <div class="creds">
           <div class="cred">
             <div class="cred-title">AI Practice Lead, Spencer Morley Consulting</div>
-            <div class="cred-detail">Leading SMC&#8217;s AI consulting practice for businesses and municipalities across Canada.</div>
+            <div class="cred-detail">Leading Spencer Morley Consulting&#8217;s AI consulting practice for businesses and municipalities across Canada.</div>
           </div>
           <div class="cred">
             <div class="cred-title">Google AI Professional Certificate</div>
@@ -671,7 +675,7 @@
       <div>
         <div class="eyebrow dark">Get in Touch</div>
         <h2 class="contact-hl">Let&#8217;s find your first win with AI.</h2>
-        <p class="contact-sub">Whether you&#8217;ve never touched AI tools or you&#8217;re already using them occasionally, SMC can show you exactly what&#8217;s possible for your business &#8212; and get it running.</p>
+        <p class="contact-sub">Whether you&#8217;ve never touched AI tools or you&#8217;re already using them occasionally, Spencer Morley Consulting can show you exactly what&#8217;s possible for your business &#8212; and get it running.</p>
         <p class="contact-sub" style="margin-top:0.6rem;">Not sure where to start? The $597 Audit answers that.</p>
         <p class="contact-sub" style="margin-top:1rem;">Fill out the form and we&#8217;ll be in touch within one business day.</p>
       </div>
@@ -756,7 +760,7 @@ function handleFormSubmit(e) {
       business: org,
       service: service,
       message: message,
-      _subject: 'SMC Small Business Inquiry \u2014 ' + service,
+      _subject: 'Spencer Morley Consulting Small Business Inquiry \u2014 ' + service,
       source: 'Small Business Track'
     })
   })
