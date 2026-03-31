@@ -1,13 +1,13 @@
 # SMC_CONTEXT.md
 ## Spencer Morley Consulting — Shared Business Context
 **Single source of truth. Referenced by all team and agent files.**
-Version 1.1 · March 2026
+Version 1.2 · March 2026
 
 ---
 
 ## The Firm
 
-**Spencer Morley Consulting (SMC)** is a Canadian AI consulting and crisis communications firm.
+**Spencer Morley Consulting (SMC)** is a Canadian AI consulting and strategic communications & crisis management firm.
 
 **Principals:**
 - **Jordan Morley** — AI Practice Lead & Co-Principal
