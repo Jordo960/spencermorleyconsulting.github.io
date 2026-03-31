@@ -1,7 +1,7 @@
 # SMC_CONTEXT.md
 ## Spencer Morley Consulting — Shared Business Context
 **Single source of truth. Referenced by all team and agent files.**
-Version 1.0 · March 2026
+Version 1.1 · March 2026
 
 ---
 
@@ -11,7 +11,7 @@ Version 1.0 · March 2026
 
 **Principals:**
 - **Jordan Morley** — AI Practice Lead & Co-Principal
-- **Cheryl Spencer-Morley** — Communications Practice Lead & Co-Principal
+- **Cheryl Spencer-Morley** — Strategic Communications & Crisis Management Practice Lead & Co-Principal
 
 **Jordan's operating mode:** Founder Mode. Jordan makes all decisions and approves all deliverables. Agents and team members execute. Jordan does not draft, research, or format — that is the team's job. Jordan reads, approves, and sends.
 
