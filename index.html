@@ -824,7 +824,7 @@
         }
       },
       {
-        "@type": "LocalBusiness",
+        "@type": "ProfessionalService",
         "@id": "https://spencermorleyconsulting.ca/#organization",
         "name": "Spencer Morley Consulting",
         "url": "https://spencermorleyconsulting.ca/",
@@ -949,30 +949,98 @@
   src="https://www.facebook.com/tr?id=921953610727268&ev=PageView&noscript=1"
   /></noscript>
   <!-- End Meta Pixel Code -->
+  <!-- ══ Block 1 — Organization + Person ══ -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "Spencer Morley Consulting",
-    "url": "https://spencermorleyconsulting.ca",
-    "description": "Canadian AI consulting and crisis communications firm",
-    "areaServed": "Canada",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "1509 Lambert Court NW",
-      "addressLocality": "Edmonton",
-      "addressRegion": "AB",
-      "postalCode": "T6R 2Y3",
-      "addressCountry": "CA"
-    },
-    "founders": [
-      { "@type": "Person", "name": "Jordan Morley" },
-      { "@type": "Person", "name": "Cheryl Spencer-Morley" }
-    ],
-    "knowsAbout": ["AI consulting", "crisis communications", "municipal AI readiness", "small business AI"],
-    "telephone": "+1-780-868-8272",
-    "image": "https://spencermorleyconsulting.ca/SMC_logo_gold_transparent.png",
-    "priceRange": "$$"
+    "@graph": [
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://spencermorleyconsulting.ca/#organization",
+        "name": "Spencer Morley Consulting",
+        "url": "https://spencermorleyconsulting.ca",
+        "logo": "https://spencermorleyconsulting.ca/SMC_logo_gold_transparent.png",
+        "description": "Spencer Morley Consulting helps Canadian municipalities and Alberta small businesses adopt AI without the risk, jargon, or guesswork. The firm also provides strategic communications and crisis management services across federal, provincial, and municipal environments.",
+        "areaServed": [
+          {
+            "@type": "Country",
+            "name": "Canada"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Alberta"
+          }
+        ],
+        "knowsAbout": [
+          "AI readiness assessment",
+          "municipal AI compliance",
+          "ATIA privacy management",
+          "POPA compliance",
+          "staff AI training",
+          "workflow automation",
+          "crisis communications",
+          "strategic communications"
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "SMC Services",
+          "itemListElement": [
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "AI Blind Spot Audit"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "AI Readiness Assessment"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Staff AI Training and Prompt Engineering"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "WebMCP Readiness"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Workflow Automation"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Crisis Management"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Media Relations Training"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Retained Communications Counsel"}}
+          ]
+        },
+        "founder": [
+          {"@id": "https://spencermorleyconsulting.ca/#jordan-morley"},
+          {"@id": "https://spencermorleyconsulting.ca/#cheryl-spencer-morley"}
+        ],
+        "sameAs": [
+          "https://www.linkedin.com/company/spencer-morley-consulting"
+        ]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://spencermorleyconsulting.ca/#jordan-morley",
+        "name": "Jordan Morley",
+        "jobTitle": "AI Practice Lead and Co-Principal",
+        "worksFor": {"@id": "https://spencermorleyconsulting.ca/#organization"},
+        "url": "https://spencermorleyconsulting.ca",
+        "knowsAbout": [
+          "AI consulting for Canadian municipalities",
+          "AI readiness assessment",
+          "ATIA compliance and AI",
+          "POPA privacy management programs",
+          "municipal AI training",
+          "small business AI adoption Alberta",
+          "WebMCP readiness",
+          "workflow automation"
+        ],
+        "description": "Jordan Morley is an AI consulting specialist serving Canadian municipalities and Alberta small businesses. He leads the AI practice at Spencer Morley Consulting, helping organizations navigate AI adoption, privacy compliance, and staff training.",
+        "sameAs": [
+          "https://www.linkedin.com/in/jordanrmorley/"
+        ]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://spencermorleyconsulting.ca/#cheryl-spencer-morley",
+        "name": "Cheryl Spencer-Morley",
+        "jobTitle": "Strategic Communications and Crisis Management Practice Lead and Co-Principal",
+        "worksFor": {"@id": "https://spencermorleyconsulting.ca/#organization"},
+        "url": "https://spencermorleyconsulting.ca",
+        "knowsAbout": [
+          "crisis communications",
+          "media relations training",
+          "strategic communications",
+          "government communications Canada",
+          "emergency communications Alberta"
+        ]
+      }
+    ]
   }
   </script>
   <link rel="icon" type="image/x-icon" href="/favicon.ico">

@@ -1082,31 +1082,193 @@
   src="https://www.facebook.com/tr?id=921953610727268&ev=PageView&noscript=1"
   /></noscript>
   <!-- End Meta Pixel Code -->
+  <!-- ══ Block 1 — Organization + Person ══ -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "Spencer Morley Consulting",
-    "url": "https://spencermorleyconsulting.ca",
-    "description": "Canadian AI consulting and crisis communications firm",
-    "areaServed": "Canada",
-    "serviceType": "Municipal AI Readiness",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "1509 Lambert Court NW",
-      "addressLocality": "Edmonton",
-      "addressRegion": "AB",
-      "postalCode": "T6R 2Y3",
-      "addressCountry": "CA"
-    },
-    "founders": [
-      { "@type": "Person", "name": "Jordan Morley" },
-      { "@type": "Person", "name": "Cheryl Spencer-Morley" }
-    ],
-    "knowsAbout": ["AI consulting", "crisis communications", "municipal AI readiness", "small business AI"],
-    "telephone": "+1-780-868-8272",
-    "image": "https://spencermorleyconsulting.ca/SMC_logo_gold_transparent.png",
-    "priceRange": "$$"
+    "@graph": [
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://spencermorleyconsulting.ca/#organization",
+        "name": "Spencer Morley Consulting",
+        "url": "https://spencermorleyconsulting.ca",
+        "logo": "https://spencermorleyconsulting.ca/SMC_logo_gold_transparent.png",
+        "description": "Spencer Morley Consulting helps Canadian municipalities and Alberta small businesses adopt AI without the risk, jargon, or guesswork. The firm also provides strategic communications and crisis management services across federal, provincial, and municipal environments.",
+        "areaServed": [
+          {
+            "@type": "Country",
+            "name": "Canada"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Alberta"
+          }
+        ],
+        "knowsAbout": [
+          "AI readiness assessment",
+          "municipal AI compliance",
+          "ATIA privacy management",
+          "POPA compliance",
+          "staff AI training",
+          "workflow automation",
+          "crisis communications",
+          "strategic communications"
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "SMC Services",
+          "itemListElement": [
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "AI Blind Spot Audit"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "AI Readiness Assessment"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Staff AI Training and Prompt Engineering"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "WebMCP Readiness"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Workflow Automation"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Crisis Management"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Media Relations Training"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Retained Communications Counsel"}}
+          ]
+        },
+        "founder": [
+          {"@id": "https://spencermorleyconsulting.ca/#jordan-morley"},
+          {"@id": "https://spencermorleyconsulting.ca/#cheryl-spencer-morley"}
+        ],
+        "sameAs": [
+          "https://www.linkedin.com/company/spencer-morley-consulting"
+        ]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://spencermorleyconsulting.ca/#jordan-morley",
+        "name": "Jordan Morley",
+        "jobTitle": "AI Practice Lead and Co-Principal",
+        "worksFor": {"@id": "https://spencermorleyconsulting.ca/#organization"},
+        "url": "https://spencermorleyconsulting.ca",
+        "knowsAbout": [
+          "AI consulting for Canadian municipalities",
+          "AI readiness assessment",
+          "ATIA compliance and AI",
+          "POPA privacy management programs",
+          "municipal AI training",
+          "small business AI adoption Alberta",
+          "WebMCP readiness",
+          "workflow automation"
+        ],
+        "description": "Jordan Morley is an AI consulting specialist serving Canadian municipalities and Alberta small businesses. He leads the AI practice at Spencer Morley Consulting, helping organizations navigate AI adoption, privacy compliance, and staff training.",
+        "sameAs": [
+          "https://www.linkedin.com/in/jordanrmorley/"
+        ]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://spencermorleyconsulting.ca/#cheryl-spencer-morley",
+        "name": "Cheryl Spencer-Morley",
+        "jobTitle": "Strategic Communications and Crisis Management Practice Lead and Co-Principal",
+        "worksFor": {"@id": "https://spencermorleyconsulting.ca/#organization"},
+        "url": "https://spencermorleyconsulting.ca",
+        "knowsAbout": [
+          "crisis communications",
+          "media relations training",
+          "strategic communications",
+          "government communications Canada",
+          "emergency communications Alberta"
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- ══ Block 2 — Municipal Services ══ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Service",
+        "@id": "https://spencermorleyconsulting.ca/municipal.html#ai-readiness-assessment",
+        "name": "AI Readiness Assessment for Municipalities",
+        "provider": {"@id": "https://spencermorleyconsulting.ca/#organization"},
+        "description": "A structured assessment of a municipality's current AI use, compliance obligations under ATIA and POPA, and readiness to adopt AI tools safely. Produces a written brief suitable for internal decision-making or council presentation. Completed within two to three weeks of booking.",
+        "areaServed": {"@type": "Country", "name": "Canada"},
+        "audience": {
+          "@type": "Audience",
+          "audienceType": "Municipal administrators, CAOs, and elected officials at small and rural Canadian municipalities"
+        }
+      },
+      {
+        "@type": "Service",
+        "@id": "https://spencermorleyconsulting.ca/municipal.html#staff-ai-training",
+        "name": "Staff AI Training and Prompt Engineering for Municipal Staff",
+        "provider": {"@id": "https://spencermorleyconsulting.ca/#organization"},
+        "description": "Practical AI training for municipal staff — how to use AI tools safely and effectively in day-to-day government operations. Tailored to the municipality's tools, risk profile, and existing workflows. Not a coding course — a practical session on responsible AI use in the public sector.",
+        "areaServed": {"@type": "Country", "name": "Canada"}
+      },
+      {
+        "@type": "Service",
+        "@id": "https://spencermorleyconsulting.ca/municipal.html#ai-policy-development",
+        "name": "AI Policy Development for Municipalities",
+        "provider": {"@id": "https://spencermorleyconsulting.ca/#organization"},
+        "description": "Development of a documented Privacy Management Program and AI acceptable use policy that satisfies Alberta's ATIA and POPA obligations. Distinct from a general IT acceptable use policy — a purpose-built compliance document for municipalities using AI tools.",
+        "areaServed": {"@type": "Country", "name": "Canada"}
+      },
+      {
+        "@type": "Service",
+        "@id": "https://spencermorleyconsulting.ca/municipal.html#private-llm",
+        "name": "Private LLM Deployment — MuniMind",
+        "provider": {"@id": "https://spencermorleyconsulting.ca/#organization"},
+        "description": "Deployment of a private language model for municipalities handling sensitive ratepayer data. AI that stays within the municipality's control — answering questions using internal information without sending data to public AI platforms.",
+        "areaServed": {"@type": "Country", "name": "Canada"}
+      }
+    ]
+  }
+  </script>
+
+  <!-- ══ Block 3 — Municipal FAQ ══ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the June 11 2026 Privacy Management Program deadline for Alberta municipalities?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "June 11, 2026 is the deadline by which Alberta municipalities must have a documented Privacy Management Program in place under the Freedom of Information and Protection of Privacy Act (FOIPP) and Protection of Privacy Act (POPA). An existing IT acceptable use policy does not satisfy this requirement. The program must specifically address how the municipality manages personal information, including information processed using AI tools."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is shadow AI and why does it matter for municipalities?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Shadow AI refers to the use of public AI tools — such as ChatGPT, Gemini, or Microsoft Copilot — by municipal staff without formal approval, policy, or training. Research indicates that approximately 48% of public servants are already using these tools with work data, including ratepayer information. This creates compliance exposure under ATIA and POPA, and potential reputational risk for the municipality."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does an IT acceptable use policy satisfy the ATIA AI compliance requirement?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. An existing IT acceptable use policy does not satisfy Alberta's Privacy Management Program requirement under ATIA and POPA. Municipalities need a purpose-built program that specifically addresses AI tool use, data handling, staff accountability, and privacy risk management."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does the AI Readiness Assessment take for a small municipality?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Spencer Morley Consulting's AI Readiness Assessment is a two-session engagement, typically completed within two to three weeks of booking. It produces a written brief suitable for internal decision-making or council presentation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you work with small and rural municipalities?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Spencer Morley Consulting works specifically with small and rural Canadian municipalities. Jordan Morley's AI practice is designed for organizations with lean administrative teams and limited internal IT resources — not for large urban municipalities with dedicated technology departments."
+        }
+      }
+    ]
   }
   </script>
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
