@@ -274,6 +274,18 @@
       color: rgba(247,247,245,0.55); padding-top: 0.5rem;
     }
 
+    /* Canadian Ownership Badge */
+    .canadian-badge {
+      display: inline-flex; align-items: center; gap: 0.45rem;
+      margin-top: 1rem;
+    }
+    .canadian-badge svg { flex-shrink: 0; }
+    .canadian-badge span {
+      font-family: var(--font-ui); font-weight: 600;
+      font-size: 0.75rem; letter-spacing: 0.06em;
+      color: var(--gold); text-transform: uppercase;
+    }
+
     .practice-grid {
       display: grid; grid-template-columns: 1fr 1fr;
       gap: 1px; background: var(--gold-border);
@@ -1149,7 +1161,19 @@
         <div class="eyebrow">Our Practice Areas</div>
         <h2 class="practices-hl">One firm.<br/><em>Many capabilities.</em></h2>
       </div>
-      <p class="practices-body">Spencer Morley Consulting operates at the intersection of high-stakes communications and emerging technology. Our strategic communications and crisis management practice equips governments, institutions, and businesses across Canada to manage high-stakes situations with confidence. Our AI consulting practice serves municipalities and businesses of every size.</p>
+      <!-- Right column: paragraph + badge wrapped together as one grid cell -->
+      <div>
+        <!-- BEFORE: practices-body paragraph (original) -->
+        <!-- AFTER: Canadian ownership sentence appended; badge added below -->
+        <p class="practices-body">Spencer Morley Consulting operates at the intersection of high-stakes communications and emerging technology. Our strategic communications and crisis management practice equips governments, institutions, and businesses across Canada to manage high-stakes situations with confidence. Our AI consulting practice serves municipalities and businesses of every size. Spencer Morley Consulting is 100% Canadian owned and operated.</p>
+        <!-- Canadian Ownership Badge -->
+        <div class="canadian-badge">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 32 32" fill="#C9A84C" aria-hidden="true">
+            <path d="M16 2l-2.5 5.5-1.5-.5 1 4.5-4-2 .5 2-4.5-1 2 3.5-3 .5 4 3-1 1.5 3.5-.5-.5 4.5 1.5-.5.5 5.5 1.5-3 1.5 3 .5-5.5 1.5.5-.5-4.5 3.5.5-1-1.5 4-3-3-.5 2-3.5-4.5 1 .5-2-4 2 1-4.5-1.5.5z"/>
+          </svg>
+          <span>100% Canadian Owned &amp; Operated</span>
+        </div>
+      </div>
     </div>
 
     <div class="practice-grid">
