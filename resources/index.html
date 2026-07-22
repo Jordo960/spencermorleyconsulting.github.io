@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI & Communications Glossary — Spencer Morley Consulting</title>
+  <meta name="description" content="Plain-language definitions of AI, privacy compliance, and crisis communications terms for Canadian municipalities and small businesses. GEO, AEO, WebMCP, shadow AI, ATIA, POPA, FOIPPA, MFIPPA, FIPPA, LAFOIP, PIPEDA, RAG, AI governance, AI hallucination, and more." />
+  <link rel="canonical" href="https://spencermorleyconsulting.ca/resources/" />
+
+  <meta property="og:title" content="AI & Communications Glossary — Spencer Morley Consulting" />
+  <meta property="og:description" content="Plain-language definitions of AI, privacy compliance, and crisis communications terms — written for municipal administrators, small business owners, and communications professionals." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://spencermorleyconsulting.ca/resources/" />
+  <meta property="og:image" content="https://spencermorleyconsulting.ca/og-image.jpg" />
+
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://spencermorleyconsulting.ca/resources/#glossary",
+        "name": "AI & Communications Glossary — Spencer Morley Consulting",
+        "description": "Plain-language definitions of AI, privacy compliance, and crisis communications terms for Canadian municipalities and small businesses.",
+        "url": "https://spencermorleyconsulting.ca/resources/",
+        "publisher": {
+          "@type": "ProfessionalService",
+          "name": "Spencer Morley Consulting",
+          "url": "https://spencermorleyconsulting.ca/"
+        },
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": [".page-hero h1", ".page-hero-sub", ".term-name", ".term-def"]
+        },
+        "hasDefinedTerm": [
+          { "@type": "DefinedTerm", "@id": "https://spencermorleyconsulting.ca/resources/#shadow-ai", "name": "Shadow AI", "termCode": "shadow-ai", "description": "The use of public AI tools by staff without formal authorization, training, or governance policy. When a municipal employee enters citizen personal information into ChatGPT or Gemini without a governing policy in place, that constitutes shadow AI — creating compliance exposure under ATIA, POPA, FOIPPA, and MFIPPA.", "inDefinedTermSet": "https://spencermorleyconsulting.ca/resources/#glossary" },
+          { "@type": "DefinedTerm", "@id": "https://spencermorleyconsulting.ca/resources/#privacy-management-program", "name": "Privacy Management Program", "termCode": "privacy-management-program", "description": "A formal set of documented policies, procedures, and controls governing how an organization collects, uses, discloses, retains, and disposes of personal information. Required of all Alberta public bodies under POPA.", "inDefinedTermSet": "https://spencermorleyconsulting.ca/resources/#glossary" },
+          { "@type": "DefinedTerm", "@id": "https://spencermorleyconsulting.ca/resources/#atia", "name": "ATIA (Access to Information Act — Alberta)", "termCode": "atia", "description": "Alberta's legislation governing the right of public access to records held by provincial public bodies, including municipalities. Works in conjunction with POPA to define privacy management obligations.", "inDefinedTermSet": "https://spencermorleyconsulting.ca/resources/#glossary" },
+          { "@type": "DefinedTerm", "@id": "https://spencermorleyconsulting.ca/resources/#popa", "name": "POPA (Protection of Privacy Act — Alberta)", "termCode": "popa", "description": "Alberta's legislation governing how provincial public bodies — including municipalities — collect, use, disclose, and protect personal information. Requires a formal Privacy Management Program.", "inDefinedTermSet": "https://spencermorleyconsulting.ca/resources/#glossary" },
+          { "@type": "DefinedTerm", "@id": "https://spencermorleyconsulting.ca/resources/#foippa", "name": "FOIPPA (Freedom of Information and Protection of Privacy Act — BC)", "termCode": "foippa", "description": "British Columbia's privacy legislation for public bodies, including municipalities. Section 30.1 requires data to be stored and accessed only in Canada, creating specific compliance challenges for cloud AI tools.", "inDefinedTermSet": "https://spencermorleyconsulting.ca/resources/#glossary" },
+          { "@type": "DefinedTerm", "@id": "https://spencermorleyconsulting.ca/resources/#mfippa", "name": "MFIPPA (Municipal Freedom of Information and Protection of Privacy Act — Ontario)", "termCode": "mfippa", "description": "Ontario's privacy legislation governing municipalities, school boards, and local institutions. Requires Privacy Impact Assessments before deploying AI tools that interact with personal information.", "inDefinedTermSet": "https://spencermorleyconsulting.ca/resources/#glossary" },
+          { "@type": "DefinedTerm", "@id": "https://spencermorleyconsulting.ca/resources/#geo", "name": "GEO (Generative Engine Optimization)", "termCode": "geo", "description": "The practice of optimizing a business's online presence so that AI platforms — ChatGPT, Perplexity, Gemini — cite it in generated answers. Distinct from SEO, which targets ranked search results.", "inDefinedTermSet": "https://spencermorleyconsulting.ca/resources/#glossary" },
+          { "@type": "DefinedTerm", "@id": "https://spencermorleyconsulting.ca/resources/#aeo", "name": "AEO (Answer Engine Optimization)", "termCode": "aeo", "description": "The practice of structuring content to earn featured answer positions in AI-powered search surfaces — Google AI Overviews, voice search, and direct-answer results.", "inDefinedTermSet": "https://spencermorleyconsulting.ca/resources/#glossary" },
+          { "@type": "DefinedTerm", "@id": "https://spencermorleyconsulting.ca/resources/#webmcp", "name": "WebMCP (Model Context Protocol)", "termCode": "webmcp", "description": "An open protocol (released February 2026) that allows AI agents to connect directly to business data sources and tools. Businesses with MCP endpoints are discoverable and actionable by AI agents in ways that websites and search listings alone cannot provide.", "inDefinedTermSet": "https://spencermorleyconsulting.ca/resources/#glossary" },
+          { "@type": "DefinedTerm", "@id": "https://spencermorleyconsulting.ca/resources/#holding-statement", "name": "Holding Statement", "termCode": "holding-statement", "description": "An initial public communication issued during a crisis before all facts are known. Its purpose is to acknowledge the situation, demonstrate accountability, and prevent rumour escalation — without prejudging an ongoing internal or legal process.", "inDefinedTermSet": "https://spencermorleyconsulting.ca/resources/#glossary" },
+          { "@type": "DefinedTerm", "@id": "https://spencermorleyconsulting.ca/resources/#private-llm", "name": "Private LLM", "termCode": "private-llm", "description": "A large language model deployed within an organization's own infrastructure — not a public cloud service. Citizen data processed by a private LLM stays within organizational systems and does not leave to third-party servers.", "inDefinedTermSet": "https://spencermorleyconsulting.ca/resources/#glossary" },
+          { "@type": "DefinedTerm", "@id": "https://spencermorleyconsulting.ca/resources/#ai-governance", "name": "AI Governance", "termCode": "ai-governance", "description": "The policies, roles, and oversight processes an organization uses to ensure AI is used responsibly, legally, and in line with its mission. Defines who approves AI tools, who is accountable, how staff are trained, and how AI use is monitored.", "inDefinedTermSet": "https://spencermorleyconsulting.ca/resources/#glossary" },
+          { "@type": "DefinedTerm", "@id": "https://spencermorleyconsulting.ca/resources/#algorithmic-bias", "name": "Algorithmic Bias", "termCode": "algorithmic-bias", "description": "Systematic, unfair skew in AI output that disadvantages certain groups, usually inherited from training data. Managed through tool selection, human review of consequential decisions, and testing against real cases.", "inDefinedTermSet": "https://spencermorleyconsulting.ca/resources/#glossary" },
+          { "@type": "DefinedTerm", "@id": "https://spencermorleyconsulting.ca/resources/#data-residency", "name": "Data Residency", "termCode": "data-residency", "description": "The requirement that data be stored and accessed only within a specific country or jurisdiction. BC's FOIPPA Section 30.1 is the clearest Canadian example; a private, local AI resolves it by keeping data on infrastructure the organization controls.", "inDefinedTermSet": "https://spencermorleyconsulting.ca/resources/#glossary" },
+          { "@type": "DefinedTerm", "@id": "https://spencermorleyconsulting.ca/resources/#fippa", "name": "FIPPA (Freedom of Information and Protection of Privacy Act, Manitoba)", "termCode": "fippa", "description": "Manitoba's privacy legislation governing public bodies including municipalities. The Manitoba Ombudsman oversees compliance. Manitoba's counterpart to Alberta's ATIA/POPA, BC's FOIPPA, and Ontario's MFIPPA.", "inDefinedTermSet": "https://spencermorleyconsulting.ca/resources/#glossary" },
+          { "@type": "DefinedTerm", "@id": "https://spencermorleyconsulting.ca/resources/#generative-ai", "name": "Generative AI", "termCode": "generative-ai", "description": "AI that creates new content (text, images, code, audio) from a prompt, rather than only classifying or predicting. The category behind ChatGPT, Claude, and Gemini; it produces plausible output rather than verified fact, so human review matters.", "inDefinedTermSet": "https://spencermorleyconsulting.ca/resources/#glossary" },
+          { "@type": "DefinedTerm", "@id": "https://spencermorleyconsulting.ca/resources/#ai-hallucination", "name": "AI Hallucination", "termCode": "ai-hallucination", "description": "When an AI tool produces fluent, confident output that is factually wrong or fabricated. The main reason AI output must be verified; mitigated by staff training, human review, and retrieval-augmented generation.", "inDefinedTermSet": "https://spencermorleyconsulting.ca/resources/#glossary" },
+          { "@type": "DefinedTerm", "@id": "https://spencermorleyconsulting.ca/resources/#human-in-the-loop", "name": "Human-in-the-Loop", "termCode": "human-in-the-loop", "description": "A design principle that keeps a person in control of consequential AI decisions, with the AI assisting rather than deciding. The core safeguard against hallucination and bias, preserving accountability.", "inDefinedTermSet": "https://spencermorleyconsulting.ca/resources/#glossary" },
+          { "@type": "DefinedTerm", "@id": "https://spencermorleyconsulting.ca/resources/#llm", "name": "Large Language Model (LLM)", "termCode": "llm", "description": "The type of AI model, trained on very large amounts of text, that powers tools like ChatGPT, Claude, and Gemini. Public LLMs are accessed over the internet; the same technology can run privately to keep data in-house.", "inDefinedTermSet": "https://spencermorleyconsulting.ca/resources/#glossary" },
+          { "@type": "DefinedTerm", "@id": "https://spencermorleyconsulting.ca/resources/#lafoip", "name": "LAFOIP (Local Authority Freedom of Information and Protection of Privacy Act, Saskatchewan)", "termCode": "lafoip", "description": "Saskatchewan's privacy legislation governing local authorities including municipalities. Distinct from the provincial FOIP Act; overseen by the Information and Privacy Commissioner of Saskatchewan.", "inDefinedTermSet": "https://spencermorleyconsulting.ca/resources/#glossary" },
+          { "@type": "DefinedTerm", "@id": "https://spencermorleyconsulting.ca/resources/#pii", "name": "PII (Personally Identifiable Information)", "termCode": "pii", "description": "Any information that can identify a specific individual, alone or combined with other data. The category privacy legislation protects; it should not be entered into a public AI tool without a governing policy and safeguards.", "inDefinedTermSet": "https://spencermorleyconsulting.ca/resources/#glossary" },
+          { "@type": "DefinedTerm", "@id": "https://spencermorleyconsulting.ca/resources/#pipeda", "name": "PIPEDA (Personal Information Protection and Electronic Documents Act)", "termCode": "pipeda", "description": "Canada's federal privacy law for personal information collected in commercial activity. Applies to many small businesses and to non-profits engaged in commercial activity; engaged when customer or donor data is fed into an AI tool.", "inDefinedTermSet": "https://spencermorleyconsulting.ca/resources/#glossary" },
+          { "@type": "DefinedTerm", "@id": "https://spencermorleyconsulting.ca/resources/#prompt-injection", "name": "Prompt Injection", "termCode": "prompt-injection", "description": "A security attack that hides malicious instructions inside content an AI reads, tricking it into ignoring its rules or leaking data. A real operational risk as AI is connected to organizational data and tools.", "inDefinedTermSet": "https://spencermorleyconsulting.ca/resources/#glossary" },
+          { "@type": "DefinedTerm", "@id": "https://spencermorleyconsulting.ca/resources/#rag", "name": "RAG (Retrieval-Augmented Generation)", "termCode": "rag", "description": "A technique that grounds an AI's answers in a specific, trusted set of documents rather than only its training. Reduces hallucination and lets an assistant answer about your organization with checkable citations; what makes a private local AI useful.", "inDefinedTermSet": "https://spencermorleyconsulting.ca/resources/#glossary" }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://spencermorleyconsulting.ca/" },
+          { "@type": "ListItem", "position": 2, "name": "Glossary" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is shadow AI?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Shadow AI is the use of public AI tools — ChatGPT, Gemini, Microsoft Copilot — by staff without formal authorization, training, or governance policy. When a municipal employee enters citizen personal information into a public AI platform without a governing policy in place, that constitutes shadow AI and creates compliance exposure under ATIA, POPA, FOIPPA, and MFIPPA. KPMG Canada research shows 48% of Canadian public servants already use AI tools on the job, but only 22% of organizations have a formal AI adoption policy." }
+          },
+          {
+            "@type": "Question",
+            "name": "What is a Privacy Management Program?",
+            "acceptedAnswer": { "@type": "Answer", "text": "A Privacy Management Program (PMP) is a formal set of documented policies, procedures, and controls governing how an organization collects, uses, discloses, retains, and disposes of personal information. Under Alberta's Protection of Privacy Act (POPA), every provincial public body — including municipalities — was required to have a PMP in place by June 11, 2026. An IT acceptable use policy is not a substitute for a PMP." }
+          },
+          {
+            "@type": "Question",
+            "name": "What is GEO (Generative Engine Optimization)?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Generative Engine Optimization (GEO) is the practice of optimizing a business's online presence so that AI platforms — ChatGPT, Perplexity, Google Gemini — cite it when generating answers to relevant questions. Unlike traditional SEO, which targets a position in a ranked list of links, GEO targets inclusion in a synthesized AI-generated answer. Key GEO signals include Google Business Profile completeness, review volume, Schema.org structured data, NAP consistency, and authoritative third-party mentions." }
+          },
+          {
+            "@type": "Question",
+            "name": "What is WebMCP?",
+            "acceptedAnswer": { "@type": "Answer", "text": "WebMCP refers to the implementation of the Model Context Protocol (MCP) — an open standard released in February 2026 — on a business website. MCP allows AI agents (like those built on ChatGPT, Claude, or Gemini) to connect directly to a business's data and tools. A business with a properly configured .well-known/mcp.json file is discoverable and actionable by AI agents, giving it a first-mover advantage over competitors that rely on traditional search signals alone." }
+          },
+          {
+            "@type": "Question",
+            "name": "What is a holding statement in crisis communications?",
+            "acceptedAnswer": { "@type": "Answer", "text": "A holding statement is an initial public communication issued during a crisis before all facts are known. Its purpose is to acknowledge the situation, demonstrate that the organization is aware and responding, and prevent rumour escalation — without making commitments that could prejudge an ongoing internal or legal process. A strong holding statement is issued within hours of a crisis emerging, not after a full investigation is complete." }
+          },
+          {
+            "@type": "Question",
+            "name": "What is AEO (Answer Engine Optimization)?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Answer Engine Optimization (AEO) is the practice of structuring content to earn featured answer positions in AI-powered search surfaces — Google AI Overviews, voice search, and direct-answer results on ChatGPT and Perplexity. AEO focuses on question-and-answer content formats, FAQPage schema markup, concise and directly answerable prose, and structured data that AI systems can extract without visiting the page." }
+          },
+          {
+            "@type": "Question",
+            "name": "What is AI governance?",
+            "acceptedAnswer": { "@type": "Answer", "text": "AI governance is the set of policies, roles, and oversight processes an organization uses to ensure AI is used responsibly, legally, and in line with its mission. It defines who decides which AI tools are allowed, who is accountable when something goes wrong, how staff are trained, and how AI use is monitored over time. For a municipal council or a non-profit board, good governance is lightweight and documented - a short approved policy, clear approval points, and a named owner - not a binder no one reads." }
+          },
+          {
+            "@type": "Question",
+            "name": "What is data residency, and why does it matter for AI tools?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Data residency is the requirement that data be physically stored and accessed only within a specific country or jurisdiction. Many public AI tools process and store data on servers outside Canada, which is a compliance problem on its own - separate from whether the data is otherwise handled well. British Columbia's FOIPPA (Section 30.1) is the clearest Canadian example, and funder agreements can impose similar limits on non-profits. A private, local AI resolves data residency directly: the model runs on infrastructure the organization controls, so data never leaves the country." }
+          },
+          {
+            "@type": "Question",
+            "name": "What is retrieval-augmented generation (RAG)?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Retrieval-augmented generation (RAG) is a technique that grounds an AI's answers in a specific, trusted set of documents instead of relying only on the model's training. The AI first retrieves relevant passages from your own materials - policies, past reports, program records - and then writes its answer from those sources, with citations you can check. RAG sharply reduces hallucination and is what makes a private, local AI genuinely useful: it can answer questions about your organization without that information ever being sent to a public service." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Nunito:wght@700;800;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --charcoal: #1C1C1C; --charcoal-mid: #252525;
+      --gold: #C9A84C; --gold-light: #D9BC7A;
+      --gold-dim: rgba(201,168,76,0.12); --gold-border: rgba(201,168,76,0.22);
+      --cream: #F7F7F5; --muted: #88887F;
+      --font-display: 'Cormorant Garamond', Georgia, serif;
+      --font-ui: 'Nunito', 'Century Gothic', Arial, sans-serif;
+      --font-body: 'Lato', 'Helvetica Neue', Arial, sans-serif;
+    }
+    html { scroll-behavior: smooth; overflow-x: hidden; }
+    body { font-family: var(--font-body); background: var(--charcoal); color: var(--cream); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+    .smc-sym { display: block; width: 100%; height: 100%; }
+    .smc-sym path { fill: currentColor; }
+    .wrap { max-width: 900px; margin: 0 auto; padding: 0 2rem; }
+
+    /* NAV */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: 74px; display: flex; align-items: center; justify-content: space-between; padding: 0 4rem; background: rgba(28,28,28,0.94); backdrop-filter: blur(18px); border-bottom: 1px solid var(--gold-border); transition: height 0.3s; }
+    nav.scrolled { height: 60px; }
+    .nav-brand { display: flex; align-items: center; gap: 0.85rem; text-decoration: none; flex-shrink: 0; }
+    .nav-brand-icon { width: 34px; height: 34px; color: var(--gold); }
+    .nav-brand-name { font-family: var(--font-ui); font-size: 0.78rem; font-weight: 900; letter-spacing: 0.14em; text-transform: uppercase; color: var(--cream); display: block; }
+    .nav-brand-tagline { font-size: 0.6rem; font-weight: 300; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); display: block; }
+    .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+    .nav-links a { font-size: 0.8rem; letter-spacing: 0.06em; color: var(--cream); text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-cta { border: 1px solid var(--gold-border); padding: 0.45rem 1.1rem; border-radius: 2px; color: var(--gold) !important; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.72rem !important; transition: background 0.2s, color 0.2s; }
+    .nav-cta:hover { background: var(--gold); color: var(--charcoal) !important; }
+    .nav-dropdown { position: relative; }
+    .nav-dropdown-menu { display: none; position: absolute; top: calc(100% + 12px); left: 0; background: var(--charcoal-mid); border: 1px solid var(--gold-border); border-radius: 4px; min-width: 220px; padding: 8px 0; z-index: 300; }
+    .nav-dropdown:hover .nav-dropdown-menu, .nav-dropdown:focus-within .nav-dropdown-menu { display: block; }
+    .nav-dropdown-menu a { display: block; padding: 8px 16px; font-size: 0.78rem; }
+    .nav-dropdown-menu a:hover { background: var(--gold-dim); color: var(--gold); }
+    .nav-hamburger { display: none; flex-direction: column; justify-content: space-between; width: 28px; height: 20px; background: none; border: none; cursor: pointer; padding: 0; }
+    .nav-hamburger span { display: block; width: 100%; height: 2px; background: var(--cream); transition: transform 0.3s, opacity 0.3s; }
+    @media (max-width: 900px) {
+      nav { padding: 0 1.5rem; }
+      .nav-links { display: none; position: fixed; top: 74px; left: 0; right: 0; background: rgba(28,28,28,0.98); flex-direction: column; align-items: flex-start; padding: 2rem 1.5rem; gap: 1.25rem; border-bottom: 1px solid var(--gold-border); }
+      .nav-links.open { display: flex; }
+      .nav-hamburger { display: flex; }
+    }
+
+    /* HERO */
+    .page-hero { padding: 140px 2rem 72px; position: relative; overflow: hidden; }
+    .page-hero-watermark { position: absolute; top: 60px; right: -40px; width: 320px; height: 320px; color: rgba(201,168,76,0.04); pointer-events: none; }
+    .breadcrumb { font-size: 0.72rem; color: var(--muted); letter-spacing: 0.08em; margin-bottom: 1.25rem; }
+    .breadcrumb a { color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    .breadcrumb a:hover { color: var(--gold); }
+    .page-hero-eyebrow { font-family: var(--font-body); font-size: 0.68rem; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
+    .page-hero h1 { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3rem); font-weight: 500; line-height: 1.15; color: var(--cream); margin-bottom: 1.25rem; }
+    .page-hero-sub { font-size: 1.05rem; line-height: 1.75; color: rgba(247,247,245,0.72); max-width: 620px; margin-bottom: 2rem; }
+    .gold-rule { border: none; border-top: 1px solid var(--gold-border); margin: 0; }
+
+    /* ALPHA NAV */
+    .alpha-nav { background: var(--charcoal-mid); border-top: 1px solid var(--gold-border); border-bottom: 1px solid var(--gold-border); padding: 1rem 2rem; position: sticky; top: 74px; z-index: 100; }
+    .alpha-nav-inner { max-width: 900px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 0.25rem 0.1rem; align-items: center; }
+    .alpha-link { font-family: var(--font-ui); font-size: 0.7rem; font-weight: 800; letter-spacing: 0.1em; color: var(--muted); text-decoration: none; padding: 0.3rem 0.55rem; border-radius: 2px; transition: color 0.2s, background 0.2s; }
+    .alpha-link:hover, .alpha-link.active { color: var(--gold); background: var(--gold-dim); }
+
+    /* FILTER PILLS */
+    .filter-bar { padding: 1.5rem 2rem 0; }
+    .filter-bar-inner { max-width: 900px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .filter-pill { font-family: var(--font-ui); font-size: 0.68rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.35rem 0.9rem; border-radius: 20px; border: 1px solid var(--gold-border); color: var(--muted); background: transparent; cursor: pointer; transition: all 0.2s; }
+    .filter-pill:hover, .filter-pill.active { background: var(--gold); color: var(--charcoal); border-color: var(--gold); }
+
+    /* GLOSSARY */
+    .glossary-section { padding: 56px 2rem 80px; }
+    .letter-group { margin-bottom: 3rem; }
+    .letter-anchor { font-family: var(--font-display); font-size: 2.5rem; font-weight: 300; color: var(--gold); border-bottom: 1px solid var(--gold-border); padding-bottom: 0.5rem; margin-bottom: 1.5rem; display: block; }
+
+    .term { padding: 1.5rem 0; border-bottom: 1px solid rgba(247,247,245,0.06); }
+    .term:last-child { border-bottom: none; }
+    .term-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; flex-wrap: wrap; margin-bottom: 0.6rem; }
+    .term-name { font-family: var(--font-ui); font-size: 1.05rem; font-weight: 900; color: var(--cream); letter-spacing: 0.02em; }
+    .term-tag { font-family: var(--font-body); font-size: 0.62rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; padding: 0.25rem 0.65rem; border-radius: 2px; flex-shrink: 0; }
+    .term-tag--compliance { background: rgba(201,168,76,0.12); color: var(--gold); border: 1px solid rgba(201,168,76,0.22); }
+    .term-tag--ai { background: rgba(100,160,220,0.1); color: #7ab4d8; border: 1px solid rgba(100,160,220,0.2); }
+    .term-tag--crisis { background: rgba(180,100,100,0.1); color: #d4928a; border: 1px solid rgba(180,100,100,0.2); }
+    .term-def { font-size: 0.95rem; font-weight: 700; color: rgba(247,247,245,0.9); line-height: 1.55; margin-bottom: 0.6rem; }
+    .term-body { font-size: 0.9rem; line-height: 1.7; color: rgba(247,247,245,0.65); margin-bottom: 0.75rem; }
+    .term-links { display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; }
+    .term-links a { font-size: 0.78rem; color: var(--gold); text-decoration: none; letter-spacing: 0.04em; transition: color 0.2s; }
+    .term-links a:hover { color: var(--gold-light); }
+
+    /* CTA */
+    .cta-section { padding: 72px 2rem; background: var(--charcoal); border-top: 1px solid var(--gold-border); text-align: center; }
+    .cta-section h2 { font-family: var(--font-display); font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: 600; color: var(--cream); margin-bottom: 1rem; }
+    .cta-section p { font-size: 1rem; line-height: 1.7; color: rgba(247,247,245,0.72); max-width: 520px; margin: 0 auto 2rem; }
+    .cta-btn { display: inline-block; background: var(--gold); color: var(--charcoal); font-family: var(--font-ui); font-size: 0.8rem; font-weight: 900; letter-spacing: 0.14em; text-transform: uppercase; padding: 0.9rem 2.2rem; border-radius: 2px; text-decoration: none; transition: background 0.2s; }
+    .cta-btn:hover { background: var(--gold-light); }
+
+    /* FOOTER */
+    footer { background: var(--charcoal-mid); padding: 56px 2rem 32px; border-top: 1px solid var(--gold-border); }
+    .footer-inner { display: flex; flex-wrap: wrap; gap: 2rem; justify-content: space-between; align-items: flex-start; margin-bottom: 2.5rem; }
+    .footer-brand { display: flex; align-items: center; gap: 0.75rem; }
+    .footer-sym { width: 28px; height: 28px; color: var(--gold); flex-shrink: 0; display: block; }
+    .footer-name { font-family: var(--font-ui); font-size: 0.72rem; font-weight: 900; letter-spacing: 0.14em; text-transform: uppercase; color: var(--cream); }
+    .footer-links { list-style: none; display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; }
+    .footer-links a { font-size: 0.78rem; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-copy { font-size: 0.7rem; color: var(--muted); border-top: 1px solid rgba(247,247,245,0.06); padding-top: 1.25rem; }
+
+    @media (max-width: 768px) {
+      .alpha-nav { top: 60px; }
+      .term-header { flex-direction: column; gap: 0.5rem; }
+    }
+  </style>
+  <script src="/consent.js" defer></script>
+</head>
+<body>
+
+<nav id="main-nav">
+  <a href="../index.html" class="nav-brand">
+    <span class="nav-brand-icon">
+      <svg class="smc-sym" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M50,5C25.2,5,5,25.2,5,50c0,24.8,20.2,45,45,45c24.8,0,45-20.2,45-45C95,25.2,74.8,5,50,5z M50,91C27.4,91,9,72.6,9,50S27.4,9,50,9s41,18.4,41,41S72.6,91,50,91z M84.4,51.4l-6,6C78,57.8,77.5,58,77,58s-1-0.2-1.4-0.6c-0.8-0.8-0.8-2,0-2.8l2.6-2.6H54.8l9.2,9.2V60c0-1.1,0.9-2,2-2s2,0.9,2,2v6c0,0.4-0.2,0.8-0.6,1c-0.2,0.2-0.5,0.4-0.8,0.4h-6c-1.1,0-2-0.9-2-2s0.9-2,2-2h1.2L52,54.8v23.3l2.6-2.6c0.8-0.8,2-0.8,2.8,0s0.8,2,0,2.8l-6,6c-0.4,0.4-0.9,0.6-1.4,0.6s-1-0.2-1.4-0.6l-6-6c-0.8-0.8-0.8-2,0-2.8c0.8-0.8,2-0.8,2.8,0l2.6,2.6V54.8L38.8,64H40c1.1,0,2,0.9,2,2s-0.9,2-2,2h-6c-0.3,0-0.6-0.1-0.8-0.4C33.8,67.4,33.6,67,33.6,66.6v-6c0-1.1,0.9-2,2-2s2,0.9,2,2v1.2l9.2-9.2H21.8l2.6,2.6c0.8,0.8,0.8,2,0,2.8C24,57.8,23.5,58,23,58s-1-0.2-1.4-0.6l-6-6c-0.8-0.8-0.8-2,0-2.8l6-6c0.8-0.8,2-0.8,2.8,0c0.8,0.8,0.8,2,0,2.8L21.8,48h23.3L36,38.8V40c0,1.1-0.9,2-2,2s-2-0.9-2-2v-6c0-0.4,0.1-0.8,0.4-1c0.3-0.3,0.6-0.4,1-0.4h6c1.1,0,2,0.9,2,2s-0.9,2-2,2h-1.2l9.2,9.2V21.8l-2.6,2.6c-0.8,0.8-2,0.8-2.8,0c-0.8-0.8-0.8-2,0-2.8l6-6c0.4-0.4,0.9-0.6,1.4-0.6s1,0.2,1.4,0.6l6,6c0.8,0.8,0.8,2,0,2.8C57,24.8,56.5,25,56,25s-1-0.2-1.4-0.6L52,21.8v23.3l9.2-9.2H60c-1.1,0-2-0.9-2-2s0.9-2,2-2h6c0.4,0,0.7,0.1,1,0.4c0.3,0.2,0.4,0.6,0.4,1v6c0,1.1-0.9,2-2,2s-2-0.9-2-2v-1.2L54.8,48h23.3l-2.6-2.6c-0.8-0.8-0.8-2,0-2.8c0.8-0.8,2-0.8,2.8,0l6,6C85.2,49.4,85.2,50.6,84.4,51.4z"/>
+      </svg>
+    </span>
+    <span>
+      <span class="nav-brand-name">Spencer Morley</span>
+      <span class="nav-brand-tagline">Consulting</span>
+    </span>
+  </a>
+  <button class="nav-hamburger" aria-label="Toggle menu" onclick="this.closest('nav').querySelector('.nav-links').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links">
+    <li class="nav-dropdown">
+      <a href="../index.html#crisis">Crisis Communications ▾</a>
+      <div class="nav-dropdown-menu">
+        <a href="../index.html#crisis">Crisis Management</a>
+        <a href="../index.html#media-relations">Media Relations Training</a>
+        <a href="../index.html#on-demand">On-Demand Communications</a>
+      </div>
+    </li>
+    <li class="nav-dropdown">
+      <a href="../municipal.html">AI Consulting ▾</a>
+      <div class="nav-dropdown-menu">
+        <a href="../municipal.html">Municipal Track</a>
+        <a href="../small-business.html">Small Business Track</a>
+        <a href="../non-profits.html">AI for Non-Profits Track</a>
+      </div>
+    </li>
+    <li><a href="../index.html#about">About</a></li>
+    <li><a href="../resources/">Glossary</a></li>
+    <li><a href="../municipal.html#contact" class="nav-cta" onclick="gtag('event','cta_click',{'event_category':'nav','event_label':'get_a_consultation','page':'glossary'})">Get a Consultation</a></li>
+  </ul>
+</nav>
+
+<main>
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="page-hero-watermark">
+    <svg class="smc-sym" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <path d="M50,5C25.2,5,5,25.2,5,50c0,24.8,20.2,45,45,45c24.8,0,45-20.2,45-45C95,25.2,74.8,5,50,5z M50,91C27.4,91,9,72.6,9,50S27.4,9,50,9s41,18.4,41,41S72.6,91,50,91z"/>
+    </svg>
+  </div>
+  <div class="wrap">
+    <div class="breadcrumb"><a href="../index.html">Home</a> › <span>Glossary</span></div>
+    <div class="page-hero-eyebrow">Knowledge Base</div>
+    <h1>AI & Communications Glossary.</h1>
+    <p class="page-hero-sub">Plain-language definitions of terms used across AI consulting, Canadian municipal privacy compliance, and crisis communications — written for administrators, business owners, and communications professionals, not technologists.</p>
+    <hr class="gold-rule" />
+  </div>
+</section>
+
+<!-- ALPHA NAV -->
+<nav class="alpha-nav" aria-label="Jump to letter">
+  <div class="alpha-nav-inner">
+    <a class="alpha-link" href="#letter-a">A</a>
+    <a class="alpha-link" href="#letter-b">B</a>
+    <a class="alpha-link" href="#letter-c">C</a>
+    <a class="alpha-link" href="#letter-d">D</a>
+    <a class="alpha-link" href="#letter-e">E</a>
+    <a class="alpha-link" href="#letter-f">F</a>
+    <a class="alpha-link" href="#letter-g">G</a>
+    <a class="alpha-link" href="#letter-h">H</a>
+    <a class="alpha-link" href="#letter-i">I</a>
+    <a class="alpha-link" href="#letter-l">L</a>
+    <a class="alpha-link" href="#letter-m">M</a>
+    <a class="alpha-link" href="#letter-n">N</a>
+    <a class="alpha-link" href="#letter-o">O</a>
+    <a class="alpha-link" href="#letter-p">P</a>
+    <a class="alpha-link" href="#letter-r">R</a>
+    <a class="alpha-link" href="#letter-s">S</a>
+    <a class="alpha-link" href="#letter-w">W</a>
+  </div>
+</nav>
+
+<!-- GLOSSARY -->
+<section class="glossary-section">
+  <div class="wrap">
+
+    <!-- A -->
+    <div class="letter-group" id="letter-a">
+      <span class="letter-anchor">A</span>
+
+      <div class="term" id="aeo">
+        <div class="term-header">
+          <span class="term-name">AEO — Answer Engine Optimization</span>
+          <span class="term-tag term-tag--ai">AI &amp; Visibility</span>
+        </div>
+        <p class="term-def">The practice of structuring content to earn featured answer positions in AI-powered search surfaces.</p>
+        <p class="term-body">AEO targets the direct-answer results that appear in Google AI Overviews, voice search responses, and AI platform answers (ChatGPT, Perplexity, Gemini). Unlike traditional SEO, which aims for a position in a ranked list of links, AEO aims to be the answer itself — meaning no click is required and the user receives the information directly from the AI. Key AEO tactics include writing in a question-and-answer format, implementing FAQPage schema markup, using concise and directly answerable prose, and ensuring content can be extracted without visiting the page.</p>
+        <div class="term-links">
+          <a href="../blog/answer-engine-optimization-aeo-guide.html">→ What Is AEO? Full Guide</a>
+          <a href="../small-business.html">→ Small Business AI Track</a>
+        </div>
+      </div>
+
+      <div class="term" id="ai-acceptable-use-policy">
+        <div class="term-header">
+          <span class="term-name">AI Acceptable Use Policy</span>
+          <span class="term-tag term-tag--compliance">Privacy &amp; Compliance</span>
+        </div>
+        <p class="term-def">A formal policy governing which AI tools staff may use, under what conditions, and with what data.</p>
+        <p class="term-body">An AI Acceptable Use Policy (AUP) specifies sanctioned tools, prohibited uses, data handling requirements, breach reporting obligations, and staff expectations. For municipalities, it must be drafted in plain language for council adoption, address provincial privacy legislation (ATIA/POPA in Alberta, FOIPPA in BC, MFIPPA in Ontario), and be distinct from — not a substitute for — a Privacy Management Program. An IT acceptable use policy that mentions AI tools is not equivalent.</p>
+        <div class="term-links">
+          <a href="../blog/ai-policy-for-small-municipalities-canada.html">→ How to Build an AI Policy for Your Municipality</a>
+          <a href="../municipal.html">→ Municipal AI Track</a>
+        </div>
+      </div>
+
+      <div class="term" id="agentic-workflow">
+        <div class="term-header">
+          <span class="term-name">Agentic Workflow</span>
+          <span class="term-tag term-tag--ai">AI &amp; Visibility</span>
+        </div>
+        <p class="term-def">An automated sequence of AI-driven tasks that operates with minimal human intervention to complete a defined objective.</p>
+        <p class="term-body">In a municipal context, agentic workflows can automate meeting minutes, council agenda preparation, bylaw drafting support, ratepayer correspondence, permit follow-up, and report generation — while keeping a human in the loop at defined approval points. Agentic workflows are not a replacement for staff; they eliminate the administrative burden that prevents staff from doing work that requires human judgment. All agentic workflows SMC implements are privacy-by-design and compliant with provincial legislation.</p>
+        <div class="term-links">
+          <a href="../municipal.html">→ Municipal AI Track</a>
+        </div>
+      </div>
+
+      <div class="term" id="atia">
+        <div class="term-header">
+          <span class="term-name">ATIA — Access to Information Act (Alberta)</span>
+          <span class="term-tag term-tag--compliance">Privacy &amp; Compliance</span>
+        </div>
+        <p class="term-def">Alberta's legislation governing the right of public access to records held by provincial public bodies, including municipalities.</p>
+        <p class="term-body">ATIA works in conjunction with POPA to define the information and privacy obligations of Alberta public bodies. Together, ATIA and POPA required every Alberta municipality to have a formal Privacy Management Program in place by June 11, 2026. The OIPC (Office of the Information and Privacy Commissioner of Alberta) oversees compliance and can receive formal complaints against municipalities that have not fulfilled their obligations.</p>
+        <div class="term-links">
+          <a href="../municipal/alberta/">→ Alberta Municipality AI Guide</a>
+          <a href="../blog/atia-popa-compliance-alberta-municipalities.html">→ ATIA/POPA Compliance Guide</a>
+        </div>
+      </div>
+      <div class="term" id="ai-governance">
+        <div class="term-header">
+          <span class="term-name">AI Governance</span>
+          <span class="term-tag term-tag--compliance">Privacy &amp; Compliance</span>
+        </div>
+        <p class="term-def">The set of policies, roles, and oversight processes an organization uses to ensure AI is used responsibly, legally, and in line with its mission.</p>
+        <p class="term-body">AI governance answers who decides which AI tools are allowed, who is accountable when something goes wrong, how staff are trained, and how AI use is monitored over time. For a municipal council or a non-profit board, it is the difference between AI happening to the organization and the organization directing it. Good governance is lightweight and documented &#8212; a short approved policy, clear approval points, and a named owner &#8212; not a binder no one reads. SMC builds governance sized for small teams: enough structure to manage risk, not so much that it stalls useful work.</p>
+        <div class="term-links">
+          <a href="../municipal.html">&#8594; Municipal AI Track</a>
+          <a href="../non-profits.html">&#8594; Non-Profits Track</a>
+        </div>
+      </div>
+    </div><!-- /letter-a -->
+
+    <!-- B -->
+    <div class="letter-group" id="letter-b">
+      <span class="letter-anchor">B</span>
+
+      <div class="term" id="algorithmic-bias">
+        <div class="term-header">
+          <span class="term-name">Algorithmic Bias</span>
+          <span class="term-tag term-tag--ai">AI &amp; Visibility</span>
+        </div>
+        <p class="term-def">Systematic, unfair skew in AI output that disadvantages certain groups &#8212; usually inherited from the data the model was trained on.</p>
+        <p class="term-body">An AI tool can produce results skewed by gender, race, age, language, or geography because those patterns existed in its training data. In a service-delivery context &#8212; screening applications, drafting communications, prioritizing cases &#8212; that skew can quietly produce unfair outcomes for the people an organization exists to serve. Bias cannot be fully eliminated, but it can be managed: choosing appropriate tools, keeping a human in the loop on consequential decisions, and testing output against real cases. For non-profits and public bodies, naming this risk in an AI use policy is part of using AI ethically.</p>
+        <div class="term-links">
+          <a href="../non-profits.html">&#8594; Non-Profits Track</a>
+        </div>
+      </div>
+    </div><!-- /letter-b -->
+
+    <!-- C -->
+    <div class="letter-group" id="letter-c">
+      <span class="letter-anchor">C</span>
+
+      <div class="term" id="crisis-communications-plan">
+        <div class="term-header">
+          <span class="term-name">Crisis Communications Plan</span>
+          <span class="term-tag term-tag--crisis">Crisis Communications</span>
+        </div>
+        <p class="term-def">A pre-built framework that defines how an organization will communicate during a crisis — before one occurs.</p>
+        <p class="term-body">A crisis communications plan identifies likely crisis scenarios, designates a spokesperson, establishes an approval chain for public statements, templates holding statements for common situations, and defines protocols for internal stakeholder notification. Organizations without a crisis plan respond reactively — losing the critical first hours to internal coordination while the story develops. A plan built before a crisis is worth exponentially more than one assembled in real time.</p>
+        <div class="term-links">
+          <a href="../index.html#crisis">→ Crisis Management Services</a>
+        </div>
+      </div>
+    </div><!-- /letter-c -->
+
+    <!-- D -->
+    <div class="letter-group" id="letter-d">
+      <span class="letter-anchor">D</span>
+
+      <div class="term" id="data-residency">
+        <div class="term-header">
+          <span class="term-name">Data Residency</span>
+          <span class="term-tag term-tag--compliance">Privacy &amp; Compliance</span>
+        </div>
+        <p class="term-def">The requirement that data be physically stored and accessed only within a specific country or jurisdiction.</p>
+        <p class="term-body">Many public AI tools process and store data on servers outside Canada. For organizations bound by data-residency rules, that is a compliance problem on its own &#8212; separate from whether the data is otherwise handled well. British Columbia&#8217;s FOIPPA (Section 30.1) is the clearest Canadian example, but funder agreements and provincial policy can impose similar limits on municipalities and non-profits. A private, local AI resolves data residency directly: the model runs on infrastructure the organization controls, so data never leaves the country &#8212; or the building.</p>
+        <div class="term-links">
+          <a href="../municipal/bc/">&#8594; BC Municipality AI Guide</a>
+          <a href="../non-profits.html">&#8594; Private Local AI</a>
+        </div>
+      </div>
+    </div><!-- /letter-d -->
+
+    <!-- E -->
+    <div class="letter-group" id="letter-e">
+      <span class="letter-anchor">E</span>
+
+      <div class="term" id="entity-authority">
+        <div class="term-header">
+          <span class="term-name">Entity Authority</span>
+          <span class="term-tag term-tag--ai">AI &amp; Visibility</span>
+        </div>
+        <p class="term-def">The degree to which AI systems have a clear, consistent, and well-sourced understanding of a specific business or organization.</p>
+        <p class="term-body">AI platforms build knowledge graphs of real-world entities — businesses, people, places. The more consistently a business is described across its website, Google Business Profile, directory listings, structured data, and third-party mentions, the higher its entity authority. High entity authority means AI platforms can confidently recommend the business without hedging. Low entity authority — caused by inconsistent NAP data, conflicting descriptions, or thin online presence — means AI platforms default to competitors with stronger signals.</p>
+        <div class="term-links">
+          <a href="../blog/how-ai-platforms-find-recommend-businesses.html">→ How AI Platforms Recommend Businesses</a>
+          <a href="../blog/generative-engine-optimization-geo-guide.html">→ GEO Guide</a>
+        </div>
+      </div>
+    </div><!-- /letter-e -->
+
+    <!-- F -->
+    <div class="letter-group" id="letter-f">
+      <span class="letter-anchor">F</span>
+
+      <div class="term" id="faqpage-schema">
+        <div class="term-header">
+          <span class="term-name">FAQPage Schema</span>
+          <span class="term-tag term-tag--ai">AI &amp; Visibility</span>
+        </div>
+        <p class="term-def">A Schema.org markup type that structures question-and-answer pairs in machine-readable JSON-LD so AI platforms can extract and cite them directly.</p>
+        <p class="term-body">FAQPage schema tells AI crawlers exactly which questions a page answers and what the authoritative answers are — without the AI needing to interpret the surrounding prose. It is one of the highest-impact AEO implementations for small businesses and municipalities. When a user asks ChatGPT or Perplexity a question your FAQPage schema answers, the AI can cite your content with high confidence.</p>
+        <div class="term-links">
+          <a href="../blog/answer-engine-optimization-aeo-guide.html">→ AEO Guide</a>
+        </div>
+      </div>
+
+      <div class="term" id="foippa">
+        <div class="term-header">
+          <span class="term-name">FOIPPA — Freedom of Information and Protection of Privacy Act (BC)</span>
+          <span class="term-tag term-tag--compliance">Privacy &amp; Compliance</span>
+        </div>
+        <p class="term-def">British Columbia's privacy legislation governing public bodies, including municipalities.</p>
+        <p class="term-body">FOIPPA's Section 30.1 is the provision most relevant to AI tool use: it requires BC public bodies to store and access personal information only in Canada, and to use only service providers who do the same. Public AI tools operated by US companies — ChatGPT, Gemini, many Microsoft 365 configurations — may not satisfy this requirement when processing BC citizen data. A private LLM deployment within Canadian infrastructure is a compliant alternative. The OIPC BC oversees FOIPPA compliance for municipal governments.</p>
+        <div class="term-links">
+          <a href="../municipal/bc/">→ BC Municipality AI Guide</a>
+        </div>
+      </div>
+      <div class="term" id="fippa">
+        <div class="term-header">
+          <span class="term-name">FIPPA &#8212; Freedom of Information and Protection of Privacy Act (Manitoba)</span>
+          <span class="term-tag term-tag--compliance">Privacy &amp; Compliance</span>
+        </div>
+        <p class="term-def">Manitoba&#8217;s privacy legislation governing public bodies, including municipalities.</p>
+        <p class="term-body">FIPPA sets out how Manitoba public bodies collect, use, disclose, and protect personal information &#8212; obligations that apply directly when staff use AI tools with residents&#8217; data. Manitoba&#8217;s Ombudsman provides oversight and investigates complaints. FIPPA is Manitoba&#8217;s counterpart to Alberta&#8217;s ATIA/POPA, BC&#8217;s FOIPPA, and Ontario&#8217;s MFIPPA; the underlying duty &#8212; a documented, defensible approach to personal information processed by AI &#8212; is consistent across provinces.</p>
+        <div class="term-links">
+          <a href="../municipal/manitoba/">&#8594; Manitoba Municipality AI Guide</a>
+          <a href="../blog/fippa-ai-compliance-manitoba-municipalities.html">&#8594; FIPPA Compliance Guide</a>
+        </div>
+      </div>
+    </div><!-- /letter-f -->
+
+    <!-- G -->
+    <div class="letter-group" id="letter-g">
+      <span class="letter-anchor">G</span>
+
+      <div class="term" id="geo">
+        <div class="term-header">
+          <span class="term-name">GEO — Generative Engine Optimization</span>
+          <span class="term-tag term-tag--ai">AI &amp; Visibility</span>
+        </div>
+        <p class="term-def">The practice of optimizing a business's online presence so that AI platforms cite it in generated answers.</p>
+        <p class="term-body">GEO is distinct from traditional SEO: SEO targets a position in a ranked list of links; GEO targets citation inside an AI-synthesized answer that may not include traditional search results at all. Key GEO signals include Google Business Profile completeness, review volume and velocity, Schema.org structured data (LocalBusiness, Service, FAQPage), NAP consistency across all platforms, content depth and answer-ready formatting, and authoritative third-party mentions. Alberta small businesses that have not addressed GEO are invisible to an increasingly large share of high-intent queries.</p>
+        <div class="term-links">
+          <a href="../blog/generative-engine-optimization-geo-guide.html">→ GEO Guide</a>
+          <a href="../small-business.html">→ AI Blind Spot Audit</a>
+        </div>
+      </div>
+
+      <div class="term" id="google-ai-overviews">
+        <div class="term-header">
+          <span class="term-name">Google AI Overviews</span>
+          <span class="term-tag term-tag--ai">AI &amp; Visibility</span>
+        </div>
+        <p class="term-def">AI-generated answer summaries that appear above traditional search results in Google Search.</p>
+        <p class="term-body">Google AI Overviews synthesize information from multiple sources and present a direct answer without requiring the user to click a link. Businesses and content cited in AI Overviews receive visibility without a click — and businesses not cited are invisible in that answer, regardless of their organic ranking. Structured data, authoritative content, and strong entity signals are the primary drivers of inclusion in AI Overviews.</p>
+        <div class="term-links">
+          <a href="../blog/seo-in-the-ai-era-alberta-small-business.html">→ SEO in the AI Era</a>
+        </div>
+      </div>
+      <div class="term" id="generative-ai">
+        <div class="term-header">
+          <span class="term-name">Generative AI</span>
+          <span class="term-tag term-tag--ai">AI &amp; Visibility</span>
+        </div>
+        <p class="term-def">AI that creates new content &#8212; text, images, code, audio &#8212; in response to a prompt, rather than only classifying or predicting.</p>
+        <p class="term-body">Generative AI is the category behind ChatGPT, Claude, Gemini, and similar tools. It is powerful for drafting, summarizing, and answering questions, but it generates plausible output rather than verified fact &#8212; which is why human review matters. For most organizations, generative AI is where the practical time savings are, provided staff know how to prompt it well and check what comes back. It is distinct from the older predictive AI used for scoring and forecasting.</p>
+        <div class="term-links">
+          <a href="../small-business.html">&#8594; Small Business AI Track</a>
+          <a href="../non-profits.html">&#8594; Non-Profits Track</a>
+        </div>
+      </div>
+    </div><!-- /letter-g -->
+
+    <!-- H -->
+    <div class="letter-group" id="letter-h">
+      <span class="letter-anchor">H</span>
+
+      <div class="term" id="holding-statement">
+        <div class="term-header">
+          <span class="term-name">Holding Statement</span>
+          <span class="term-tag term-tag--crisis">Crisis Communications</span>
+        </div>
+        <p class="term-def">An initial public communication issued during a crisis before all facts are known.</p>
+        <p class="term-body">A holding statement acknowledges the situation, demonstrates that the organization is aware and responding, and prevents rumour escalation — without making commitments that could prejudge an ongoing internal or legal process. A strong holding statement is issued within hours of a crisis emerging, not after a full investigation is complete. The window to shape public and media perception closes quickly; a holding statement issued too late allows the narrative to form without the organization's voice. Cheryl Spencer-Morley has developed and delivered holding statements across federal, provincial, and municipal government contexts.</p>
+        <div class="term-links">
+          <a href="../index.html#crisis">→ Crisis Management Services</a>
+        </div>
+      </div>
+      <div class="term" id="ai-hallucination">
+        <div class="term-header">
+          <span class="term-name">AI Hallucination</span>
+          <span class="term-tag term-tag--ai">AI &amp; Visibility</span>
+        </div>
+        <p class="term-def">When an AI tool produces output that is fluent and confident but factually wrong or entirely fabricated.</p>
+        <p class="term-body">Generative AI predicts likely text; it does not &#8220;know&#8221; facts, so it can invent citations, statistics, names, or policy details that look correct. Hallucination is the single biggest reason AI output must be checked before it is relied on &#8212; especially in grant applications, council reports, legal-adjacent communications, or anything sent to the public. The practical defenses are training staff to verify, keeping a human in the loop, and using approaches like retrieval-augmented generation that ground answers in your own trusted documents.</p>
+        <div class="term-links">
+          <a href="../non-profits.html">&#8594; Ethical &amp; Safe AI Training</a>
+        </div>
+      </div>
+
+      <div class="term" id="human-in-the-loop">
+        <div class="term-header">
+          <span class="term-name">Human-in-the-Loop</span>
+          <span class="term-tag term-tag--ai">AI &amp; Visibility</span>
+        </div>
+        <p class="term-def">A design principle that keeps a person in control of consequential AI decisions, with the AI assisting rather than deciding.</p>
+        <p class="term-body">Human-in-the-loop means the AI drafts, suggests, or flags &#8212; and a qualified person reviews and approves before anything is acted on or published. It is the core safeguard in any responsible AI workflow: it catches hallucinations and bias, preserves accountability, and keeps judgment where it belongs. Every automation SMC builds for municipalities and non-profits defines explicit approval points rather than letting AI act unsupervised.</p>
+        <div class="term-links">
+          <a href="../municipal.html">&#8594; Municipal AI Track</a>
+          <a href="../non-profits.html">&#8594; Non-Profits Track</a>
+        </div>
+      </div>
+    </div><!-- /letter-h -->
+
+    <!-- I -->
+    <div class="letter-group" id="letter-i">
+      <span class="letter-anchor">I</span>
+
+      <div class="term" id="ipc">
+        <div class="term-header">
+          <span class="term-name">IPC — Information and Privacy Commissioner</span>
+          <span class="term-tag term-tag--compliance">Privacy &amp; Compliance</span>
+        </div>
+        <p class="term-def">The independent oversight body that enforces privacy and access-to-information legislation for public bodies in each province.</p>
+        <p class="term-body">Each province has its own IPC or OIPC. In Alberta: the OIPC Alberta enforces ATIA and POPA. In BC: the OIPC BC enforces FOIPPA. In Ontario: the IPC Ontario enforces MFIPPA and FIPPA. These bodies investigate complaints, conduct audits, issue guidance, and can order public bodies to comply — including municipalities. A municipality without documented AI governance is in a weak position if a complaint is filed.</p>
+        <div class="term-links">
+          <a href="../municipal/alberta/">→ Alberta Municipality AI Guide</a>
+          <a href="../municipal/bc/">→ BC Municipality AI Guide</a>
+          <a href="../municipal/ontario/">→ Ontario Municipality AI Guide</a>
+        </div>
+      </div>
+    </div><!-- /letter-i -->
+
+    <!-- L -->
+    <div class="letter-group" id="letter-l">
+      <span class="letter-anchor">L</span>
+
+      <div class="term" id="llms-txt">
+        <div class="term-header">
+          <span class="term-name">llms.txt</span>
+          <span class="term-tag term-tag--ai">AI &amp; Visibility</span>
+        </div>
+        <p class="term-def">A plain-text file placed at the root of a website that provides AI platforms with a structured, human-readable description of the organization, its services, and its content.</p>
+        <p class="term-body">Analogous to robots.txt for traditional search crawlers, llms.txt is read by AI platforms when they index a site or when an AI agent accesses it via WebMCP. A well-written llms.txt reduces the risk of AI platforms misrepresenting a business by providing authoritative, machine-readable descriptions of services, pricing, team, geographic scope, and how to refer users accurately. Spencer Morley Consulting maintains a comprehensive llms.txt at <a href="../llms.txt" style="color:var(--gold);">spencermorleyconsulting.ca/llms.txt</a>.</p>
+        <div class="term-links">
+          <a href="../blog/webmcp-explained-alberta-businesses.html">→ WebMCP Explained</a>
+        </div>
+      </div>
+      <div class="term" id="llm">
+        <div class="term-header">
+          <span class="term-name">Large Language Model (LLM)</span>
+          <span class="term-tag term-tag--ai">AI &amp; Visibility</span>
+        </div>
+        <p class="term-def">The type of AI model, trained on very large amounts of text, that powers tools like ChatGPT, Claude, and Gemini.</p>
+        <p class="term-body">An LLM generates language by predicting the most likely next words given a prompt. The public LLMs are accessed over the internet, which is what creates data-handling and residency concerns when sensitive information is involved. The same technology can also be run privately &#8212; see Private LLM &#8212; so an organization gets the usefulness without sending data to a third party. Understanding that &#8220;LLM&#8221; is the engine, and the chat product is just one interface to it, helps in evaluating tools.</p>
+        <div class="term-links">
+          <a href="../non-profits.html">&#8594; Private Local AI</a>
+          <a href="../municipal.html">&#8594; Municipal AI Track</a>
+        </div>
+      </div>
+
+      <div class="term" id="lafoip">
+        <div class="term-header">
+          <span class="term-name">LAFOIP &#8212; Local Authority Freedom of Information and Protection of Privacy Act (Saskatchewan)</span>
+          <span class="term-tag term-tag--compliance">Privacy &amp; Compliance</span>
+        </div>
+        <p class="term-def">Saskatchewan&#8217;s privacy legislation governing local authorities, including municipalities.</p>
+        <p class="term-body">LAFOIP is the Saskatchewan counterpart to Alberta&#8217;s ATIA/POPA &#8212; distinct from the provincial FOIP Act, which covers government institutions rather than local authorities. The Information and Privacy Commissioner of Saskatchewan oversees compliance and can issue findings on how local authorities handle personal information, including data processed with AI tools. Municipalities, libraries, and other local authorities fall under LAFOIP.</p>
+        <div class="term-links">
+          <a href="../municipal/saskatchewan/">&#8594; Saskatchewan Municipality AI Guide</a>
+          <a href="../blog/lafoip-ai-compliance-saskatchewan-municipalities.html">&#8594; LAFOIP Compliance Guide</a>
+        </div>
+      </div>
+    </div><!-- /letter-l -->
+
+    <!-- M -->
+    <div class="letter-group" id="letter-m">
+      <span class="letter-anchor">M</span>
+
+      <div class="term" id="mfippa">
+        <div class="term-header">
+          <span class="term-name">MFIPPA — Municipal Freedom of Information and Protection of Privacy Act (Ontario)</span>
+          <span class="term-tag term-tag--compliance">Privacy &amp; Compliance</span>
+        </div>
+        <p class="term-def">Ontario's privacy legislation governing municipalities, school boards, and local institutions — distinct from FIPPA, which governs provincial institutions.</p>
+        <p class="term-body">MFIPPA requires Ontario municipalities to document how personal information is collected, used, disclosed, and protected. The IPC Ontario has issued specific guidance requiring Privacy Impact Assessments before deploying AI tools that interact with personal information — including Microsoft Copilot when integrated into 365 environments. A small Ontario township with one CAO has the same MFIPPA obligations as a large city; the difference is resources, which is where Spencer Morley Consulting's remote delivery model is specifically designed to help.</p>
+        <div class="term-links">
+          <a href="../municipal/ontario/">→ Ontario Municipality AI Guide</a>
+        </div>
+      </div>
+
+      <div class="term" id="mcp">
+        <div class="term-header">
+          <span class="term-name">MCP — Model Context Protocol</span>
+          <span class="term-tag term-tag--ai">AI &amp; Visibility</span>
+        </div>
+        <p class="term-def">An open protocol (released February 2026) that allows AI agents to connect directly to a business's data, tools, and services.</p>
+        <p class="term-body">MCP is fundamentally different from a website or a search listing: it creates a machine-readable endpoint that an AI agent can query in real time. When a user instructs an AI agent to "find me a crisis communications consultant in Edmonton," an agent with MCP access doesn't search Google — it queries connected MCP endpoints directly. Businesses with properly configured MCP implementations are discoverable and actionable in ways that traditional web presence alone cannot provide. See also: <a href="#webmcp" style="color:var(--gold);">WebMCP</a>.</p>
+        <div class="term-links">
+          <a href="../blog/webmcp-explained-alberta-businesses.html">→ WebMCP Explained</a>
+          <a href="../small-business.html">→ WebMCP Readiness Assessment</a>
+        </div>
+      </div>
+    </div><!-- /letter-m -->
+
+    <!-- N -->
+    <div class="letter-group" id="letter-n">
+      <span class="letter-anchor">N</span>
+
+      <div class="term" id="nap-consistency">
+        <div class="term-header">
+          <span class="term-name">NAP Consistency</span>
+          <span class="term-tag term-tag--ai">AI &amp; Visibility</span>
+        </div>
+        <p class="term-def">The uniformity of a business's Name, Address, and Phone number across every online platform and directory.</p>
+        <p class="term-body">AI platforms build entity profiles of businesses by aggregating information from multiple sources — Google Business Profile, Yelp, Facebook, directory listings, and the business's own website. When NAP data is inconsistent (a slightly different business name on one platform, an old phone number on another), AI systems reduce their confidence in the entity — making the business less likely to be cited in generated answers. NAP consistency is one of the foundational GEO signals and is audited in SMC's AI Blind Spot Audit.</p>
+        <div class="term-links">
+          <a href="../small-business.html">→ AI Blind Spot Audit ($600)</a>
+        </div>
+      </div>
+    </div><!-- /letter-n -->
+
+    <!-- O -->
+    <div class="letter-group" id="letter-o">
+      <span class="letter-anchor">O</span>
+
+      <div class="term" id="oipc">
+        <div class="term-header">
+          <span class="term-name">OIPC — Office of the Information and Privacy Commissioner</span>
+          <span class="term-tag term-tag--compliance">Privacy &amp; Compliance</span>
+        </div>
+        <p class="term-def">The independent oversight body that enforces Alberta's ATIA and POPA — and the equivalent body in BC for FOIPPA.</p>
+        <p class="term-body">The OIPC Alberta can investigate complaints filed against municipalities, conduct compliance audits, and issue binding orders. Since the June 11, 2026 Privacy Management Program deadline has passed, the OIPC can now receive formal complaints against Alberta municipalities that have not completed their program. The OIPC BC plays an equivalent role for BC municipalities under FOIPPA. Neither body is a regulatory backwater — both have been increasingly active on AI-specific guidance and enforcement.</p>
+        <div class="term-links">
+          <a href="../municipal/alberta/">→ Alberta Municipality AI Guide</a>
+          <a href="../municipal/bc/">→ BC Municipality AI Guide</a>
+        </div>
+      </div>
+    </div><!-- /letter-o -->
+
+    <!-- P -->
+    <div class="letter-group" id="letter-p">
+      <span class="letter-anchor">P</span>
+
+      <div class="term" id="pia">
+        <div class="term-header">
+          <span class="term-name">PIA — Privacy Impact Assessment</span>
+          <span class="term-tag term-tag--compliance">Privacy &amp; Compliance</span>
+        </div>
+        <p class="term-def">A formal risk assessment documenting how a new technology, system, or process interacts with personal information — required before deploying AI tools in Ontario municipalities under IPC guidance.</p>
+        <p class="term-body">A PIA documents what personal information an AI tool accesses, how it uses that information, where it stores it, what third parties receive it, and what controls are in place to protect it. IPC Ontario has specifically required municipalities to complete a PIA before deploying AI tools — including Microsoft Copilot when integrated into 365 environments. A PIA is not a one-time exercise; it should be updated when a system changes significantly.</p>
+        <div class="term-links">
+          <a href="../municipal/ontario/">→ Ontario Municipality AI Guide</a>
+          <a href="../municipal.html">→ AI Policy Development Service</a>
+        </div>
+      </div>
+
+      <div class="term" id="privacy-management-program">
+        <div class="term-header">
+          <span class="term-name">Privacy Management Program (PMP)</span>
+          <span class="term-tag term-tag--compliance">Privacy &amp; Compliance</span>
+        </div>
+        <p class="term-def">A formal, documented set of policies, procedures, and controls governing how an organization handles personal information — required of all Alberta public bodies under POPA.</p>
+        <p class="term-body">A PMP must cover how personal information is collected, used, disclosed, retained, and disposed of. It must designate a Privacy Officer, define breach reporting protocols, include staff training, and demonstrate accountability at the leadership level. The ATIA/POPA deadline for Alberta municipalities to have a PMP in place was June 11, 2026. An IT acceptable use policy is not a substitute for a PMP, even if it mentions AI or data.</p>
+        <div class="term-links">
+          <a href="../blog/atia-popa-compliance-alberta-municipalities.html">→ ATIA/POPA Compliance Guide</a>
+          <a href="../municipal/alberta/">→ Alberta Municipality AI Guide</a>
+        </div>
+      </div>
+
+      <div class="term" id="private-llm">
+        <div class="term-header">
+          <span class="term-name">Private LLM</span>
+          <span class="term-tag term-tag--ai">AI &amp; Visibility</span>
+        </div>
+        <p class="term-def">A large language model deployed entirely within an organization's own infrastructure — not on a public cloud.</p>
+        <p class="term-body">A private LLM processes municipal data without sending it to third-party servers. Citizen information, council documents, ratepayer correspondence, and financial data remain within the municipal system. For BC municipalities, a private LLM deployed on Canadian infrastructure directly addresses the FOIPPA Section 30.1 data residency requirement. For all municipalities, it eliminates the exposure created by staff entering sensitive information into public AI tools. SMC deploys private LLMs for municipal clients without requiring an in-house IT department.</p>
+        <div class="term-links">
+          <a href="../municipal.html">→ Private LLM Deployment Service</a>
+        </div>
+      </div>
+
+      <div class="term" id="popa">
+        <div class="term-header">
+          <span class="term-name">POPA — Protection of Privacy Act (Alberta)</span>
+          <span class="term-tag term-tag--compliance">Privacy &amp; Compliance</span>
+        </div>
+        <p class="term-def">Alberta's legislation governing how provincial public bodies — including municipalities — handle personal information.</p>
+        <p class="term-body">POPA works alongside ATIA to define Alberta municipalities' privacy obligations. The key AI-era requirement: every Alberta public body must have a formal Privacy Management Program in place. The deadline was June 11, 2026. POPA defines personal information broadly — ratepayer records, staff data, applicant files, bylaw complaint records — all of which are routinely entered into AI tools by municipal staff who are unaware of the risk.</p>
+        <div class="term-links">
+          <a href="../municipal/alberta/">→ Alberta Municipality AI Guide</a>
+          <a href="../blog/atia-popa-compliance-alberta-municipalities.html">→ ATIA/POPA Compliance Guide</a>
+        </div>
+      </div>
+
+      <div class="term" id="prompt-engineering">
+        <div class="term-header">
+          <span class="term-name">Prompt Engineering</span>
+          <span class="term-tag term-tag--ai">AI &amp; Visibility</span>
+        </div>
+        <p class="term-def">The practice of designing AI inputs (prompts) that consistently produce accurate, useful outputs for a specific task or role.</p>
+        <p class="term-body">Most AI tools are used at a fraction of their potential because staff rely on generic prompts and accept whatever output is produced. Prompt engineering teaches staff how to frame requests, provide context, specify constraints, and critically evaluate AI output — so the tool is genuinely useful rather than a source of risk. SMC delivers prompt engineering training for both municipal staff (focused on safe, compliant AI use with citizen data) and small business teams (focused on productivity and content quality).</p>
+        <div class="term-links">
+          <a href="../municipal.html">→ Municipal Staff AI Training</a>
+          <a href="../small-business.html">→ Small Business Staff Training</a>
+        </div>
+      </div>
+      <div class="term" id="pii">
+        <div class="term-header">
+          <span class="term-name">PII &#8212; Personally Identifiable Information</span>
+          <span class="term-tag term-tag--compliance">Privacy &amp; Compliance</span>
+        </div>
+        <p class="term-def">Any information that can identify a specific individual, on its own or combined with other data.</p>
+        <p class="term-body">PII includes obvious identifiers like name, address, and email, but also case notes, health and housing details, donor records, and combinations of data points that together single someone out. It is the category of information that privacy legislation protects and that should almost never be entered into a public AI tool without a governing policy and safeguards. Knowing what counts as PII is the starting point for using AI safely in any organization that holds information about residents, clients, or donors.</p>
+        <div class="term-links">
+          <a href="../non-profits.html">&#8594; Non-Profits Track</a>
+          <a href="../municipal.html">&#8594; Municipal AI Track</a>
+        </div>
+      </div>
+
+      <div class="term" id="pipeda">
+        <div class="term-header">
+          <span class="term-name">PIPEDA &#8212; Personal Information Protection and Electronic Documents Act</span>
+          <span class="term-tag term-tag--compliance">Privacy &amp; Compliance</span>
+        </div>
+        <p class="term-def">Canada&#8217;s federal privacy law for personal information collected in the course of commercial activity.</p>
+        <p class="term-body">PIPEDA governs how private-sector organizations handle personal information, and it applies to many small businesses and to non-profits when they engage in commercial activity such as selling goods or services. It sets expectations for consent, purpose limitation, safeguarding, and accountability &#8212; all engaged the moment customer or donor data is fed into an AI tool. Some provinces have substantially similar private-sector laws; SMC helps organizations identify which regime applies and use AI within it.</p>
+        <div class="term-links">
+          <a href="../small-business.html">&#8594; Small Business AI Track</a>
+          <a href="../non-profits.html">&#8594; Non-Profits Track</a>
+        </div>
+      </div>
+
+      <div class="term" id="prompt-injection">
+        <div class="term-header">
+          <span class="term-name">Prompt Injection</span>
+          <span class="term-tag term-tag--ai">AI &amp; Visibility</span>
+        </div>
+        <p class="term-def">A security attack that hides malicious instructions inside content an AI reads, tricking it into ignoring its rules or leaking data.</p>
+        <p class="term-body">When an AI tool processes a web page, document, or email, an attacker can embed hidden text instructing the AI to disregard its guidelines, exfiltrate information, or take unintended actions. As organizations connect AI to their own data and tools, prompt injection becomes a real operational risk, not a theoretical one. Defenses include treating any AI that handles external content as untrusted, limiting what connected AI can access, and keeping a human in the loop on actions that send data or make changes.</p>
+        <div class="term-links">
+          <a href="../small-business.html">&#8594; Small Business AI Track</a>
+        </div>
+      </div>
+    </div><!-- /letter-p -->
+
+    <!-- R -->
+    <div class="letter-group" id="letter-r">
+      <span class="letter-anchor">R</span>
+
+      <div class="term" id="rag">
+        <div class="term-header">
+          <span class="term-name">RAG &#8212; Retrieval-Augmented Generation</span>
+          <span class="term-tag term-tag--ai">AI &amp; Visibility</span>
+        </div>
+        <p class="term-def">A technique that grounds an AI&#8217;s answers in a specific, trusted set of documents instead of relying only on its training.</p>
+        <p class="term-body">With RAG, the AI first retrieves relevant passages from your own materials &#8212; policies, past reports, program records &#8212; and then writes its answer from those sources. This sharply reduces hallucination and lets an AI assistant answer questions about your organization specifically, with citations you can check. RAG is what makes a private, local AI genuinely useful: it can work over your documents without that information ever being sent to a public service.</p>
+        <div class="term-links">
+          <a href="../non-profits.html">&#8594; Private Local AI</a>
+        </div>
+      </div>
+    </div><!-- /letter-r -->
+
+    <!-- S -->
+    <div class="letter-group" id="letter-s">
+      <span class="letter-anchor">S</span>
+
+      <div class="term" id="schema-org">
+        <div class="term-header">
+          <span class="term-name">Schema.org Structured Data</span>
+          <span class="term-tag term-tag--ai">AI &amp; Visibility</span>
+        </div>
+        <p class="term-def">A shared vocabulary of machine-readable markup types — embedded in a website as JSON-LD — that allows AI platforms to understand what a page is about without interpreting its prose.</p>
+        <p class="term-body">Schema.org types relevant to SMC clients include LocalBusiness (who you are, where you operate), Service and OfferCatalog (what you offer and at what price), FAQPage (structured Q&amp;A for AEO), Article (blog content attribution), Person (team profiles), and BreadcrumbList (page hierarchy). Proper structured data is one of the highest-leverage implementations for both GEO and AEO — it tells AI systems exactly what a business does without relying on their interpretation of surrounding text.</p>
+        <div class="term-links">
+          <a href="../blog/generative-engine-optimization-geo-guide.html">→ GEO Guide</a>
+          <a href="../small-business.html">→ WebMCP Readiness Assessment</a>
+        </div>
+      </div>
+
+      <div class="term" id="shadow-ai">
+        <div class="term-header">
+          <span class="term-name">Shadow AI</span>
+          <span class="term-tag term-tag--compliance">Privacy &amp; Compliance</span>
+        </div>
+        <p class="term-def">The use of public AI tools by staff without formal authorization, training, or governance policy.</p>
+        <p class="term-body">Shadow AI is not hypothetical: KPMG Canada research shows 48% of Canadian public servants already use AI tools on the job, but only 22% of organizations have a formal AI adoption policy. When a municipal employee enters citizen personal information into ChatGPT, Gemini, or another public AI service, that data may be stored on servers outside Canada (a potential FOIPPA violation), used to train AI models, shared with third parties, or disclosed in ways the municipality cannot control. Shadow AI creates compliance exposure under ATIA, POPA, FOIPPA, and MFIPPA — regardless of whether the employee intended any harm.</p>
+        <div class="term-links">
+          <a href="../blog/shadow-ai-in-municipalities.html">→ Shadow AI in Municipalities — Full Guide</a>
+          <a href="../municipal.html">→ Municipal AI Readiness Assessment</a>
+        </div>
+      </div>
+
+      <div class="term" id="spokesperson-training">
+        <div class="term-header">
+          <span class="term-name">Spokesperson Training</span>
+          <span class="term-tag term-tag--crisis">Crisis Communications</span>
+        </div>
+        <p class="term-def">Coaching that prepares a designated organizational representative to speak confidently and accurately to media, elected officials, and the public during high-pressure situations.</p>
+        <p class="term-body">Spokesperson training is not presentation training. It is preparation for adversarial, unpredictable situations — journalists with an angle, community members with grievances, council members asking questions in public. Effective spokesperson training includes message development, bridging techniques, handling hostile questions, managing silence and pauses, and understanding what not to say. Cheryl Spencer-Morley has delivered spokesperson coaching at the executive level across federal, provincial, and municipal government contexts.</p>
+        <div class="term-links">
+          <a href="../index.html#media-relations">→ Media Relations Training</a>
+        </div>
+      </div>
+    </div><!-- /letter-s -->
+
+    <!-- W -->
+    <div class="letter-group" id="letter-w">
+      <span class="letter-anchor">W</span>
+
+      <div class="term" id="webmcp">
+        <div class="term-header">
+          <span class="term-name">WebMCP — Web Model Context Protocol Implementation</span>
+          <span class="term-tag term-tag--ai">AI &amp; Visibility</span>
+        </div>
+        <p class="term-def">The implementation of the Model Context Protocol on a business website, making it discoverable and actionable by AI agents.</p>
+        <p class="term-body">WebMCP is the fourth layer of the AI visibility stack — beyond SEO, AEO, and GEO. While those three optimize for AI platforms reading and citing a website, WebMCP creates a structured endpoint that AI agents can query directly. A properly configured WebMCP implementation includes a <code style="font-size:0.85em;color:var(--gold);background:var(--gold-dim);padding:0.1em 0.4em;border-radius:2px;">/.well-known/mcp.json</code> file describing the business's tools and resources. Businesses with WebMCP endpoints in place before their competitors have first-mover advantage — AI agents preferentially connect to endpoints that exist and respond. The MCP standard became publicly available in February 2026.</p>
+        <div class="term-links">
+          <a href="../blog/webmcp-explained-alberta-businesses.html">→ WebMCP Explained — Full Guide</a>
+          <a href="../small-business.html">→ WebMCP Readiness Assessment ($3,750)</a>
+        </div>
+      </div>
+    </div><!-- /letter-w -->
+
+  </div><!-- /.wrap -->
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="wrap">
+    <h2>Terms are one thing. Applying them is another.</h2>
+    <p>Whether you're navigating AI compliance for your municipality or building visibility for your business, Spencer Morley Consulting can show you exactly where you stand.</p>
+    <a href="../municipal.html#contact" class="cta-btn" onclick="gtag('event','cta_click',{'event_category':'glossary_cta','event_label':'get_consultation','page':'glossary'})">Get a Consultation</a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <svg class="footer-sym smc-sym" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <path d="M50,5C25.2,5,5,25.2,5,50c0,24.8,20.2,45,45,45c24.8,0,45-20.2,45-45C95,25.2,74.8,5,50,5z M50,91C27.4,91,9,72.6,9,50S27.4,9,50,9s41,18.4,41,41S72.6,91,50,91z"/>
+        </svg>
+        <span class="footer-name">Spencer Morley Consulting</span>
+      </div>
+      <ul class="footer-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../municipal.html">Municipal AI</a></li>
+        <li><a href="../small-business.html">Small Business AI</a></li>
+        <li><a href="../case-studies/">Experience</a></li>
+        <li><a href="../team/jordan.html">Jordan Morley</a></li>
+        <li><a href="../team/cheryl.html">Cheryl Spencer-Morley</a></li>
+        <li><a href="../resources/">Glossary</a></li>
+      </ul>
+    </div>
+    <p class="footer-copy">&copy; 2026 Spencer Morley Consulting. Edmonton, Alberta. jordan@spencermorleyconsulting.ca</p>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('main-nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 40);
+  });
+</script>
+
+</body>
+</html>

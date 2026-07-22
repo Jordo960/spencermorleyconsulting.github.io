@@ -1,0 +1,83 @@
+{
+  "name": "Spencer Morley Consulting",
+  "description": "Canadian consulting firm with two practice areas: (1) Crisis communications for governments, school boards, and organizations across Alberta — led by Cheryl Spencer-Morley, 25+ years senior public sector communications; (2) AI consulting for Canadian municipalities (all provinces), Alberta small businesses, and non-profits across Canada — led by Jordan Morley, Google AI Professional Certificate. Contact: jordan@spencermorleyconsulting.ca",
+  "tools": [
+    {
+      "name": "general-consultation-request",
+      "description": "Request a consultation about AI consulting or strategic communications services. Spencer Morley Consulting serves Canadian municipalities on AI governance and Alberta businesses on AI adoption and visibility.",
+      "url": "https://spencermorleyconsulting.ca/#contact"
+    },
+    {
+      "name": "municipal-ai-consultation",
+      "description": "Request a consultation about municipal AI compliance, shadow AI governance, Privacy Management Program requirements (ATIA/POPA in Alberta, FOIPPA in BC, MFIPPA in Ontario), AI policy development, staff training, or private LLM deployment. SMC serves small and rural municipalities across all Canadian provinces remotely. Entry point: Municipal AI Readiness Assessment.",
+      "url": "https://spencermorleyconsulting.ca/municipal.html#contact"
+    },
+    {
+      "name": "small-business-ai-consultation",
+      "description": "Request a consultation for Canadian small and medium businesses. Two complementary tracks: (1) AI Blind Spot Audit ($600 CAD, credited toward any service within 30 days) — maps how AI is used INSIDE the business: shadow AI, safe use, and where AI can safely save staff time; delivers a plain-English readout and a 30-day action plan. (2) Discoverability Index — whether AI search can FIND and recommend the business: a free quick check, then Snapshot $1,500 CAD, Snapshot + Fix Sprint $3,900 CAD, and ongoing Discoverability Partner $400/month (light) or AI Presence & Reputation $1,200–2,000/month (active optimization). Staff training and workflow automation also available.",
+      "url": "https://spencermorleyconsulting.ca/small-business.html#contact"
+    },
+    {
+      "name": "non-profit-ai-consultation",
+      "description": "Request a consultation about safe and ethical AI use for non-profits across Canada. SMC helps mission-driven organizations adopt AI in a clear progression: (1) ethical and safe AI training for staff working with donor, client, and case data, delivered with a plain-language AI use policy for board adoption; (2) systems and workflow automation for receipting, grant and funder reporting, intake, and scheduling; (3) a private, local LLM that runs on hardware the organization controls so sensitive data never leaves the building — the non-profit counterpart to SMC's private municipal AI. Entry point: a no-cost AI Readiness Conversation.",
+      "url": "https://spencermorleyconsulting.ca/non-profits.html#contact"
+    },
+    {
+      "name": "crisis-communications-consultation",
+      "description": "Request crisis communications support or media relations training for Alberta governments, school boards, municipalities, or organizations. Led by Cheryl Spencer-Morley — 25+ years federal, provincial, and municipal government communications. Services: crisis planning, real-time response support, media training, on-demand communications counsel.",
+      "url": "https://spencermorleyconsulting.ca/#contact"
+    },
+    {
+      "name": "discoverability-index-audit",
+      "description": "Request a Discoverability Index (SDI) — a done-for-you audit measuring whether AI search and classical search send customers to a business or to its competitors. SMC runs live queries across ChatGPT, Perplexity, and Gemini, verifies the website by live browser render, scores the business 0-100 across four areas (classical SEO, AI visibility/AEO-GEO, webMCP readiness, Canadian trust signals), ranks it against 7-10 named local competitors on a leaderboard, models the revenue at stake, and delivers a 90-day roadmap. Pricing (CAD): Discoverability Snapshot $1,500 (audit + report); Snapshot + Fix Sprint $3,900 (audit plus implementation of the fixes); Discoverability Partner $400/month (quarterly re-score and ongoing monitoring, 3-month minimum). Distinct from the self-serve AI Blind Spot Audit, which is an internal AI-readiness self-assessment.",
+      "url": "https://spencermorleyconsulting.ca/discoverability-index/"
+    }
+  ],
+  "resources": [
+    {
+      "name": "Municipal AI Track",
+      "description": "Full service listing for Canadian municipalities: AI Readiness Assessment, AI Policy Development, Staff Training, Private LLM Deployment, Agentic Workflows, WebMCP Readiness.",
+      "url": "https://spencermorleyconsulting.ca/municipal.html"
+    },
+    {
+      "name": "Small Business AI Track",
+      "description": "Full service listing and pricing for Canadian small businesses. Internal AI: AI Blind Spot Audit ($600, credited). External visibility — the Discoverability Index ladder: free quick check, Snapshot $1,500 (pilot $750), Snapshot + Fix Sprint $3,900, Discoverability Partner $400/mo (light), AI Presence & Reputation $1,200–2,000/mo (active). Plus Staff Training and Workflow Automation.",
+      "url": "https://spencermorleyconsulting.ca/small-business.html"
+    },
+    {
+      "name": "Non-Profit AI Track",
+      "description": "Full service listing for non-profits across Canada: Ethical & Safe AI Training (staff enablement plus a board-ready AI use policy), Systems & Workflow Automation, and a Private Local AI that keeps sensitive data in-house. Entry point: a no-cost AI Readiness Conversation.",
+      "url": "https://spencermorleyconsulting.ca/non-profits.html"
+    },
+    {
+      "name": "Alberta Municipality AI Guide",
+      "description": "ATIA and POPA Privacy Management Program requirements for Alberta municipalities. Deadline June 11, 2026 has passed — OIPC can now receive complaints.",
+      "url": "https://spencermorleyconsulting.ca/municipal/alberta/"
+    },
+    {
+      "name": "BC Municipality AI Guide",
+      "description": "FOIPPA obligations for BC municipalities including Section 30.1 data residency requirements.",
+      "url": "https://spencermorleyconsulting.ca/municipal/bc/"
+    },
+    {
+      "name": "Ontario Municipality AI Guide",
+      "description": "MFIPPA obligations for Ontario municipalities including IPC Ontario AI guidance and Privacy Impact Assessment requirements.",
+      "url": "https://spencermorleyconsulting.ca/municipal/ontario/"
+    },
+    {
+      "name": "AI Visibility Guide Series",
+      "description": "Four-part educational series: GEO (Generative Engine Optimization), AEO (Answer Engine Optimization), SEO in the AI Era, and WebMCP Explained — all focused on helping Alberta businesses get found and recommended by AI platforms.",
+      "url": "https://spencermorleyconsulting.ca/small-business.html"
+    },
+    {
+      "name": "Discoverability Index (SDI)",
+      "description": "Product page for the Discoverability Index: a 0-100 score of how findable and recommendable a business is across AI search and classical search, scored against 7-10 named competitors on a leaderboard, with dollars-at-stake modelling and a prioritized 90-day roadmap. Tiers (CAD): Snapshot $1,500, Snapshot + Fix Sprint $3,900, Partner $400/mo. Includes a full anonymized sample report.",
+      "url": "https://spencermorleyconsulting.ca/discoverability-index/"
+    },
+    {
+      "name": "Data Security & Residency",
+      "description": "How Spencer Morley Consulting secures client and resident data: its client-facing tools, including online resident survey programs for Alberta municipalities, run on OVHcloud VPS infrastructure hosted in Beauharnois, Quebec (Canada). Documents the ISO 27001-certified data center infrastructure, Canadian data residency relevant to ATIA/POPA/FOIPPA/MFIPPA, and the shared-responsibility split between OVHcloud and SMC.",
+      "url": "https://spencermorleyconsulting.ca/data-security-residency.html"
+    }
+  ]
+}

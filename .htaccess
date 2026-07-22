@@ -4,13 +4,41 @@
 # Updated: March 25, 2026
 # ─────────────────────────────────────────────────────────────────────────────
 
-# Disable directory listing
-Options -Indexes
+# Disable directory listing; disable MultiViews so /.well-known/mcp.json
+# resolves to the exact file instead of triggering a 300 Multiple Choices
+Options -Indexes -MultiViews
 
 # ── WWW → NON-WWW CANONICAL REDIRECT ─────────────────────────────────────────
 RewriteEngine On
 RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
 RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
+
+# ── WELL-KNOWN MCP MANIFEST ──────────────────────────────────────────────────
+# The MCP manifest is a real file at /.well-known/mcp.json (uploaded via SFTP),
+# served directly. No rewrite needed.
+
+# ── LEGACY WORDPRESS URL CLEANUP (post-migration, added 2026-06-14) ───────────
+# Old WordPress page URLs that Google indexed now 404 (site rebuilt as static HTML),
+# which was de-indexing the site. 301 the real pages to their current homes; 410
+# the leftover WordPress theme/demo and system paths so Google drops them fast.
+# Specific service rules first, generic /services/ last. NE preserves the # anchor.
+RewriteRule ^services/crisis-management/?$ /index.html#crisis-mgmt [R=301,L,NE]
+RewriteRule ^services/on-demand-communications/?$ /index.html#on-demand [R=301,L,NE]
+RewriteRule ^services/media-relations-training-and-coaching/?$ /index.html#media-relations [R=301,L,NE]
+RewriteRule ^services/?$ /index.html#practices [R=301,L,NE]
+RewriteRule ^why-us/?$ / [R=301,L]
+RewriteRule ^about/?$ /index.html#about [R=301,L,NE]
+RewriteRule ^contact/?$ /index.html#contact [R=301,L,NE]
+
+# Legacy/renamed blog URLs Google still crawls (added 2026-06-30). 301 to current homes.
+RewriteRule ^blog/seo-in-the-ai-era-alberta-non-profits\.html$ /blog/seo-in-the-ai-era-alberta-small-business.html [R=301,L]
+RewriteRule ^blog/municipal-ai-framework-overview\.html$ /municipal.html [R=301,L]
+RewriteRule ^blog/municipal-ai-framework-canada\.html$ /municipal.html [R=301,L]
+
+# 410 Gone — legacy WordPress theme/demo content and system paths (no equivalent)
+RewriteRule ^(faq-items|portfolio-items|portfolio_category|author)(/|$) - [G]
+RewriteRule ^wp-content(/|$) - [G]
+RewriteRule ^wp-[^/]*\.php$ - [G]
 
 # ── SECURITY HEADERS ──────────────────────────────────────────────────────────
 <IfModule mod_headers.c>
@@ -37,6 +65,13 @@ RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
   # Suppress server information
   Header always unset Server
   Header always unset X-Powered-By
+
+  # Serve machine-readable discovery files as JSON, with open CORS so AI
+  # agents and crawlers can fetch them cross-origin
+  <FilesMatch "\.(json)$">
+    Header set Content-Type "application/json"
+    Header set Access-Control-Allow-Origin "*"
+  </FilesMatch>
 
 </IfModule>
 

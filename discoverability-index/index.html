@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Discoverability Index — does AI search send customers to you, or your competitor? | Spencer Morley Consulting</title>
+  <meta name="description" content="The Discoverability Index scores how your business shows up across five AI engines (ChatGPT, Perplexity, Gemini, Claude, Copilot) and classic search, ranks you against named local competitors, and shows what the gap costs. For small businesses across Canada." />
+  <link rel="canonical" href="https://spencermorleyconsulting.ca/discoverability-index/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Discoverability Index — is your business invisible to AI search?" />
+  <meta property="og:description" content="One score, your competitors ranked beside you, and the dollars at stake. Find out where AI sends Canadian buyers instead of you." />
+  <meta property="og:url" content="https://spencermorleyconsulting.ca/discoverability-index/" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Nunito:wght@700;800;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Spencer Morley Consulting — Discoverability Index",
+    "description": "AI-search discoverability audits (AEO/GEO), classic SEO and webMCP readiness for Canadian small businesses. Produces a 0–100 Discoverability Index score, a competitor leaderboard, dollars-at-stake modelling and a 90-day roadmap.",
+    "url": "https://spencermorleyconsulting.ca/discoverability-index/",
+    "email": "jordan@spencermorleyconsulting.ca",
+    "areaServed": {"@type": "Country", "name": "Canada"},
+    "founder": {"@type": "Person", "name": "Jordan Morley"},
+    "knowsAbout": ["Answer Engine Optimization", "Generative Engine Optimization", "Search Engine Optimization", "webMCP", "Schema.org structured data", "AI search visibility"],
+    "makesOffer": [
+      {"@type": "Offer", "name": "Discoverability Snapshot", "description": "Full audit and report: SDI score, competitor leaderboard, dollars-at-stake, 90-day roadmap.", "priceCurrency": "CAD", "price": "1500"},
+      {"@type": "Offer", "name": "Snapshot + Fix Sprint", "description": "The Snapshot plus done-for-you fixes: structured data, llms.txt, meta and headings, Google Business Profile.", "priceCurrency": "CAD", "price": "3900"},
+      {"@type": "Offer", "name": "Discoverability Partner (light)", "description": "Monthly monitoring: quarterly re-score, AI-visibility pulse, competitor-overtake alerts, light ongoing fixes.", "priceCurrency": "CAD", "price": "400"},
+      {"@type": "Offer", "name": "AI Presence & Reputation (active)", "description": "Active monthly optimization retainer — content, schema, GBP, review velocity, citation building.", "priceSpecification": {"@type":"PriceSpecification","minPrice":"1200","maxPrice":"2000","priceCurrency":"CAD","unitText":"MONTH"}}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type": "Question", "name": "What is AI search, and why does it matter for my business?", "acceptedAnswer": {"@type": "Answer", "text": "More buyers now ask ChatGPT, Perplexity, and Google's AI 'who's the best [your service] near me' instead of scrolling a results page. Those tools name a short list of businesses. If yours isn't on it, you lose the job before a conversation starts — and you never see it happen."}},
+      {"@type": "Question", "name": "How is this different from a free AI visibility checker?", "acceptedAnswer": {"@type": "Answer", "text": "A free grader gives you one number from an AI model's memory. The Discoverability Index runs live queries across five AI engines, scores you against seven to ten named local competitors on one leaderboard, audits what AI gets wrong about your business, verifies your website's structured data by live browser render, models the revenue at stake, and gives you a prioritized 90-day plan — and we can do the fixes."}},
+      {"@type": "Question", "name": "Do you just hand me a report, or do you fix it?", "acceptedAnswer": {"@type": "Answer", "text": "Both are available. The Snapshot is the audit. The Fix Sprint adds the done-for-you work — structured data, llms.txt, meta and headings, Google Business Profile — so the gaps actually close, not just get named."}},
+      {"@type": "Question", "name": "Is this relevant to my industry?", "acceptedAnswer": {"@type": "Answer", "text": "It fits any local business buyers research before they call — trades, home services, dental and health clinics, professional services, specialty retail. If customers ask around (or ask AI) before choosing, discoverability decides who they find."}},
+      {"@type": "Question", "name": "How long does it take?", "acceptedAnswer": {"@type": "Answer", "text": "A Snapshot is typically delivered within about a week. Most quick-win fixes land within a single search-cycle — weeks, not months."}}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://spencermorleyconsulting.ca/"},
+      {"@type": "ListItem", "position": 2, "name": "Small Business AI Track", "item": "https://spencermorleyconsulting.ca/small-business.html"},
+      {"@type": "ListItem", "position": 3, "name": "Discoverability Index", "item": "https://spencermorleyconsulting.ca/discoverability-index/"}
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --charcoal:       #1C1C1C;
+      --charcoal-mid:   #252525;
+      --charcoal-light: #323232;
+      --gold:           #C9A84C;
+      --gold-light:     #D9BC7A;
+      --gold-dim:       rgba(201,168,76,0.12);
+      --gold-border:    rgba(201,168,76,0.22);
+      --cream:          #F7F7F5;
+      --cream-mid:      #EFEFEB;
+      --warm-white:     #FAFAF8;
+      --muted:          #88887F;
+      --light-text:     #5C5C54;
+      --crit:           #C84A3A;
+      --font-display:   'Cormorant Garamond', 'Georgia', 'Times New Roman', serif;
+      --font-ui:        'Nunito', 'Century Gothic', 'Trebuchet MS', 'Arial', sans-serif;
+      --font-body:      'Lato', 'Helvetica Neue', 'Arial', sans-serif;
+    }
+    html { scroll-behavior: smooth; overflow-x: hidden; }
+    body { font-family: var(--font-body); background: var(--charcoal); color: var(--cream); overflow-x: hidden; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-synthesis: none; }
+    .smc-sym { display: block; width: 100%; height: 100%; }
+    .smc-sym path { fill: currentColor; }
+    a { color: inherit; }
+
+    /* ── NAV ── */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: 74px; display: flex; align-items: center; justify-content: space-between; padding: 0 4rem; background: rgba(28,28,28,0.94); backdrop-filter: blur(18px); border-bottom: 1px solid var(--gold-border); transition: height 0.35s cubic-bezier(0.4,0,0.2,1), background 0.35s ease, box-shadow 0.35s ease; }
+    nav.scrolled { height: 58px; background: rgba(28,28,28,0.98); box-shadow: 0 4px 40px rgba(0,0,0,0.45); }
+    nav.scrolled .nav-brand-icon { width: 26px; height: 26px; transition: width 0.35s ease, height 0.35s ease; }
+    .nav-brand { display: flex; align-items: center; gap: 0.85rem; text-decoration: none; flex-shrink: 0; }
+    .nav-brand-icon { width: 34px; height: 34px; color: var(--gold); flex-shrink: 0; }
+    .nav-brand-text { line-height: 1.25; }
+    .nav-brand-name { font-family: var(--font-ui); font-size: 0.78rem; font-weight: 900; letter-spacing: 0.1em; text-transform: uppercase; color: var(--cream); display: block; }
+    .nav-brand-tagline { font-family: var(--font-body); font-size: 0.6rem; font-weight: 300; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); display: block; }
+    .nav-links { display: flex; align-items: center; gap: 1.4rem; list-style: none; white-space: nowrap; }
+    .nav-links > li > a { font-family: var(--font-ui); font-size: 0.72rem; font-weight: 800; letter-spacing: 0.07em; text-transform: uppercase; color: var(--cream); text-decoration: none; opacity: 0.65; transition: opacity 0.2s; position: relative; white-space: nowrap; }
+    .nav-links > li > a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 1px; background: var(--gold); transition: width 0.3s; }
+    .nav-links > li > a:hover { opacity: 1; }
+    .nav-links > li > a:hover::after { width: 100%; }
+    .nav-dropdown { position: relative; }
+    .nav-dropdown > a { padding-bottom: 1.2rem; }
+    .nav-dropdown-menu::before { content: ""; position: absolute; top: -12px; left: 0; right: 0; height: 12px; }
+    .nav-dropdown-menu { display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); margin-top: 0; background: var(--charcoal-mid); border: 1px solid var(--gold-border); min-width: 230px; padding: 0.5rem 0; }
+    .nav-dropdown:hover .nav-dropdown-menu { display: block; }
+    .nav-dropdown-menu a { display: block; padding: 0.6rem 1.4rem; font-family: var(--font-body); font-size: 0.78rem; font-weight: 400; letter-spacing: 0.04em; color: var(--cream); text-decoration: none; opacity: 0.72; transition: opacity 0.2s, background 0.2s; }
+    .nav-dropdown-menu a:hover { opacity: 1; background: var(--gold-dim); color: var(--gold); }
+    .nav-cta { font-family: var(--font-ui) !important; padding: 0.5rem 1.2rem !important; border: 1px solid var(--gold) !important; color: var(--gold) !important; opacity: 1 !important; font-size: 0.68rem !important; font-weight: 800 !important; letter-spacing: 0.1em !important; text-transform: uppercase; text-decoration: none; transition: background 0.2s, color 0.2s !important; }
+    .nav-cta:hover { background: var(--gold) !important; color: var(--charcoal) !important; }
+    .nav-cta::after { display: none !important; }
+    .nav-hamburger { display: none; flex-direction: column; justify-content: space-between; width: 26px; height: 18px; background: none; border: none; cursor: pointer; padding: 0; z-index: 201; }
+    .nav-hamburger span { display: block; width: 100%; height: 2px; background: var(--cream); transition: transform 0.3s, opacity 0.3s; }
+    nav.nav-open .nav-hamburger span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    nav.nav-open .nav-hamburger span:nth-child(2) { opacity: 0; }
+    nav.nav-open .nav-hamburger span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 4rem; }
+    .eyebrow { font-family: var(--font-ui); font-size: 0.65rem; font-weight: 800; letter-spacing: 0.24em; text-transform: uppercase; color: var(--gold); display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1.2rem; }
+    .eyebrow::before { content: ''; width: 26px; height: 1px; background: var(--gold); }
+    .eyebrow.dark { color: var(--charcoal-light); }
+    .eyebrow.dark::before { background: var(--charcoal-light); }
+
+    .btn-gold { font-family: var(--font-ui); padding: 0.85rem 2.2rem; background: var(--gold); color: var(--charcoal); font-size: 0.72rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none; display: inline-block; transition: background 0.2s, transform 0.15s; cursor: pointer; border: none; }
+    .btn-gold:hover { background: var(--gold-light); transform: translateY(-2px); }
+    .btn-ghost { font-family: var(--font-ui); padding: 0.85rem 2.2rem; background: transparent; color: var(--cream); font-size: 0.72rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none; display: inline-block; border: 1px solid var(--gold-border); transition: border-color 0.2s, color 0.2s; }
+    .btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
+    .btn-dark { font-family: var(--font-ui); padding: 0.85rem 2.2rem; background: var(--charcoal); color: var(--cream); font-size: 0.72rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none; display: inline-block; border: 1px solid var(--gold-border); transition: background 0.2s, border-color 0.2s; }
+    .btn-dark:hover { background: var(--charcoal-light); border-color: var(--gold); }
+
+    /* ── PAGE HERO ── */
+    .page-hero { padding: 10rem 0 5rem; background: var(--charcoal); position: relative; overflow: hidden; border-bottom: 1px solid var(--gold-border); }
+    .page-hero-watermark { position: absolute; right: -3%; top: 50%; transform: translateY(-50%); width: 45vw; height: 45vw; max-width: 620px; max-height: 620px; color: var(--gold); opacity: 0.04; pointer-events: none; }
+    .breadcrumb { font-family: var(--font-ui); font-size: 0.65rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 2rem; display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap; }
+    .breadcrumb a { color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    .breadcrumb a:hover { color: var(--gold); }
+    .breadcrumb span { color: var(--gold); }
+    .hero-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 3.5rem; align-items: center; position: relative; z-index: 2; }
+    .page-hero h1 { font-family: var(--font-display); font-size: clamp(2.5rem, 4vw, 4.2rem); font-weight: 300; line-height: 1.07; color: var(--cream); margin-bottom: 1.5rem; }
+    .page-hero h1 em { font-style: italic; color: var(--gold-light); }
+    .page-hero-sub { font-family: var(--font-body); font-size: 1.02rem; font-weight: 300; line-height: 1.78; color: rgba(247,247,245,0.6); max-width: 32em; margin-bottom: 2rem; }
+    .hero-actions { display: flex; align-items: center; gap: 1.2rem; flex-wrap: wrap; }
+    .hero-reassure { font-family: var(--font-ui); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.04em; color: rgba(247,247,245,0.4); margin-top: 1.4rem; }
+    /* ── HERO QUICK-CHECK FORM ── */
+    .hero-qc { display: flex; flex-wrap: wrap; gap: 0.6rem; max-width: 34em; margin-bottom: 1.1rem; }
+    .hero-qc input { flex: 1 1 140px; min-width: 0; background: rgba(255,255,255,0.06); border: 1px solid rgba(247,247,245,0.18); border-radius: 6px; padding: 0.8rem 0.9rem; color: var(--cream); font-family: var(--font-body); font-size: 0.9rem; }
+    .hero-qc input::placeholder { color: rgba(247,247,245,0.4); }
+    .hero-qc input:focus { outline: none; border-color: var(--gold); }
+    .hero-qc .btn-gold { flex: 1 1 100%; border: none; cursor: pointer; font-family: inherit; }
+    .hero-qc-success { display: none; font-family: var(--font-ui); font-size: 0.88rem; font-weight: 700; color: var(--gold-light); margin-bottom: 1.1rem; }
+
+    /* ── GAUGE CARD ── */
+    .gauge-card { background: var(--charcoal-mid); border: 1px solid var(--gold-border); padding: 1.8rem; text-align: center; }
+    .gauge-card .lb-title { font-family: var(--font-ui); font-size: 0.62rem; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(247,247,245,0.5); margin-bottom: 0.6rem; }
+    .gauge svg { display: block; margin: 0.4rem auto 0.2rem; }
+    .gauge-num { font-family: var(--font-display); font-weight: 500; font-size: 2.6rem; fill: var(--cream); }
+    .gauge-sub { font-family: var(--font-ui); font-size: 0.6rem; letter-spacing: 0.12em; fill: rgba(247,247,245,0.5); }
+    .mini-lb { margin-top: 1.1rem; text-align: left; font-family: var(--font-ui); font-size: 0.78rem; }
+    .mini-lb .row { display: flex; align-items: center; gap: 0.6rem; margin: 0.5rem 0; }
+    .mini-lb .nm { width: 110px; color: rgba(247,247,245,0.65); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 0.74rem; }
+    .mini-lb .bar { height: 9px; background: #3a3a3a; flex: 1; overflow: hidden; }
+    .mini-lb .bar i { display: block; height: 100%; }
+    .mini-lb .val { width: 24px; text-align: right; color: var(--cream); font-weight: 800; }
+    .mini-lb .you .nm { color: var(--gold-light); font-weight: 800; }
+
+    /* ── SECTIONS ── */
+    section { padding: 6rem 0; }
+    .sec-dark { background: var(--charcoal); }
+    .sec-mid { background: var(--charcoal-mid); position: relative; overflow: hidden; }
+    .sec-mid::before { content: ''; position: absolute; top: -200px; right: -200px; width: 600px; height: 600px; background: radial-gradient(circle, rgba(201,168,76,0.05) 0%, transparent 70%); pointer-events: none; }
+    .section-head { max-width: 44em; margin-bottom: 2.8rem; position: relative; z-index: 2; }
+    .section-head h2 { font-family: var(--font-display); font-size: clamp(2rem, 3vw, 3.2rem); font-weight: 300; line-height: 1.1; color: var(--cream); margin: 0.6rem 0 1rem; }
+    .section-head h2 em { font-style: italic; color: var(--gold-light); }
+    .section-head p { font-family: var(--font-body); font-size: 1.02rem; font-weight: 300; line-height: 1.75; color: rgba(247,247,245,0.55); }
+
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; position: relative; z-index: 2; }
+    .card { background: var(--charcoal); border: 1px solid var(--gold-border); padding: 2rem; }
+    .sec-mid .card { background: rgba(28,28,28,0.4); }
+    .card .k { font-family: var(--font-display); font-weight: 400; font-size: 3.2rem; line-height: 1; color: var(--gold); display: block; margin-bottom: 0.5rem; }
+    .card h3 { font-family: var(--font-ui); font-size: 0.82rem; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--cream); margin-bottom: 0.7rem; }
+    .card p { font-family: var(--font-body); font-size: 0.88rem; font-weight: 300; line-height: 1.7; color: rgba(247,247,245,0.55); }
+
+    /* ── PILLARS ── */
+    .pillars { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; position: relative; z-index: 2; }
+    .pillar { background: var(--charcoal); border: 1px solid var(--gold-border); border-top: 3px solid var(--gold); padding: 1.6rem; }
+    .pillar .w { font-family: var(--font-ui); font-size: 0.7rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold); }
+    .pillar h3 { font-family: var(--font-display); font-size: 1.3rem; font-weight: 500; color: var(--cream); margin: 0.5rem 0 0.5rem; line-height: 1.2; }
+    .pillar p { font-family: var(--font-body); font-size: 0.82rem; font-weight: 300; line-height: 1.65; color: rgba(247,247,245,0.55); }
+
+    /* ── PRICING ── */
+    .tiers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; align-items: stretch; position: relative; z-index: 2; }
+    .tier { background: var(--charcoal); border: 1px solid var(--gold-border); padding: 2.2rem; display: flex; flex-direction: column; }
+    .tier.feature { border: 1.5px solid var(--gold); box-shadow: 0 10px 40px rgba(0,0,0,0.35); }
+    .tier .badge { align-self: flex-start; font-family: var(--font-ui); font-size: 0.58rem; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); background: var(--gold-dim); border: 1px solid var(--gold-border); padding: 0.25rem 0.7rem; margin-bottom: 1rem; }
+    .tier h3 { font-family: var(--font-display); font-size: 1.6rem; font-weight: 500; color: var(--cream); margin-bottom: 0.2rem; }
+    .tier .role { font-family: var(--font-body); font-size: 0.82rem; font-weight: 300; color: rgba(247,247,245,0.5); margin-bottom: 1.1rem; }
+    .tier-price { font-family: var(--font-display); font-weight: 400; font-size: 2.6rem; color: var(--gold); line-height: 1; }
+    .tier-price small { font-family: var(--font-body); font-size: 0.95rem; font-weight: 300; color: rgba(247,247,245,0.4); }
+    .tier ul { list-style: none; margin: 1.4rem 0 1.8rem; display: flex; flex-direction: column; gap: 0.7rem; }
+    .tier li { font-family: var(--font-body); font-size: 0.86rem; font-weight: 300; color: rgba(247,247,245,0.72); padding-left: 1.4rem; position: relative; line-height: 1.5; }
+    .tier li::before { content: ""; position: absolute; left: 0; top: 0.5rem; width: 7px; height: 7px; background: var(--gold); }
+    .tier .btn-gold, .tier .btn-dark { margin-top: auto; text-align: center; width: 100%; }
+    .price-note { font-family: var(--font-body); font-size: 0.88rem; font-weight: 300; color: rgba(247,247,245,0.55); margin-top: 1.8rem; text-align: center; position: relative; z-index: 2; }
+    .price-note strong { color: var(--gold-light); font-weight: 700; }
+
+    /* ── STEPS ── */
+    .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; position: relative; z-index: 2; }
+    .step { padding-top: 1.2rem; border-top: 1px solid var(--gold-border); }
+    .step .n { font-family: var(--font-ui); font-weight: 800; color: var(--gold); font-size: 0.66rem; letter-spacing: 0.16em; text-transform: uppercase; }
+    .step h3 { font-family: var(--font-display); font-size: 1.4rem; font-weight: 500; color: var(--cream); margin: 0.5rem 0 0.5rem; }
+    .step p { font-family: var(--font-body); font-size: 0.85rem; font-weight: 300; line-height: 1.65; color: rgba(247,247,245,0.55); }
+
+    /* ── FAQ ── */
+    .faq details { background: var(--charcoal); border: 1px solid var(--gold-border); padding: 0.2rem 1.6rem; margin-bottom: 0.8rem; }
+    .faq summary { font-family: var(--font-ui); font-weight: 800; font-size: 0.92rem; letter-spacing: 0.02em; padding: 1.1rem 0; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; color: var(--cream); }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after { content: "+"; color: var(--gold); font-size: 1.4rem; font-weight: 300; }
+    .faq details[open] summary::after { content: "\2013"; }
+    .faq p { font-family: var(--font-body); font-size: 0.92rem; font-weight: 300; line-height: 1.75; color: rgba(247,247,245,0.6); padding: 0 0 1.2rem; }
+
+    /* ── SAMPLE REPORT BAND ── */
+    .sample-band { background: var(--charcoal-mid); border: 1px solid var(--gold-border); padding: 2.2rem 2.6rem; display: grid; grid-template-columns: 1fr auto; gap: 1.5rem; align-items: center; }
+    .sample-band .label { font-family: var(--font-ui); font-size: 0.6rem; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .sample-band h3 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 400; color: var(--cream); margin-bottom: 0.4rem; }
+    .sample-band p { font-family: var(--font-body); font-size: 0.88rem; font-weight: 300; color: rgba(247,247,245,0.55); max-width: 38em; }
+
+    /* ── CONTACT ── */
+    .contact { background: var(--gold); color: var(--charcoal); }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+    .contact .eyebrow.dark { color: rgba(28,28,28,0.6); }
+    .contact .eyebrow.dark::before { background: rgba(28,28,28,0.6); }
+    .contact-hl { font-family: var(--font-display); font-size: clamp(2rem, 3vw, 3rem); font-weight: 400; line-height: 1.1; color: var(--charcoal); margin-bottom: 1rem; }
+    .contact-sub { font-family: var(--font-body); font-size: 0.95rem; font-weight: 300; line-height: 1.7; color: rgba(28,28,28,0.7); }
+    .contact-form { display: flex; flex-direction: column; gap: 0.9rem; }
+    .contact-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.9rem; }
+    .contact-form input, .contact-form textarea { font-family: var(--font-body); font-size: 0.9rem; color: var(--charcoal); background: rgba(28,28,28,0.10); border: 1px solid rgba(28,28,28,0.22); padding: 0.85rem 1rem; width: 100%; }
+    .contact-form input::placeholder, .contact-form textarea::placeholder { color: rgba(28,28,28,0.5); }
+    .contact-form input:focus, .contact-form textarea:focus { outline: none; border-color: var(--charcoal); background: rgba(28,28,28,0.04); }
+    .contact-form textarea { min-height: 100px; resize: vertical; }
+    .btn-submit { font-family: var(--font-ui); background: var(--charcoal); color: var(--cream); font-size: 0.72rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; padding: 0.95rem; width: 100%; border: none; cursor: pointer; transition: background 0.2s; }
+    .btn-submit:hover { background: var(--charcoal-light); }
+    .form-note { font-family: var(--font-body); font-size: 0.75rem; font-weight: 300; color: rgba(28,28,28,0.55); text-align: center; }
+    .form-success { display: none; background: rgba(28,28,28,0.08); border: 1px solid rgba(28,28,28,0.2); padding: 2.5rem; text-align: center; }
+    .form-success-title { font-family: var(--font-display); font-size: 1.6rem; font-weight: 500; color: var(--charcoal); margin-bottom: 0.5rem; }
+    .form-success-body { font-family: var(--font-body); font-size: 0.92rem; font-weight: 300; color: rgba(28,28,28,0.7); }
+
+    /* ── FOOTER ── */
+    footer { background: #141414; border-top: 1px solid var(--gold-border); padding: 2.8rem 0; }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.4rem; }
+    .footer-brand { display: flex; align-items: center; gap: 0.7rem; }
+    .footer-sym { width: 22px; height: 22px; color: rgba(247,247,245,0.3); }
+    .footer-name { font-family: var(--font-ui); font-size: 0.68rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(247,247,245,0.35); }
+    .footer-links { display: flex; gap: 1.4rem; list-style: none; flex-wrap: wrap; }
+    .footer-links a { font-family: var(--font-ui); font-size: 0.65rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-copy { font-family: var(--font-body); font-size: 0.7rem; font-weight: 300; color: var(--muted); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1100px) {
+      nav { padding: 0 2rem; }
+      .wrap { padding: 0 2rem; }
+      .hero-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .pillars { grid-template-columns: 1fr 1fr; }
+      .cards, .tiers, .steps { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    }
+    @media (max-width: 720px) {
+      .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
+      nav.nav-open .nav-links { display: flex; position: fixed; top: 74px; left: 0; right: 0; flex-direction: column; align-items: flex-start; gap: 0; background: var(--charcoal-mid); border-bottom: 1px solid var(--gold-border); padding: 1rem 2rem 2rem; }
+      nav.nav-open .nav-links > li { width: 100%; padding: 0.7rem 0; border-bottom: 1px solid rgba(201,168,76,0.08); }
+      nav.nav-open .nav-dropdown-menu { display: block; position: static; transform: none; border: none; min-width: 0; padding: 0.4rem 0 0 1rem; background: transparent; }
+      .page-hero { padding: 8rem 0 4rem; }
+      .pillars { grid-template-columns: 1fr; }
+      .contact-form-row { grid-template-columns: 1fr; }
+      .sample-band { grid-template-columns: 1fr; }
+      .footer-inner { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+  <script src="/consent.js" defer></script>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="nav-brand">
+    <span class="nav-brand-icon">
+      <svg class="smc-sym" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M50,5C25.2,5,5,25.2,5,50c0,24.8,20.2,45,45,45c24.8,0,45-20.2,45-45C95,25.2,74.8,5,50,5z M50,91C27.4,91,9,72.6,9,50S27.4,9,50,9s41,18.4,41,41S72.6,91,50,91z M84.4,51.4l-6,6C78,57.8,77.5,58,77,58s-1-0.2-1.4-0.6c-0.8-0.8-0.8-2,0-2.8l2.6-2.6H54.8l9.2,9.2V60c0-1.1,0.9-2,2-2s2,0.9,2,2v6c0,0.1,0,0.3,0,0.4c-0.1,0.3-0.3,0.6-0.6,0.8c0,0-0.1,0.1-0.1,0.1c-0.1,0.1-0.3,0.1-0.6,0.1h-6c-1.1,0-2-0.9-2-2s0.9-2,2-2h1.2L52,54.8v23.3l2.6-2.6c0.8-0.8,2-0.8,2.8,0s0.8,2,0,2.8l-6,6c-0.4,0.4-0.9,0.6-1.4,0.6s-1-0.2-1.4-0.6l-6-6c-0.8-0.8-0.8-2,0-2.8c0.8-0.8,2-0.8,2.8,0l2.6,2.6V54.8L38.8,64H40c1.1,0,2,0.9,2,2s-0.9,2-2,2h-6c-0.3,0-0.5-0.1-0.7-0.2c-0.3-0.2-0.5-0.5-0.6-0.8c0-0.1,0-0.3,0-0.4v-6c0-1.1,0.9-2,2-2s2,0.9,2,2v1.2l9.2-9.2H21.8l2.6,2.6c0.8,0.8,0.8,2,0,2.8C24,57.8,23.5,58,23,58s-1-0.2-1.4-0.6l-6-6c-0.8-0.8-0.8-2,0-2.8l6-6c0.8-0.8,2-0.8,2.8,0c0.8,0.8,0.8,2,0,2.8L21.8,48h23.3L36,38.8V40c0,1.1-0.9,2-2,2s-2-0.9-2-2v-6c0-0.1,0-0.3,0-0.4c0.2-0.6,0.7-1.1,1.3-1.2c0.1,0,0.2,0,0.3,0h6c1.1,0,2,0.9,2,2s-0.9,2-2,2h-1.2l9.2,9.2V21.8l-2.6,2.6c-0.8,0.8-2,0.8-2.8,0c-0.8-0.8-0.8-2,0-2.8l6-6c0.4-0.4,0.9-0.6,1.4-0.6s1,0.2,1.4,0.6l6,6c0.8,0.8,0.8,2,0,2.8C57,24.8,56.5,25,56,25s-1-0.2-1.4-0.6L52,21.8v23.3l9.2-9.2H60c-1.1,0-2-0.9-2-2s0.9-2,2-2h6c0.1,0,0.2,0,0.3,0c0.6,0.1,1.1,0.6,1.3,1.2c0,0.1,0,0.3,0,0.4v6c0,1.1-0.9,2-2,2s-2-0.9-2-2v-1.2L54.8,48h23.3l-2.6-2.6c-0.8-0.8-0.8-2,0-2.8c0.8-0.8,2-0.8,2.8,0l6,6C85.2,49.4,85.2,50.6,84.4,51.4z"/></svg>
+    </span>
+    <span class="nav-brand-text">
+      <span class="nav-brand-name">Spencer Morley Consulting</span>
+      <span class="nav-brand-tagline">Helping You Navigate the Chaos</span>
+    </span>
+  </a>
+  <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links">
+    <li class="nav-dropdown">
+      <a href="../index.html#crisis">Strategic Communications &amp; Crisis Management &#9660;</a>
+      <div class="nav-dropdown-menu">
+        <a href="../index.html#crisis-mgmt">Crisis Management</a>
+        <a href="../index.html#media-relations">Media Relations Training</a>
+        <a href="../index.html#on-demand">Retained Communications Counsel</a>
+      </div>
+    </li>
+    <li class="nav-dropdown">
+      <a href="../index.html#ai-section">AI Consulting &#9660;</a>
+      <div class="nav-dropdown-menu">
+        <a href="../municipal.html">Municipal Track</a>
+        <a href="../small-business.html">Small Business Track</a>
+        <a href="../non-profits.html">AI for Non-Profits Track</a>
+      </div>
+    </li>
+    <li><a href="../index.html#about">About</a></li>
+    <li><a href="../resources/">Glossary</a></li>
+    <li><a href="#book" class="nav-cta" onclick="gtag('event', 'cta_click', {'event_category': 'nav', 'event_label': 'free_quick_check', 'page': 'discoverability_index'})">Free Visibility Check</a></li>
+  </ul>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-watermark">
+    <svg class="smc-sym" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M50,5C25.2,5,5,25.2,5,50c0,24.8,20.2,45,45,45c24.8,0,45-20.2,45-45C95,25.2,74.8,5,50,5z M50,91C27.4,91,9,72.6,9,50S27.4,9,50,9s41,18.4,41,41S72.6,91,50,91z"/></svg>
+  </div>
+  <div class="wrap">
+    <div class="breadcrumb"><a href="../index.html">Home</a> &rsaquo; <a href="../small-business.html">Small Business AI Track</a> &rsaquo; <span>Discoverability Index</span></div>
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow">AI search has changed how customers find you</div>
+        <h1>When a customer asks AI who's best in your trade, <em>does your name come up?</em></h1>
+        <p class="page-hero-sub">More Canadian buyers start with ChatGPT, Perplexity, and Google's AI than ever. These tools name a short list of businesses — and if yours isn't on it, you lose the job before the phone rings. The Discoverability Index shows you exactly where you stand.</p>
+        <form class="hero-qc" onsubmit="return false;">
+          <input type="text" id="hqc-business" placeholder="Business name *" required />
+          <input type="text" id="hqc-city" placeholder="City *" required />
+          <input type="email" id="hqc-email" placeholder="Email *" required />
+          <button class="btn-gold" onclick="handleHeroQuickCheck(event)">Get your free Visibility Check</button>
+        </form>
+        <p class="hero-qc-success" id="hero-qc-success">Request received — I&rsquo;ll run your Visibility Check and be in touch within one business day.</p>
+        <div class="hero-actions">
+          <a class="btn-ghost" href="#what">See how it works</a>
+          <a class="btn-ghost" href="#book" onclick="gtag('event', 'cta_click', {'event_category': 'hero', 'event_label': 'book_your_audit', 'page': 'discoverability_index'})">Book your audit</a>
+        </div>
+        <p class="hero-reassure">Free &middot; No obligation &middot; Scored against your real competitors &middot; Canada-wide</p>
+      </div>
+      <div class="gauge-card">
+        <div class="lb-title">Sample Discoverability Index</div>
+        <div class="gauge">
+          <svg width="150" height="150" viewBox="0 0 150 150" role="img" aria-label="Sample score 34 out of 100">
+            <circle cx="75" cy="75" r="62" fill="none" stroke="#3a3a3a" stroke-width="11"/>
+            <circle cx="75" cy="75" r="62" fill="none" stroke="#C84A3A" stroke-width="11" stroke-linecap="round"
+              stroke-dasharray="389.6" stroke-dashoffset="257.1" transform="rotate(-90 75 75)"/>
+            <text x="75" y="82" text-anchor="middle" class="gauge-num">34</text>
+            <text x="75" y="100" text-anchor="middle" class="gauge-sub">OF 100</text>
+          </svg>
+        </div>
+        <div class="mini-lb">
+          <div class="row"><span class="nm">Top competitor</span><span class="bar"><i style="width:75%;background:#C9A84C"></i></span><span class="val">75</span></div>
+          <div class="row"><span class="nm">Next rival</span><span class="bar"><i style="width:56%;background:#8a8a8a"></i></span><span class="val">56</span></div>
+          <div class="row you"><span class="nm">Your business</span><span class="bar"><i style="width:34%;background:#C84A3A"></i></span><span class="val">34</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEM -->
+<section class="sec-dark" id="what">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">The shift</div>
+      <h2>Search didn't just change — it started <em>answering</em></h2>
+      <p>Buyers used to scroll a page of links. Now they ask a question and get a short, named recommendation. The businesses that get named aren't always the biggest — they're the ones the tools can actually read.</p>
+    </div>
+    <div class="cards">
+      <div class="card"><span class="k">3</span><h3>engines deciding</h3><p>ChatGPT, Perplexity, and Google's AI now shape who a buyer calls — often before they ever reach a search results page.</p></div>
+      <div class="card"><span class="k">0</span><h3>mentions is common</h3><p>Most local businesses we audit appear zero times when buyers ask AI for a recommendation in their category. They're invisible and don't know it.</p></div>
+      <div class="card"><span class="k">1</span><h3>score to track it</h3><p>The Discoverability Index turns all of it into a single number you can measure, compare to rivals, and improve over time.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PILLARS -->
+<section class="sec-mid">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">What you get</div>
+      <h2>One score, built the same way for every business — so you can see exactly where you stand</h2>
+      <p>Your Discoverability Index (SDI) is scored from 0–100 across four areas, then ranked against seven to ten named competitors on a single leaderboard. Every finding is verified, specific, and tied to a dollar impact.</p>
+    </div>
+    <div class="pillars">
+      <div class="pillar"><div class="w">30 pts</div><h3>Classical SEO</h3><p>Can search engines read, index, and rank your site? Titles, structure, content, and authority.</p></div>
+      <div class="pillar"><div class="w">35 pts</div><h3>AI visibility (AEO/GEO)</h3><p>Do ChatGPT, Perplexity, Gemini, Claude, and Copilot name you when buyers ask? The channel most businesses ignore.</p></div>
+      <div class="pillar"><div class="w">20 pts</div><h3>webMCP readiness</h3><p>Is your business machine-readable — structured data, llms.txt, an AI manifest — so agents can use it?</p></div>
+      <div class="pillar"><div class="w">15 pts</div><h3>Canadian trust signals</h3><p>Google Business Profile, HomeStars, Consumer Choice, local reviews — weighted for Canadian buyers.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- DELIVERABLE -->
+<section class="sec-dark">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Inside the report</div>
+      <h2>A diagnosis your web developer <em>can't argue with</em></h2>
+    </div>
+    <div class="cards">
+      <div class="card"><h3>Your SDI score &amp; rank</h3><p>One number, your place on a leaderboard of named local competitors, and the exact point gap to the top.</p></div>
+      <div class="card"><h3>What the gap costs</h3><p>The revenue going to competitors through AI and search discovery — modelled on recovered jobs, with the assumptions printed in plain sight.</p></div>
+      <div class="card"><h3>A 90-day roadmap</h3><p>Prioritized fixes by impact and effort — what to do first, what's quick, and what moves the score most.</p></div>
+    </div>
+    <div style="margin-top:2.5rem;" class="sample-band">
+      <div>
+        <div class="label">See it first</div>
+        <h3>A full sample report</h3>
+        <p>Walk through a complete, anonymized Discoverability Index report — the score, the leaderboard, the dollars-at-stake, and the roadmap — before you book.</p>
+      </div>
+      <a class="btn-gold" href="sample-report.html" onclick="gtag('event', 'cta_click', {'event_category': 'sample', 'event_label': 'view_sample_report', 'page': 'discoverability_index'})">View the sample report</a>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="sec-mid" id="pricing">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Pricing</div>
+      <h2>Start with the audit. Go as far as you want.</h2>
+      <p>The audit is the wedge — most businesses then fix the gaps, and some keep us monitoring. Prices in CAD.</p>
+    </div>
+    <div class="tiers">
+      <div class="tier">
+        <span class="badge">Start here</span>
+        <h3>Discoverability Snapshot</h3>
+        <div class="role">The full audit &amp; report</div>
+        <div class="tier-price">$1,500</div>
+        <ul>
+          <li>Your 0–100 SDI score and rank</li>
+          <li>Leaderboard vs 7–10 named competitors</li>
+          <li>Live AI checks across 5 engines</li>
+          <li>Dollars-at-stake, modelled</li>
+          <li>90-day roadmap</li>
+        </ul>
+        <a class="btn-dark" href="#book" onclick="gtag('event', 'cta_click', {'event_category': 'pricing', 'event_label': 'snapshot', 'page': 'discoverability_index'})">Book a Snapshot</a>
+      </div>
+      <div class="tier feature">
+        <span class="badge">Most popular</span>
+        <h3>Snapshot + Fix Sprint</h3>
+        <div class="role">Audit, then we do the fixes</div>
+        <div class="tier-price">$3,900</div>
+        <ul>
+          <li>Everything in the Snapshot</li>
+          <li>Structured data (schema) built</li>
+          <li>llms.txt &amp; AI manifest added</li>
+          <li>Meta, headings &amp; sitemap repaired</li>
+          <li>Google Business Profile built out</li>
+          <li>WebMCP / agent-readiness configured</li>
+        </ul>
+        <a class="btn-gold" href="#book" onclick="gtag('event', 'cta_click', {'event_category': 'pricing', 'event_label': 'fix_sprint', 'page': 'discoverability_index'})">Book a Fix Sprint</a>
+      </div>
+      <div class="tier">
+        <span class="badge">Stay ahead</span>
+        <h3>Discoverability Partner</h3>
+        <div class="role">Ongoing monitoring (light)</div>
+        <div class="tier-price">$400<small>/mo</small></div>
+        <ul>
+          <li>Quarterly SDI re-score</li>
+          <li>Monthly AI-visibility pulse</li>
+          <li>Competitor-overtake alerts</li>
+          <li>Light ongoing fixes</li>
+          <li>3-month minimum</li>
+        </ul>
+        <a class="btn-dark" href="#book" onclick="gtag('event', 'cta_click', {'event_category': 'pricing', 'event_label': 'partner', 'page': 'discoverability_index'})">Talk monitoring</a>
+      </div>
+    </div>
+    <p class="price-note">Founding-client pilot rate: <strong>$750</strong> for the first few founding clients, in exchange for a testimonial. &nbsp;&middot;&nbsp; Prefer we actively build your presence each month? Ask about the AI Presence &amp; Reputation retainer ($1,200&#8211;2,000/mo). &nbsp;&middot;&nbsp; Trade associations &amp; franchises: ask about a sector leaderboard.</p>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="sec-dark">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">How it works</div>
+      <h2>From "are we even showing up?" to a clear plan in about a week</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="n">Step 1</div><h3>Visibility check</h3><p>Tell us your business and city. We run a fast live check so you can see where you stand at no cost.</p></div>
+      <div class="step"><div class="n">Step 2</div><h3>Full audit</h3><p>We score you and your competitors across all four areas, verified by live browser checks — not guesses.</p></div>
+      <div class="step"><div class="n">Step 3</div><h3>The report</h3><p>You get your SDI, the leaderboard, the dollars at stake, and a prioritized 90-day roadmap.</p></div>
+      <div class="step"><div class="n">Step 4</div><h3>Close the gap</h3><p>Do it yourself from the roadmap, or have us run the Fix Sprint and keep watch with monitoring.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY SMC -->
+<section class="sec-mid">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Why Spencer Morley Consulting</div>
+      <h2>Built in Edmonton, calibrated for <em>Canadian buyers</em></h2>
+      <p>The Discoverability Index weights the platforms Canadians actually use — Google Business Profile, HomeStars, Consumer Choice, TrustedPros — and down-weights US-only sites that don't move local buyers. Every claim is verified by live browser render, and every number is sourced or labelled. No hype, no vanity metrics.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec-dark" id="faq">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Questions</div>
+      <h2>Straight answers</h2>
+    </div>
+    <div class="faq">
+      <details open><summary>How is this different from a free AI visibility checker?</summary><p>A free grader gives you one number from an AI model's memory. The Discoverability Index runs live queries across five AI engines, scores you against seven to ten named local competitors, audits what AI gets wrong about your business, verifies your website's structured data by live browser render, models the revenue at stake, and gives you a prioritized plan — and we can do the fixes.</p></details>
+      <details><summary>Do you just hand me a report, or do you fix it?</summary><p>Both are available. The Snapshot is the audit. The Fix Sprint adds the done-for-you work — structured data, llms.txt, meta and headings, Google Business Profile — so the gaps actually close, not just get named.</p></details>
+      <details><summary>Is this relevant to my industry?</summary><p>It fits any local business buyers research before they call — trades, home services, dental and health clinics, professional services, specialty retail. If customers ask around (or ask AI) before choosing, discoverability decides who they find.</p></details>
+      <details><summary>How long does it take?</summary><p>A Snapshot is typically delivered within about a week. Most quick-win fixes land within a single search-cycle — weeks, not months.</p></details>
+      <details><summary>What does it cost to start?</summary><p>The Snapshot is $1,500 CAD, with a $750 founding-client rate for the first few founding clients. One recovered job usually covers it.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT / BOOK -->
+<section class="contact" id="book">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div>
+        <div class="eyebrow dark">Free Visibility Check</div>
+        <h2 class="contact-hl">Find out if AI search is sending your customers to a competitor.</h2>
+        <p class="contact-sub">Send your business name and city. I'll run a free Visibility Check and show you where you stand — no obligation.</p>
+        <p class="contact-sub" style="margin-top:1rem;">Prefer email? Reach me at <a href="mailto:jordan@spencermorleyconsulting.ca" style="color:var(--gold);text-decoration:underline;text-underline-offset:3px;" onclick="gtag('event','cta_click',{'event_category':'contact','event_label':'email_direct','page':'discoverability_index'})">jordan@spencermorleyconsulting.ca</a> &mdash; or <a href="https://calendly.com/jordan-spencermorleyconsulting" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:underline;text-underline-offset:3px;" onclick="gtag('event','cta_click',{'event_category':'contact','event_label':'calendly_book_call','page':'discoverability_index'})">book a call directly</a>.</p>
+      </div>
+      <div>
+        <div id="contact-form-wrap">
+          <form
+            tool-name="discoverability-quick-check-request"
+            tool-description="Request a free AI-search Visibility Check from Spencer Morley Consulting. Provide business name, city, website, and email."
+            onsubmit="return false;">
+            <div class="contact-form">
+              <div class="contact-form-row">
+                <input type="text" id="cf-business" placeholder="Business name *" required />
+                <input type="text" id="cf-city" placeholder="City *" required />
+              </div>
+              <div class="contact-form-row">
+                <input type="text" id="cf-website" placeholder="Website (if you have one)" />
+                <input type="email" id="cf-email" placeholder="Email address *" required />
+              </div>
+              <textarea id="cf-message" placeholder="Anything you'd like us to know? (optional)"></textarea>
+              <button class="btn-submit" onclick="handleFormSubmit(event)">Get your free Visibility Check</button>
+              <p class="form-note">We respect your privacy. Your information will never be shared.</p>
+            </div>
+          </form>
+        </div>
+        <div class="form-success" id="form-success">
+          <div class="form-success-title">Request received.</div>
+          <div class="form-success-body">Thanks — I'll run your Visibility Check and be in touch within one business day.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="footer-sym">
+          <svg class="smc-sym" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M50,5C25.2,5,5,25.2,5,50c0,24.8,20.2,45,45,45c24.8,0,45-20.2,45-45C95,25.2,74.8,5,50,5z M50,91C27.4,91,9,72.6,9,50S27.4,9,50,9s41,18.4,41,41S72.6,91,50,91z"/></svg>
+        </span>
+        <span class="footer-name">Spencer Morley Consulting</span>
+      </div>
+      <ul class="footer-links">
+        <li><a href="../index.html#crisis">Crisis Communications</a></li>
+        <li><a href="../small-business.html">Small Business Track</a></li>
+        <li><a href="../index.html#ai-section">AI Consulting</a></li>
+        <li><a href="../resources/">Glossary</a></li>
+        <li><a href="#book">Contact</a></li>
+        <li><a href="../privacy.html">Privacy</a></li>
+      </ul>
+      <div class="footer-copy">© 2026 Spencer Morley Consulting · Edmonton, AB · Serving Canada</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+function handleHeroQuickCheck(e) {
+  e.preventDefault();
+  var business = document.getElementById('hqc-business').value.trim();
+  var city     = document.getElementById('hqc-city').value.trim();
+  var email    = document.getElementById('hqc-email').value.trim();
+  if (!business || !city || !email) {
+    alert('Please fill in your business name, city, and email.');
+    return;
+  }
+  var btn = e.target;
+  btn.disabled = true;
+  btn.textContent = 'Sending…';
+  fetch('https://formspree.io/f/xojpaekn', {
+    method: 'POST',
+    headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      business: business,
+      city: city,
+      website: 'Not provided',
+      email: email,
+      message: 'Not provided',
+      _subject: 'Discoverability Index — Free Visibility Check (hero) — ' + business,
+      source: 'Discoverability Index — hero'
+    })
+  })
+  .then(function(r) {
+    if (r.ok) {
+      var goThankYou = function() { window.location.href = 'thank-you.html'; };
+      var redirected = false;
+      var redirectOnce = function() { if (!redirected) { redirected = true; goThankYou(); } };
+      if (typeof gtag === 'function') {
+        gtag('event', 'generate_lead', {
+          'event_category': 'contact_form',
+          'event_label': 'discoverability_quick_check_hero',
+          'page': 'discoverability_index',
+          'event_callback': redirectOnce
+        });
+      }
+      // Fallback: proceed even if the event callback never fires (e.g. consent denied).
+      setTimeout(redirectOnce, 800);
+    } else {
+      btn.disabled = false;
+      btn.textContent = 'Get your free Visibility Check';
+      alert('Something went wrong. Please try again or email jordan@spencermorleyconsulting.ca directly.');
+    }
+  })
+  .catch(function() {
+    btn.disabled = false;
+    btn.textContent = 'Get your free Visibility Check';
+    alert('Something went wrong. Please try again or email jordan@spencermorleyconsulting.ca directly.');
+  });
+}
+function handleFormSubmit(e) {
+  e.preventDefault();
+  var business = document.getElementById('cf-business').value.trim();
+  var city     = document.getElementById('cf-city').value.trim();
+  var website  = document.getElementById('cf-website').value.trim();
+  var email    = document.getElementById('cf-email').value.trim();
+  var message  = document.getElementById('cf-message').value.trim();
+  if (!business || !city || !email) {
+    alert('Please fill in your business name, city, and email.');
+    return;
+  }
+  var btn = e.target;
+  btn.disabled = true;
+  btn.textContent = 'Sending…';
+  fetch('https://formspree.io/f/xojpaekn', {
+    method: 'POST',
+    headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      business: business,
+      city: city,
+      website: website || 'Not provided',
+      email: email,
+      message: message || 'Not provided',
+      _subject: 'Discoverability Index — Free Visibility Check — ' + business,
+      source: 'Discoverability Index'
+    })
+  })
+  .then(function(r) {
+    if (r.ok) {
+      var goThankYou = function() { window.location.href = 'thank-you.html'; };
+      var redirected = false;
+      var redirectOnce = function() { if (!redirected) { redirected = true; goThankYou(); } };
+      if (typeof gtag === 'function') {
+        gtag('event', 'generate_lead', {
+          'event_category': 'contact_form',
+          'event_label': 'discoverability_quick_check',
+          'page': 'discoverability_index',
+          'event_callback': redirectOnce
+        });
+      }
+      // Fallback: proceed even if the event callback never fires (e.g. consent denied).
+      setTimeout(redirectOnce, 800);
+    } else {
+      btn.disabled = false;
+      btn.textContent = 'Get your free Visibility Check';
+      alert('Something went wrong. Please try again or email jordan@spencermorleyconsulting.ca directly.');
+    }
+  })
+  .catch(function() {
+    btn.disabled = false;
+    btn.textContent = 'Get your free Visibility Check';
+    alert('Something went wrong. Please try again or email jordan@spencermorleyconsulting.ca directly.');
+  });
+}
+(function () {
+  var nav = document.querySelector('nav');
+  var onScroll = function() { nav.classList.toggle('scrolled', window.scrollY > 60); };
+  window.addEventListener('scroll', onScroll, { passive: true });
+})();
+(function() {
+  var hamburger = document.querySelector('.nav-hamburger');
+  var navEl = document.querySelector('nav');
+  if (!hamburger) return;
+  hamburger.addEventListener('click', function() {
+    var isOpen = navEl.classList.toggle('nav-open');
+    hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    hamburger.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && navEl.classList.contains('nav-open')) {
+      navEl.classList.remove('nav-open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+  });
+})();
+</script>
+</body>
+</html>

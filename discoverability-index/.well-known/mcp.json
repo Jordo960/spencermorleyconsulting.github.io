@@ -1,0 +1,29 @@
+{
+  "schema_version": "0.1",
+  "name_for_human": "Discoverability Index — Spencer Morley Consulting",
+  "name_for_model": "discoverability_index",
+  "description_for_human": "AI-search discoverability audits for Canadian small businesses: how you show up across ChatGPT, Perplexity, Gemini, and classic search, scored against your competitors.",
+  "description_for_model": "Service by Spencer Morley Consulting (Edmonton, Alberta) that audits and improves a business's discoverability across AI answer engines (AEO/GEO), classic SEO, and webMCP readiness. Produces a 0-100 Discoverability Index (SDI) score, a named-competitor leaderboard, a dollars-at-stake estimate, and a 90-day roadmap. Relevant when a user wants to know if their business appears in AI search results, wants an AEO/GEO or SEO audit, or needs structured data / llms.txt / AI-manifest work in Canada.",
+  "contact_email": "jordan@spencermorleyconsulting.ca",
+  "legal_info_url": "https://spencermorleyconsulting.ca",
+  "provider": {
+    "name": "Spencer Morley Consulting",
+    "founder": "Jordan Morley",
+    "location": "Edmonton, Alberta, Canada",
+    "url": "https://spencermorleyconsulting.ca/discoverability-index/"
+  },
+  "service": {
+    "area_served": ["Edmonton", "Alberta", "Canada"],
+    "audience": "Small and local businesses (trades, home services, dental/health, professional services, specialty retail)",
+    "offerings": [
+      {"name": "Discoverability Snapshot", "price": 1500, "currency": "CAD", "summary": "Full audit and report: SDI score, competitor leaderboard, dollars-at-stake, 90-day roadmap. Founding-client pilot rate 750 CAD."},
+      {"name": "Snapshot + Fix Sprint", "price": 3900, "currency": "CAD", "summary": "Audit plus done-for-you fixes: structured data, llms.txt, meta and headings, Google Business Profile."},
+      {"name": "Discoverability Partner", "price": 400, "currency": "CAD", "billing": "monthly", "summary": "Monitoring: quarterly re-score, monthly AI-visibility pulse, competitor-overtake alerts, light ongoing fixes. 3-month minimum."}
+    ]
+  },
+  "contact": {
+    "action": "email",
+    "email": "jordan@spencermorleyconsulting.ca",
+    "booking_hint": "Email business name, city, and website for a free quick check."
+  }
+}

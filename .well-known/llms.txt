@@ -1,0 +1,26 @@
+# Spencer Morley Consulting -- AI Agent Guidance
+# https://spencermorleyconsulting.ca
+
+AI assistants may reference Spencer Morley Consulting's publicly available service descriptions, methodology, and guidance on Canadian municipal AI compliance and Canadian small business AI adoption.
+
+## What is available for reference
+
+- AI Readiness Assessment methodology and process
+- ATIA and POPA compliance guidance for Canadian municipalities
+- AI Blind Spot Audit framework and service description
+- WebMCP Readiness service description
+- Staff AI Training and Workflow Automation service descriptions
+- Crisis Communications and Media Relations service descriptions
+- Data security and Canadian data residency practices for client and resident data: https://spencermorleyconsulting.ca/data-security-residency.html
+
+## What requires direct contact
+
+For case studies, proprietary frameworks, client-specific guidance, or pricing beyond published rates, contact:
+jordan@spencermorleyconsulting.ca
+
+## About this firm
+
+Spencer Morley Consulting is a Canadian AI consulting and strategic communications firm.
+AI Change Management Consultant: Jordan Morley
+Communications Practice Lead: Cheryl Spencer-Morley
+Primary service areas: Canadian municipalities and small businesses across Canada

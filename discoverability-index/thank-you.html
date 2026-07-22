@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Visibility Check is running — thank you | Spencer Morley Consulting</title>
+  <meta name="description" content="Your free AI-search Visibility Check request has been received. Results within one business day — or grab a 15-minute call to walk through it live." />
+  <meta name="robots" content="noindex, follow" />
+  <link rel="canonical" href="https://spencermorleyconsulting.ca/discoverability-index/thank-you.html" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Nunito:wght@700;800;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --charcoal:       #1C1C1C;
+      --charcoal-mid:   #252525;
+      --charcoal-light: #323232;
+      --gold:           #C9A84C;
+      --gold-light:     #D9BC7A;
+      --gold-dim:       rgba(201,168,76,0.12);
+      --gold-border:    rgba(201,168,76,0.22);
+      --cream:          #F7F7F5;
+      --muted:          #88887F;
+      --font-display:   'Cormorant Garamond', 'Georgia', 'Times New Roman', serif;
+      --font-ui:        'Nunito', 'Century Gothic', 'Trebuchet MS', 'Arial', sans-serif;
+      --font-body:      'Lato', 'Helvetica Neue', 'Arial', sans-serif;
+    }
+    html { scroll-behavior: smooth; overflow-x: hidden; }
+    body { font-family: var(--font-body); background: var(--charcoal); color: var(--cream); overflow-x: hidden; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-synthesis: none; display: flex; flex-direction: column; min-height: 100vh; }
+    .smc-sym { display: block; width: 100%; height: 100%; }
+    .smc-sym path { fill: currentColor; }
+    a { color: inherit; }
+
+    /* ── NAV ── */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: 74px; display: flex; align-items: center; justify-content: space-between; padding: 0 4rem; background: rgba(28,28,28,0.94); backdrop-filter: blur(18px); border-bottom: 1px solid var(--gold-border); }
+    .nav-brand { display: flex; align-items: center; gap: 0.85rem; text-decoration: none; flex-shrink: 0; }
+    .nav-brand-icon { width: 34px; height: 34px; color: var(--gold); flex-shrink: 0; }
+    .nav-brand-text { line-height: 1.25; }
+    .nav-brand-name { font-family: var(--font-ui); font-size: 0.78rem; font-weight: 900; letter-spacing: 0.1em; text-transform: uppercase; color: var(--cream); display: block; }
+    .nav-brand-tagline { font-family: var(--font-body); font-size: 0.6rem; font-weight: 300; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); display: block; }
+    .nav-links { display: flex; align-items: center; gap: 1.4rem; list-style: none; white-space: nowrap; }
+    .nav-links > li > a { font-family: var(--font-ui); font-size: 0.72rem; font-weight: 800; letter-spacing: 0.07em; text-transform: uppercase; color: var(--cream); text-decoration: none; opacity: 0.65; transition: opacity 0.2s; }
+    .nav-links > li > a:hover { opacity: 1; }
+    .nav-cta { padding: 0.5rem 1.2rem !important; border: 1px solid var(--gold) !important; color: var(--gold) !important; opacity: 1 !important; font-size: 0.68rem !important; }
+    .nav-cta:hover { background: var(--gold) !important; color: var(--charcoal) !important; }
+
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 4rem; }
+    .eyebrow { font-family: var(--font-ui); font-size: 0.65rem; font-weight: 800; letter-spacing: 0.24em; text-transform: uppercase; color: var(--gold); display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1.2rem; }
+    .eyebrow::before { content: ''; width: 26px; height: 1px; background: var(--gold); }
+
+    .btn-gold { font-family: var(--font-ui); padding: 0.85rem 2.2rem; background: var(--gold); color: var(--charcoal); font-size: 0.72rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none; display: inline-block; transition: background 0.2s, transform 0.15s; cursor: pointer; border: none; }
+    .btn-gold:hover { background: var(--gold-light); transform: translateY(-2px); }
+    .btn-ghost { font-family: var(--font-ui); padding: 0.85rem 2.2rem; background: transparent; color: var(--cream); font-size: 0.72rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none; display: inline-block; border: 1px solid var(--gold-border); transition: border-color 0.2s, color 0.2s; }
+    .btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
+
+    /* ── HERO / CONFIRMATION ── */
+    main { flex: 1 0 auto; }
+    .ty-hero { padding: 11rem 0 5rem; background: var(--charcoal); position: relative; overflow: hidden; border-bottom: 1px solid var(--gold-border); }
+    .ty-hero-watermark { position: absolute; right: -3%; top: 50%; transform: translateY(-50%); width: 45vw; height: 45vw; max-width: 560px; max-height: 560px; color: var(--gold); opacity: 0.04; pointer-events: none; }
+    .ty-inner { position: relative; z-index: 2; max-width: 40em; }
+    .ty-check { width: 62px; height: 62px; border-radius: 50%; border: 1.5px solid var(--gold); display: flex; align-items: center; justify-content: center; margin-bottom: 1.8rem; }
+    .ty-check svg { width: 30px; height: 30px; }
+    .ty-check svg path { fill: none; stroke: var(--gold); stroke-width: 8; stroke-linecap: round; stroke-linejoin: round; }
+    .ty-hero h1 { font-family: var(--font-display); font-size: clamp(2.4rem, 4vw, 3.8rem); font-weight: 300; line-height: 1.08; color: var(--cream); margin-bottom: 1.4rem; }
+    .ty-hero h1 em { font-style: italic; color: var(--gold-light); }
+    .ty-hero-sub { font-family: var(--font-body); font-size: 1.05rem; font-weight: 300; line-height: 1.8; color: rgba(247,247,245,0.62); margin-bottom: 1.2rem; }
+    .ty-hero-sub strong { color: var(--cream); font-weight: 700; }
+
+    /* ── WHAT HAPPENS NEXT ── */
+    .next { padding: 5rem 0; background: var(--charcoal-mid); position: relative; overflow: hidden; }
+    .next::before { content: ''; position: absolute; top: -200px; right: -200px; width: 600px; height: 600px; background: radial-gradient(circle, rgba(201,168,76,0.05) 0%, transparent 70%); pointer-events: none; }
+    .section-head { max-width: 44em; margin-bottom: 2.6rem; position: relative; z-index: 2; }
+    .section-head h2 { font-family: var(--font-display); font-size: clamp(1.9rem, 3vw, 2.8rem); font-weight: 300; line-height: 1.1; color: var(--cream); margin: 0.5rem 0 1rem; }
+    .section-head h2 em { font-style: italic; color: var(--gold-light); }
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; position: relative; z-index: 2; }
+    .step { padding-top: 1.2rem; border-top: 1px solid var(--gold-border); }
+    .step .n { font-family: var(--font-ui); font-weight: 800; color: var(--gold); font-size: 0.66rem; letter-spacing: 0.16em; text-transform: uppercase; }
+    .step h3 { font-family: var(--font-display); font-size: 1.35rem; font-weight: 500; color: var(--cream); margin: 0.5rem 0 0.5rem; }
+    .step p { font-family: var(--font-body); font-size: 0.88rem; font-weight: 300; line-height: 1.7; color: rgba(247,247,245,0.55); }
+
+    /* ── SHORTCUT / CALENDLY ── */
+    .shortcut { padding: 5rem 0; background: var(--charcoal); }
+    .shortcut-card { background: var(--charcoal-mid); border: 1px solid var(--gold-border); border-top: 3px solid var(--gold); padding: 2.6rem 2.8rem; }
+    .shortcut-card .label { font-family: var(--font-ui); font-size: 0.62rem; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.7rem; }
+    .shortcut-card h2 { font-family: var(--font-display); font-size: clamp(1.7rem, 2.6vw, 2.3rem); font-weight: 400; color: var(--cream); line-height: 1.15; margin-bottom: 0.9rem; }
+    .shortcut-card p { font-family: var(--font-body); font-size: 0.96rem; font-weight: 300; line-height: 1.75; color: rgba(247,247,245,0.6); max-width: 40em; margin-bottom: 1.6rem; }
+    .shortcut-actions { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
+    .calendly-inline-widget { margin-top: 2rem; min-width: 320px; height: 640px; }
+    .shortcut-fallback { font-family: var(--font-body); font-size: 0.8rem; font-weight: 300; color: rgba(247,247,245,0.4); margin-top: 1rem; }
+    .shortcut-fallback a { color: var(--gold); text-decoration: underline; text-underline-offset: 3px; }
+
+    /* ── SAMPLE BAND ── */
+    .sample-wrap { padding: 0 0 5rem; background: var(--charcoal); }
+    .sample-band { background: var(--charcoal-mid); border: 1px solid var(--gold-border); padding: 2.2rem 2.6rem; display: grid; grid-template-columns: 1fr auto; gap: 1.5rem; align-items: center; }
+    .sample-band .label { font-family: var(--font-ui); font-size: 0.6rem; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .sample-band h3 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 400; color: var(--cream); margin-bottom: 0.4rem; }
+    .sample-band p { font-family: var(--font-body); font-size: 0.88rem; font-weight: 300; color: rgba(247,247,245,0.55); max-width: 38em; }
+
+    /* ── FOOTER ── */
+    footer { flex-shrink: 0; background: #141414; border-top: 1px solid var(--gold-border); padding: 2.8rem 0; }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.4rem; }
+    .footer-brand { display: flex; align-items: center; gap: 0.7rem; }
+    .footer-sym { width: 22px; height: 22px; color: rgba(247,247,245,0.3); }
+    .footer-name { font-family: var(--font-ui); font-size: 0.68rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(247,247,245,0.35); }
+    .footer-links { display: flex; gap: 1.4rem; list-style: none; flex-wrap: wrap; }
+    .footer-links a { font-family: var(--font-ui); font-size: 0.65rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-copy { font-family: var(--font-body); font-size: 0.7rem; font-weight: 300; color: var(--muted); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1100px) {
+      nav { padding: 0 2rem; }
+      .wrap { padding: 0 2rem; }
+      .steps { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 720px) {
+      .nav-links { display: none; }
+      .ty-hero { padding: 9rem 0 4rem; }
+      .shortcut-card { padding: 2rem 1.6rem; }
+      .sample-band { grid-template-columns: 1fr; }
+      .footer-inner { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+  <script src="/consent.js" defer></script>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="nav-brand">
+    <span class="nav-brand-icon">
+      <svg class="smc-sym" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M50,5C25.2,5,5,25.2,5,50c0,24.8,20.2,45,45,45c24.8,0,45-20.2,45-45C95,25.2,74.8,5,50,5z M50,91C27.4,91,9,72.6,9,50S27.4,9,50,9s41,18.4,41,41S72.6,91,50,91z"/></svg>
+    </span>
+    <span class="nav-brand-text">
+      <span class="nav-brand-name">Spencer Morley Consulting</span>
+      <span class="nav-brand-tagline">Helping You Navigate the Chaos</span>
+    </span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Discoverability Index</a></li>
+    <li><a href="sample-report.html">Sample report</a></li>
+    <li><a href="../small-business.html">Small Business Track</a></li>
+    <li><a href="index.html#book" class="nav-cta">Free Visibility Check</a></li>
+  </ul>
+</nav>
+
+<main>
+
+<!-- CONFIRMATION -->
+<section class="ty-hero">
+  <div class="ty-hero-watermark">
+    <svg class="smc-sym" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M50,5C25.2,5,5,25.2,5,50c0,24.8,20.2,45,45,45c24.8,0,45-20.2,45-45C95,25.2,74.8,5,50,5z M50,91C27.4,91,9,72.6,9,50S27.4,9,50,9s41,18.4,41,41S72.6,91,50,91z"/></svg>
+  </div>
+  <div class="wrap">
+    <div class="ty-inner">
+      <div class="ty-check" aria-hidden="true">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M20 52 L42 74 L80 30"/></svg>
+      </div>
+      <div class="eyebrow">Request received</div>
+      <h1>Your Visibility Check is <em>running.</em></h1>
+      <p class="ty-hero-sub">Thanks for the request. I run each Visibility Check by hand — the same live queries across ChatGPT, Perplexity, and Google's AI that decide who Canadian buyers call. <strong>You'll have your results by email within one business day.</strong></p>
+      <p class="ty-hero-sub">No score or leaderboard in the free check — those are the paid Snapshot. What you will see: whether AI names your business in your category, who it's recommending instead, and the single clearest gap.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT HAPPENS NEXT -->
+<section class="next">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">What happens next</div>
+      <h2>Three steps — the first two are <em>on me</em></h2>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="n">Now</div><h3>I run the checks</h3><p>By hand, across three AI engines for your business category and city. About fifteen minutes of live queries — no automated grader guessing from memory.</p></div>
+      <div class="step"><div class="n">Within 1 business day</div><h3>Results land in your inbox</h3><p>A short, plain-English read on where you stand: named, not named, and who's being recommended in your place.</p></div>
+      <div class="step"><div class="n">If you want more</div><h3>We talk it through</h3><p>Grab a 15-minute call below and I'll walk your results with you — and show what the full Snapshot adds: the 0&ndash;100 score, the named leaderboard, and the dollars at stake.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SHORTCUT: CALENDLY -->
+<section class="shortcut">
+  <div class="wrap">
+    <div class="shortcut-card">
+      <div class="label">The shortcut</div>
+      <h2>Don't want to wait for the email?</h2>
+      <p>Book a free 15-minute call. I'll run your Visibility Check live on the call, you'll see your results on the spot, and you can ask anything about the full Snapshot. Pick a time that works:</p>
+      <div class="shortcut-actions">
+        <a class="btn-gold" href="https://calendly.com/jordan-spencermorleyconsulting/15min" target="_blank" rel="noopener"
+           onclick="gtag('event','cta_click',{'event_category':'thank_you','event_label':'calendly_book_call','page':'discoverability_thank_you'})">Book a 15-minute call</a>
+        <a class="btn-ghost" href="mailto:jordan@spencermorleyconsulting.ca"
+           onclick="gtag('event','cta_click',{'event_category':'thank_you','event_label':'email_direct','page':'discoverability_thank_you'})">Email me instead</a>
+      </div>
+      <!-- Calendly inline widget -->
+      <div class="calendly-inline-widget" data-url="https://calendly.com/jordan-spencermorleyconsulting/15min?hide_gdpr_banner=1&background_color=252525&text_color=f7f7f5&primary_color=c9a84c"></div>
+      <p class="shortcut-fallback">Widget not loading? <a href="https://calendly.com/jordan-spencermorleyconsulting/15min" target="_blank" rel="noopener">Open the booking page in a new tab.</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- SAMPLE REPORT -->
+<section class="sample-wrap">
+  <div class="wrap">
+    <div class="sample-band">
+      <div>
+        <div class="label">While you wait</div>
+        <h3>See exactly what the full report delivers</h3>
+        <p>Walk through a complete, anonymized Discoverability Index — the score, the named-competitor leaderboard, the dollars-at-stake, and the 90-day roadmap. It's the paid product, in full, before you spend a dollar.</p>
+      </div>
+      <a class="btn-gold" href="sample-report.html"
+         onclick="gtag('event','cta_click',{'event_category':'thank_you','event_label':'sample_report','page':'discoverability_thank_you'})">View the sample report</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="footer-sym">
+          <svg class="smc-sym" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M50,5C25.2,5,5,25.2,5,50c0,24.8,20.2,45,45,45c24.8,0,45-20.2,45-45C95,25.2,74.8,5,50,5z M50,91C27.4,91,9,72.6,9,50S27.4,9,50,9s41,18.4,41,41S72.6,91,50,91z"/></svg>
+        </span>
+        <span class="footer-name">Spencer Morley Consulting</span>
+      </div>
+      <ul class="footer-links">
+        <li><a href="../index.html#crisis">Crisis Communications</a></li>
+        <li><a href="../small-business.html">Small Business Track</a></li>
+        <li><a href="index.html">Discoverability Index</a></li>
+        <li><a href="../resources/">Glossary</a></li>
+        <li><a href="../privacy.html">Privacy</a></li>
+      </ul>
+      <div class="footer-copy">© 2026 Spencer Morley Consulting · Edmonton, AB · Serving Canada</div>
+    </div>
+  </div>
+</footer>
+
+<!-- Calendly embed + conversion signal -->
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<script>
+  // Fire a conversion signal for the thank-you page view (page_view also fires via consent.js).
+  (function () {
+    if (typeof gtag === 'function') {
+      gtag('event', 'quick_check_lead_confirmed', {
+        'event_category': 'conversion',
+        'event_label': 'discoverability_quick_check',
+        'page': 'discoverability_thank_you'
+      });
+    }
+  })();
+</script>
+</body>
+</html>

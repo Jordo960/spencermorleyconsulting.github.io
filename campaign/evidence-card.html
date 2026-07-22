@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Evidence card — weekly export</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Lato:wght@400;700&display=swap" rel="stylesheet" />
+<style>
+  :root { --charcoal:#161616; --charcoal2:#1f1f1f; --gold:#C5A059; --paper:#f4f1ea; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#333; display:flex; justify-content:center; padding:20px; }
+  .card { width:1080px; height:1350px; background:
+      radial-gradient(1200px 700px at 80% -10%, #2a2620 0%, transparent 55%),
+      linear-gradient(160deg, #1c1c1c 0%, #131313 100%);
+      position:relative; overflow:hidden; padding:72px 80px; }
+  .kicker { font:700 26px/1 'Lato',sans-serif; letter-spacing:.18em; text-transform:uppercase; color:var(--gold); margin-bottom:18px; }
+  h1 { font:600 74px/1.08 'Cormorant Garamond',serif; color:#fff; margin-bottom:44px; }
+  h1 em { font-style:italic; color:var(--gold); }
+
+  .chat { background:#0e0e10; border:1px solid #2c2c2e; border-radius:22px; padding:36px 40px 30px; box-shadow:0 30px 80px rgba(0,0,0,.55); }
+  .q { display:flex; justify-content:flex-end; margin-bottom:26px; }
+  .q span { background:#2f2f33; color:#eee; font:400 30px/1.35 'Lato',sans-serif; padding:16px 24px; border-radius:18px 18px 4px 18px; max-width:70%; }
+  .a { color:#d8d8d8; font:400 30px/1.5 'Lato',sans-serif; }
+  .a p { margin-bottom:18px; color:#bdbdbd; }
+  .row { display:flex; align-items:center; gap:16px; margin:14px 0; }
+  .num { color:#8a8a8a; font:700 28px 'Lato',sans-serif; width:40px; }
+  .redact { height:38px; border-radius:5px; background:
+      repeating-linear-gradient(115deg, #000 0 14px, #0b0b0b 14px 22px);
+      box-shadow:inset 0 0 0 1px #000, 0 1px 0 rgba(255,255,255,.04);
+      transform:rotate(-.3deg); }
+  .r1{width:430px} .r2{width:360px; transform:rotate(.4deg)} .r3{width:485px}
+  .r4{width:335px; transform:rotate(-.5deg)} .r5{width:410px; transform:rotate(.2deg)}
+  .tease { position:relative; }
+  .tease .peek { position:absolute; left:14px; top:3px; color:#666; font:700 26px 'Lato',sans-serif; letter-spacing:.06em; filter:blur(7px); }
+  .badge { margin-left:8px; font:700 22px 'Lato',sans-serif; color:var(--gold); border:1px solid var(--gold); border-radius:999px; padding:6px 14px; white-space:nowrap; }
+  .more { color:#777; font:400 28px 'Lato',sans-serif; margin-top:20px; }
+
+  .verdict { margin-top:48px; }
+  .verdict .line { font:600 64px/1.15 'Cormorant Garamond',serif; color:#fff; }
+  .verdict .line b { color:var(--gold); font-weight:600; }
+  .stamp { position:absolute; bottom:64px; left:80px; right:80px; display:flex; justify-content:space-between; align-items:center; }
+  .stamp .meta { color:#8a8a8a; font:400 24px 'Lato',sans-serif; }
+  .stamp .brand { color:var(--gold); font:700 24px 'Lato',sans-serif; letter-spacing:.04em; }
+  .seal { position:absolute; top:170px; right:64px; transform:rotate(8deg); border:3px solid #a33; color:#a33; opacity:.85;
+      font:700 24px 'Lato',sans-serif; letter-spacing:.22em; padding:10px 18px; border-radius:8px; text-transform:uppercase; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="seal">Names redacted</div>
+  <div class="kicker">This week's test · 3 AI engines · real answers</div>
+  <h1>We asked AI who to <em>hire.</em></h1>
+
+  <div class="chat">
+    <div class="q"><span>Who's the best plumber in Edmonton?</span></div>
+    <div class="a">
+      <p>Based on reviews and reputation, the standout options are:</p>
+      <div class="row"><span class="num">1.</span><span class="redact r1 tease"><span class="peek">THE GENT</span></span><span class="badge">named by 2 engines</span></div>
+      <div class="row"><span class="num">2.</span><span class="redact r2"></span></div>
+      <div class="row"><span class="num">3.</span><span class="redact r3"></span></div>
+      <div class="row"><span class="num">4.</span><span class="redact r4"></span></div>
+      <div class="row"><span class="num">5.</span><span class="redact r5"></span></div>
+      <div class="more">+ 8 more across Perplexity and Gemini · none named by all three</div>
+    </div>
+  </div>
+
+  <div class="verdict">
+    <div class="line">13 businesses got the call — <b>and the job.</b></div>
+    <div class="line"><b>Was yours one of them?</b></div>
+    <div style="font:400 30px/1.4 'Lato',sans-serif; color:#9a9a9a; margin-top:18px;">Multiply your average job by every customer who asked AI and never heard your name.</div>
+  </div>
+
+  <div class="stamp">
+    <span class="meta">Real answers · July 5, 2026 · recordings on file</span>
+    <span class="brand">Discoverability Index</span>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Discoverability Report — illustrative sample | Spencer Morley Consulting</title>
+<meta name="robots" content="noindex">
+<meta name="description" content="An illustrative sample of the SMC Discoverability Index report. All business names are fictional and used for illustration only.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{--charcoal:#1A1A1A;--charcoal-2:#242424;--paper:#FAF8F4;--white:#fff;--gold:#B8924A;--gold-dark:#8E6F35;--ink:#1A1A1A;--muted:#5A564E;--line:#E7E1D6;--crit:#C84A3A;--warn:#C9A341;--success:#5A8F5F;--sans:'Inter',system-ui,sans-serif;--serif:'Source Serif 4',Georgia,serif;--mono:'JetBrains Mono',monospace}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:var(--serif);color:var(--ink);background:var(--paper);line-height:1.6}
+  h1,h2,h3,h4,.eyebrow,.btn,.stat-num,.lbl,.badge,.score-num,table,.tag{font-family:var(--sans)}
+  h1,h2,h3{font-weight:600;letter-spacing:-0.02em;line-height:1.12}
+  .doc{max-width:860px;margin:0 auto;background:var(--paper)}
+  .pad{padding:0 56px}
+  .eyebrow{font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-dark)}
+  .sample-flag{display:inline-block;font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-dark);border:1px solid var(--gold);border-radius:20px;padding:4px 12px}
+
+  .cover{background:var(--charcoal);color:#fff;padding:54px 56px 60px}
+  .cover .brand{font-family:var(--sans);font-weight:700;color:#fff;font-size:15px;letter-spacing:.02em}
+  .cover .brand .tag{color:var(--gold);font-weight:500;font-size:12px;letter-spacing:.16em;text-transform:uppercase;display:block;margin-top:4px}
+  .cover .rule{width:54px;height:3px;background:var(--gold);margin:40px 0 22px}
+  .cover h1{font-size:48px;color:#fff;line-height:1.04}
+  .cover .sub{font-family:var(--serif);font-size:19px;color:#C9C3B8;margin-top:14px;max-width:30em}
+  .cover .meta{margin-top:34px;font-family:var(--sans);font-size:13px;color:#9C968B;line-height:1.9}
+  .cover .meta b{color:#D9D4CB;font-weight:600}
+
+  .dash{background:var(--charcoal-2);color:#fff;padding:44px 56px}
+  .dash .eyebrow{color:var(--gold)}
+  .dash h2{color:#fff;font-size:26px;margin:10px 0 26px}
+  .dash-grid{display:grid;grid-template-columns:200px 1fr;gap:38px;align-items:center}
+  .score-num{font-weight:700;font-size:40px;fill:#fff}
+  .score-sub{font-family:var(--sans);font-size:11px;fill:#9C968B;letter-spacing:.1em}
+  .rank-line{font-family:var(--sans);font-weight:600;font-size:18px;color:#fff;margin-bottom:6px}
+  .rank-line span{color:var(--gold)}
+  .rank-note{font-size:14px;color:#C9C3B8;max-width:32em}
+  .bars{margin-top:8px}
+  .bars .row{display:flex;align-items:center;gap:10px;margin:6px 0;font-family:var(--sans);font-size:13px}
+  .bars .nm{width:210px;color:#C9C3B8;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .bars .bar{flex:1;height:10px;border-radius:3px;background:#3a3a3a;overflow:hidden}
+  .bars .bar i{display:block;height:100%;border-radius:3px}
+  .bars .val{width:26px;text-align:right;color:#fff;font-weight:600}
+  .bars .you .nm{color:var(--crit);font-weight:600}
+
+  section{padding:40px 0}
+  .num{font-family:var(--sans);color:var(--gold-dark);font-weight:700;font-size:14px;letter-spacing:.06em}
+  h2.s{font-size:26px;margin:6px 0 16px;border-bottom:2px solid var(--ink);padding-bottom:12px}
+  p.body{font-size:16.5px;color:#3c3933;margin:0 0 14px}
+  .callout{background:var(--charcoal);color:#fff;border-radius:12px;padding:26px 28px;margin:22px 0}
+  .callout .big{font-family:var(--sans);font-weight:700;font-size:40px;color:var(--gold);letter-spacing:-.01em}
+  .callout p{font-family:var(--serif);font-size:14.5px;color:#C9C3B8;margin-top:6px}
+  .tag{font-size:11px;color:var(--gold-dark);font-weight:600;letter-spacing:.04em}
+
+  .strip{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:8px 0 6px}
+  .stat{background:#fff;border:1px solid var(--line);border-radius:10px;padding:18px;text-align:center}
+  .stat .stat-num{font-weight:700;font-size:30px;color:var(--charcoal);display:block}
+  .stat .lbl{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:4px}
+  .method{font-size:13px;color:var(--muted);font-style:italic;margin-top:16px}
+
+  .find{background:#fff;border:1px solid var(--line);border-left:4px solid var(--line);border-radius:0 8px 8px 0;padding:16px 20px;margin:12px 0}
+  .find.crit{border-left-color:var(--crit)}.find.warn{border-left-color:var(--warn)}.find.win{border-left-color:var(--success)}
+  .find h4{font-family:var(--sans);font-size:16px;font-weight:600;margin-bottom:5px;display:flex;align-items:center;gap:8px}
+  .find h4::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--line)}
+  .find.crit h4::before{background:var(--crit)}.find.warn h4::before{background:var(--warn)}.find.win h4::before{background:var(--success)}
+  .find p{font-size:14.5px;color:var(--muted)}
+  .find .horizon{font-family:var(--sans);font-size:12px;color:var(--gold-dark);font-weight:500;margin-top:6px}
+
+  table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+  thead th{background:var(--charcoal);color:#fff;text-align:left;padding:11px 12px;font-weight:600;font-size:12px;letter-spacing:.04em}
+  thead th.r{text-align:right}
+  tbody td{padding:11px 12px;border-bottom:1px solid var(--line)}
+  tbody td.r{text-align:right;font-family:var(--sans)}
+  tbody tr:nth-child(even){background:#fff}
+  tbody tr.you{background:#FBEDE9}
+  tbody tr.you td{font-weight:600;color:var(--crit)}
+  .lead-val{font-family:var(--sans);font-weight:700}
+
+  .gate{position:relative;margin-top:14px}
+  .gate .locked{filter:blur(5px);opacity:.55;pointer-events:none;user-select:none}
+  .gate-card{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:linear-gradient(180deg,rgba(250,248,244,.4),rgba(250,248,244,.92) 55%);border-radius:10px;padding:24px}
+  .gate-card .lockico{width:38px;height:38px;border-radius:50%;background:var(--charcoal);color:var(--gold);display:flex;align-items:center;justify-content:center;font-size:18px;margin-bottom:12px}
+  .gate-card h3{font-size:19px;margin-bottom:8px}
+  .gate-card p{font-size:14.5px;color:var(--muted);max-width:32em;margin-bottom:16px}
+  .btn{display:inline-block;font-family:var(--sans);font-weight:600;font-size:15px;padding:13px 26px;border-radius:6px;text-decoration:none;background:var(--gold);color:#fff}
+  .btn:hover{background:var(--gold-dark)}
+
+  .ctaband{background:var(--charcoal);color:#fff;text-align:center;padding:54px 56px;margin-top:20px}
+  .ctaband .eyebrow{color:var(--gold)}
+  .ctaband h2{color:#fff;font-size:30px;margin:10px auto 12px;max-width:20em}
+  .ctaband p{color:#C9C3B8;font-size:16px;max-width:34em;margin:0 auto 22px}
+  footer{font-family:var(--sans);font-size:12px;color:var(--muted);text-align:center;padding:26px 56px;border-top:1px solid var(--line)}
+
+  @media(max-width:680px){.pad,.cover,.dash,.ctaband,footer{padding-left:24px;padding-right:24px}.cover h1{font-size:34px}.dash-grid{grid-template-columns:1fr;gap:22px}.strip{grid-template-columns:1fr 1fr}.bars .nm{width:150px}}
+  @media print{body{background:#fff}.btn{display:none}.gate .locked{filter:blur(6px)}}
+</style>
+  <script src="/consent.js" defer></script>
+</head>
+<body>
+<div class="doc">
+
+  <!-- COVER -->
+  <div class="cover">
+    <div class="brand">SPENCER MORLEY CONSULTING<span class="tag">AI &amp; Discoverability Practice</span></div>
+    <div class="rule"></div>
+    <h1>Discoverability<br>Report</h1>
+    <p class="sub">How a business shows up — and doesn't — across search and AI engines in its local market.</p>
+    <div class="meta">
+      <span class="sample-flag">Illustrative sample</span><br><br>
+      Example: <b>a family dental clinic</b> in the Edmonton market<br>
+      Prepared by <b>Spencer Morley Consulting</b> &nbsp;·&nbsp; SMC Discoverability Index method<br>
+      <b>Sample only.</b> All names are anonymized placeholders and all figures are illustrative — not a real audit.
+    </div>
+  </div>
+
+  <!-- DASHBOARD -->
+  <div class="dash">
+    <span class="eyebrow">The headline</span>
+    <h2>SMC Discoverability Index</h2>
+    <div class="dash-grid">
+      <div style="text-align:center">
+        <svg width="170" height="170" viewBox="0 0 170 170" role="img" aria-label="Score 31 of 100">
+          <circle cx="85" cy="85" r="70" fill="none" stroke="#333" stroke-width="12"/>
+          <circle cx="85" cy="85" r="70" fill="none" stroke="#C84A3A" stroke-width="12" stroke-linecap="round" stroke-dasharray="439.8" stroke-dashoffset="303.5" transform="rotate(-90 85 85)"/>
+          <text x="85" y="88" text-anchor="middle" class="score-num">31</text>
+          <text x="85" y="108" text-anchor="middle" class="score-sub">OF 100</text>
+        </svg>
+      </div>
+      <div>
+        <div class="rank-line">Rank <span>8 of 9</span> — near the bottom of the clinics measured</div>
+        <p class="rank-note">The category leader scores 72. Your clinic has the reputation to compete — it simply isn't telling that story to the systems patients now start with. The 41-point gap is what this report is built to close. (Clinic names shown are fictional, for illustration; your real report names your actual competitors.)</p>
+        <div class="bars">
+          <div class="row"><span class="nm">Westhollow Dental — AI-search leader</span><span class="bar"><i style="width:72%;background:#B8924A"></i></span><span class="val">72</span></div>
+          <div class="row"><span class="nm">Kingsmere Dental — classic-search leader</span><span class="bar"><i style="width:64%;background:#8a8a8a"></i></span><span class="val">64</span></div>
+          <div class="row"><span class="nm">Royden Oaks Dental</span><span class="bar"><i style="width:58%;background:#8a8a8a"></i></span><span class="val">58</span></div>
+          <div class="row"><span class="nm">Glenbrae Dental</span><span class="bar"><i style="width:53%;background:#8a8a8a"></i></span><span class="val">53</span></div>
+          <div class="row"><span class="nm">Harborwalk Dental</span><span class="bar"><i style="width:49%;background:#8a8a8a"></i></span><span class="val">49</span></div>
+          <div class="row"><span class="nm">Lazybrook Dental</span><span class="bar"><i style="width:44%;background:#8a8a8a"></i></span><span class="val">44</span></div>
+          <div class="row"><span class="nm">Stillmeadow Dental</span><span class="bar"><i style="width:38%;background:#8a8a8a"></i></span><span class="val">38</span></div>
+          <div class="row you"><span class="nm">Your clinic</span><span class="bar"><i style="width:31%;background:#C84A3A"></i></span><span class="val">31</span></div>
+          <div class="row"><span class="nm">Sugarmill Dental</span><span class="bar"><i style="width:27%;background:#8a8a8a"></i></span><span class="val">27</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pad">
+
+    <!-- 1 EXEC SUMMARY -->
+    <section>
+      <div class="num">01</div><h2 class="s">Executive summary</h2>
+      <p class="body">Your clinic scores <b>31 out of 100</b> on the SMC Discoverability Index — eighth of the nine clinics measured in this sample. Across 16 AI-engine answers to the questions local patients actually ask, your clinic appears <b>zero times</b>. Not once, on any engine.</p>
+      <p class="body">This is not a reflection of the practice or its care. It is a structural gap: the signals search engines and AI tools use to find and recommend a local clinic are largely missing from the website and the clinic's online presence. The reputation is real; the systems patients now start with just can't see it.</p>
+      <div class="callout">
+        <div class="big">$28,800–$57,600</div>
+        <p>Estimated annual revenue going to competitors through AI and search discovery — modelled at two to four recovered new patients per month at a $1,200 first-year value. Closing the gap is a four-figure engagement that pays for itself quickly. <span class="tag">MODELED — assumptions stated</span></p>
+      </div>
+    </section>
+
+    <!-- 2 WHAT WE LOOKED AT -->
+    <section>
+      <div class="num">02</div><h2 class="s">What we looked at</h2>
+      <p class="body">We measure four layers of discoverability and combine them into one score, built the same way for every business — so a clinic sees its number against every competitor on a single leaderboard, and can track it over time.</p>
+      <div class="strip">
+        <div class="stat"><span class="stat-num">9</span><div class="lbl">Clinics scored</div></div>
+        <div class="stat"><span class="stat-num">16</span><div class="lbl">AI answers captured</div></div>
+        <div class="stat"><span class="stat-num">3</span><div class="lbl">AI engines</div></div>
+        <div class="stat"><span class="stat-num">8</span><div class="lbl">Buyer queries</div></div>
+      </div>
+      <p class="method">Method note: this is an illustrative sample. In a real report, every on-page finding is verified by live browser render, every figure is sourced or labelled, and Canadian platforms (Google Business Profile, HomeStars, Consumer Choice) are weighted while US-only platforms are down-weighted.</p>
+    </section>
+
+    <!-- 3 FINDINGS -->
+    <section>
+      <div class="num">03</div><h2 class="s">What we found</h2>
+      <div class="find crit"><h4>Invisible across AI answers</h4><p>Across 16 answers — covering ChatGPT, Gemini, and Perplexity for the questions local patients type — your clinic is never named. Competitors appear in two to five each. In the AI-mediated version of this market, the clinic does not exist.</p><div class="horizon">Why it matters: more patients begin here every month.</div></div>
+      <div class="find crit"><h4>The website sends almost no relevance signal</h4><p>The most important pages are missing the basic elements search engines rely on to understand and rank a clinic. The site reads as "generic dental page" rather than "the dentist patients in this neighbourhood are searching for."</p><div class="horizon">Fix horizon: quick wins, measurable within 30 days.</div></div>
+      <div class="find warn"><h4>Not machine-readable to AI agents</h4><p>The clinic's core facts — what it offers, where it is, when it's open — live only in page text, not in a form AI tools and assistants can reliably read and cite. This is the layer competitors are starting to win on.</p><div class="horizon">Fix horizon: foundational, high impact.</div></div>
+      <div class="find warn"><h4>A strong reputation that isn't reaching the systems</h4><p>The clinic's reviews are positive but thin in volume and recency on the Canadian platforms AI engines treat as trust signals — so an existing strength isn't translating into discoverability.</p><div class="horizon">Fix horizon: ongoing, compounding.</div></div>
+      <div class="find win"><h4>Genuine longevity and patient loyalty</h4><p>The clinic has the kind of track record these systems reward — it's simply buried where engines and new patients can't see it. Surfacing it is one of the fastest, highest-impact moves available.</p><div class="horizon">An asset to build on.</div></div>
+    </section>
+
+    <!-- 4 COMPETITIVE FIELD -->
+    <section>
+      <div class="num">04</div><h2 class="s">The competitive field</h2>
+      <p class="body">Two clinics are winning two different games — and your clinic is in neither. <b>Westhollow Dental</b> leads AI search: not because it's the biggest, but because it made its credentials easy for these tools to read. <b>Kingsmere Dental</b> wins classic search on the strength of review volume and content depth.</p>
+      <p class="body">The legacy peers tell the most useful story: clinics no larger or older than yours clear the mid-40s on the index through review base and Canadian recognition alone. Your clinic's own longevity story isn't reaching the systems that would surface it.</p>
+    </section>
+
+    <!-- 5 INDEX TABLE -->
+    <section>
+      <div class="num">05</div><h2 class="s">The SMC Discoverability Index</h2>
+      <p class="body">One 0–100 score: classic SEO (30), AI visibility (35, weighted highest because that's where the durable edge is forming), machine-readability (20), and Canadian trust signals (15).</p>
+      <table>
+        <thead><tr><th>#</th><th>Clinic</th><th class="r">SEO/30</th><th class="r">AI/35</th><th class="r">Machine/20</th><th class="r">Trust/15</th><th class="r">SDI/100</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Westhollow Dental</td><td class="r">22</td><td class="r">26</td><td class="r">12</td><td class="r">12</td><td class="r lead-val">72</td></tr>
+          <tr><td>2</td><td>Kingsmere Dental</td><td class="r">25</td><td class="r">22</td><td class="r">6</td><td class="r">11</td><td class="r lead-val">64</td></tr>
+          <tr><td>3</td><td>Royden Oaks Dental</td><td class="r">21</td><td class="r">20</td><td class="r">8</td><td class="r">9</td><td class="r lead-val">58</td></tr>
+          <tr><td>4</td><td>Glenbrae Dental</td><td class="r">20</td><td class="r">18</td><td class="r">7</td><td class="r">8</td><td class="r lead-val">53</td></tr>
+          <tr><td>5</td><td>Harborwalk Dental</td><td class="r">19</td><td class="r">15</td><td class="r">7</td><td class="r">8</td><td class="r lead-val">49</td></tr>
+          <tr><td>6</td><td>Lazybrook Dental</td><td class="r">18</td><td class="r">13</td><td class="r">6</td><td class="r">7</td><td class="r lead-val">44</td></tr>
+          <tr><td>7</td><td>Stillmeadow Dental</td><td class="r">16</td><td class="r">11</td><td class="r">4</td><td class="r">7</td><td class="r lead-val">38</td></tr>
+          <tr class="you"><td>8</td><td>Your clinic</td><td class="r">12</td><td class="r">4</td><td class="r">3</td><td class="r">12</td><td class="r lead-val">31</td></tr>
+          <tr><td>9</td><td>Sugarmill Dental</td><td class="r">14</td><td class="r">5</td><td class="r">4</td><td class="r">4</td><td class="r lead-val">27</td></tr>
+        </tbody>
+      </table>
+      <p class="method">Note your strongest pillar is trust (12/15) — the reputation is there. The score is dragged down by AI visibility (4/35) and machine-readability (3/20): the clinic is liked, but unfindable.</p>
+    </section>
+
+    <!-- 6 WHAT THE GAP COSTS -->
+    <section>
+      <div class="num">06</div><h2 class="s">What the gap costs</h2>
+      <p class="body">Modelled on recovered new patients, not invented traffic math, so the number survives scrutiny. Edmonton new-patient first-year value is modelled at a conservative $1,200.</p>
+      <table>
+        <thead><tr><th>Scenario</th><th class="r">Recovered patients / mo</th><th class="r">Annual recovered revenue</th></tr></thead>
+        <tbody>
+          <tr><td>Conservative</td><td class="r">2</td><td class="r">$28,800</td></tr>
+          <tr><td>Base</td><td class="r">4</td><td class="r">$57,600</td></tr>
+        </tbody>
+      </table>
+      <p class="method">These are topline figures, modelled — assumptions stated. Replace the modelled $1,200 with the clinic's real new-patient value and this becomes a hard number.</p>
+    </section>
+
+    <!-- 7 WHERE THEY WIN -->
+    <section>
+      <div class="num">07</div><h2 class="s">Where your clinic already wins</h2>
+      <p class="body">Two assets are real and currently underused — which is good news, because they're the foundation the rest builds on. <b>Genuine longevity and patient loyalty</b>, the kind of track record AI engines reward once it's made visible. And a <b>solid review rating</b> — the quality signal is there; only the volume and reach are thin. A focused push converts an existing strength into a discoverability asset.</p>
+    </section>
+
+    <!-- 8 ROADMAP (GATED) -->
+    <section>
+      <div class="num">08</div>
+      <h2 class="s" style="border:none;padding:0">Prioritized roadmap</h2>
+      <p class="body">Ordered by impact-to-effort. The first moves are quick wins — achievable in weeks, none requiring a website rebuild. Here are the first two:</p>
+      <table>
+        <thead><tr><th>#</th><th>What it achieves</th><th class="r">Effort</th><th class="r">Impact</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Make the clinic's core pages clearly say what they are, so search engines stop guessing and start ranking them</td><td class="r">Quick win</td><td class="r">High</td></tr>
+          <tr><td>2</td><td>Turn the existing 5-star reputation into review volume on the Canadian platforms AI engines trust</td><td class="r">Quick win</td><td class="r">High</td></tr>
+        </tbody>
+      </table>
+
+      <div class="gate">
+        <div class="locked" aria-hidden="true">
+          <table>
+            <thead><tr><th>#</th><th>What it achieves</th><th class="r">Effort</th><th class="r">Impact</th></tr></thead>
+            <tbody>
+              <tr><td>3</td><td>Make core business facts machine-readable so AI tools can cite the clinic directly</td><td class="r">Project</td><td class="r">High</td></tr>
+              <tr><td>4</td><td>Claim the high-intent patient questions no competitor currently owns</td><td class="r">Project</td><td class="r">Medium</td></tr>
+              <tr><td>5</td><td>Surface longevity and recognition where engines and patients can see it</td><td class="r">Quick win</td><td class="r">Medium</td></tr>
+              <tr><td>6</td><td>Build the Canadian trust layer the AI engines pull from</td><td class="r">Ongoing</td><td class="r">Medium</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="gate-card">
+          <div class="lockico">&#128274;</div>
+          <h3>The full roadmap is in your report</h3>
+          <p>The complete prioritized plan — the specific technical fixes, exactly how each is implemented, and the order to do them in — comes with your own Discoverability Index. This sample shows the shape of the plan, not the playbook.</p>
+          <a class="btn" href="index.html#book" onclick="gtag('event', 'cta_click', {'event_category': 'sample_report', 'event_label': 'get_your_own_report', 'page': 'sample_report'})">Get your own report</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9 90-DAY -->
+    <section>
+      <div class="num">09</div><h2 class="s">The 90-day picture</h2>
+      <p class="body">The quick wins alone realistically lift a clinic from 31 into the high-40s within a single search cycle — clearing several competitors and closing on the leaders. The full roadmap, run in order, is what moves a clinic from invisible to named in the answers patients now start with.</p>
+    </section>
+
+  </div>
+
+  <!-- CTA -->
+  <div class="ctaband">
+    <span class="eyebrow">This is an illustrative sample</span>
+    <h2>Your report scores your business, your competitors, your market</h2>
+    <p>Same method, your real numbers — where you rank, what the gap costs you, and the plan to close it. Start with a free Visibility Check.</p>
+    <a class="btn" href="index.html#book" onclick="gtag('event', 'cta_click', {'event_category': 'sample_report', 'event_label': 'book_your_audit_bottom', 'page': 'sample_report'})">Book your audit</a>
+  </div>
+
+  <footer>Illustrative sample · Spencer Morley Consulting · Edmonton, Alberta · <a href="mailto:jordan@spencermorleyconsulting.ca" style="color:inherit;" onclick="gtag('event','cta_click',{'event_category':'footer','event_label':'email_direct','page':'sample_report'})">jordan@spencermorleyconsulting.ca</a> · All clinic names are fictional and used for illustration only; any resemblance to a real practice is coincidental. Scores and figures are illustrative, not a real audit.</footer>
+
+</div>
+</body>
+</html>

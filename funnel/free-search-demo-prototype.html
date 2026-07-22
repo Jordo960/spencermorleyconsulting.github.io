@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Free Search demo — prototype (internal review) | Spencer Morley Consulting</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Nunito:wght@700;800;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --charcoal:#1C1C1C; --charcoal-mid:#252525; --charcoal-light:#323232;
+    --gold:#C9A84C; --gold-light:#D9BC7A; --gold-dim:rgba(201,168,76,0.12); --gold-border:rgba(201,168,76,0.22);
+    --cream:#F7F7F5; --muted:#88887F;
+    --font-display:'Cormorant Garamond','Georgia',serif;
+    --font-ui:'Nunito','Century Gothic','Trebuchet MS',sans-serif;
+    --font-body:'Lato','Helvetica Neue','Arial',sans-serif;
+  }
+  html { scroll-behavior:smooth; overflow-x:hidden; }
+  body { font-family:var(--font-body); background:var(--charcoal); color:var(--cream); overflow-x:hidden; -webkit-font-smoothing:antialiased; }
+  a { color:inherit; }
+  .smc-sym { display:block; width:100%; height:100%; } .smc-sym path { fill:currentColor; }
+
+  /* prototype ribbon */
+  .proto { background:repeating-linear-gradient(45deg,#2a2410,#2a2410 12px,#221d0d 12px,#221d0d 24px); border-bottom:1px solid var(--gold-border); color:var(--gold-light); font-family:var(--font-ui); font-size:0.68rem; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; text-align:center; padding:0.55rem 1rem; }
+
+  /* nav */
+  nav { position:sticky; top:0; z-index:200; height:74px; display:flex; align-items:center; justify-content:space-between; padding:0 4rem; background:rgba(28,28,28,0.94); backdrop-filter:blur(18px); border-bottom:1px solid var(--gold-border); }
+  .nav-brand { display:flex; align-items:center; gap:0.85rem; text-decoration:none; }
+  .nav-brand-icon { width:34px; height:34px; color:var(--gold); }
+  .nav-brand-name { font-family:var(--font-ui); font-size:0.78rem; font-weight:900; letter-spacing:0.1em; text-transform:uppercase; color:var(--cream); display:block; }
+  .nav-brand-tagline { font-family:var(--font-body); font-size:0.6rem; font-weight:300; letter-spacing:0.2em; text-transform:uppercase; color:var(--muted); display:block; }
+  .nav-links { display:flex; align-items:center; gap:1.4rem; list-style:none; }
+  .nav-links a { font-family:var(--font-ui); font-size:0.72rem; font-weight:800; letter-spacing:0.07em; text-transform:uppercase; color:var(--cream); text-decoration:none; opacity:0.65; }
+  .nav-cta { padding:0.5rem 1.2rem; border:1px solid var(--gold); color:var(--gold)!important; opacity:1!important; font-size:0.68rem!important; }
+
+  .wrap { max-width:1080px; margin:0 auto; padding:0 4rem; }
+  .eyebrow { font-family:var(--font-ui); font-size:0.65rem; font-weight:800; letter-spacing:0.24em; text-transform:uppercase; color:var(--gold); display:flex; align-items:center; gap:0.8rem; margin-bottom:1.2rem; }
+  .eyebrow::before { content:''; width:26px; height:1px; background:var(--gold); }
+
+  .btn-gold { font-family:var(--font-ui); padding:0.85rem 2.2rem; background:var(--gold); color:var(--charcoal); font-size:0.72rem; font-weight:800; letter-spacing:0.14em; text-transform:uppercase; text-decoration:none; display:inline-block; border:none; cursor:pointer; transition:background .2s, transform .15s; }
+  .btn-gold:hover { background:var(--gold-light); transform:translateY(-2px); }
+  .btn-ghost { font-family:var(--font-ui); padding:0.85rem 2.2rem; background:transparent; color:var(--cream); font-size:0.72rem; font-weight:800; letter-spacing:0.14em; text-transform:uppercase; text-decoration:none; display:inline-block; border:1px solid var(--gold-border); cursor:pointer; transition:border-color .2s,color .2s; }
+  .btn-ghost:hover { border-color:var(--gold); color:var(--gold); }
+
+  /* section */
+  .fs { padding:5.5rem 0 6rem; position:relative; overflow:hidden; border-bottom:1px solid var(--gold-border); }
+  .fs::before { content:''; position:absolute; top:-220px; right:-220px; width:640px; height:640px; background:radial-gradient(circle,rgba(201,168,76,0.06) 0%,transparent 70%); pointer-events:none; }
+  .fs-inner { position:relative; z-index:2; max-width:46em; }
+  .fs h1 { font-family:var(--font-display); font-size:clamp(2.4rem,4.4vw,3.8rem); font-weight:300; line-height:1.06; margin-bottom:1.1rem; }
+  .fs h1 em { font-style:italic; color:var(--gold-light); }
+  .fs-sub { font-family:var(--font-body); font-size:1.05rem; font-weight:300; line-height:1.75; color:rgba(247,247,245,0.62); margin-bottom:2.2rem; max-width:34em; }
+
+  /* input */
+  .fs-form { display:flex; flex-wrap:wrap; gap:0.7rem; max-width:44em; }
+  .fs-form input { font-family:var(--font-body); font-size:0.95rem; color:var(--cream); background:var(--charcoal-mid); border:1px solid var(--gold-border); padding:0.9rem 1.1rem; flex:1 1 auto; min-width:0; }
+  .fs-form input::placeholder { color:var(--muted); }
+  .fs-form input:focus { outline:none; border-color:var(--gold); }
+  .fs-form input.biz { flex:2 1 260px; }
+  .fs-form input.city, .fs-form input.cat { flex:1 1 140px; }
+  .fs-note { font-family:var(--font-body); font-size:0.78rem; font-weight:300; color:rgba(247,247,245,0.4); margin-top:0.8rem; }
+
+  /* results */
+  .fs-results { position:relative; z-index:2; margin-top:2.8rem; display:none; }
+  .fs-results.on { display:block; }
+  .cards { display:grid; grid-template-columns:repeat(3,1fr); gap:1.1rem; }
+  .card { background:var(--charcoal-mid); border:1px solid var(--gold-border); border-top:3px solid var(--charcoal-light); padding:1.5rem 1.4rem; min-height:170px; display:flex; flex-direction:column; transition:border-top-color .4s; }
+  .card.done-present { border-top-color:var(--gold); }
+  .card.done-look { border-top-color:var(--muted); }
+  .card-eng { display:flex; align-items:center; gap:0.6rem; margin-bottom:0.9rem; }
+  .card-mono { width:26px; height:26px; border-radius:50%; border:1px solid var(--gold-border); display:flex; align-items:center; justify-content:center; font-family:var(--font-ui); font-weight:900; font-size:0.7rem; color:var(--gold-light); }
+  .card-name { font-family:var(--font-ui); font-weight:800; font-size:0.8rem; letter-spacing:0.06em; text-transform:uppercase; color:var(--cream); }
+  .card-q { font-family:var(--font-body); font-size:0.82rem; font-weight:300; line-height:1.5; color:rgba(247,247,245,0.5); min-height:2.4em; }
+  .card-q .cur { display:inline-block; width:7px; height:1em; background:var(--gold); vertical-align:-2px; animation:blink 1s steps(1) infinite; }
+  @keyframes blink { 50% { opacity:0; } }
+  .card-status { margin-top:auto; padding-top:1rem; font-family:var(--font-ui); font-size:0.82rem; font-weight:800; display:flex; align-items:center; gap:0.5rem; }
+  .card-status .dot { width:8px; height:8px; border-radius:50%; background:var(--muted); flex-shrink:0; }
+  .card-status.working { color:var(--muted); }
+  .card-status.working .dot { background:var(--gold); animation:pulse 1s ease-in-out infinite; }
+  @keyframes pulse { 0%,100% { opacity:0.3; } 50% { opacity:1; } }
+  .card-status.present { color:var(--gold-light); } .card-status.present .dot { background:var(--gold); }
+  .card-status.look { color:rgba(247,247,245,0.7); } .card-status.look .dot { background:var(--muted); }
+
+  .fs-tension { font-family:var(--font-display); font-style:italic; font-size:1.2rem; font-weight:400; line-height:1.4; color:var(--gold-light); margin-top:1.7rem; max-width:40em; }
+  .fs-honesty { font-family:var(--font-body); font-size:0.8rem; font-weight:300; line-height:1.6; color:rgba(247,247,245,0.42); margin-top:0.9rem; max-width:44em; }
+
+  /* close + capture */
+  .fs-close { margin-top:2.6rem; padding-top:2.4rem; border-top:1px solid var(--gold-border); max-width:46em; display:none; }
+  .fs-close.on { display:block; }
+  .fs-close h2 { font-family:var(--font-display); font-size:clamp(1.7rem,2.8vw,2.4rem); font-weight:400; line-height:1.15; margin-bottom:0.8rem; }
+  .fs-close h2 em { font-style:italic; color:var(--gold-light); }
+  .fs-close p { font-family:var(--font-body); font-size:0.98rem; font-weight:300; line-height:1.7; color:rgba(247,247,245,0.6); margin-bottom:1.6rem; max-width:38em; }
+  .cap { display:flex; flex-wrap:wrap; gap:0.7rem; max-width:40em; margin-bottom:1rem; }
+  .cap input { font-family:var(--font-body); font-size:0.95rem; color:var(--cream); background:var(--charcoal-mid); border:1px solid var(--gold-border); padding:0.9rem 1.1rem; flex:1 1 160px; min-width:0; }
+  .cap input:focus { outline:none; border-color:var(--gold); }
+  .cap-msg { font-family:var(--font-body); font-size:0.85rem; color:var(--gold-light); margin-bottom:1.4rem; display:none; }
+  .cap-msg.on { display:block; }
+  .alt { display:flex; flex-wrap:wrap; gap:1rem; align-items:center; }
+  .alt .sep { font-family:var(--font-body); font-size:0.8rem; color:var(--muted); }
+  .alt a { font-family:var(--font-ui); font-size:0.72rem; font-weight:800; letter-spacing:0.06em; text-transform:uppercase; color:var(--gold); text-decoration:none; }
+  .alt a:hover { color:var(--gold-light); }
+
+  footer { background:#141414; border-top:1px solid var(--gold-border); padding:2.4rem 0; }
+  .footer-inner { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1.2rem; }
+  .footer-name { font-family:var(--font-ui); font-size:0.68rem; font-weight:800; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,247,245,0.35); }
+  .footer-copy { font-family:var(--font-body); font-size:0.7rem; font-weight:300; color:var(--muted); }
+
+  @media (max-width:1100px){ nav{padding:0 2rem;} .wrap{padding:0 2rem;} .cards{grid-template-columns:1fr;} }
+  @media (max-width:720px){ .nav-links{display:none;} }
+  @media (prefers-reduced-motion:reduce){ .card-q .cur,.card-status.working .dot{animation:none;} }
+</style>
+</head>
+<body>
+
+<div class="proto">Prototype — two-state, copy-led urgency (recommended) · internal review · illustrative</div>
+
+<nav>
+  <a href="#" class="nav-brand">
+    <span class="nav-brand-icon"><svg class="smc-sym" viewBox="0 0 100 100"><path d="M50,5C25.2,5,5,25.2,5,50c0,24.8,20.2,45,45,45c24.8,0,45-20.2,45-45C95,25.2,74.8,5,50,5z M50,91C27.4,91,9,72.6,9,50S27.4,9,50,9s41,18.4,41,41S72.6,91,50,91z"/></svg></span>
+    <span><span class="nav-brand-name">Spencer Morley Consulting</span><span class="nav-brand-tagline">Helping You Navigate the Chaos</span></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#">Discoverability Index</a></li>
+    <li><a href="#">Sample report</a></li>
+    <li><a href="#" class="nav-cta">Free Visibility Check</a></li>
+  </ul>
+</nav>
+
+<section class="fs">
+  <div class="wrap">
+    <div class="fs-inner">
+      <div class="eyebrow">Free search</div>
+      <h1>See if AI <em>recommends</em> your business</h1>
+      <p class="fs-sub">Type your business. Watch three AI engines get asked the question your customers ask — and see whether your name comes up.</p>
+
+      <form class="fs-form" id="fsForm" autocomplete="off">
+        <input class="biz" id="biz" type="text" placeholder="Your business name or website" aria-label="Business name or website" />
+        <input class="city" id="city" type="text" placeholder="City you serve" aria-label="City you serve" />
+        <input class="cat" id="cat" type="text" placeholder="What you do (e.g. dentist)" aria-label="What you do" />
+        <button class="btn-gold" type="button" id="runBtn">Run the free check</button>
+      </form>
+      <p class="fs-note">Three questions, three engines. No score, no cost, no sign-up.</p>
+
+      <div class="fs-results" id="results">
+        <div class="cards" id="cards"></div>
+        <p class="fs-tension">Coming up in an answer is a start — it's not the same as being the name AI recommends first.</p>
+        <p class="fs-honesty">We check a sample of the questions your customers ask. AI answers change often, so your full check is run by hand to confirm what's really happening.</p>
+      </div>
+
+      <div class="fs-close" id="close">
+        <h2>That's the quick look. Coming up isn't the same as being the name it <em>recommends.</em></h2>
+        <p>Free, by email, within one business day — the full check shows how often you're the one AI leads with, who's ahead when you're not, and the single clearest gap to close. No score or dollar figure in the free check; those are the paid Snapshot.</p>
+        <form class="cap" id="capForm" autocomplete="off">
+          <input id="capName" type="text" placeholder="Your name" aria-label="Your name" />
+          <input id="capEmail" type="email" placeholder="Email" aria-label="Email" />
+          <button class="btn-gold" type="submit">Email me the full check — free</button>
+        </form>
+        <p class="cap-msg" id="capMsg">In the live version this submits to Formspree and sends you to the thank-you page. (Prototype — nothing was sent.)</p>
+        <div class="alt">
+          <span class="sep">or</span>
+          <a href="https://calendly.com/jordan-spencermorleyconsulting/15min" target="_blank" rel="noopener">Book a 15-minute call</a>
+          <span class="sep">·</span>
+          <a href="https://spencermorleyconsulting.ca/discoverability-index/sample-report.html" target="_blank" rel="noopener">See a full sample report</a>
+          <span class="sep">·</span>
+          <a href="https://spencermorleyconsulting.ca/small-business.html#sb-index" target="_blank" rel="noopener">Get your score — $750</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap"><div class="footer-inner">
+    <span class="footer-name">Spencer Morley Consulting</span>
+    <span class="footer-copy">© 2026 Spencer Morley Consulting · Edmonton, AB · Serving Canada · Prototype</span>
+  </div></div>
+</footer>
+
+<script>
+(function(){
+  var engines = [
+    { name:'ChatGPT', mono:'G', outcome:'present' },
+    { name:'Perplexity', mono:'P', outcome:'look' },
+    { name:'Gemini', mono:'◆', outcome:'present' }
+  ];
+  var form = document.getElementById('fsForm');
+  var results = document.getElementById('results');
+  var cardsEl = document.getElementById('cards');
+  var closeEl = document.getElementById('close');
+  var running = false;
+
+  function esc(s){ return (s||'').replace(/[<>&]/g,function(c){return {'<':'&lt;','>':'&gt;','&':'&amp;'}[c];}); }
+
+  function run(){
+    if (running) return;
+    running = true;
+    closeEl.classList.remove('on');
+    var biz = document.getElementById('biz').value.trim() || 'your business';
+    var city = document.getElementById('city').value.trim() || 'your city';
+    var cat = document.getElementById('cat').value.trim() || 'your service';
+    var query = 'best ' + cat + ' in ' + city + '?';
+
+    results.classList.add('on');
+    cardsEl.innerHTML = '';
+    var cards = engines.map(function(e){
+      var c = document.createElement('div');
+      c.className = 'card';
+      c.innerHTML =
+        '<div class="card-eng"><span class="card-mono">'+e.mono+'</span><span class="card-name">'+e.name+'</span></div>'+
+        '<div class="card-q"></div>'+
+        '<div class="card-status working"><span class="dot"></span><span class="lbl">ready</span></div>';
+      cardsEl.appendChild(c);
+      return c;
+    });
+
+    // sequence each card serially: type query -> read -> resolve
+    var PRE = 200, PER = 28, GAP = 150, READ = 1100, TAIL = 450;
+    var typeDur = query.length * PER;
+    var cardDur = PRE + typeDur + GAP + READ + TAIL;
+    var chars = query.split('');
+
+    engines.forEach(function(e, i){
+      var c = cards[i];
+      var q = c.querySelector('.card-q');
+      var st = c.querySelector('.card-status');
+      var lbl = st.querySelector('.lbl');
+      var start = i * cardDur;
+      var prefix = 'Asking ' + esc(e.name) + ': "';
+      var full = prefix + esc(query) + '"';
+
+      setTimeout(function(){ lbl.textContent = 'asking'; q.innerHTML = prefix + '<span class="cur"></span>'; }, start + PRE);
+      chars.forEach(function(ch, k){
+        setTimeout(function(){ q.innerHTML = prefix + esc(query.slice(0, k+1)) + '<span class="cur"></span>'; }, start + PRE + (k+1)*PER);
+      });
+      setTimeout(function(){ q.innerHTML = full; lbl.textContent = 'reading the answer'; }, start + PRE + typeDur + GAP);
+      setTimeout(function(){
+        st.classList.remove('working');
+        if (e.outcome === 'present'){ st.classList.add('present'); c.classList.add('done-present'); lbl.textContent = 'You came up in this answer.'; }
+        else { st.classList.add('look'); c.classList.add('done-look'); lbl.textContent = 'Not confirmed here — worth a human look.'; }
+      }, start + PRE + typeDur + GAP + READ);
+    });
+
+    var finish = engines.length * cardDur + 200;
+    setTimeout(function(){ closeEl.classList.add('on'); running = false; }, finish);
+  }
+
+  document.getElementById('runBtn').addEventListener('click', function(ev){ ev.preventDefault(); run(); });
+  form.addEventListener('submit', function(ev){ ev.preventDefault(); run(); });
+  document.getElementById('capForm').addEventListener('submit', function(ev){
+    ev.preventDefault(); document.getElementById('capMsg').classList.add('on');
+  });
+})();
+</script>
+</body>
+</html>

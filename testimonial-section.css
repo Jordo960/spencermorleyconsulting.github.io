@@ -6,7 +6,6 @@
    Static / CSS-only — no JavaScript dependencies
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Lato:wght@400&family=Montserrat:wght@600&display=swap');
 
 /* ── Section wrapper ── */
 .smc-logo-strip {
@@ -44,19 +43,19 @@
   border: none;
 }
 
-/* ── Logo grid ── */
+/* ── Logo grid — flex layout handles any tile count gracefully ── */
 .smc-logo-strip__grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  flex-wrap: wrap;
   gap: 24px;
-  justify-items: center;
+  justify-content: center;
   align-items: stretch;
 }
 
-/* 4 active tiles at launch → natural 2×2 on desktop (correct behaviour) */
-
-/* ── Individual logo tile ── */
+/* ── Individual logo tile — 3 per row (clean 3+3 for 6 tiles) ── */
 .logo-tile {
+  flex: 0 1 calc(33.33% - 16px);
+  min-width: 160px;
   background-color: #FFFFFF;
   border-radius: 6px;
   padding: 20px;
@@ -64,7 +63,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
   box-sizing: border-box;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   min-height: 100px;
@@ -73,8 +71,8 @@
 /* Dark tile variant — County of Grande Prairie */
 .logo-tile--dark {
   background-color: #323232;
-  box-shadow: none; /* dark on dark — no lift needed */
-  border: 1px solid rgba(255, 255, 255, 0.08); /* very subtle definition */
+  box-shadow: none;
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 /* ── Logo image wrapper ── */
@@ -96,7 +94,7 @@
 
 /* ── Hidden testimonial scaffold (Phase 2) ── */
 .logo-tile__testimonial {
-  display: none; /* controlled via aria-hidden + inline style per spec */
+  display: none;
 }
 
 /* ── Hidden placeholder slots ── */
@@ -104,28 +102,33 @@
   display: none !important;
 }
 
-/* ── Responsive: Tablet (768px–1023px) ── */
+/* ── Responsive: Tablet (768px–1023px) — 3 per row ── */
 @media (max-width: 1023px) {
-  .smc-logo-strip__grid {
-    grid-template-columns: repeat(2, 1fr);
+  .logo-tile {
+    flex: 0 1 calc(33.33% - 16px);
+    min-width: 140px;
   }
 }
 
-/* ── Responsive: Mobile (<768px) ── */
+/* ── Responsive: Mobile (<768px) — 2 per row ── */
 @media (max-width: 767px) {
   .smc-logo-strip {
     padding: 48px 24px;
   }
 
   .smc-logo-strip__grid {
-    grid-template-columns: repeat(2, 1fr);
     gap: 16px;
+  }
+
+  .logo-tile {
+    flex: 0 1 calc(50% - 8px);
+    min-width: 120px;
   }
 }
 
-/* ── Responsive: Narrow mobile — single column if tiles compress below 140px ── */
+/* ── Responsive: Narrow mobile — single column ── */
 @media (max-width: 340px) {
-  .smc-logo-strip__grid {
-    grid-template-columns: 1fr;
+  .logo-tile {
+    flex: 0 1 100%;
   }
 }

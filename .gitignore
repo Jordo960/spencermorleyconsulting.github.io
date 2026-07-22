@@ -1,0 +1,38 @@
+# ── Internal / sensitive — keep OUT of the public repo ──
+CLAUDE.md
+.claude/
+DEPLOY_*.md
+INDEXNOW-AND-SEO-SWEEP.md
+*.batch
+# Internal working / planning docs
+PROJECT_STATUS.md
+SMC_CONTEXT.md
+SMB_PAGE_REDESIGN_PLAN.md
+SEO-AEO-GEO-*.md
+TEAM.md
+*.bak
+# Working directories (not the live site)
+Discoverability/
+redesign-2026/
+files/
+outputs/
+downloads/
+_to_delete/
+.playwright-mcp/
+# macOS + dev QA screenshots
+.DS_Store
+**/.DS_Store
+verify-*.png
+desktop-*.png
+mobile-*.png
+
+# ── Internal docs/data inside site folders — keep OUT of the public repo ──
+campaign/*.md
+campaign/pilot-week1/*.md
+campaign/pilot-week1/render*.py
+funnel/*.md
+funnel/*.pdf
+funnel/*.csv
+discoverability-index/*.md
+discoverability-index/generate-marketing-pdfs.js
+discoverability-index/outreach-list-*.xlsx

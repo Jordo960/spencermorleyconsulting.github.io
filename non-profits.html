@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AI Blind Spot Audit &amp; Discoverability Index for Canadian Small Business — Spencer Morley Consulting</title>
-  <meta name="description" content="Two diagnostics for Canadian small businesses: the Discoverability Index scores whether AI search can find you (leaderboard vs. named competitors, 90-day roadmap); the $600 AI Blind Spot Audit maps where AI is a risk or opportunity inside your company." />
+  <title>AI Consulting for Non-Profits — Spencer Morley Consulting</title>
+  <meta name="description" content="AI consulting for non-profits across Canada: ethical and safe AI training, systems and workflow automation, and a private, local LLM built for mission-driven teams." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Nunito:wght@700;800;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
@@ -150,13 +150,16 @@
       padding-top: 0.7rem; margin-top: 0.7rem;
     }
     .compliance-callout-source a {
-      color: rgba(247,247,245,0.55);
+      color: var(--gold);
       text-decoration: underline;
-      text-underline-offset: 3px;
-      text-decoration-color: var(--gold-border);
-      transition: color 0.2s;
+      text-decoration-color: rgba(201,168,76,0.4);
+      text-underline-offset: 2px;
+      transition: color 0.2s, text-decoration-color 0.2s;
     }
-    .compliance-callout-source a:hover { color: var(--gold); }
+    .compliance-callout-source a:hover {
+      color: var(--gold-light);
+      text-decoration-color: var(--gold-light);
+    }
 
     .ai-svc { display: grid; grid-template-columns: 38px 1fr; gap: 1.2rem; align-items: start; padding: 1.4rem 0; border-bottom: 1px solid rgba(201,168,76,0.08); }
     .ai-svc:last-child { border-bottom: none; }
@@ -210,6 +213,7 @@
       nav { padding: 0 2rem; }
       .wrap { padding: 0 2rem; }
       .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .gap-band-grid { grid-template-columns: 1fr !important; gap: 2rem !important; text-align: center; }
     }
     @media (min-width: 1381px) and (max-width: 1600px) {
       nav { padding: 0 2rem; }
@@ -258,10 +262,10 @@
     "@graph": [
       {
         "@type": "WebPage",
-        "@id": "https://spencermorleyconsulting.ca/small-business.html#webpage",
-        "url": "https://spencermorleyconsulting.ca/small-business.html",
-        "name": "AI Consulting for Business & Organizations — Spencer Morley Consulting",
-        "description": "Practical AI consulting for businesses and organizations across Canada. AI Blind Spot Audit, the Discoverability Index, staff training, and workflow automation. Based in Edmonton, Alberta.",
+        "@id": "https://spencermorleyconsulting.ca/non-profits.html#webpage",
+        "url": "https://spencermorleyconsulting.ca/non-profits.html",
+        "name": "AI Consulting for Non-Profits - Spencer Morley Consulting",
+        "description": "Practical AI consulting for non-profits across Canada. Ethical and safe AI training, systems and workflow automation, and a private, local LLM for mission-driven teams. Based in Edmonton, Alberta.",
         "isPartOf": {
           "@id": "https://spencermorleyconsulting.ca/#website"
         },
@@ -270,69 +274,65 @@
           "itemListElement": [
             { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://spencermorleyconsulting.ca/" },
             { "@type": "ListItem", "position": 2, "name": "AI Consulting", "item": "https://spencermorleyconsulting.ca/#ai-section" },
-            { "@type": "ListItem", "position": 3, "name": "Small Business Track", "item": "https://spencermorleyconsulting.ca/small-business.html" }
+            { "@type": "ListItem", "position": 3, "name": "Non-Profits Track", "item": "https://spencermorleyconsulting.ca/non-profits.html" }
           ]
         },
         "speakable": {
           "@type": "SpeakableSpecification",
-          "cssSelector": [".page-hero-hl", ".page-hero-sub", ".audit-intro", ".service-name", ".service-desc", ".service-price"]
+          "cssSelector": [".page-hero-hl", ".page-hero-sub", ".audit-intro", ".service-name", ".service-desc"]
         }
       },
       {
         "@type": "Service",
-        "@id": "https://spencermorleyconsulting.ca/small-business.html#service",
-        "name": "AI Consulting for Business & Organizations — Spencer Morley Consulting Small Business Track",
-        "url": "https://spencermorleyconsulting.ca/small-business.html",
+        "@id": "https://spencermorleyconsulting.ca/non-profits.html#service",
+        "name": "AI Consulting for Non-Profits - Spencer Morley Consulting Non-Profits Track",
+        "url": "https://spencermorleyconsulting.ca/non-profits.html",
         "provider": {
           "@id": "https://spencermorleyconsulting.ca/#organization"
         },
-        "description": "Spencer Morley Consulting helps businesses, non-profits, and organizations across Canada adopt AI practically and profitably. Services include the AI Blind Spot Audit (internal AI), the Discoverability Index (AI search visibility), staff AI training, and workflow automation — all built for teams without enterprise budgets or IT departments.",
+        "description": "Spencer Morley Consulting helps non-profits across Canada adopt AI safely and practically. Services follow a clear progression: ethical and safe AI training for staff, systems and workflow automation, and a private, local LLM that keeps sensitive data in-house. Built for mission-driven teams without enterprise budgets or IT departments.",
         "areaServed": {
           "@type": "Country",
           "name": "Canada"
         },
         "audience": {
           "@type": "Audience",
-          "audienceType": "Canadian business owners, non-profit leaders, office managers, entrepreneurs, and organizational decision-makers"
+          "audienceType": "Non-profit leaders, executive directors, board members, program managers, and operations staff at charities and mission-driven organizations"
         },
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
-          "name": "Business & Organization AI Services",
+          "name": "Non-Profit AI Services",
           "itemListElement": [
             {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "AI Blind Spot Audit",
-                "description": "Maps how AI is being used inside the business — shadow AI exposure, privacy and quality risks, and the highest-value, lowest-risk places AI can safely save staff time. Includes a plain-English readout and a 30-day action plan."
-              },
-              "price": "600",
-              "priceCurrency": "CAD"
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Discoverability Index — Snapshot",
-                "description": "AI-search visibility audit: a 0-100 discoverability score, a leaderboard ranking against 7-10 named local competitors, modelled dollars-at-stake, and a 90-day roadmap."
-              },
-              "price": "750",
-              "priceCurrency": "CAD"
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Staff AI Training & Prompt Engineering",
-                "description": "Hands-on training built around your team’s actual job functions. Staff learn to get useful AI output on the first try — structuring prompts, evaluating results, and handling customer information safely."
+                "name": "AI Readiness Conversation",
+                "description": "A starting conversation that reviews how your team already uses AI, where sensitive data could be exposed, where time is being lost to repetitive work, and what to do first. No cost, no obligation."
               }
             },
             {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Workflow Automation",
-                "description": "Identify and automate repetitive tasks — customer inquiry responses, appointment follow-ups, quote generation, social content, internal reporting, and more. Built for organizations without enterprise software budgets."
+                "name": "Ethical and Safe AI Training",
+                "description": "Hands-on training built around the work non-profit staff actually do - grant writing, donor communications, program reporting, intake - and around the ethics that matter in the sector: protecting beneficiary privacy, handling sensitive data, and disclosing AI use appropriately. Includes a plain-language AI use policy your board can adopt."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Systems and Workflow Automation",
+                "description": "Mapping and automating the repetitive work that eats a non-profit team's hours - donor acknowledgements and receipting, grant and funder reporting, intake and registration, scheduling, content, and board-packet preparation - using the tools you already have."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Private Local AI for Non-Profits",
+                "description": "A private AI assistant that runs on hardware the organization controls, so sensitive data - client case files, health and housing records, donor details - never leaves the building. The non-profit counterpart to the private municipal AI built for local governments."
               }
             }
           ]
@@ -340,58 +340,57 @@
         "telephone": "+1-780-868-8272",
         "image": "https://spencermorleyconsulting.ca/SMC_logo_gold_transparent.png",
         "priceRange": "$$",
-        "keywords": "AI consulting Canada, business AI consulting, non-profit AI adoption, AI visibility optimization, WebMCP for business, AI Blind Spot Audit, ChatGPT business recommendations, AI workflow automation Canada, Edmonton AI consultant"
+        "keywords": "AI consulting for non-profits Canada, nonprofit AI training, ethical AI for charities, safe AI use nonprofit, nonprofit workflow automation, private local LLM nonprofit, nonprofit AI policy, Edmonton AI consultant"
       }
     ]
   }
   </script>
 
-  <!-- HowTo: AI Blind Spot Audit process -->
+  <!-- HowTo: Non-Profit AI adoption process -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "HowTo",
-    "name": "How to find out where AI is a risk or opportunity inside your Canadian business",
-    "description": "Spencer Morley Consulting's AI Blind Spot Audit: a structured process to find where AI is being used inside your business, where it creates privacy or quality risk, and where it can safely save time.",
-    "estimatedCost": { "@type": "MonetaryAmount", "currency": "CAD", "value": "600" },
+    "name": "How a non-profit can start using AI safely",
+    "description": "Spencer Morley Consulting's progression for non-profits adopting AI: train staff to use it ethically and safely, automate the busywork, and add a private, local AI when sensitive data requires it.",
     "step": [
       {
         "@type": "HowToStep",
         "position": 1,
-        "name": "AI Blind Spot Audit",
-        "text": "We map how AI is actually being used inside your business — where staff use AI (\"shadow AI\"), where that creates privacy or quality risk, and where AI could safely save real time. You receive a plain-English readout and a 30-day action plan. Cost: $600 CAD, credited toward any service within 30 days."
+        "name": "Ethical and safe AI training",
+        "text": "Staff learn to use AI safely with donor, client, and case information - around the work they actually do. We can also leave you with a plain-language AI use policy your board can adopt. This is the recommended starting point."
       },
       {
         "@type": "HowToStep",
         "position": 2,
-        "name": "Choose your path based on audit findings",
-        "text": "Based on audit results, we identify the highest-impact next step: Staff AI Training, Workflow Automation, or — if being found by AI search is the priority — the Discoverability Index, a separate visibility audit and fix path."
+        "name": "Systems and workflow automation",
+        "text": "Once your team can use AI safely, we map the repetitive work - receipting, grant reporting, intake, scheduling, content - and build AI-assisted systems that handle the routine parts, sized for a lean team without an IT department."
       },
       {
         "@type": "HowToStep",
         "position": 3,
-        "name": "Implementation and ongoing maintenance",
-        "text": "We implement the recommended internal-AI changes — safe-use guardrails, staff training, and workflow automation. For AI-search visibility, the Discoverability Index handles the fixes and ongoing monthly monitoring."
+        "name": "Private, local AI when needed",
+        "text": "For organizations holding data that cannot leave the building, we scope, set up, and support a private AI assistant that runs on hardware you control - the non-profit counterpart to the private municipal AI we build for local governments."
       }
     ]
   }
   </script>
 
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://spencermorleyconsulting.ca/small-business.html" />
-  <meta property="og:title" content="AI Blind Spot Audit &amp; Discoverability Index for Canadian Small Business — Spencer Morley Consulting" />
-  <meta property="og:description" content="Two diagnostics for Canadian small businesses: the Discoverability Index scores whether AI search can find you; the $600 AI Blind Spot Audit maps AI risk and opportunity inside your company." />
+  <meta property="og:url" content="https://spencermorleyconsulting.ca/non-profits.html" />
+  <meta property="og:title" content="AI Consulting for Non-Profits — Spencer Morley Consulting" />
+  <meta property="og:description" content="Practical AI consulting for non-profits across Canada. Ethical and safe AI training, systems and workflow automation, and a private, local LLM for mission-driven teams." />
   <meta property="og:image" content="https://spencermorleyconsulting.ca/og-image.jpg" />
   <meta property="og:locale" content="en_CA" />
   <meta property="og:site_name" content="Spencer Morley Consulting" />
 
   <!-- Twitter / X Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="AI Blind Spot Audit &amp; Discoverability Index for Canadian Small Business — Spencer Morley Consulting" />
-  <meta name="twitter:description" content="Two diagnostics for Canadian small businesses: the Discoverability Index scores whether AI search can find you; the $600 AI Blind Spot Audit maps AI risk and opportunity inside your company." />
+  <meta name="twitter:title" content="AI Consulting for Non-Profits — Spencer Morley Consulting" />
+  <meta name="twitter:description" content="Practical AI consulting for non-profits across Canada. Use AI safely, automate the busywork, and keep sensitive data in-house." />
   <meta name="twitter:image" content="https://spencermorleyconsulting.ca/og-image.jpg" />
 
-  <link rel="canonical" href="https://spencermorleyconsulting.ca/small-business.html" />
+  <link rel="canonical" href="https://spencermorleyconsulting.ca/non-profits.html" />
   <meta name="robots" content="index, follow" />
   <meta name="geo.region" content="CA-AB" />
   <meta name="geo.placename" content="Edmonton, Alberta" />
@@ -435,7 +434,7 @@
           "name": "SMC Services",
           "itemListElement": [
             {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "AI Blind Spot Audit"}},
-            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Discoverability Index"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "AI Readiness Assessment"}},
             {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Staff AI Training and Prompt Engineering"}},
             {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "WebMCP Readiness"}},
             {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Workflow Automation"}},
@@ -469,7 +468,7 @@
           "ATIA compliance and AI",
           "POPA privacy management programs",
           "municipal AI training",
-          "small business AI adoption Canada",
+          "small business AI adoption Alberta",
           "WebMCP readiness",
           "workflow automation"
         ],
@@ -501,43 +500,40 @@
   }
   </script>
 
-  <!-- ══ Block 4 — Small Business Services ══ -->
+  <!-- Block 4 - Non-Profit Services -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
       {
         "@type": "Service",
-        "@id": "https://spencermorleyconsulting.ca/small-business.html#ai-blind-spot-audit",
-        "name": "AI Blind Spot Audit",
+        "@id": "https://spencermorleyconsulting.ca/non-profits.html#ethical-ai-training",
+        "name": "Ethical and Safe AI Training for Non-Profits",
         "provider": {"@id": "https://spencermorleyconsulting.ca/#organization"},
-        "description": "Maps how AI is being used inside a specific Canadian business — shadow AI, privacy and quality risks, and where AI can safely save staff time — without selling software. Includes a plain-English readout and a 30-day action plan. The $600 fee is credited in full against any subsequent Spencer Morley Consulting service.",
-        "offers": {
-          "@type": "Offer",
-          "price": "600",
-          "priceCurrency": "CAD"
-        },
-        "areaServed": {
-          "@type": "Country",
-          "name": "Canada"
-        }
+        "description": "Training that teaches non-profit staff to use AI safely and ethically with sensitive donor, client, and case information - built around their real work, and delivered with a plain-language AI use policy the board can adopt.",
+        "areaServed": {"@type": "Country", "name": "Canada"}
       },
       {
         "@type": "Service",
-        "@id": "https://spencermorleyconsulting.ca/small-business.html#workflow-automation",
-        "name": "Workflow Automation for Small Business",
+        "@id": "https://spencermorleyconsulting.ca/non-profits.html#workflow-automation",
+        "name": "Systems and Workflow Automation for Non-Profits",
         "provider": {"@id": "https://spencermorleyconsulting.ca/#organization"},
-        "description": "Identification and automation of repetitive business tasks using AI — forms, reports, communications, and internal processes. Spencer Morley Consulting identifies the bottleneck and builds the solution.",
-        "areaServed": {
-          "@type": "Country",
-          "name": "Canada"
-        }
+        "description": "Identification and automation of repetitive non-profit work - receipting, grant and funder reporting, intake, scheduling, content, and board-packet preparation - built to fit the tools the organization already uses.",
+        "areaServed": {"@type": "Country", "name": "Canada"}
+      },
+      {
+        "@type": "Service",
+        "@id": "https://spencermorleyconsulting.ca/non-profits.html#private-local-ai",
+        "name": "Private, Local AI for Non-Profits",
+        "provider": {"@id": "https://spencermorleyconsulting.ca/#organization"},
+        "description": "A private AI assistant that runs on hardware the organization controls, so sensitive data never leaves the building. Spencer Morley Consulting scopes, sets up, supports, and trains staff to use it.",
+        "areaServed": {"@type": "Country", "name": "Canada"}
       }
     ]
   }
   </script>
 
-  <!-- ══ Block 5 — Small Business FAQ ══ -->
+  <!-- Block 5 - Non-Profit FAQ -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -545,42 +541,42 @@
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "What is the AI Blind Spot Audit and what does it cost?",
+        "name": "Where should a non-profit start with AI?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "The AI Blind Spot Audit maps how AI is being used inside your business — where staff are already using it (\"shadow AI\"), where that creates privacy or quality risk, and where AI could safely save your team real time. You get a plain-English readout and a 30-day action plan. It costs $600 CAD, credited in full against any subsequent Spencer Morley Consulting service. Whether customers can find you when they ask AI is a separate question — that is the Discoverability Index."
+          "text": "Start with ethical and safe use. Most non-profit staff are already using AI, often without guidance and sometimes with sensitive donor or client information. Spencer Morley Consulting trains your team to use AI safely first, then helps automate repetitive work, and adds a private AI only when your data requires it."
         }
       },
       {
         "@type": "Question",
-        "name": "What is WebMCP Readiness and why does it matter for Canadian businesses?",
+        "name": "Is it safe to use AI with donor, client, or case information?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "WebMCP Readiness refers to how well a business is structured to be found and recommended by AI platforms like ChatGPT, Perplexity, and Google AI Overviews. When a customer asks an AI platform for a recommendation — a plumber, a consultant, a restaurant — the AI draws from what it can find and verify about local businesses. Businesses that are not structured for AI discoverability are invisible in those conversations. WebMCP became available in February 2026, giving first movers a narrow window to establish AI visibility before competitors do."
+          "text": "It can be, with the right standards. Public AI tools should never receive sensitive beneficiary, health, or donor data without clear rules. Our training covers what is safe, what is not, and how to disclose AI use appropriately. For data that cannot leave the building, we set up a private, local AI that runs on hardware you control."
         }
       },
       {
         "@type": "Question",
-        "name": "Do you work with businesses across Canada?",
+        "name": "What is the private, local AI for non-profits?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Spencer Morley Consulting's small business AI practice serves businesses across Canada, delivered remotely. The firm is based in Edmonton, Alberta."
+          "text": "It is a private AI assistant that runs on hardware your organization controls, so sensitive data never leaves your premises. It is the non-profit counterpart to the private municipal AI we build for local governments - the same security model, sized and scoped for the sector."
         }
       },
       {
         "@type": "Question",
-        "name": "How is Spencer Morley Consulting different from an AI software company?",
+        "name": "Do you work with non-profits outside Alberta?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Spencer Morley Consulting is a consulting firm, not a software company. Jordan Morley does not sell AI tools or platforms. The practice provides independent analysis, training, and implementation guidance — the goal is to help your business use AI effectively, not to sell you a subscription."
+          "text": "Yes. Spencer Morley Consulting works with non-profits across Canada. Training and automation are delivered remotely or on-site depending on your needs."
         }
       },
       {
         "@type": "Question",
-        "name": "How quickly can a Canadian small business get started with AI?",
+        "name": "How is this different from buying an AI tool?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "The AI Blind Spot Audit can typically be booked within one to two weeks. It is designed for time-poor business owners — the output is a plain-English readout of your internal AI risks and opportunities, plus a 30-day action plan you can act on immediately."
+          "text": "Spencer Morley Consulting is a consulting firm, not a software vendor. We do not sell subscriptions. We help your organization use AI safely and effectively with the tools that fit your work and your budget."
         }
       }
     ]
@@ -593,7 +589,7 @@
   {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    "@id": "https://spencermorleyconsulting.ca/small-business.html#breadcrumb",
+    "@id": "https://spencermorleyconsulting.ca/non-profits.html#breadcrumb",
     "itemListElement": [
       {
         "@type": "ListItem",
@@ -610,8 +606,8 @@
       {
         "@type": "ListItem",
         "position": 3,
-        "name": "Business and Organizations Track",
-        "item": "https://spencermorleyconsulting.ca/small-business.html"
+        "name": "Non-Profits Track",
+        "item": "https://spencermorleyconsulting.ca/non-profits.html"
       }
     ]
   }
@@ -652,7 +648,7 @@
     </li>
     <li><a href="#about">About</a></li>
     <li><a href="resources/">Glossary</a></li>
-    <li><a href="#contact" class="nav-cta" onclick="gtag('event', 'cta_click', {'event_category': 'nav', 'event_label': 'book_a_diagnostic', 'page': 'small_business'})">Book a Diagnostic</a></li>
+    <li><a href="#contact" class="nav-cta" onclick="gtag('event', 'cta_click', {'event_category': 'nav', 'event_label': 'get_a_consultation', 'page': 'non_profits'})">Get a Consultation</a></li>
   </ul>
 </nav>
 
@@ -663,187 +659,183 @@
   </div>
   <div class="wrap">
     <div class="breadcrumb">
-      <a href="index.html">Home</a> &#8250; <a href="index.html#ai-section">AI Consulting</a> &#8250; <span>Business &amp; Organizations Track</span>
+      <a href="index.html">Home</a> &#8250; <a href="index.html#ai-section">AI Consulting</a> &#8250; <span>Non-Profits Track</span>
     </div>
-    <div class="page-hero-eyebrow">AI Consulting &#8212; Business &amp; Organizations Track</div>
-    <h1>AI is already shaping your business &#8212;<br/><em>outside and inside.</em></h1>    <p class="page-hero-sub">Outside: AI search is deciding whether new customers ever find you. Inside: your staff are already using AI, with or without a plan. Two diagnostics tell you exactly where you stand.</p>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1.5rem;max-width:860px;margin-top:1rem;">
-      <div style="border:1px solid var(--gold-border);background:rgba(201,168,76,0.06);padding:2rem;display:flex;flex-direction:column;gap:0.8rem;">
-        <p style="font-family:var(--font-ui);font-size:0.62rem;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin:0;">For getting found</p>
-        <h2 style="font-family:var(--font-display);font-size:1.45rem;font-weight:400;color:var(--cream);line-height:1.25;margin:0;">Can customers find you in AI search?</h2>
-        <p style="font-family:var(--font-body);font-size:0.85rem;font-weight:300;color:rgba(247,247,245,0.6);line-height:1.7;margin:0;">One 0&#8211;100 score. Your competitors ranked beside you on a leaderboard. The dollars at stake, and a 90-day plan to close the gap.</p>
-        <div style="margin-top:auto;padding-top:0.6rem;">
-          <a href="#sb-index" class="btn-gold" style="padding:0.8rem 1.8rem;" onclick="gtag('event', 'cta_click', {'event_category': 'hero', 'event_label': 'door_index', 'page': 'small_business'})">Get Your Score</a>
-          <p style="font-family:var(--font-body);font-size:0.75rem;color:rgba(247,247,245,0.45);margin:0.7rem 0 0;">Snapshot &#8212; $750 founding-client rate</p>
-        </div>
-      </div>
-      <div style="border:1px solid var(--gold-border);background:rgba(201,168,76,0.06);padding:2rem;display:flex;flex-direction:column;gap:0.8rem;">
-        <p style="font-family:var(--font-ui);font-size:0.62rem;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin:0;">For using AI safely</p>
-        <h2 style="font-family:var(--font-display);font-size:1.45rem;font-weight:400;color:var(--cream);line-height:1.25;margin:0;">Is your team already using AI without a plan?</h2>
-        <p style="font-family:var(--font-body);font-size:0.85rem;font-weight:300;color:rgba(247,247,245,0.6);line-height:1.7;margin:0;">We map where AI is quietly in use, where that creates risk, and where it could save real hours &#8212; with a 30-day action plan.</p>
-        <div style="margin-top:auto;padding-top:0.6rem;">
-          <a href="#sb-audit" class="btn-gold" style="padding:0.8rem 1.8rem;" onclick="gtag('event', 'cta_click', {'event_category': 'hero', 'event_label': 'door_audit', 'page': 'small_business'})">Book Your Audit &#8212; $600</a>
-          <p style="font-family:var(--font-body);font-size:0.75rem;color:rgba(247,247,245,0.45);margin:0.7rem 0 0;">Fully credited toward any follow-on service</p>
-        </div>
-      </div>
+    <div class="page-hero-eyebrow">AI Consulting &#8212; Non-Profits Track</div>
+    <h1>Your mission is the priority.<br/><em>AI just gives your team more time to serve it.</em></h1>    <p class="page-hero-sub">More hours back for the work that matters. Staff who use AI safely and confidently. Systems that handle the busywork &#8212; and the option of a private AI that keeps your data in-house. That&#8217;s what working with Spencer Morley Consulting looks like.</p>
+    <div class="page-hero-actions">
+      <a href="#npo-audit" class="btn-gold" onclick="gtag('event', 'cta_click', {'event_category': 'hero', 'event_label': 'see_where_to_start', 'page': 'non_profits'})">See Where to Start</a>
     </div>
   </div>
 </section>
 
-<!-- DISCOVERABILITY INDEX -->
-<section id="sb-index" style="padding: 7rem 0; background: var(--cream); color: var(--charcoal);">
-  <div class="wrap">
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:5rem;align-items:center;">
-      <div>
-        <p class="eyebrow dark">Door one &#8212; getting found</p>
-        <h2 style="font-family:var(--font-display);font-size:clamp(2.2rem,3vw,3.4rem);font-weight:400;color:var(--charcoal);line-height:1.2;margin:0 0 1.6rem;">When AI answers for your customers,<br><em style="font-style:italic;">does it mention you?</em></h2>
-        <p style="font-family:var(--font-body);font-size:0.95rem;font-weight:300;color:var(--light-text);line-height:1.82;margin:0 0 1.4rem;">More of your customers ask ChatGPT, Perplexity, and Google AI for recommendations every month. The Discoverability Snapshot runs live checks across five AI engines and classic search &#8212; one 0&#8211;100 score, a leaderboard ranking you against seven to ten named local competitors, what AI gets wrong about your business, the dollars at stake, and a 90-day roadmap to close the gap.</p>
-        <p style="font-family:var(--font-body);font-size:0.85rem;color:var(--light-text);margin:0 0 2.2rem;">Snapshot $1,500 &#8212; <strong>founding-client rate $750</strong> for the first few clients, in exchange for a testimonial. Fix Sprint and monthly monitoring available after your score.</p>
-        <div style="display:flex;align-items:center;gap:1.6rem;flex-wrap:wrap;">
-          <a href="https://buy.stripe.com/dRm6oJ3Xjbsi4gLc5v6Na01" class="btn-gold" onclick="gtag('event', 'begin_checkout', {'event_category': 'stripe', 'event_label': 'snapshot_750', 'page': 'small_business'})">Get Your Score &#8212; $750</a>
-          <span style="font-family:var(--font-body);font-size:0.82rem;">
-            <a href="discoverability-index/sample-report.html" style="color:var(--charcoal);text-decoration:underline;text-underline-offset:3px;" onclick="gtag('event', 'cta_click', {'event_category': 'discoverability_index', 'event_label': 'sample_report', 'page': 'small_business'})">See a sample report</a>
-            &nbsp;&middot;&nbsp;
-            <a href="discoverability-index/" style="color:var(--charcoal);text-decoration:underline;text-underline-offset:3px;" onclick="gtag('event', 'cta_click', {'event_category': 'discoverability_index', 'event_label': 'full_details', 'page': 'small_business'})">Full details &amp; pricing</a>
-          </span>
-        </div>
-      </div>
-      <div style="border:1px solid rgba(28,28,28,0.15);background:var(--warm-white);padding:2.4rem;">
-        <p style="font-family:var(--font-ui);font-size:0.62rem;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;color:var(--charcoal-light);margin:0 0 1.6rem;">Your leaderboard <span style="font-weight:400;letter-spacing:0.08em;color:var(--muted);text-transform:none;">(illustrative)</span></p>
-        <div style="display:flex;flex-direction:column;gap:1px;background:rgba(28,28,28,0.08);border:1px solid rgba(28,28,28,0.08);">
-          <div style="display:grid;grid-template-columns:2rem 1fr auto;gap:1rem;align-items:center;padding:0.85rem 1.1rem;background:var(--cream);">
-            <span style="font-family:var(--font-display);font-size:1.1rem;color:var(--muted);">1</span>
-            <span style="font-family:var(--font-body);font-size:0.85rem;color:var(--charcoal);">Competitor A</span>
-            <span style="font-family:var(--font-ui);font-size:0.85rem;font-weight:800;color:var(--charcoal);">74</span>
-          </div>
-          <div style="display:grid;grid-template-columns:2rem 1fr auto;gap:1rem;align-items:center;padding:0.85rem 1.1rem;background:var(--cream);">
-            <span style="font-family:var(--font-display);font-size:1.1rem;color:var(--muted);">2</span>
-            <span style="font-family:var(--font-body);font-size:0.85rem;color:var(--charcoal);">Competitor B</span>
-            <span style="font-family:var(--font-ui);font-size:0.85rem;font-weight:800;color:var(--charcoal);">61</span>
-          </div>
-          <div style="display:grid;grid-template-columns:2rem 1fr auto;gap:1rem;align-items:center;padding:0.85rem 1.1rem;background:var(--gold);border-left:3px solid var(--charcoal);">
-            <span style="font-family:var(--font-display);font-size:1.1rem;color:var(--charcoal);">5</span>
-            <span style="font-family:var(--font-ui);font-size:0.85rem;font-weight:800;color:var(--charcoal);letter-spacing:0.04em;">YOUR BUSINESS</span>
-            <span style="font-family:var(--font-ui);font-size:0.85rem;font-weight:800;color:var(--charcoal);">38</span>
-          </div>
-          <div style="display:grid;grid-template-columns:2rem 1fr auto;gap:1rem;align-items:center;padding:0.85rem 1.1rem;background:var(--cream);">
-            <span style="font-family:var(--font-display);font-size:1.1rem;color:var(--muted);">6</span>
-            <span style="font-family:var(--font-body);font-size:0.85rem;color:var(--charcoal);">Competitor C</span>
-            <span style="font-family:var(--font-ui);font-size:0.85rem;font-weight:800;color:var(--charcoal);">33</span>
-          </div>
-        </div>
-        <p style="font-family:var(--font-body);font-size:0.75rem;color:var(--muted);margin:1.2rem 0 0;line-height:1.6;">Live checks across 5 AI engines &middot; dollars-at-stake modelled &middot; 90-day roadmap included</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- AI BLIND SPOT AUDIT -->
-<section id="sb-audit" style="padding: 7rem 0; background: var(--charcoal-mid); position: relative; overflow: hidden;">
+<!-- READINESS / START HERE -->
+<section id="npo-audit" style="padding: 7rem 0; background: var(--charcoal-mid); position: relative; overflow: hidden;">
   <div style="position:absolute;top:0;right:0;width:600px;height:600px;background:radial-gradient(circle at top right,rgba(201,168,76,0.06),transparent 70%);pointer-events:none;"></div>
   <div class="wrap">
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center;">
       <div>
-        <p class="eyebrow">Door two &#8212; inside your business</p>
-        <h2 style="font-family:var(--font-display);font-size:clamp(2.2rem,3vw,3.4rem);font-weight:400;color:var(--cream);line-height:1.2;margin:0 0 1.6rem;">Your team is already using AI &#8212;<br><em style="font-style:italic;color:var(--gold-light);">often without a plan.</em></h2>
-        <p style="font-family:var(--font-body);font-size:0.95rem;font-weight:300;color:rgba(247,247,245,0.6);line-height:1.82;margin:0 0 2.4rem;">Staff are quietly using AI to draft, summarize, and answer customers &#8212; sometimes with sensitive data, in tools never set up for it. The $600 AI Blind Spot Audit maps what&#8217;s actually happening inside your business: where AI creates privacy or quality risk, and where it could safely save your team real time. You get a plain-English readout and a 30-day action plan.</p>
-        <div style="display:flex;align-items:center;gap:1.6rem;flex-wrap:wrap;margin-bottom:1.1rem;">
-          <a href="https://buy.stripe.com/bJecN79hDgMCeVpfhH6Na00" class="btn-gold" onclick="gtag('event', 'begin_checkout', {'event_category': 'stripe', 'event_label': 'audit_600', 'page': 'small_business'})">Book Your Audit &#8212; $600</a>
-          <span style="display:inline-block;border:1px solid var(--gold-border);background:var(--gold-dim);color:var(--gold);font-family:var(--font-ui);font-size:0.62rem;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;padding:0.55rem 0.9rem;">$600 fully credited toward any follow-on service</span>
+        <p class="eyebrow">Start Here</p>
+        <h2 style="font-family:var(--font-display);font-size:clamp(2.2rem,3vw,3.4rem);font-weight:400;color:var(--cream);line-height:1.2;margin:0 0 1.6rem;">Most Non-Profits Are <em style="font-style:italic;color:var(--gold-light);">Already Using AI</em>.<br>Few Are Using It Safely.</h2>
+        <p style="font-family:var(--font-body);font-size:0.95rem;font-weight:300;color:rgba(247,247,245,0.6);line-height:1.82;margin:0 0 2.4rem;">Across the sector, 80% of Canadian non-profits now use AI in some way &#8212; but most have no policy, no training plan, and no clear picture of where it&#8217;s saving time versus creating risk. A readiness conversation tells you exactly where your organization stands and what to do first, starting with using AI ethically and safely.</p>
+        <div style="display:flex;align-items:center;gap:2rem;flex-wrap:wrap;">
+          <a href="#contact" style="display:inline-block;background:var(--gold);color:var(--charcoal);font-family:var(--font-ui);font-size:0.72rem;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;padding:0.9rem 2.2rem;text-decoration:none;" onclick="gtag('event', 'cta_click', {'event_category': 'audit', 'event_label': 'book_readiness_call', 'page': 'non_profits'})">Book a Readiness Conversation</a>
+          <span style="font-family:var(--font-body);font-size:0.8rem;color:rgba(247,247,245,0.38);">No cost, no obligation &#8212; just a clear starting point</span>
         </div>
-        <p style="font-family:var(--font-body);font-size:0.82rem;color:rgba(247,247,245,0.5);margin:0;">Prefer to talk first? <a href="#contact" style="color:var(--gold);text-decoration:underline;text-underline-offset:3px;" onclick="gtag('event', 'cta_click', {'event_category': 'audit', 'event_label': 'talk_first', 'page': 'small_business'})">Send a note</a> &#8212; response within one business day.</p>
       </div>
       <div style="border:1px solid var(--gold-border);padding:2.8rem;">
-        <p style="font-family:var(--font-ui);font-size:0.65rem;font-weight:800;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin:0 0 2rem;">What the audit includes</p>
+        <p style="font-family:var(--font-ui);font-size:0.65rem;font-weight:800;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin:0 0 2rem;">Where We Start</p>
         <div style="display:grid;grid-template-columns:38px 1fr;gap:1.2rem;padding:1.4rem 0;border-bottom:1px solid rgba(201,168,76,0.08);align-items:start;">
           <span style="font-family:var(--font-display);font-size:1.7rem;font-weight:300;color:var(--gold);line-height:1;">01</span>
-          <div><p style="font-family:var(--font-ui);font-size:0.8rem;font-weight:800;color:var(--cream);margin:0 0 0.3rem;text-transform:uppercase;letter-spacing:0.06em;">Shadow-AI Map</p><p style="font-family:var(--font-body);font-size:0.8rem;color:rgba(247,247,245,0.45);margin:0;line-height:1.65;">Where your staff are already using AI — and where that creates privacy or quality risk. The exposure most owners can&#8217;t see.</p></div>
+          <div><p style="font-family:var(--font-ui);font-size:0.8rem;font-weight:800;color:var(--cream);margin:0 0 0.3rem;text-transform:uppercase;letter-spacing:0.06em;">Ethical &amp; Safe-Use Review</p><p style="font-family:var(--font-body);font-size:0.8rem;color:rgba(247,247,245,0.45);margin:0;line-height:1.65;">We look at how your team is already using AI, where sensitive data could be exposed, and what a safe, practical baseline looks like for your organization.</p></div>
         </div>
         <div style="display:grid;grid-template-columns:38px 1fr;gap:1.2rem;padding:1.4rem 0;border-bottom:1px solid rgba(201,168,76,0.08);align-items:start;">
           <span style="font-family:var(--font-display);font-size:1.7rem;font-weight:300;color:var(--gold);line-height:1;">02</span>
-          <div><p style="font-family:var(--font-ui);font-size:0.8rem;font-weight:800;color:var(--cream);margin:0 0 0.3rem;text-transform:uppercase;letter-spacing:0.06em;">Safe-Use Guardrails</p><p style="font-family:var(--font-body);font-size:0.8rem;color:rgba(247,247,245,0.45);margin:0;line-height:1.65;">Clear rules for what&#8217;s okay and what&#8217;s not — in plain language your team will actually follow.</p></div>
+          <div><p style="font-family:var(--font-ui);font-size:0.8rem;font-weight:800;color:var(--cream);margin:0 0 0.3rem;text-transform:uppercase;letter-spacing:0.06em;">Time-Drain Map</p><p style="font-family:var(--font-body);font-size:0.8rem;color:rgba(247,247,245,0.45);margin:0;line-height:1.65;">We identify the repetitive, low-value work eating your team&#8217;s hours &#8212; the tasks best suited to systems and automation.</p></div>
         </div>
         <div style="display:grid;grid-template-columns:38px 1fr;gap:1.2rem;padding:1.4rem 0;border-bottom:1px solid rgba(201,168,76,0.08);align-items:start;">
           <span style="font-family:var(--font-display);font-size:1.7rem;font-weight:300;color:var(--gold);line-height:1;">03</span>
-          <div><p style="font-family:var(--font-ui);font-size:0.8rem;font-weight:800;color:var(--cream);margin:0 0 0.3rem;text-transform:uppercase;letter-spacing:0.06em;">Time-Savings Opportunities</p><p style="font-family:var(--font-body);font-size:0.8rem;color:rgba(247,247,245,0.45);margin:0;line-height:1.65;">The highest-value, lowest-risk places AI can save your team hours — matched to how you actually work.</p></div>
+          <div><p style="font-family:var(--font-ui);font-size:0.8rem;font-weight:800;color:var(--cream);margin:0 0 0.3rem;text-transform:uppercase;letter-spacing:0.06em;">Priority Roadmap</p><p style="font-family:var(--font-body);font-size:0.8rem;color:rgba(247,247,245,0.45);margin:0;line-height:1.65;">Not everything at once. The two or three moves that will free up the most time and reduce the most risk first.</p></div>
         </div>
         <div style="display:grid;grid-template-columns:38px 1fr;gap:1.2rem;padding:1.4rem 0;align-items:start;">
           <span style="font-family:var(--font-display);font-size:1.7rem;font-weight:300;color:var(--gold);line-height:1;">04</span>
-          <div><p style="font-family:var(--font-ui);font-size:0.8rem;font-weight:800;color:var(--cream);margin:0 0 0.3rem;text-transform:uppercase;letter-spacing:0.06em;">30-Day Action Plan</p><p style="font-family:var(--font-body);font-size:0.8rem;color:rgba(247,247,245,0.45);margin:0;line-height:1.65;">A prioritized, plain-English plan you can act on immediately. No jargon.</p></div>
+          <div><p style="font-family:var(--font-ui);font-size:0.8rem;font-weight:800;color:var(--cream);margin:0 0 0.3rem;text-transform:uppercase;letter-spacing:0.06em;">45-Minute Briefing</p><p style="font-family:var(--font-body);font-size:0.8rem;color:rgba(247,247,245,0.45);margin:0;line-height:1.65;">We walk you through the findings live. No jargon. Clear next steps your board and staff can understand.</p></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- AFTER THE DIAGNOSTIC — SERVICE LADDER -->
-<section class="ai-section" style="padding: 6rem 0 7rem;" id="smb-track">
+<!-- 9% CONSULTANT GAP CALLOUT -->
+<section style="background: var(--charcoal); padding: 5.5rem 0; border-top: 1px solid var(--gold-border); border-bottom: 1px solid var(--gold-border); position: relative; overflow: hidden;">
+  <div style="position:absolute;top:50%;left:-4%;transform:translateY(-50%);width:500px;height:500px;background:radial-gradient(circle,rgba(201,168,76,0.06),transparent 70%);pointer-events:none;"></div>
   <div class="wrap">
-    <div style="max-width:720px;margin-bottom:3.5rem;">
-      <p class="eyebrow">Where it goes next</p>
-      <h2 style="font-family:var(--font-display);font-size:clamp(2rem,2.8vw,3rem);font-weight:400;color:var(--cream);line-height:1.2;margin:0 0 1.2rem;">Both diagnostics end the same way: a plan &#8212; <em style="font-style:italic;color:var(--gold-light);">and help executing it.</em></h2>
-      <p style="font-family:var(--font-body);font-size:0.92rem;font-weight:300;color:rgba(247,247,245,0.6);line-height:1.8;margin:0;">Your audit or Snapshot fee is credited toward whichever step comes next. Built for teams without enterprise budgets or IT departments.</p>
+    <div class="gap-band-grid" style="display:grid;grid-template-columns:auto 1fr;gap:4rem;align-items:center;max-width:1000px;margin:0 auto;position:relative;">
+      <div>
+        <div style="font-family:var(--font-display);font-size:clamp(4.5rem,9vw,7.5rem);font-weight:300;color:var(--gold-light);line-height:0.85;">91%</div>
+        <div style="font-family:var(--font-ui);font-size:0.62rem;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);margin-top:0.7rem;">are going it alone</div>
+      </div>
+      <div>
+        <p class="eyebrow">The Gap</p>
+        <p style="font-family:var(--font-display);font-size:clamp(1.5rem,2.4vw,2.1rem);font-weight:400;color:var(--cream);line-height:1.35;margin:0 0 1.2rem;">Adoption ran ahead of capacity. <em style="font-style:italic;color:var(--gold-light);">Almost no one is closing the gap.</em></p>
+        <p style="font-family:var(--font-body);font-size:0.92rem;font-weight:300;color:rgba(247,247,245,0.62);line-height:1.8;margin:0;">Four in five Canadian non-profits now use AI, but only one in ten has a formal policy &#8212; and just 9% have brought in outside help. The other 91% are working it out as they go, often with donor and client data on the line. Moving deliberately now puts your organization in the small, responsible minority that got ahead of it.</p>
+      </div>
     </div>
+  </div>
+</section>
 
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;">
-      <div style="border:1px solid var(--gold-border);padding:2.2rem;display:flex;flex-direction:column;gap:0.9rem;">
-        <p style="font-family:var(--font-ui);font-size:0.62rem;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin:0;">Staff AI training</p>
-        <p style="font-family:var(--font-body);font-size:0.88rem;font-weight:300;color:rgba(247,247,245,0.62);line-height:1.75;margin:0;">Training built around your team&#8217;s actual jobs &#8212; quoting, scheduling, customer replies, reporting. How to structure a prompt, give AI the right context, and handle customer information safely. Skills they use the next day, remotely or on-site.</p>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(201,168,76,0.1);border:1px solid rgba(201,168,76,0.1);margin-top:0.4rem;">
-          <div style="padding:0.9rem 1rem;background:var(--charcoal);">
-            <div style="font-family:var(--font-display);font-size:1.5rem;color:var(--gold);line-height:1.1;">83%</div>
-            <div style="font-family:var(--font-body);font-size:0.72rem;color:rgba(247,247,245,0.45);line-height:1.5;">of Canadian employees want to use AI more effectively</div>
+<!-- SMALL BUSINESS TRACK CONTENT -->
+<section class="ai-section" style="padding: 5rem 0 7rem;">
+  <div class="wrap">
+    <div class="track-full">
+      <div class="track" id="smb-track">
+        <div class="track-header">
+          <div class="track-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
           </div>
-          <div style="padding:0.9rem 1rem;background:var(--charcoal);">
-            <div style="font-family:var(--font-display);font-size:1.5rem;color:var(--gold);line-height:1.1;">48%</div>
-            <div style="font-family:var(--font-body);font-size:0.72rem;color:rgba(247,247,245,0.45);line-height:1.5;">say their employer gave them what they needed to get there <span style="opacity:0.6;">(KPMG Canada 2025)</span></div>
+          <div>
+            <div class="track-label">Non-Profits Track</div>
+            <div class="track-sublabel">Non-profits and mission-driven organizations across Canada</div>
           </div>
         </div>
-        <p style="margin:auto 0 0;padding-top:0.6rem;"><a href="#contact" style="font-family:var(--font-ui);font-size:0.7rem;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);text-decoration:none;border-bottom:1px solid var(--gold-border);padding-bottom:2px;" onclick="gtag('event', 'cta_click', {'event_category': 'ladder', 'event_label': 'training', 'page': 'small_business'})">Ask about training &#8594;</a></p>
-      </div>
-      <div style="border:1px solid var(--gold-border);padding:2.2rem;display:flex;flex-direction:column;gap:0.9rem;">
-        <p style="font-family:var(--font-ui);font-size:0.62rem;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin:0;">Workflow automation</p>
-        <p style="font-family:var(--font-body);font-size:0.88rem;font-weight:300;color:rgba(247,247,245,0.62);line-height:1.75;margin:0;">This is where the time comes back. We map the work eating your hours and automate it: customer inquiry responses, appointment follow-ups, quote generation, reporting, onboarding. Not to replace your people &#8212; to free them for the work that actually needs a human.</p>
-        <p style="margin:auto 0 0;padding-top:0.6rem;"><a href="#contact" style="font-family:var(--font-ui);font-size:0.7rem;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);text-decoration:none;border-bottom:1px solid var(--gold-border);padding-bottom:2px;" onclick="gtag('event', 'cta_click', {'event_category': 'ladder', 'event_label': 'automation', 'page': 'small_business'})">Ask about automation &#8594;</a></p>
-      </div>
-      <div style="border:1px solid var(--gold-border);padding:2.2rem;display:flex;flex-direction:column;gap:0.9rem;">
-        <p style="font-family:var(--font-ui);font-size:0.62rem;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin:0;">Ongoing monitoring</p>
-        <p style="font-family:var(--font-body);font-size:0.88rem;font-weight:300;color:rgba(247,247,245,0.62);line-height:1.75;margin:0;">After your Snapshot: quarterly re-scores, a monthly AI-visibility pulse, competitor-overtake alerts, and light ongoing fixes so the gap you closed stays closed. From $400/month, 3-month minimum.</p>
-        <p style="margin:auto 0 0;padding-top:0.6rem;"><a href="discoverability-index/#pricing" style="font-family:var(--font-ui);font-size:0.7rem;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);text-decoration:none;border-bottom:1px solid var(--gold-border);padding-bottom:2px;" onclick="gtag('event', 'cta_click', {'event_category': 'ladder', 'event_label': 'monitoring', 'page': 'small_business'})">Monitoring details &#8594;</a></p>
+        <div class="track-intro">
+          <p class="lead">Canadian non-profits are adopting AI fast &#8212; 80% now use it in some way. But adoption has outrun governance: just one in ten has a formal AI policy, and most aren&#8217;t building one. The ones getting real value started by using AI safely, then built from there.</p>
+          <p>Every hour your team spends on repetitive admin is an hour not spent on your mission. AI can give much of that time back &#8212; but only if staff know how to use it safely with donor and client information, and only if the systems are set up properly. Spencer Morley Consulting works with non-profits across Canada to adopt AI in the right order: ethical, safe training first; then systems and automation; then, when it fits, a private AI of your own.</p>
+        </div>
+
+        <!-- Small Business AI Stats Box -->
+        <div class="shadow-ai-label" style="padding: 0 0 0 2rem; margin-top: 0.2rem;">
+          AI Adoption in the Canadian Non-Profit Sector
+          <span class="shadow-ai-badge">Imagine Canada 2026</span>
+        </div>
+        <div class="shadow-ai-stats" style="margin-left: 2rem; margin-right: 2rem;">
+          <div class="shadow-stat">
+            <div class="shadow-stat-num">80%</div>
+            <div class="shadow-stat-desc">of Canadian non-profits are now using AI in some way</div>
+          </div>
+          <div class="shadow-stat shadow-stat--highlight">
+            <div class="shadow-stat-num">64%</div>
+            <div class="shadow-stat-desc">of AI-using non-profits have no policies &#8212; and aren&#8217;t developing any</div>
+          </div>
+          <div class="shadow-stat shadow-stat--highlight">
+            <div class="shadow-stat-num">10%</div>
+            <div class="shadow-stat-desc">have a formal AI policy in place &#8212; just one organization in ten</div>
+          </div>
+          <div class="shadow-stat">
+            <div class="shadow-stat-num">16%</div>
+            <div class="shadow-stat-desc">have drawn on any network, formal or informal, for AI support</div>
+          </div>
+        </div>
+        <div class="compliance-callout-source" style="margin: 0 2rem 1.4rem; padding-top: 0.7rem; border-top: 1px solid rgba(201,168,76,0.12);"><a href="https://imaginecanada.ca/en/research/ai-report" target="_blank" rel="noopener">Imagine Canada &amp; the Canadian Centre for Nonprofit Digital Resilience &#8212; The State of AI Adoption in Canadian Nonprofits (2026)</a></div>
+        <div class="track-services">
+          <div class="ai-svc">
+            <div class="ai-svc-n">01</div>
+            <div>
+              <div class="ai-svc-title">Ethical &amp; Safe AI Training</div>
+              <div class="ai-svc-desc"><strong style="color:rgba(247,247,245,0.72);">Before any tool or automation: your team learns to use AI safely, ethically, and well.</strong></div>
+              <!-- Training Gap Stats Box -->
+              <div class="shadow-ai-label" style="margin-top:0.9rem; margin-bottom:0.8rem;">
+                Training Gap
+                <span class="shadow-ai-badge">Imagine Canada 2026</span>
+              </div>
+              <div class="shadow-ai-stats">
+                <div class="shadow-stat shadow-stat--highlight">
+                  <div class="shadow-stat-num">9%</div>
+                  <div class="shadow-stat-desc">of Canadian non-profits have engaged an external consultant to help with AI</div>
+                </div>
+                <div class="shadow-stat">
+                  <div class="shadow-stat-num">67%</div>
+                  <div class="shadow-stat-desc">of those that do get outside support say training is the help they need most</div>
+                </div>
+              </div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;">Most staff are already using AI &#8212; often without guidance, and sometimes with donor, client, or case information that should never be pasted into a public tool. The risk isn&#8217;t the technology; it&#8217;s using it without a clear, shared standard.</div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;">Spencer Morley Consulting trains your team around the work they actually do &#8212; grant writing, donor communications, program reporting, intake notes &#8212; and around the ethics that matter in the non-profit context: protecting beneficiary privacy, handling sensitive data, disclosing AI use appropriately, and checking output before it goes out the door. Staff leave knowing what&#8217;s safe, what isn&#8217;t, and how to get genuinely useful results. Delivered remotely or on-site. We can also leave you with a plain-language AI use policy your board can adopt.</div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;">It all comes back to a standard simple enough for your whole team to remember &#8212; <strong style="color:rgba(247,247,245,0.72);">Ask, Check, Tell</strong>: <strong style="color:rgba(247,247,245,0.72);">Ask</strong> whether a task is appropriate for AI in the first place; <strong style="color:rgba(247,247,245,0.72);">Check</strong> every output for accuracy and bias before it&#8217;s used; and <strong style="color:rgba(247,247,245,0.72);">Tell</strong> people when AI was involved. A shared rule like this is what turns scattered, unguided use into responsible use.</div>
+              <span class="ai-svc-tag">Start Here</span>
+            </div>
+          </div>
+          <div class="ai-svc">
+            <div class="ai-svc-n">02</div>
+            <div>
+              <div class="ai-svc-title">Systems &amp; Workflow Automation</div>
+              <div class="ai-svc-desc"><strong style="color:rgba(247,247,245,0.72);">Once your team can use AI safely, we put it to work on the tasks eating their hours.</strong></div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;">This is where the time comes back. Spencer Morley Consulting maps the repetitive work across your organization &#8212; donor acknowledgements and receipting, grant and funder reporting, intake and registration, scheduling, social and newsletter content, board-packet preparation &#8212; and builds AI-assisted systems that handle the routine parts.</div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;">The goal isn&#8217;t to replace staff or volunteers. It&#8217;s to remove the administrative load that keeps them from the mission. Every system is built to fit the tools you already use, sized for a lean team without an IT department, and documented so you&#8217;re never dependent on us to keep it running.</div>
+              <span class="ai-svc-tag">Build</span>
+            </div>
+          </div>
+          <div class="ai-svc">
+            <div class="ai-svc-n">03</div>
+            <div>
+              <div class="ai-svc-title">MissionMind &#8212; A Private, Local AI for Non-Profits</div>
+              <div class="ai-svc-desc"><strong style="color:rgba(247,247,245,0.72);">When your data can&#8217;t leave the building: a capable AI assistant that runs entirely in-house.</strong></div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;">Many non-profits hold information that should never be sent to a public AI service &#8212; client case files, health and housing records, donor details, anything covered by a funder agreement or privacy obligation. MissionMind is a private AI assistant that runs on hardware you control, so sensitive data never leaves your organization.</div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;">It&#8217;s the non-profit counterpart to the private municipal AI we build for local governments: the same security model, sized and scoped for the sector. Your team gets the day-to-day usefulness of a modern AI assistant &#8212; drafting, summarizing, answering questions about your own documents &#8212; without the data-exposure risk that keeps privacy-conscious organizations on the sidelines. Spencer Morley Consulting scopes, sets up, and supports it, and trains your staff to use it well.</div>
+              <span class="ai-svc-tag">Private &amp; Secure</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PROOF — ADOPTION STATS BAND -->
-<section style="padding: 3.5rem 0; background: var(--charcoal); border-top: 1px solid var(--gold-border);">
+<!-- AI READINESS MAINTENANCE ADD-ON -->
+<div style="background:var(--charcoal);padding:0 0 4rem;">
   <div class="wrap">
-    <div class="shadow-ai-label" style="margin-bottom:1.1rem;">
-      AI adoption in Canada
-      <span class="shadow-ai-badge">CFIB &amp; Canada.ca Research</span>
-    </div>
-    <div class="shadow-ai-stats" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr));margin-bottom:0.8rem;">
-      <div class="shadow-stat">
-        <div class="shadow-stat-num">12.2%</div>
-        <div class="shadow-stat-desc">of Canadian businesses have adopted AI &#8212; doubled in one year</div>
+    <div style="border:1px solid rgba(201,168,76,0.15);background:rgba(201,168,76,0.04);padding:2.4rem 3rem;display:grid;grid-template-columns:1fr auto;gap:3rem;align-items:center;">
+      <div>
+        <p style="font-family:var(--font-ui);font-size:0.6rem;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin:0 0 0.6rem;">Add-On &#8212; Ongoing AI Support</p>
+        <p style="font-family:var(--font-display);font-size:1.4rem;font-weight:400;color:var(--cream);margin:0 0 0.6rem;">Keep Your Team Supported.</p>
+        <p style="font-family:var(--font-body);font-size:0.84rem;font-weight:300;color:rgba(247,247,245,0.5);margin:0;line-height:1.72;">AI tools change quickly, and so do the expectations around using them responsibly. Ongoing support keeps your staff training current, your AI use policy up to date, and your systems and private AI running smoothly as your needs grow. Includes a periodic re-check so you always know your organization is using AI safely and getting full value from it.</p>
       </div>
-      <div class="shadow-stat shadow-stat--highlight">
-        <div class="shadow-stat-num">10%</div>
-        <div class="shadow-stat-desc">of Canadian SMEs are fully integrated &#8220;Digital Leaders&#8221; &#8212; the other 90% are leaving gains on the table</div>
-      </div>
-      <div class="shadow-stat shadow-stat--highlight">
-        <div class="shadow-stat-num">$2.40</div>
-        <div class="shadow-stat-desc">returned per $1 invested by Digital Leaders &#8212; vs. $1.20 for early adopters</div>
-      </div>
-      <div class="shadow-stat">
-        <div class="shadow-stat-num">1.08 hrs</div>
-        <div class="shadow-stat-desc">saved per day by generative AI for the average Canadian SME owner</div>
+      <div style="text-align:right;white-space:nowrap;">
+        <p style="font-family:var(--font-display);font-size:1.6rem;font-weight:300;color:var(--gold);margin:0 0 0.4rem;">Scoped to your org</p>
+        <a href="#contact" style="font-family:var(--font-ui);font-size:0.65rem;font-weight:800;color:rgba(247,247,245,0.45);text-decoration:none;text-transform:uppercase;letter-spacing:0.12em;">Ask About This &#8594;</a>
       </div>
     </div>
-    <div class="compliance-callout-source" style="padding-top: 0.7rem; border-top: 1px solid rgba(201,168,76,0.12);"><a href="https://www150.statcan.gc.ca/n1/pub/36-28-0001/2026004/article/00002-eng.htm" target="_blank" rel="noopener">CFIB Digital Transformation Report 2025 / Canada.ca SME AI Adoption Blueprint</a></div>
-    <!-- TESTIMONIAL SLOT: first founding-client testimonials go here (see SMB_PAGE_REDESIGN_PLAN.md §2.5) -->
   </div>
-</section>
+</div>
 
 <!-- ABOUT -->
 <section class="about" id="about">
@@ -855,21 +847,21 @@
       </div>
       <div>
         <div class="eyebrow">About</div>
-        <h2 class="about-hl">Leading the next frontier of business strategy &#8212; where AI meets real-world results.</h2>
-        <p class="about-body">Jordan Morley leads Spencer Morley Consulting&#8217;s AI consulting practice, helping businesses, organizations, and municipalities across Canada navigate the practical realities of AI adoption. His work focuses on making AI accessible and actionable for organizations that don&#8217;t have enterprise budgets or dedicated IT teams &#8212; from readiness assessments and staff training to WebMCP infrastructure and workflow automation.</p>
+        <h2 class="about-hl">Helping mission-driven teams use AI &#8212; safely, practically, and on their own terms.</h2>
+        <p class="about-body">Jordan Morley leads Spencer Morley Consulting&#8217;s AI consulting practice, helping non-profits, businesses, and municipalities across Canada navigate the practical realities of AI adoption. His work focuses on making AI accessible, safe, and actionable for organizations that don&#8217;t have enterprise budgets or dedicated IT teams &#8212; from ethical-use training and staff enablement to workflow automation and private, in-house AI.</p>
         <p class="about-body">With deep expertise in how AI platforms discover and recommend businesses, Jordan brings a builder&#8217;s approach to consulting: identify the highest-value opportunity, implement it cleanly, and make sure the client can sustain it without ongoing dependency.</p>
         <div class="creds">
           <div class="cred">
             <div class="cred-title">AI Change Management Consultant, Spencer Morley Consulting</div>
-            <div class="cred-detail">Leading Spencer Morley Consulting&#8217;s AI consulting practice for businesses and municipalities across Canada.</div>
-          </div>
-          <div class="cred">
-            <div class="cred-title">WebMCP &amp; AI Visibility Specialist</div>
-            <div class="cred-detail">Expert in Model Context Protocol implementation and AI platform discoverability.</div>
+            <div class="cred-detail">Leading Spencer Morley Consulting&#8217;s AI consulting practice for non-profits, businesses, and municipalities across Canada.</div>
           </div>
           <div class="cred">
             <div class="cred-title">Google AI Professional Certificate</div>
             <div class="cred-detail">Certified in Google&#8217;s AI professional program.</div>
+          </div>
+          <div class="cred">
+            <div class="cred-title">WebMCP &amp; AI Visibility Specialist</div>
+            <div class="cred-detail">Expert in Model Context Protocol implementation and AI platform discoverability.</div>
           </div>
           <div class="cred">
             <div class="cred-title">Workflow Automation &amp; Prompt Engineering</div>
@@ -889,7 +881,7 @@
       <a href="blog/how-ai-platforms-find-recommend-businesses.html" style="display:flex;flex-direction:column;gap:0.5rem;flex:1 1 240px;background:var(--gold-dim);border:1px solid var(--gold-border);border-radius:4px;padding:1.25rem 1.5rem;text-decoration:none;transition:background 0.2s;">
         <span style="font-family:var(--font-body);font-size:0.68rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);">AI Discoverability</span>
         <span style="font-family:var(--font-display);font-size:1.1rem;font-weight:600;color:var(--cream);line-height:1.3;">How AI Platforms Decide Which Businesses to Recommend</span>
-        <span style="font-size:0.82rem;color:rgba(247,247,245,0.6);margin-top:auto;">The signals that drive AI recommendations — and the gaps most Canadian businesses don't know they have &rarr;</span>
+        <span style="font-size:0.82rem;color:rgba(247,247,245,0.6);margin-top:auto;">The signals that drive AI recommendations — and the gaps most Alberta businesses don't know they have &rarr;</span>
       </a>
       <a href="blog/generative-engine-optimization-geo-guide.html" style="display:flex;flex-direction:column;gap:0.5rem;flex:1 1 240px;background:var(--gold-dim);border:1px solid var(--gold-border);border-radius:4px;padding:1.25rem 1.5rem;text-decoration:none;transition:background 0.2s;">
         <span style="font-family:var(--font-body);font-size:0.68rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);">Series Part 1 — GEO</span>
@@ -899,17 +891,17 @@
       <a href="blog/answer-engine-optimization-aeo-guide.html" style="display:flex;flex-direction:column;gap:0.5rem;flex:1 1 240px;background:var(--gold-dim);border:1px solid var(--gold-border);border-radius:4px;padding:1.25rem 1.5rem;text-decoration:none;transition:background 0.2s;">
         <span style="font-family:var(--font-body);font-size:0.68rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);">Series Part 2 — AEO</span>
         <span style="font-family:var(--font-display);font-size:1.1rem;font-weight:600;color:var(--cream);line-height:1.3;">What Is Answer Engine Optimization (AEO)?</span>
-        <span style="font-size:0.82rem;color:rgba(247,247,245,0.6);margin-top:auto;">How Canadian businesses earn the featured answer on Google, voice, and AI Overviews &rarr;</span>
+        <span style="font-size:0.82rem;color:rgba(247,247,245,0.6);margin-top:auto;">How Alberta businesses earn the featured answer on Google, voice, and AI Overviews &rarr;</span>
       </a>
-      <a href="blog/seo-in-the-ai-era-alberta-small-business.html" style="display:flex;flex-direction:column;gap:0.5rem;flex:1 1 240px;background:var(--gold-dim);border:1px solid var(--gold-border);border-radius:4px;padding:1.25rem 1.5rem;text-decoration:none;transition:background 0.2s;">
+      <a href="blog/seo-in-the-ai-era-alberta-non-profits.html" style="display:flex;flex-direction:column;gap:0.5rem;flex:1 1 240px;background:var(--gold-dim);border:1px solid var(--gold-border);border-radius:4px;padding:1.25rem 1.5rem;text-decoration:none;transition:background 0.2s;">
         <span style="font-family:var(--font-body);font-size:0.68rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);">Series Part 3 — SEO</span>
         <span style="font-family:var(--font-display);font-size:1.1rem;font-weight:600;color:var(--cream);line-height:1.3;">SEO in the AI Era: What Changed</span>
-        <span style="font-size:0.82rem;color:rgba(247,247,245,0.6);margin-top:auto;">What traditional SEO still does, what shifted, and what Canadian businesses need to add &rarr;</span>
+        <span style="font-size:0.82rem;color:rgba(247,247,245,0.6);margin-top:auto;">What traditional SEO still does, what shifted, and what Alberta businesses need to add &rarr;</span>
       </a>
       <a href="blog/webmcp-explained-alberta-businesses.html" style="display:flex;flex-direction:column;gap:0.5rem;flex:1 1 240px;background:var(--gold-dim);border:1px solid var(--gold-border);border-radius:4px;padding:1.25rem 1.5rem;text-decoration:none;transition:background 0.2s;">
         <span style="font-family:var(--font-body);font-size:0.68rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);">Series Part 4 — WebMCP</span>
         <span style="font-family:var(--font-display);font-size:1.1rem;font-weight:600;color:var(--cream);line-height:1.3;">WebMCP Explained: Let AI Agents Find Your Business</span>
-        <span style="font-size:0.82rem;color:rgba(247,247,245,0.6);margin-top:auto;">The new MCP standard — first-mover advantage for Canadian businesses is open right now &rarr;</span>
+        <span style="font-size:0.82rem;color:rgba(247,247,245,0.6);margin-top:auto;">The new MCP standard — first-mover advantage for Alberta businesses is open right now &rarr;</span>
       </a>
     </div>
   </div>
@@ -920,16 +912,17 @@
   <div class="wrap">
     <div class="contact-grid">
       <div>
-        <div class="eyebrow dark">Get in touch</div>
-        <h2 class="contact-hl">Start with the diagnostic that fits.</h2>
-        <p class="contact-sub">Want to be found by AI search? That&#8217;s the Discoverability Snapshot. Worried about how your team is using AI? That&#8217;s the Blind Spot Audit. Both are bookable directly above &#8212; or send a note and we&#8217;ll point you to the right one.</p>
-        <p class="contact-sub" style="margin-top:1rem;">Response within one business day. Prefer to talk? <a href="https://calendly.com/jordan-spencermorleyconsulting" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:underline;text-underline-offset:3px;" onclick="gtag('event','cta_click',{'event_category':'contact','event_label':'calendly_book_call','page':'small_business'})">Book a call directly</a>.</p>
+        <div class="eyebrow dark">Get in Touch</div>
+        <h2 class="contact-hl">Let&#8217;s put AI to work for your mission.</h2>
+        <p class="contact-sub">Whether you&#8217;ve never touched AI tools or your team is already using them occasionally, Spencer Morley Consulting can show you exactly what&#8217;s possible for your organization &#8212; safely &#8212; and get it running.</p>
+        <p class="contact-sub" style="margin-top:0.6rem;">Not sure where to start? A readiness conversation answers that.</p>
+        <p class="contact-sub" style="margin-top:1rem;">Fill out the form and we&#8217;ll be in touch within one business day.</p>
       </div>
       <div>
         <div id="contact-form-wrap">
           <form
-  tool-name="business-consultation-request"
-  tool-description="Request a consultation with Spencer Morley Consulting about AI adoption, WebMCP readiness, or workflow automation for your business."
+  tool-name="nonprofit-consultation-request"
+  tool-description="Request a consultation with Spencer Morley Consulting about ethical and safe AI use, workflow automation, or a private local AI for your non-profit."
   onsubmit="return false;">
           <div class="contact-form">
             <div class="contact-form-row">
@@ -941,13 +934,16 @@
               <input type="text" id="cf-org" placeholder="Business name *" required />
             </div>
             <select id="cf-service">
-              <option value="">What are you interested in? *</option>
-              <option>Discoverability Snapshot (AI visibility)</option>
-              <option>AI Blind Spot Audit (internal AI)</option>
-              <option>Something else / not sure</option>
+              <option value="">Which service are you interested in? *</option>
+              <option>AI Readiness Conversation</option>
+              <option>Ethical &amp; Safe AI Training</option>
+              <option>Systems &amp; Workflow Automation</option>
+              <option>Private Local AI (MissionMind)</option>
+              <option>Ongoing AI Support (Add-On)</option>
+              <option>General Inquiry</option>
             </select>
-            <textarea id="cf-message" placeholder="Tell us about your business and what you&#8217;re hoping AI can help with *" required></textarea>
-            <button class="btn-submit" onclick="handleFormSubmit(event)">Send &#8212; response within one business day</button>
+            <textarea id="cf-message" placeholder="Tell us about your organization and what you&#8217;re hoping AI can help with *" required></textarea>
+            <button class="btn-submit" onclick="handleFormSubmit(event)">Request a Conversation</button>
             <p class="form-note">We respect your privacy. Your information will never be shared.</p>
           </div>
           </form>
@@ -976,7 +972,6 @@
         <li><a href="#about">About</a></li>
     <li><a href="resources/">Glossary</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li><a href="https://google.com/preferences/source?q=spencermorleyconsulting.ca" target="_blank" rel="noopener" style="color:var(--gold);">★ Prefer us on Google</a></li>
       </ul>
       <div class="footer-copy">
   © 2026 Spencer Morley Consulting · Edmonton, AB · Serving Canada
@@ -1024,8 +1019,8 @@ function handleFormSubmit(e) {
       business: org,
       service: service,
       message: message,
-      _subject: 'Spencer Morley Consulting Small Business Inquiry \u2014 ' + service,
-      source: 'Small Business Track'
+      _subject: 'Spencer Morley Consulting Non-Profit Inquiry \u2014 ' + service,
+      source: 'Non-Profits Track'
     })
   })
   .then(function(r) {
@@ -1035,17 +1030,17 @@ function handleFormSubmit(e) {
       gtag('event', 'generate_lead', {
         'event_category': 'contact_form',
         'event_label': service,
-        'page': 'small_business'
+        'page': 'non_profits'
       });
     } else {
       btn.disabled = false;
-      btn.textContent = 'Send — response within one business day';
+      btn.textContent = 'Request a Conversation';
       alert('Something went wrong. Please try again or email jordan@spencermorleyconsulting.ca directly.');
     }
   })
   .catch(function() {
     btn.disabled = false;
-    btn.textContent = 'Send — response within one business day';
+    btn.textContent = 'Request a Conversation';
     alert('Something went wrong. Please try again or email jordan@spencermorleyconsulting.ca directly.');
   });
 }
