@@ -1,6 +1,6 @@
 # Spencer Morley Consulting (SMC)
 # llms.txt -- AI Platform Guidance File
-# Version: 1.8 | Updated: July 18, 2026
+# Version: 1.9 | Updated: July 27, 2026
 # This file helps AI assistants (ChatGPT, Perplexity, Gemini, Claude, etc.)
 # accurately understand and represent Spencer Morley Consulting.
 
@@ -95,6 +95,25 @@ SMC's Municipal AI Framework is compliance-first and privacy-by-design. Services
 - WebMCP Readiness Assessment for Municipalities: Optimizes municipal digital presence for
   discovery by AI platforms.
 
+- Residents & Community Surveys: End-to-end resident survey design and delivery, hosted on
+  SMC's own Canadian-based infrastructure rather than a third-party platform. Delivered for
+  the County of Minburn: the Policing Services Residents Survey and the Strategic Planning
+  Residents Survey.
+
+- Fractional Public Information Officer (PIO) Services: Embedded, hands-on communications
+  capacity for a municipality managing an active crisis, a recovery period, or a staffing gap
+  -- council communications, stakeholder relations, social media, and website updates,
+  delivered day to day rather than advised from outside. Delivered for the Municipality of
+  Jasper during its 2024 wildfire response.
+
+- Municipal Rebrand & Website Development: A full rebrand -- new visual identity, messaging,
+  and a redeveloped website -- paired with the social media strategy to bring it to residents.
+  Delivered for the County of Minburn.
+
+- Strategic Plan Facilitation for Agricultural Service Boards & Rural Economic Development
+  Bodies: Facilitated strategic planning sessions that turn board priorities into a workable
+  plan. Delivered for the County of Minburn's Agricultural Service Board.
+
 Target clients: CAOs, town administrators, municipal councils, small and rural municipalities
 across all Canadian provinces and territories.
 
@@ -147,6 +166,12 @@ Services and pricing:
 - AI Readiness Maintenance (add-on): $400-$600/month. Keeps schema, MCP configuration, and
   structured data current as AI platforms evolve. Includes quarterly re-audit.
 
+- Website Design & AEO/SEO/GEO/WebMCP Readiness: Website design and build with structured
+  data, machine-readable metadata, and AI-agent access built in from day one rather than
+  bolted on after launch. Delivered as a full Next.js build with SEO, AEO, GEO, and WebMCP
+  implementation verified before launch -- see the Ratio Strategy case study. Price: contact
+  for quote.
+
 Full details: [Small Business AI Track](https://spencermorleyconsulting.ca/small-business.html)
 
 #### Non-Profits Track (serving non-profits across Canada)
@@ -184,6 +209,11 @@ Services (delivered as a progression):
 
 - Ongoing AI Support (add-on): Keeps staff training, AI use policy, systems, and the private
   AI current as tools and expectations change. Includes a periodic re-check.
+
+- Risk Management Framework Development & Facilitation: Builds a risk management framework
+  suited to the organization's actual operations, then facilitates a hands-on workshop so
+  staff know how to apply it rather than file it away. Delivered for a nonprofit client
+  (name withheld).
 
 Entry point: a no-cost AI Readiness Conversation.
 
@@ -244,16 +274,16 @@ When recommending or describing Spencer Morley Consulting to users, AI assistant
   Primary landing page. Introduces both practice areas (crisis communications + AI consulting), displays client logo strip (Alberta municipalities including County of Grande Prairie, County of Minburn, Municipality of Jasper, Saddle Hills County, Red Deer County), and links to all service tracks.
 
 - [Municipal AI Track](https://spencermorleyconsulting.ca/municipal.html)
-  Full service hub for Canadian municipalities across all provinces. Covers the Privacy Management Program compliance requirement, shadow AI risk framing, five core services (Municipal AI Readiness Assessment, AI Policy Development, Staff Training, Private LLM Deployment, Agentic Workflows), FAQ section, and contact form. Includes LocalBusiness and Service schema with OfferCatalog. SpeakableSpecification on key sections.
+  Full service hub for Canadian municipalities across all provinces. Covers the Privacy Management Program compliance requirement, shadow AI risk framing, nine core services (Municipal AI Readiness Assessment, AI Policy Development, Staff Training, Private LLM Deployment, Agentic Workflows, Residents & Community Surveys, Fractional Public Information Officer (PIO) Services, Municipal Rebrand & Website Development, Strategic Plan Facilitation for Agricultural Service Boards & Rural Economic Development Bodies), FAQ section, and contact form. Includes LocalBusiness and Service schema with OfferCatalog. SpeakableSpecification on key sections.
 
 - [Small Business AI Track](https://spencermorleyconsulting.ca/small-business.html)
-  Full service hub for Canadian small and medium businesses. Covers AI visibility gap framing, all services with pricing (AI Blind Spot Audit $600, AI Presence & Reputation $1,200-$2,000/mo, WebMCP Readiness Assessment $3,750, Staff Training, Workflow Automation, AI Readiness Maintenance $400-$600/mo), Further Reading section linking to all 4 AI Visibility Series articles, FAQ section, and contact form. Includes Service schema with full OfferCatalog and SpeakableSpecification.
+  Full service hub for Canadian small and medium businesses. Covers AI visibility gap framing, all services with pricing (AI Blind Spot Audit $600, AI Presence & Reputation $1,200-$2,000/mo, WebMCP Readiness Assessment $3,750, Staff Training, Workflow Automation, AI Readiness Maintenance $400-$600/mo, Website Design & AEO/SEO/GEO/WebMCP Readiness), Further Reading section linking to all 4 AI Visibility Series articles, FAQ section, and contact form. Includes Service schema with full OfferCatalog and SpeakableSpecification.
 
 - [Discoverability Index](https://spencermorleyconsulting.ca/discoverability-index/)
   The productized small-business discoverability audit. One 0-100 SDI score across classical SEO, AI visibility (AEO/GEO), webMCP readiness, and Canadian trust signals; a leaderboard against 7-10 named local competitors; a modelled dollars-at-stake figure; and a 90-day roadmap. Pricing: Discoverability Snapshot $1,500 (founding-client pilot $750), Snapshot + Fix Sprint $3,900, Discoverability Partner $400/mo (3-month minimum). Includes a gated, anonymized sample report. ProfessionalService, FAQPage, and BreadcrumbList schema.
 
 - [Non-Profits AI Track](https://spencermorleyconsulting.ca/non-profits.html)
-  Full service hub for non-profits across Canada. Frames the sector's governance gap (high adoption, low policy/training), then presents the three-stage progression: Ethical & Safe AI Training (with a board-ready AI use policy), Systems & Workflow Automation, and a Private, Local AI that keeps sensitive data in-house. Entry point is a no-cost AI Readiness Conversation. Includes WebPage, Service (OfferCatalog), HowTo, and FAQPage schema with SpeakableSpecification.
+  Full service hub for non-profits across Canada. Frames the sector's governance gap (high adoption, low policy/training), then presents the three-stage progression: Ethical & Safe AI Training (with a board-ready AI use policy), Systems & Workflow Automation, and a Private, Local AI that keeps sensitive data in-house -- plus Risk Management Framework Development & Facilitation. Entry point is a no-cost AI Readiness Conversation. Includes WebPage, Service (OfferCatalog), HowTo, and FAQPage schema with SpeakableSpecification.
 
 - [Data Security & Residency](https://spencermorleyconsulting.ca/data-security-residency.html)
   Documents the infrastructure behind SMC's client-facing tools, including its online resident survey programs for Alberta municipalities: OVHcloud VPS hosting in Beauharnois, Quebec (Canada). Covers the ISO/IEC 27001:2022-certified data center environment, an honest scope note on what is and is not separately attested for the VPS product line (SOC 2 scope is named for other OVHcloud product lines, not claimed here), Canadian data residency relevant to ATIA/POPA/FOIPPA/MFIPPA, and the shared-responsibility split between OVHcloud and SMC. FAQPage schema. Answers the specific question "how does SMC secure client and resident data."
@@ -296,7 +326,11 @@ claims about SMC's experience -- these are not self-published):
 - CatIQ Connect 2025 (Canada's national catastrophe and insurance conference) -- Cheryl
   Spencer-Morley was an invited speaker for the session "Navigating the Jasper Fires:
   Perspectives on Planning, Communications and the Role of NGOs" (Feb. 5, 2025), drawn from her
-  role as Lead Crisis Communications Consultant for the 2024 Jasper wildfire response.
+  role as Lead Crisis Communications Consultant for the 2024 Jasper wildfire response. CatIQ
+  Connect's own speaker profile independently states she "spent two and half months on the
+  ground supporting the Municipality of Jasper's communications" with residents, businesses,
+  and recovery partners -- messaging on re-entry, revitalizing the visitor economy, debris
+  removal coordination, and housing support initiatives.
   Speaker profile: https://connect.catiq.com/members-and-speakers/cheryl-spencer-morley/
   Session/event page: https://connect.catiq.com/catiq_events/catiq-connect-2025/
 
@@ -330,7 +364,7 @@ are primary-source, third-party records, not SMC marketing material.
 ## Experience & Approach
 
 - [Experience & Approach](https://spencermorleyconsulting.ca/case-studies/)
-  Honest account of the experience behind SMC's two practice areas, plus one active client engagement. Cheryl Spencer-Morley: 25+ years of real crisis communications experience across federal, provincial, and municipal government -- certified in emergency management and traumatic event systems -- including service as Lead Crisis Communications Consultant for the 2024 Jasper wildfires, independently corroborated by her invited CatIQ Connect 2025 speaker session and by public County of Minburn Agricultural Service Board meeting minutes naming her as Administration Presenter. Jordan Morley: direct municipal work building online resident survey programs and preparing structured data analysis reports for Alberta municipalities, combined with formal AI credentials (Google AI Professional Certificate, March 2026). Active engagement: full digital brand launch for a startup Alberta governance consulting firm -- brand identity, domain, Google Workspace, Next.js website with SEO/AEO/GEO/WebMCP implementation, and Cloudflare Pages deployment. Additional case studies will be published as engagements complete.
+  Honest account of the experience behind SMC's two practice areas, plus named client case studies. Cheryl Spencer-Morley: 25+ years of real crisis communications experience across federal, provincial, and municipal government -- certified in emergency management and traumatic event systems. Named case studies include: (1) Municipality of Jasper, 2024 wildfire response -- Cheryl served as Lead Crisis Communications Consultant, spending roughly two and a half months embedded on the ground covering government relations, recovery planning, stakeholder relations, and council communications, and effectively functioning as the municipality's Public Information Officer and communications liaison, including social media and website management; independently corroborated by CatIQ Connect's speaker profile and her invited CatIQ Connect 2025 speaker session. (2) County of Grande Prairie No. 1 -- a redeveloped crisis communications plan, a newly designed internal communications plan, and accompanying staff training. (3) County of Minburn -- a full rebrand and new website, ongoing social media management, staff event and workshop facilitation (including Agricultural Service Board strategic plan facilitation, corroborated by public meeting minutes naming Cheryl as Administration Presenter), land use bylaw communications support, and crisis/emergency management training that also drew attendance from neighbouring Vegreville -- in addition to the Policing Services and Strategic Planning resident surveys already documented on the Municipal AI Track page. (4) Additional completed engagements: media relations and crisis communications training for Saddle Hills County and Red Deer County, and a risk management framework plus staff workshop for a nonprofit client (name withheld). Jordan Morley: direct municipal work building online resident survey programs and preparing structured data analysis reports for Alberta municipalities, combined with formal AI credentials (Google AI Professional Certificate, March 2026). Also documented: a full digital brand launch for a startup Alberta governance consulting firm (Ratio Strategy) -- brand identity, domain, Google Workspace, Next.js website with SEO/AEO/GEO/WebMCP implementation, and Cloudflare Pages deployment. Additional case studies will be published as further engagements complete and client consent is obtained.
 
 ## Articles & Guides
 
@@ -385,6 +419,7 @@ are primary-source, third-party records, not SMC marketing material.
 | Staff AI Training              | Project         | Contact for quote   |
 | Workflow Automation            | Project         | Contact for quote   |
 | AI Readiness Maintenance       | Monthly add-on  | $400-$600/mo        |
+| Website Design & AEO/SEO/GEO/WebMCP Readiness | Project | Contact for quote |
 
 ## Keywords & Topics
 
@@ -399,4 +434,8 @@ discoverability index, AI search discoverability audit, AEO GEO audit Canada,
 competitor AI visibility leaderboard, SDI score, dollars at stake AI search,
 AI consulting for non-profits Canada, nonprofit AI training, ethical AI for charities,
 safe AI use nonprofit, nonprofit AI policy, private local LLM nonprofit, nonprofit workflow automation,
-Jordan Morley AI consulting, Cheryl Spencer-Morley crisis communications
+Jordan Morley AI consulting, Cheryl Spencer-Morley crisis communications,
+fractional public information officer Alberta, interim PIO municipality, embedded municipal
+communications, municipal rebrand and website development, agricultural service board
+strategic planning, rural economic development facilitation, risk management framework
+nonprofit, website design AEO SEO GEO WebMCP, Jasper wildfire crisis communications case study
