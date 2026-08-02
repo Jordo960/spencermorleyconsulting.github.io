@@ -874,7 +874,7 @@
         "name": "Spencer Morley Consulting",
         "url": "https://spencermorleyconsulting.ca",
         "logo": "https://spencermorleyconsulting.ca/SMC_logo_gold_transparent.png",
-        "description": "Spencer Morley Consulting helps Canadian municipalities and small businesses across Canada adopt AI without the risk, jargon, or guesswork. The firm also provides strategic communications and crisis management services across federal, provincial, and municipal environments.",
+        "description": "Spencer Morley Consulting runs three separate AI consulting practices — one for Canadian municipalities, one for Edmonton and Alberta small businesses, and one for non-profits — alongside a strategic communications and crisis management practice serving federal, provincial, and municipal environments. The small-business practice is a distinct practice with its own services and diagnostics, not an extension of the municipal work.",
         "areaServed": [
           {
             "@type": "Country",
@@ -895,29 +895,21 @@
           "ethical and safe AI use for non-profits",
           "private local AI deployment",
           "crisis communications",
-          "strategic communications"
+          "strategic communications",
+          "AI consulting for small businesses",
+          "AI workflow audit for small businesses",
+          "AI adoption roadmap for Alberta SMBs",
+          "operational efficiency",
+          "staff AI adoption",
+          "fractional public information officer services",
+          "Answer Engine Optimization",
+          "Generative Engine Optimization"
         ],
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "SMC Services",
-          "itemListElement": [
-            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "AI Blind Spot Audit"}},
-            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "AI Readiness Assessment"}},
-            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Staff AI Training and Prompt Engineering"}},
-            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "WebMCP Readiness"}},
-            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Workflow Automation"}},
-            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Ethical and Safe AI Training for Non-Profits"}},
-            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Private Local AI Deployment"}},
-            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Crisis Management"}},
-            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Media Relations Training"}},
-            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Retained Communications Counsel"}},
-            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Fractional Public Information Officer (PIO) Services"}},
-            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Municipal Rebrand & Website Development"}},
-            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Risk Management Framework Development & Facilitation"}},
-            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Strategic Plan Facilitation for Agricultural Service Boards & Rural Economic Development Bodies"}},
-            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Website Design & AEO/SEO/GEO/WebMCP Readiness"}}
-          ]
-        },
+        "hasOfferCatalog": [
+          {"@id": "https://spencermorleyconsulting.ca/#municipal-practice"},
+          {"@id": "https://spencermorleyconsulting.ca/#smb-practice"},
+          {"@id": "https://spencermorleyconsulting.ca/#nonprofit-practice"}
+        ],
         "founder": [
           {"@id": "https://spencermorleyconsulting.ca/#jordan-morley"},
           {"@id": "https://spencermorleyconsulting.ca/#cheryl-spencer-morley"}
@@ -927,6 +919,82 @@
           "https://www.instagram.com/spencermorleyconsulting/",
           "https://maps.app.goo.gl/ERxu5eUhXKKQ3rEG9"
         ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://spencermorleyconsulting.ca/#municipal-practice",
+        "name": "Municipal communications and AI consulting",
+        "serviceType": "Municipal crisis communications and AI consulting",
+        "description": "Crisis communications, fractional public information officer staffing, and AI compliance consulting for Canadian municipalities — villages, towns, counties, and municipal districts, with particular depth in rural and small municipalities.",
+        "provider": {"@id": "https://spencermorleyconsulting.ca/#organization"},
+        "url": "https://spencermorleyconsulting.ca/municipal.html",
+        "areaServed": {"@type": "Country", "name": "Canada"},
+        "audience": {"@type": "Audience", "audienceType": "Canadian municipalities, CAOs, town administrators, municipal councils, villages, towns, counties, and municipal districts"},
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Municipal practice",
+          "itemListElement": [
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Municipal AI Readiness Assessment"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "AI Policy Development"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Staff AI Training and Prompt Engineering"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Private Local AI Deployment"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Fractional Public Information Officer (PIO) Services"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Crisis Management"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Media Relations Training"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Residents & Community Surveys"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Municipal Rebrand & Website Development"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Strategic Plan Facilitation for Agricultural Service Boards & Rural Economic Development Bodies"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Retained Communications Counsel"}}
+          ]
+        }
+      },
+      {
+        "@type": "Service",
+        "@id": "https://spencermorleyconsulting.ca/#smb-practice",
+        "name": "AI consulting for Edmonton and Alberta small businesses",
+        "serviceType": "AI consulting for small businesses",
+        "description": "A separate small-business practice, not a municipal add-on: AI workflow audits, an AI adoption roadmap, staff AI adoption and training, workflow automation for quoting, bookings, lead handling, customer service, and sales admin, and AI search visibility (AEO/GEO/webMCP) for Edmonton and Alberta small businesses. Serves professional services, construction and trades, accounting, and manufacturing.",
+        "provider": {"@id": "https://spencermorleyconsulting.ca/#organization"},
+        "url": "https://spencermorleyconsulting.ca/small-business.html",
+        "areaServed": [
+          {"@type": "City", "name": "Edmonton"},
+          {"@type": "AdministrativeArea", "name": "Alberta"},
+          {"@type": "Country", "name": "Canada"}
+        ],
+        "audience": {"@type": "BusinessAudience", "audienceType": "Small business owners and operators in Edmonton and Alberta — professional services, construction and trades, accounting, manufacturing, and retail"},
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Small business practice",
+          "itemListElement": [
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "AI Blind Spot Audit — AI workflow audit for small businesses"}, "price": "600", "priceCurrency": "CAD"},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Discoverability Index Snapshot — AI search visibility audit"}, "price": "1500", "priceCurrency": "CAD"},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "WebMCP Readiness"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Staff AI Training and Adoption"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Workflow Automation for Small Business Operations"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Website Design & AEO/SEO/GEO/WebMCP Readiness"}}
+          ]
+        }
+      },
+      {
+        "@type": "Service",
+        "@id": "https://spencermorleyconsulting.ca/#nonprofit-practice",
+        "name": "AI consulting for non-profits",
+        "serviceType": "AI consulting for non-profit organizations",
+        "description": "Ethics-first AI training, a board-ready AI use policy, workflow automation, private local AI for sensitive donor and client data, and risk management framework development for Canadian non-profits.",
+        "provider": {"@id": "https://spencermorleyconsulting.ca/#organization"},
+        "url": "https://spencermorleyconsulting.ca/non-profits.html",
+        "areaServed": {"@type": "Country", "name": "Canada"},
+        "audience": {"@type": "Audience", "audienceType": "Executive directors, non-profit boards, program and operations managers"},
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Non-profit practice",
+          "itemListElement": [
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Ethical and Safe AI Training for Non-Profits"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Workflow Automation"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Private Local AI Deployment"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Risk Management Framework Development & Facilitation"}}
+          ]
+        }
       },
       {
         "@type": "Person",
