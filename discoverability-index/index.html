@@ -28,10 +28,10 @@
     "founder": {"@type": "Person", "name": "Jordan Morley"},
     "knowsAbout": ["Answer Engine Optimization", "Generative Engine Optimization", "Search Engine Optimization", "webMCP", "Schema.org structured data", "AI search visibility"],
     "makesOffer": [
-      {"@type": "Offer", "name": "Discoverability Snapshot", "description": "Full audit and report: SDI score, competitor leaderboard, dollars-at-stake, 90-day roadmap.", "priceCurrency": "CAD", "price": "1500"},
-      {"@type": "Offer", "name": "Snapshot + Fix Sprint", "description": "The Snapshot plus done-for-you fixes: structured data, llms.txt, meta and headings, Google Business Profile.", "priceCurrency": "CAD", "price": "3900"},
-      {"@type": "Offer", "name": "Discoverability Partner (light)", "description": "Monthly monitoring: quarterly re-score, AI-visibility pulse, competitor-overtake alerts, light ongoing fixes.", "priceCurrency": "CAD", "price": "400"},
-      {"@type": "Offer", "name": "AI Presence & Reputation (active)", "description": "Active monthly optimization retainer — content, schema, GBP, review velocity, citation building.", "priceSpecification": {"@type":"PriceSpecification","minPrice":"1200","maxPrice":"2000","priceCurrency":"CAD","unitText":"MONTH"}}
+      {"@type": "Offer", "name": "Discoverability Report", "description": "Full audit and report: SDI score, competitor leaderboard, dollars-at-stake, 90-day roadmap.", "priceCurrency": "CAD", "price": "1500"},
+      {"@type": "Offer", "name": "Report + Fix Sprint", "description": "The Report plus done-for-you fixes: structured data, llms.txt, meta and headings, Google Business Profile.", "priceCurrency": "CAD", "price": "3900"},
+      {"@type": "Offer", "name": "Discoverability Monitoring", "description": "Monthly monitoring: quarterly re-score, AI-visibility pulse, competitor-overtake alerts, light ongoing fixes.", "priceCurrency": "CAD", "price": "400"},
+      {"@type": "Offer", "name": "Managed Discoverability", "description": "Active monthly optimization retainer — content, schema, GBP, review velocity, citation building.", "priceCurrency": "CAD", "price": "1200", "_unused": {"@type":"PriceSpecification","priceCurrency":"CAD","unitText":"MONTH"}}
     ]
   }
   </script>
@@ -41,10 +41,10 @@
     "@type": "FAQPage",
     "mainEntity": [
       {"@type": "Question", "name": "What is AI search, and why does it matter for my business?", "acceptedAnswer": {"@type": "Answer", "text": "More buyers now ask ChatGPT, Perplexity, and Google's AI 'who's the best [your service] near me' instead of scrolling a results page. Those tools name a short list of businesses. If yours isn't on it, you lose the job before a conversation starts — and you never see it happen."}},
-      {"@type": "Question", "name": "How is this different from a free AI visibility checker?", "acceptedAnswer": {"@type": "Answer", "text": "A free grader gives you one number from an AI model's memory. The Discoverability Index runs live queries across five AI engines, scores you against seven to ten named local competitors on one leaderboard, audits what AI gets wrong about your business, verifies your website's structured data by live browser render, models the revenue at stake, and gives you a prioritized 90-day plan — and we can do the fixes."}},
-      {"@type": "Question", "name": "Do you just hand me a report, or do you fix it?", "acceptedAnswer": {"@type": "Answer", "text": "Both are available. The Snapshot is the audit. The Fix Sprint adds the done-for-you work — structured data, llms.txt, meta and headings, Google Business Profile — so the gaps actually close, not just get named."}},
+      {"@type": "Question", "name": "How is this different from a free AI visibility checker?", "acceptedAnswer": {"@type": "Answer", "text": "A free grader gives you one number from an AI model's memory. The Discoverability Index runs live queries across five AI engines, scores you against seven to ten named local competitors on one leaderboard, checks what AI gets wrong about your business, verifies your website's structured data by live browser render, models the revenue at stake, and gives you a prioritized 90-day plan — and we can do the fixes."}},
+      {"@type": "Question", "name": "Do you just hand me a report, or do you fix it?", "acceptedAnswer": {"@type": "Answer", "text": "Both are available. The Report is the diagnosis, and it is credited in full against the Fix Sprint — go ahead with the fixes and the Report costs you nothing. The Fix Sprint adds the done-for-you work — structured data, llms.txt, meta and headings, Google Business Profile — so the gaps actually close, not just get named."}},
       {"@type": "Question", "name": "Is this relevant to my industry?", "acceptedAnswer": {"@type": "Answer", "text": "It fits any local business buyers research before they call — trades, home services, dental and health clinics, professional services, specialty retail. If customers ask around (or ask AI) before choosing, discoverability decides who they find."}},
-      {"@type": "Question", "name": "How long does it take?", "acceptedAnswer": {"@type": "Answer", "text": "A Snapshot is typically delivered within about a week. Most quick-win fixes land within a single search-cycle — weeks, not months."}}
+      {"@type": "Question", "name": "How long does it take?", "acceptedAnswer": {"@type": "Answer", "text": "A Report is typically delivered within about a week. Most quick-win fixes land within a single search-cycle — weeks, not months."}}
     ]
   }
   </script>
@@ -197,6 +197,7 @@
     .tier .role { font-family: var(--font-body); font-size: 0.82rem; font-weight: 300; color: rgba(247,247,245,0.5); margin-bottom: 1.1rem; }
     .tier-price { font-family: var(--font-display); font-weight: 400; font-size: 2.6rem; color: var(--gold); line-height: 1; }
     .tier-price small { font-family: var(--font-body); font-size: 0.95rem; font-weight: 300; color: rgba(247,247,245,0.4); }
+    .tier-credit { font-family: var(--font-body); font-size: 0.82rem; font-weight: 400; color: var(--gold-light); margin-top: 0.5rem; line-height: 1.4; }
     .tier ul { list-style: none; margin: 1.4rem 0 1.8rem; display: flex; flex-direction: column; gap: 0.7rem; }
     .tier li { font-family: var(--font-body); font-size: 0.86rem; font-weight: 300; color: rgba(247,247,245,0.72); padding-left: 1.4rem; position: relative; line-height: 1.5; }
     .tier li::before { content: ""; position: absolute; left: 0; top: 0.5rem; width: 7px; height: 7px; background: var(--gold); }
@@ -314,7 +315,7 @@
     </li>
     <li><a href="../index.html#about">About</a></li>
     <li><a href="../resources/">Glossary</a></li>
-    <li><a href="#book" class="nav-cta" onclick="gtag('event', 'cta_click', {'event_category': 'nav', 'event_label': 'free_quick_check', 'page': 'discoverability_index'})">Free Visibility Check</a></li>
+    <li><a href="#book" class="nav-cta" onclick="gtag('event', 'cta_click', {'event_category': 'nav', 'event_label': 'free_quick_check', 'page': 'discoverability_index'})">Discoverability Check</a></li>
   </ul>
 </nav>
 
@@ -334,12 +335,12 @@
           <input type="text" id="hqc-business" placeholder="Business name *" required />
           <input type="text" id="hqc-city" placeholder="City *" required />
           <input type="email" id="hqc-email" placeholder="Email *" required />
-          <button class="btn-gold" onclick="handleHeroQuickCheck(event)">Get your free Visibility Check</button>
+          <button class="btn-gold" onclick="handleHeroQuickCheck(event)">Get your free Discoverability Check</button>
         </form>
-        <p class="hero-qc-success" id="hero-qc-success">Request received — I&rsquo;ll run your Visibility Check and be in touch within one business day.</p>
+        <p class="hero-qc-success" id="hero-qc-success">Request received — I&rsquo;ll run your Discoverability Check and be in touch within one business day.</p>
         <div class="hero-actions">
           <a class="btn-ghost" href="#what">See how it works</a>
-          <a class="btn-ghost" href="#book" onclick="gtag('event', 'cta_click', {'event_category': 'hero', 'event_label': 'book_your_audit', 'page': 'discoverability_index'})">Book your audit</a>
+          <a class="btn-ghost" href="#book" onclick="gtag('event', 'cta_click', {'event_category': 'hero', 'event_label': 'book_report', 'page': 'discoverability_index'})">Book your Report</a>
         </div>
         <p class="hero-reassure">Free &middot; No obligation &middot; Scored against your real competitors &middot; Canada-wide</p>
       </div>
@@ -374,7 +375,7 @@
     </div>
     <div class="cards">
       <div class="card"><span class="k">3</span><h3>engines deciding</h3><p>ChatGPT, Perplexity, and Google's AI now shape who a buyer calls — often before they ever reach a search results page.</p></div>
-      <div class="card"><span class="k">0</span><h3>mentions is common</h3><p>Most local businesses we audit appear zero times when buyers ask AI for a recommendation in their category. They're invisible and don't know it.</p></div>
+      <div class="card"><span class="k">0</span><h3>mentions is common</h3><p>Most local businesses we score appear zero times when buyers ask AI for a recommendation in their category. They're invisible and don't know it.</p></div>
       <div class="card"><span class="k">1</span><h3>score to track it</h3><p>The Discoverability Index turns all of it into a single number you can measure, compare to rivals, and improve over time.</p></div>
     </div>
   </div>
@@ -425,15 +426,16 @@
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow">Pricing</div>
-      <h2>Start with the audit. Go as far as you want.</h2>
-      <p>The audit is the wedge — most businesses then fix the gaps, and some keep us monitoring. Prices in CAD.</p>
+      <h2>Start with the Report. Go as far as you want.</h2>
+      <p>The Report is the wedge — most businesses then fix the gaps, and some keep us monitoring. Prices in CAD.</p>
     </div>
     <div class="tiers">
       <div class="tier">
         <span class="badge">Start here</span>
-        <h3>Discoverability Snapshot</h3>
-        <div class="role">The full audit &amp; report</div>
+        <h3>Discoverability Report</h3>
+        <div class="role">The full scan and roadmap</div>
         <div class="tier-price">$1,500</div>
+        <div class="tier-credit">Credited in full against the Fix Sprint &mdash; go ahead with the fixes and the Report costs you nothing.</div>
         <ul>
           <li>Your 0–100 SDI score and rank</li>
           <li>Leaderboard vs 7–10 named competitors</li>
@@ -441,15 +443,15 @@
           <li>Dollars-at-stake, modelled</li>
           <li>90-day roadmap</li>
         </ul>
-        <a class="btn-dark" href="#book" onclick="gtag('event', 'cta_click', {'event_category': 'pricing', 'event_label': 'snapshot', 'page': 'discoverability_index'})">Book a Snapshot</a>
+        <a class="btn-dark" href="#book" onclick="gtag('event', 'cta_click', {'event_category': 'pricing', 'event_label': 'report', 'page': 'discoverability_index'})">Book a Report</a>
       </div>
       <div class="tier feature">
         <span class="badge">Most popular</span>
-        <h3>Snapshot + Fix Sprint</h3>
-        <div class="role">Audit, then we do the fixes</div>
+        <h3>Report + Fix Sprint</h3>
+        <div class="role">Report, then we do the fixes</div>
         <div class="tier-price">$3,900</div>
         <ul>
-          <li>Everything in the Snapshot</li>
+          <li>Everything in the Report, credited in full</li>
           <li>Structured data (schema) built</li>
           <li>llms.txt &amp; AI manifest added</li>
           <li>Meta, headings &amp; sitemap repaired</li>
@@ -460,7 +462,7 @@
       </div>
       <div class="tier">
         <span class="badge">Stay ahead</span>
-        <h3>Discoverability Partner</h3>
+        <h3>Discoverability Monitoring</h3>
         <div class="role">Ongoing monitoring (light)</div>
         <div class="tier-price">$400<small>/mo</small></div>
         <ul>
@@ -470,10 +472,10 @@
           <li>Light ongoing fixes</li>
           <li>3-month minimum</li>
         </ul>
-        <a class="btn-dark" href="#book" onclick="gtag('event', 'cta_click', {'event_category': 'pricing', 'event_label': 'partner', 'page': 'discoverability_index'})">Talk monitoring</a>
+        <a class="btn-dark" href="#book" onclick="gtag('event', 'cta_click', {'event_category': 'pricing', 'event_label': 'monitoring', 'page': 'discoverability_index'})">Talk monitoring</a>
       </div>
     </div>
-    <p class="price-note">Founding-client pilot rate: <strong>$750</strong> for the first few founding clients, in exchange for a testimonial. &nbsp;&middot;&nbsp; Prefer we actively build your presence each month? Ask about the AI Presence &amp; Reputation retainer ($1,200&#8211;2,000/mo). &nbsp;&middot;&nbsp; Trade associations &amp; franchises: ask about a sector leaderboard.</p>
+    <p class="price-note">Prefer we actively build your presence each month? Ask about Managed Discoverability ($1,200/mo). &nbsp;&middot;&nbsp; Trade associations &amp; franchises: ask about a sector leaderboard.</p>
   </div>
 </section>
 
@@ -486,7 +488,7 @@
     </div>
     <div class="steps">
       <div class="step"><div class="n">Step 1</div><h3>Visibility check</h3><p>Tell us your business and city. We run a fast live check so you can see where you stand at no cost.</p></div>
-      <div class="step"><div class="n">Step 2</div><h3>Full audit</h3><p>We score you and your competitors across all four areas, verified by live browser checks — not guesses.</p></div>
+      <div class="step"><div class="n">Step 2</div><h3>Full Report</h3><p>We score you and your competitors across all four areas, verified by live browser checks — not guesses.</p></div>
       <div class="step"><div class="n">Step 3</div><h3>The report</h3><p>You get your SDI, the leaderboard, the dollars at stake, and a prioritized 90-day roadmap.</p></div>
       <div class="step"><div class="n">Step 4</div><h3>Close the gap</h3><p>Do it yourself from the roadmap, or have us run the Fix Sprint and keep watch with monitoring.</p></div>
     </div>
@@ -512,11 +514,11 @@
       <h2>Straight answers</h2>
     </div>
     <div class="faq">
-      <details open><summary>How is this different from a free AI visibility checker?</summary><p>A free grader gives you one number from an AI model's memory. The Discoverability Index runs live queries across five AI engines, scores you against seven to ten named local competitors, audits what AI gets wrong about your business, verifies your website's structured data by live browser render, models the revenue at stake, and gives you a prioritized plan — and we can do the fixes.</p></details>
-      <details><summary>Do you just hand me a report, or do you fix it?</summary><p>Both are available. The Snapshot is the audit. The Fix Sprint adds the done-for-you work — structured data, llms.txt, meta and headings, Google Business Profile — so the gaps actually close, not just get named.</p></details>
+      <details open><summary>How is this different from a free AI visibility checker?</summary><p>A free grader gives you one number from an AI model's memory. The Discoverability Index runs live queries across five AI engines, scores you against seven to ten named local competitors, checks what AI gets wrong about your business, verifies your website's structured data by live browser render, models the revenue at stake, and gives you a prioritized plan — and we can do the fixes.</p></details>
+      <details><summary>Do you just hand me a report, or do you fix it?</summary><p>Both are available. The Report is the diagnosis. The Fix Sprint adds the done-for-you work — structured data, llms.txt, meta and headings, Google Business Profile — so the gaps actually close, not just get named.</p></details>
       <details><summary>Is this relevant to my industry?</summary><p>It fits any local business buyers research before they call — trades, home services, dental and health clinics, professional services, specialty retail. If customers ask around (or ask AI) before choosing, discoverability decides who they find.</p></details>
-      <details><summary>How long does it take?</summary><p>A Snapshot is typically delivered within about a week. Most quick-win fixes land within a single search-cycle — weeks, not months.</p></details>
-      <details><summary>What does it cost to start?</summary><p>The Snapshot is $1,500 CAD, with a $750 founding-client rate for the first few founding clients. One recovered job usually covers it.</p></details>
+      <details><summary>How long does it take?</summary><p>A Report is typically delivered within about a week. Most quick-win fixes land within a single search-cycle — weeks, not months.</p></details>
+      <details><summary>What does it cost to start?</summary><p>The Discoverability Report is $1,500 CAD, and it is credited in full against the Fix Sprint. If you go ahead with the fixes, the Report costs you nothing. One recovered job usually covers it either way.</p></details>
     </div>
   </div>
 </section>
@@ -526,16 +528,16 @@
   <div class="wrap">
     <div class="contact-grid">
       <div>
-        <div class="eyebrow dark">Free Visibility Check</div>
+        <div class="eyebrow dark">Discoverability Check</div>
         <h2 class="contact-hl">Find out if AI search is sending your customers to a competitor.</h2>
-        <p class="contact-sub">Send your business name and city. I'll run a free Visibility Check and show you where you stand — no obligation.</p>
+        <p class="contact-sub">Send your business name and city. I'll run a free Discoverability Check and show you where you stand — no obligation.</p>
         <p class="contact-sub" style="margin-top:1rem;">Prefer email? Reach me at <a href="mailto:jordan@spencermorleyconsulting.ca" style="color:var(--gold);text-decoration:underline;text-underline-offset:3px;" onclick="gtag('event','cta_click',{'event_category':'contact','event_label':'email_direct','page':'discoverability_index'})">jordan@spencermorleyconsulting.ca</a> &mdash; or <a href="https://calendly.com/jordan-spencermorleyconsulting" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:underline;text-underline-offset:3px;" onclick="gtag('event','cta_click',{'event_category':'contact','event_label':'calendly_book_call','page':'discoverability_index'})">book a call directly</a>.</p>
       </div>
       <div>
         <div id="contact-form-wrap">
           <form
             tool-name="discoverability-quick-check-request"
-            tool-description="Request a free AI-search Visibility Check from Spencer Morley Consulting. Provide business name, city, website, and email."
+            tool-description="Request a free AI-search Discoverability Check from Spencer Morley Consulting. Provide business name, city, website, and email."
             onsubmit="return false;">
             <div class="contact-form">
               <div class="contact-form-row">
@@ -547,14 +549,14 @@
                 <input type="email" id="cf-email" placeholder="Email address *" required />
               </div>
               <textarea id="cf-message" placeholder="Anything you'd like us to know? (optional)"></textarea>
-              <button class="btn-submit" onclick="handleFormSubmit(event)">Get your free Visibility Check</button>
+              <button class="btn-submit" onclick="handleFormSubmit(event)">Get your free Discoverability Check</button>
               <p class="form-note">We respect your privacy. Your information will never be shared.</p>
             </div>
           </form>
         </div>
         <div class="form-success" id="form-success">
           <div class="form-success-title">Request received.</div>
-          <div class="form-success-body">Thanks — I'll run your Visibility Check and be in touch within one business day.</div>
+          <div class="form-success-body">Thanks — I'll run your Discoverability Check and be in touch within one business day.</div>
         </div>
       </div>
     </div>
@@ -605,7 +607,7 @@ function handleHeroQuickCheck(e) {
       website: 'Not provided',
       email: email,
       message: 'Not provided',
-      _subject: 'Discoverability Index — Free Visibility Check (hero) — ' + business,
+      _subject: 'Discoverability Index — Discoverability Check (hero) — ' + business,
       source: 'Discoverability Index — hero'
     })
   })
@@ -626,13 +628,13 @@ function handleHeroQuickCheck(e) {
       setTimeout(redirectOnce, 800);
     } else {
       btn.disabled = false;
-      btn.textContent = 'Get your free Visibility Check';
+      btn.textContent = 'Get your free Discoverability Check';
       alert('Something went wrong. Please try again or email jordan@spencermorleyconsulting.ca directly.');
     }
   })
   .catch(function() {
     btn.disabled = false;
-    btn.textContent = 'Get your free Visibility Check';
+    btn.textContent = 'Get your free Discoverability Check';
     alert('Something went wrong. Please try again or email jordan@spencermorleyconsulting.ca directly.');
   });
 }
@@ -659,7 +661,7 @@ function handleFormSubmit(e) {
       website: website || 'Not provided',
       email: email,
       message: message || 'Not provided',
-      _subject: 'Discoverability Index — Free Visibility Check — ' + business,
+      _subject: 'Discoverability Index — Discoverability Check — ' + business,
       source: 'Discoverability Index'
     })
   })
@@ -680,13 +682,13 @@ function handleFormSubmit(e) {
       setTimeout(redirectOnce, 800);
     } else {
       btn.disabled = false;
-      btn.textContent = 'Get your free Visibility Check';
+      btn.textContent = 'Get your free Discoverability Check';
       alert('Something went wrong. Please try again or email jordan@spencermorleyconsulting.ca directly.');
     }
   })
   .catch(function() {
     btn.disabled = false;
-    btn.textContent = 'Get your free Visibility Check';
+    btn.textContent = 'Get your free Discoverability Check';
     alert('Something went wrong. Please try again or email jordan@spencermorleyconsulting.ca directly.');
   });
 }

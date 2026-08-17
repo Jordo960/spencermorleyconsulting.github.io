@@ -753,7 +753,18 @@
     }
     @media (max-width: 640px) {
       .svc-grid { grid-template-columns: 1fr; }
-      .hero-stats { grid-template-columns: 1fr; right: 0; }
+      /* P0 fix 2026-08-02: .hero-stats is position:absolute;z-index:10 and grows to
+         ~292px tall when it stacks below 640px, covering the hero's primary CTA
+         (z-index:3) and making it physically untappable. Let it flow instead.
+         Regression guard: at 390px, elementFromPoint(btn centre) must return the button. */
+      .hero { flex-direction: column; min-height: auto; }
+      .hero-stats {
+        position: static; grid-template-columns: 1fr;
+        right: auto; border-right: 0; backdrop-filter: none;
+        background: rgba(28,28,28,0.55);
+      }
+      .hero-stat { border-right: 0; border-bottom: 1px solid var(--gold-border); padding: 1.2rem 2rem; }
+      .hero-stat:last-child { border-bottom: 0; }
       .contact-actions { align-items: flex-start; }
       .contact-form-row { grid-template-columns: 1fr; }
       .hero-actions { flex-direction: column; align-items: flex-start; gap: 1rem; }
@@ -966,8 +977,8 @@
           "@type": "OfferCatalog",
           "name": "Small business practice",
           "itemListElement": [
-            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "AI Blind Spot Audit — AI workflow audit for small businesses"}, "price": "600", "priceCurrency": "CAD"},
-            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Discoverability Index Snapshot — AI search visibility audit"}, "price": "1500", "priceCurrency": "CAD"},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Staff AI Risk Review — AI workflow audit for small businesses"}, "price": "600", "priceCurrency": "CAD"},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Discoverability Report — AI search visibility check"}, "price": "1500", "priceCurrency": "CAD"},
             {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "WebMCP Readiness"}},
             {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Staff AI Training and Adoption"}},
             {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Workflow Automation for Small Business Operations"}},
@@ -1148,10 +1159,10 @@
     },
     {
       "@type": "Question",
-      "name": "What is the AI Blind Spot Audit and what does it cost?",
+      "name": "What is the Staff AI Risk Review and what does it cost?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The AI Blind Spot Audit ($600 CAD) is SMC's entry-point service for Alberta small businesses. We run 30–50 live AI queries across ChatGPT, Perplexity, and Gemini to test how your business appears when customers ask for recommendations in your category. You receive a full gap analysis, AI Visibility Report, and a 60-minute debrief. The fee is credited toward any follow-on service within 30 days."
+        "text": "The Staff AI Risk Review ($600 CAD) is SMC's entry-point service for Alberta small businesses. We run 30–50 live AI queries across ChatGPT, Perplexity, and Gemini to test how your business appears when customers ask for recommendations in your category. You receive a full gap analysis, AI Visibility Report, and a 60-minute debrief. The fee is credited toward any follow-on service within 30 days."
       }
     }
   ]
@@ -1399,8 +1410,8 @@
           <div class="gateway-track-sub">Businesses and organizations across Canada</div>
           <p class="gateway-desc">Your competitors are getting found by AI. Your business might not be. Find out where you stand &#8212; and what it takes to show up.</p>
           <div class="gateway-tags">
-            <span class="tag-new">AI Blind Spot Audit</span>
-            <span class="tag-new">AI Presence &amp; Reputation</span>
+            <span class="tag-new">Staff AI Risk Review</span>
+            <span class="tag-new">Managed Discoverability</span>
             <span>WebMCP Readiness</span>
             <span>Staff AI Training</span>
             <span>Workflow Automation</span>
@@ -1636,7 +1647,7 @@
         <div class="eyebrow dark">Get in Touch</div>
         <h2 class="contact-hl">Ready to stop hoping for the best and start planning for the worst?</h2>
         <p class="contact-sub">Strategic communications and crisis management across Canada. AI consulting for municipalities and businesses of every size.</p>
-        <p class="contact-sub" style="margin-top:1rem;">Prefer to skip the form? <a href="https://calendly.com/jordan-spencermorleyconsulting" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:underline;text-underline-offset:3px;" onclick="gtag('event','cta_click',{'event_category':'contact','event_label':'calendly_book_call','page':'homepage'})">Book a call directly</a>.</p>
+        <p class="contact-sub" style="margin-top:1rem;">Prefer to skip the form? <a href="https://calendly.com/jordan-spencermorleyconsulting" target="_blank" rel="noopener" style="color:var(--charcoal);font-weight:700;text-decoration:underline;text-decoration-color:rgba(28,28,28,0.45);text-underline-offset:3px;" onclick="gtag('event','cta_click',{'event_category':'contact','event_label':'calendly_book_call','page':'homepage'})">Book a call directly</a>.</p>
         <p class="contact-sub" style="margin-top:1rem;">Fill out the form and we will be in touch within one business day.</p>
       </div>
       <div>

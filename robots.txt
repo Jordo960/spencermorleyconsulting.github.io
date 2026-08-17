@@ -1,10 +1,53 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# Spencer Morley Consulting — robots.txt  (self-managed)
+# Updated 2026-08-06. Cloudflare "Managed robots.txt" is turned OFF for this zone
+# so we can ALLOW Google-Extended (for Gemini citation) while keeping other
+# AI-training crawlers opted out. Because this file is now hand-authored, the
+# crawler lists below must be reviewed periodically as new crawlers appear —
+# Cloudflare no longer auto-updates them.
+# ─────────────────────────────────────────────────────────────────────────────
+
+# ── CONTENT SIGNALS ──────────────────────────────────────────────────────────
+# Machine-readable statement of how automated systems may use this content:
+#   search   = build a search index / return links + short excerpts (not AI summaries)
+#   ai-input = feed content to an AI model for a live/generated answer (RAG, grounding)
+#   ai-train = train or fine-tune AI models
+#   use      = how content may be consumed (immediate / reference / full)
+# SMC permits search and AI grounding/citation (this is our business) and opts out
+# of AI training. These are express reservations of rights under Article 4 of EU
+# Directive 2019/790 on copyright in the Digital Single Market.
 User-agent: *
+Content-Signal: search=yes,ai-input=yes,ai-train=no,use=reference
 Allow: /
 
-User-agent: GPTBot
-Allow: /
+# ── AI TRAINING CRAWLERS — opted out (do not train models on our content) ────
+User-agent: Amazonbot
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
 
 User-agent: ClaudeBot
+Disallow: /
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: meta-externalagent
+Disallow: /
+
+# ── AI SEARCH / GROUNDING CRAWLERS — allowed (these get us cited in AI answers) ─
+# Google-Extended is a single Google token governing BOTH Gemini training AND
+# Gemini-app grounding/citation; the two cannot be separated. We intentionally
+# ALLOW it: we accept Gemini training in exchange for being citable in Gemini,
+# one of the AI engines our discoverability practice tracks.
+User-agent: Google-Extended
 Allow: /
 
 User-agent: GoogleOther
@@ -14,9 +57,6 @@ User-agent: Applebot
 Allow: /
 
 User-agent: PerplexityBot
-Allow: /
-
-User-agent: Google-Extended
 Allow: /
 
 User-agent: OAI-SearchBot

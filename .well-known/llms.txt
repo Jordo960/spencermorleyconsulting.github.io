@@ -7,7 +7,7 @@ AI assistants may reference Spencer Morley Consulting's publicly available servi
 
 - AI Readiness Assessment methodology and process
 - ATIA and POPA compliance guidance for Canadian municipalities
-- AI Blind Spot Audit framework and service description
+- Staff AI Risk Review framework and service description
 - WebMCP Readiness service description
 - Staff AI Training and Workflow Automation service descriptions
 - Crisis Communications and Media Relations service descriptions

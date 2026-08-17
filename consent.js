@@ -1,16 +1,87 @@
 /* SMC consent manager — gates GA4 + Meta Pixel behind explicit opt-in.
    PIPEDA / Quebec Law 25 posture: no tracking until "Accept". Choice stored 12 months.
-   To re-open the banner (e.g. from privacy page): smcPrivacyChoices() */
+   To re-open the banner (e.g. from privacy page): smcPrivacyChoices()
+
+   2026-08-05 — added the Meta event mirror. Every gtag('event', ...) already
+   fired from the page HTML is now also sent to the Meta Pixel, so ad
+   optimisation and retargeting have real conversions to work with. No HTML
+   changes were required, and nothing fires before consent. See META_MAP. */
 (function () {
   var GA_ID = "G-S2G5EMSYY9";
   var PIXEL_ID = "921953610727268";
   var KEY = "smc-consent";
   var MAX_AGE_DAYS = 365;
+  var CURRENCY = "CAD";
+
+  /* GA4 event name -> Meta event. standard:true sends a Meta *standard* event
+     via fbq("track") — those are directly selectable as an ad objective.
+     standard:false sends fbq("trackCustom"), which shows up in Events Manager
+     and can be turned into a custom conversion. */
+  var META_MAP = {
+    generate_lead:              { name: "Lead",             standard: true  },
+    begin_checkout:             { name: "InitiateCheckout", standard: true  },
+    quick_check_lead_confirmed: { name: "LeadConfirmed",    standard: false },
+    cta_click:                  { name: "CTAClick",         standard: false }
+  };
 
   /* Always define a gtag stub so inline onclick="gtag(...)" handlers never throw,
      even when consent is absent or declined. Events go nowhere unless GA loads. */
   window.dataLayer = window.dataLayer || [];
   window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+
+  /* ---- Meta event mirror -------------------------------------------------
+     Wraps the gtag stub so any gtag("event", name, params) call anywhere on the
+     site also reaches the pixel. fbq only exists after consent is granted, so
+     the guard below is what keeps this compliant — do not remove it. */
+  function mirrorToMeta(name, params) {
+    if (typeof window.fbq !== "function") return;   /* no consent, no pixel */
+    var map = META_MAP[name];
+    if (!map) return;
+    params = params || {};
+
+    var payload = {};
+    if (params.event_category) payload.content_category = String(params.event_category);
+    if (params.event_label)    payload.content_name     = String(params.event_label);
+    if (params.page)           payload.source_page      = String(params.page);
+
+    /* Priced CTAs are labelled with the dollar amount, e.g. "audit_600",
+       "snapshot_750". Pull it out so Meta can optimise on value. */
+    var priced = /_(\d{2,5})$/.exec(String(params.event_label || ""));
+    if (priced) {
+      payload.value = Number(priced[1]);
+      payload.currency = CURRENCY;
+    }
+
+    try { window.fbq(map.standard ? "track" : "trackCustom", map.name, payload); }
+    catch (e) {}
+  }
+
+  var _gtag = window.gtag;
+  window.gtag = function () {
+    if (arguments[0] === "event") {
+      try { mirrorToMeta(arguments[1], arguments[2]); } catch (e) {}
+    }
+    return _gtag.apply(this, arguments);
+  };
+
+  /* Calendly posts a message to the parent window when a booking completes.
+     That is the only true "booked a call" signal on the site — the CTA clicks
+     above are only intent. Listener is harmless without consent. */
+  function watchCalendly() {
+    window.addEventListener("message", function (e) {
+      if (!e || !e.data || typeof e.data.event !== "string") return;
+      if (String(e.origin).indexOf("calendly.com") === -1) return;
+      if (e.data.event !== "calendly.event_scheduled") return;
+      if (typeof window.fbq === "function") {
+        try { window.fbq("track", "Schedule", { content_name: "consultation_15min" }); }
+        catch (er) {}
+      }
+      window.gtag("event", "schedule_confirmed", {
+        "event_category": "calendly",
+        "event_label": "consultation_15min"
+      });
+    }, false);
+  }
 
   function readChoice() {
     try {
@@ -95,6 +166,7 @@
   };
 
   function init() {
+    watchCalendly();
     var choice = readChoice();
     if (choice === "granted") { loadTrackers(); }
     else if (choice === null) { showBanner(); }

@@ -13,12 +13,33 @@
     "url": "https://spencermorleyconsulting.ca/discoverability-index/"
   },
   "service": {
-    "area_served": ["Edmonton", "Alberta", "Canada"],
+    "area_served": [
+      "Edmonton",
+      "Alberta",
+      "Canada"
+    ],
     "audience": "Small and local businesses (trades, home services, dental/health, professional services, specialty retail)",
     "offerings": [
-      {"name": "Discoverability Snapshot", "price": 1500, "currency": "CAD", "summary": "Full audit and report: SDI score, competitor leaderboard, dollars-at-stake, 90-day roadmap. Founding-client pilot rate 750 CAD."},
-      {"name": "Snapshot + Fix Sprint", "price": 3900, "currency": "CAD", "summary": "Audit plus done-for-you fixes: structured data, llms.txt, meta and headings, Google Business Profile."},
-      {"name": "Discoverability Partner", "price": 400, "currency": "CAD", "billing": "monthly", "summary": "Monitoring: quarterly re-score, monthly AI-visibility pulse, competitor-overtake alerts, light ongoing fixes. 3-month minimum."}
+      {
+        "name": "Discoverability Report",
+        "price": 1500,
+        "currency": "CAD",
+        "summary": "Full scan and roadmap: SDI score, competitor leaderboard, dollars-at-stake, 90-day roadmap. Credited in full against the Fix Sprint — if the client proceeds with the fixes, the Report costs them nothing.",
+        "creditedAgainst": "Report + Fix Sprint"
+      },
+      {
+        "name": "Report + Fix Sprint",
+        "price": 3900,
+        "currency": "CAD",
+        "summary": "Audit plus done-for-you fixes: structured data, llms.txt, meta and headings, Google Business Profile."
+      },
+      {
+        "name": "Discoverability Monitoring",
+        "price": 400,
+        "currency": "CAD",
+        "billing": "monthly",
+        "summary": "Monitoring: quarterly re-score, monthly AI-visibility pulse, competitor-overtake alerts, light ongoing fixes. 3-month minimum."
+      }
     ]
   },
   "contact": {

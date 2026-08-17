@@ -1059,6 +1059,30 @@
                 "name": "Strategic Plan Facilitation for Agricultural Service Boards & Rural Economic Development Bodies",
                 "description": "Facilitated strategic planning sessions that turn board priorities into a workable plan. Delivered for the County of Minburn's Agricultural Service Board."
               }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "AI-Assisted Permitting & Licensing Intake",
+                "description": "Intake triage, completeness checking, and routing for permitting and licensing applications, integrated with existing municipal permitting and GIS platforms. Scoped to intake and routing, not automated approval decisions."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Data Readiness & Migration",
+                "description": "Cleansing, deduplication, and structuring of legacy spreadsheets, GIS layers, and municipal records so they're usable for AI tools and other systems. Typically delivered as Phase 1 of a larger engagement."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Citizen-Service Chatbot & Virtual Front Desk",
+                "description": "A resident-facing chatbot built on a staff-curated knowledge base covering bylaws, utility billing, waste schedules, and permit FAQs, with a defined human escalation path."
+              }
             }
           ]
         },
@@ -1168,7 +1192,7 @@
           "@type": "OfferCatalog",
           "name": "SMC Services",
           "itemListElement": [
-            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "AI Blind Spot Audit"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Staff AI Risk Review"}},
             {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "AI Readiness Assessment"}},
             {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Staff AI Training and Prompt Engineering"}},
             {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "WebMCP Readiness"}},
@@ -1503,7 +1527,7 @@
         </div>
 
         <div class="track-services">
-          <div class="ai-svc">
+          <div class="ai-svc" id="ai-readiness-assessment">
             <div class="ai-svc-n">01</div>
             <div>
               <div class="ai-svc-title">AI Readiness Assessment</div>
@@ -1515,7 +1539,7 @@
               <span class="ai-svc-tag" style="margin-top:0.5rem;">Province-Adaptive</span>
             </div>
           </div>
-          <div class="ai-svc">
+          <div class="ai-svc" id="staff-ai-training">
             <div class="ai-svc-n">02</div>
             <div>
               <div class="ai-svc-title">Staff AI Training &amp; Prompt Engineering</div>
@@ -1527,7 +1551,7 @@
               <span class="ai-svc-tag" style="margin-top:0.5rem;">Foundation</span>
             </div>
           </div>
-          <div class="ai-svc">
+          <div class="ai-svc" id="ai-policy-development">
             <div class="ai-svc-n">03</div>
             <div>
               <div class="ai-svc-title">AI Policy Development</div>
@@ -1537,7 +1561,7 @@
               <span class="ai-svc-tag" style="margin-top:0.5rem;">Compliance</span>
             </div>
           </div>
-          <div class="ai-svc">
+          <div class="ai-svc" id="private-llm">
             <div class="ai-svc-n">04</div>
             <div>
               <div class="ai-svc-title">Private Large Language Model Deployment</div>
@@ -1574,18 +1598,18 @@
             </div>
             <div class="compliance-callout-source">KPMG in Canada, <em>&#8220;Canadian organizations turning to AI agents: KPMG poll,&#8221;</em> April 2025</div>
           </div>
-          <div class="ai-svc">
+          <div class="ai-svc" id="agentic-workflows">
             <div class="ai-svc-n">05</div>
             <div>
               <div class="ai-svc-title">Agentic Workflows</div>
               <div class="ai-svc-desc"><strong style="color:rgba(247,247,245,0.72);">Stop spending staff hours on tasks AI can complete in seconds.</strong></div>
               <div class="ai-svc-desc" style="margin-top:0.6rem;">Spencer Morley Consulting builds municipal agentic workflows with human oversight designed in from the start &#8212; not added as an afterthought. Your staff don&#8217;t get replaced. They get relieved of the administrative burden that prevents them from doing the work that actually requires a human.</div>
-              <div class="ai-svc-desc" style="margin-top:0.6rem;">Workflows we automate for municipalities: meeting minutes and council agendas, bylaw drafting, permit correspondence, report generation, ratepayer communications, onboarding documentation, and more. Every workflow is privacy-by-design.</div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;">Workflows we automate for municipalities: meeting minutes and council agendas, bylaw drafting, permit correspondence, access-to-information request triage and response drafting under ATIA/POPA (or your province&#8217;s equivalent), report generation, ratepayer communications, onboarding documentation, and more. Every workflow is privacy-by-design.</div>
               <span class="legislation-tag">Privacy-by-design</span>
               <span class="ai-svc-tag" style="margin-top:0.5rem;">Transformation</span>
             </div>
           </div>
-          <div class="ai-svc">
+          <div class="ai-svc" id="resident-surveys">
             <div class="ai-svc-n">06</div>
             <div>
               <div class="ai-svc-title">Residents &amp; Community Surveys</div>
@@ -1593,11 +1617,12 @@
               <div class="ai-svc-desc" style="margin-top:0.6rem;">Whether the question is policing services, strategic planning, or how residents feel about a decision council is facing, a well-run survey turns opinion into evidence. Spencer Morley Consulting designs and delivers resident surveys end to end &#8212; so your administration gets the answers without taking on the workload.</div>
               <div class="ai-svc-desc" style="margin-top:0.6rem;">How we run them: we design the questionnaire with your administration, so every question maps to a decision council actually has to make. The survey runs online, built and hosted on SMC&#8217;s own infrastructure &#8212; resident responses stay in Canada, on systems we control, not on a third-party survey platform (see <a href="data-security-residency.html" style="color:var(--gold);">data security &amp; residency</a>). We handle the fielding, then analyze the results and deliver a plain-language report to council: what residents said, what it means, and what to do next.</div>
               <div class="ai-svc-desc" style="margin-top:0.6rem;font-style:italic;color:rgba(247,247,245,0.55);">Delivered for the County of Minburn: the Policing Services Residents Survey and the Strategic Planning Residents Survey.</div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;"><a href="municipal-surveys/" style="color:var(--gold);text-decoration:none;border-bottom:1px solid var(--gold-border);">How a resident survey engagement works &#8212; security, privacy and reporting</a></div>
               <span class="legislation-tag">Canadian data residency</span>
               <span class="ai-svc-tag" style="margin-top:0.5rem;">Delivered for Alberta counties</span>
             </div>
           </div>
-          <div class="ai-svc">
+          <div class="ai-svc" id="fractional-pio">
             <div class="ai-svc-n">07</div>
             <div>
               <div class="ai-svc-title">Fractional Public Information Officer (PIO) Services</div>
@@ -1607,7 +1632,7 @@
               <span class="ai-svc-tag" style="margin-top:0.5rem;">Embedded delivery</span>
             </div>
           </div>
-          <div class="ai-svc">
+          <div class="ai-svc" id="municipal-rebrand">
             <div class="ai-svc-n">08</div>
             <div>
               <div class="ai-svc-title">Municipal Rebrand &amp; Website Development</div>
@@ -1617,7 +1642,7 @@
               <span class="ai-svc-tag" style="margin-top:0.5rem;">Delivered for Alberta counties</span>
             </div>
           </div>
-          <div class="ai-svc">
+          <div class="ai-svc" id="strategic-plan-facilitation">
             <div class="ai-svc-n">09</div>
             <div>
               <div class="ai-svc-title">Strategic Plan Facilitation for Agricultural Service Boards &amp; Rural Economic Development Bodies</div>
@@ -1625,6 +1650,40 @@
               <div class="ai-svc-desc" style="margin-top:0.6rem;">Spencer Morley Consulting facilitates strategic planning sessions for agricultural service boards and similar rural economic development bodies, turning board priorities into a workable strategic plan.</div>
               <div class="ai-svc-desc" style="margin-top:0.6rem;font-style:italic;color:rgba(247,247,245,0.55);">Delivered for the County of Minburn's Agricultural Service Board &#8212; Cheryl Spencer-Morley is named Administration Presenter to the ASB in <a href="https://minburncounty.ab.ca/vertical/sites/%7BD0C7E2CA-BDB2-4F40-86B9-3377946EC766%7D/uploads/December-Agricultural-Service-Board-Meeting.pdf" target="_blank" rel="noopener" style="color:var(--gold);">public meeting minutes</a>.</div>
               <span class="ai-svc-tag" style="margin-top:0.5rem;">Delivered for Alberta counties</span>
+            </div>
+          </div>
+          <div class="ai-svc" id="permitting-intake">
+            <div class="ai-svc-n">10</div>
+            <div>
+              <div class="ai-svc-title">AI-Assisted Permitting &amp; Licensing Intake</div>
+              <div class="ai-svc-desc"><strong style="color:rgba(247,247,245,0.72);">Faster intake, fewer back-and-forth cycles, no new hires.</strong></div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;">Spencer Morley Consulting builds intake triage, completeness checking, and routing against your existing permitting or GIS platform &#8212; catching missing documents and misrouted applications before they cost your staff a phone call. This is not automated approval. A person still makes every decision; the AI just gets the file to them faster and cleaner.</div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;">Built to work alongside the systems you already run &#8212; Esri ArcGIS, Diamond/CentralSquare, Questica &#8212; not to replace them.</div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;font-style:italic;color:rgba(247,247,245,0.55);">Edmonton&#8217;s AutoReview program has shown this approach can cut typical review cycles from weeks to days for eligible applications &#8212; the documented pattern we&#8217;re building from, not an SMC-delivered result.</div>
+              <span class="ai-svc-tag" style="margin-top:0.5rem;">Permitting &amp; Licensing</span>
+              <span class="ai-svc-tag" style="margin-top:0.5rem;">New</span>
+            </div>
+          </div>
+          <div class="ai-svc" id="data-readiness">
+            <div class="ai-svc-n">11</div>
+            <div>
+              <div class="ai-svc-title">Data Readiness &amp; Migration</div>
+              <div class="ai-svc-desc"><strong style="color:rgba(247,247,245,0.72);">The unglamorous work every other AI project depends on.</strong></div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;">Fragmented spreadsheets, inconsistent GIS layers, and legacy records aren&#8217;t just an inconvenience &#8212; they&#8217;re the reason most AI projects stall before they start. Spencer Morley Consulting cleanses, deduplicates, and structures your existing data so it&#8217;s actually usable, by AI tools or anything else.</div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;">This is usually Phase 1 of a larger engagement, not a service on its own &#8212; the right starting point if your municipality isn&#8217;t ready for anything else on this list yet.</div>
+              <span class="ai-svc-tag" style="margin-top:0.5rem;">Foundational</span>
+              <span class="ai-svc-tag" style="margin-top:0.5rem;">New</span>
+            </div>
+          </div>
+          <div class="ai-svc" id="citizen-chatbot">
+            <div class="ai-svc-n">12</div>
+            <div>
+              <div class="ai-svc-title">Citizen-Service Chatbot &amp; Virtual Front Desk</div>
+              <div class="ai-svc-desc"><strong style="color:rgba(247,247,245,0.72);">A front desk that doesn&#8217;t close at 4:30.</strong></div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;">Built on a knowledge base your staff curate and approve &#8212; bylaws, utility billing, waste schedules, permit FAQs &#8212; with a clear handoff to a person whenever a question needs one. We design the escalation path and the update process together, so the answers stay current after launch instead of going stale six months in.</div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;font-style:italic;color:rgba(247,247,245,0.55);">Both Alberta Municipalities and the Rural Municipalities of Alberta point to resident-facing chatbots as a sound low-risk starting point for municipal AI &#8212; Alberta-specific results are still early, and we&#8217;ll tell you that plainly rather than oversell it.</div>
+              <span class="ai-svc-tag" style="margin-top:0.5rem;">Citizen Services</span>
+              <span class="ai-svc-tag" style="margin-top:0.5rem;">New</span>
             </div>
           </div>
         </div>
@@ -1724,6 +1783,9 @@
               <option value="AI Policy Development — Municipal">AI Policy Development</option>
               <option value="Private Large Language Model Deployment">Private Large Language Model Deployment</option>
               <option value="Agentic Workflows — Municipal">Agentic Workflows</option>
+              <option value="AI-Assisted Permitting &amp; Licensing Intake — Municipal">AI-Assisted Permitting &amp; Licensing Intake</option>
+              <option value="Data Readiness &amp; Migration — Municipal">Data Readiness &amp; Migration</option>
+              <option value="Citizen-Service Chatbot &amp; Virtual Front Desk — Municipal">Citizen-Service Chatbot &amp; Virtual Front Desk</option>
               <option value="General Municipal Inquiry">General Inquiry</option>
             </select>
             <textarea id="cf-message" placeholder="Tell us about your municipality and what you're looking to achieve *" required></textarea>

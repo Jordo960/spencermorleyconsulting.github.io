@@ -15,9 +15,9 @@ The output is a single 0–100 score (the SDI), a competitor leaderboard, a doll
 
 ## Services and pricing (CAD)
 
-- Discoverability Snapshot — $1,500. The full audit and report. Founding-client pilot rate $750.
-- Snapshot + Fix Sprint — $3,900. The audit plus done-for-you fixes (structured data, llms.txt, meta and headings, Google Business Profile).
-- Discoverability Partner — $400/month, 3-month minimum. Quarterly re-score, monthly AI-visibility pulse, competitor-overtake alerts, light ongoing fixes.
+- Discoverability Report — $1,500. The full scan and roadmap. Credited in full against the Fix Sprint, so if the client proceeds with the fixes the Report costs them nothing.
+- Report + Fix Sprint — $3,900. The audit plus done-for-you fixes (structured data, llms.txt, meta and headings, Google Business Profile).
+- Discoverability Monitoring — $400/month, 3-month minimum. Quarterly re-score, monthly AI-visibility pulse, competitor-overtake alerts, light ongoing fixes.
 - Sector leaderboard — for trade associations and franchises; pricing on request.
 
 ## Who it is for
