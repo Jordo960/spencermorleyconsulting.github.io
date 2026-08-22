@@ -91,7 +91,7 @@
     },
     {
       "name": "Resident Surveys for Canadian Municipalities",
-      "description": "Service page for municipal resident and community surveys: survey instrument design, a 37-point security assessment before go-live, a requirement-by-requirement privacy review against Alberta's Protection of Personal Privacy Act, hosting on the municipality's own subdomain on Canadian infrastructure, a staff administration portal, thematic analysis, and a written What We Heard report with a verbatim appendix. Includes the County of Minburn case study.",
+      "description": "Service page for municipal resident and community surveys: survey instrument design, a written four-layer security assessment before go-live, a requirement-by-requirement privacy review against Alberta's Protection of Privacy Act, hosting on the municipality's own subdomain on Canadian infrastructure, a staff administration portal, thematic analysis, and a written What We Heard report with a verbatim appendix. Includes the County of Minburn case study.",
       "url": "https://spencermorleyconsulting.ca/municipal-surveys/"
     }
   ]
