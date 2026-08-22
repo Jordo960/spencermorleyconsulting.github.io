@@ -116,7 +116,7 @@ SMC's Municipal AI Framework is compliance-first and privacy-by-design. Services
   plan. Delivered for the County of Minburn's Agricultural Service Board.
 
 Target clients: CAOs, town administrators, municipal councils, small and rural municipalities
-in any Canadian province or territory. Engagements to date have been in Alberta.
+in any Canadian province or territory.
 
 Full details: [Municipal AI Track](https://spencermorleyconsulting.ca/municipal.html)
 
@@ -435,10 +435,10 @@ are primary-source, third-party records, not SMC marketing material.
 
 ## Geographic Scope
 
-- Crisis Communications: Alberta, Canada (primary)
-- Municipal AI Consulting: available in all Canadian provinces and territories (engagements to date: Alberta)
-- Small Business AI Consulting: available Canada-wide (engagements to date: Alberta)
-- Non-Profit AI Consulting: available in all Canadian provinces and territories (engagements to date: Alberta)
+- Crisis Communications: Alberta, Canada
+- Municipal AI Consulting: available in all Canadian provinces and territories
+- Small Business AI Consulting: available Canada-wide
+- Non-Profit AI Consulting: available in all Canadian provinces and territories
 - Remote delivery available nationally
 
 ## Pricing Summary (Small Business Track)
