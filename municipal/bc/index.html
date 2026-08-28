@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Municipal AI Consulting — BC Municipalities | Spencer Morley Consulting</title>
-  <meta name="description" content="BC municipalities: FOIPPA requires a formal privacy governance program for AI use. Shadow AI — staff using public tools like ChatGPT with citizen data — is a compliance risk under BC's freedom of information law. Spencer Morley Consulting helps BC CAOs close the gap." />
+  <meta name="description" content="BC municipalities: FIPPA s. 36.2 has required a privacy management program since February 1, 2023 — and the data-residency rule most administrators still cite, s. 30.1, was repealed in 2021. Spencer Morley Consulting writes the AI adoption policy and procedures that close the real gap." />
   <link rel="canonical" href="https://spencermorleyconsulting.ca/municipal/bc/" />
 
   <meta property="og:title" content="AI Consulting for BC Municipalities — FOIPPA Compliance" />
@@ -51,12 +51,12 @@
           {
             "@type": "Question",
             "name": "Does FOIPPA restrict where BC municipal data can be stored?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Yes. FOIPPA Section 30.1 requires that BC public bodies store and access personal information only in Canada, and only use service providers who store and access that information in Canada, unless an exception applies. Public AI tools operated by US companies (including ChatGPT, Gemini, and many Microsoft services) may not satisfy this requirement when processing British Columbia citizen data. A private LLM deployment within Canadian infrastructure is a compliant alternative." }
+            "acceptedAnswer": { "@type": "Answer", "text": "No. FOIPPA section 30.1, which required BC public bodies to store and access personal information only in Canada, was repealed on 25 November 2021 by Bill 22 (SBC 2021, c. 39, s. 17). The consolidated Act shows sections 30.1 to 30.2 as repealed, and the phrase outside Canada does not appear in it. British Columbia has no data-residency requirement for public bodies. This is widely misunderstood and still cited as current law. The obligations that do apply are section 30 (reasonable security arrangements), section 36.2 (a privacy management program, required since February 1, 2023), section 36.3 (mandatory privacy breach notification) and section 69 (privacy impact assessments). Where a public AI tool sends data still matters as a security and risk question under section 30, but it is not a residency prohibition." }
           },
           {
             "@type": "Question",
             "name": "What is shadow AI risk for BC municipalities?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Shadow AI is the use of public AI tools by municipal staff without authorization, training, or governance. When a BC municipal employee enters citizen personal information into ChatGPT, Gemini, or another public AI service, that data may be stored on servers outside Canada — a potential FOIPPA violation. It may also be used to train AI models, shared with third parties, or disclosed in ways the municipality cannot control. Shadow AI is not hypothetical: KPMG Canada research shows 48% of public servants already use AI tools on the job." }
+            "acceptedAnswer": { "@type": "Answer", "text": "Shadow AI is the use of public AI tools by municipal staff without authorization, training, or governance. When a BC municipal employee enters citizen personal information into ChatGPT, Gemini, or another public AI service, that data leaves the municipality's control. FOIPPA no longer prohibits storage outside Canada, but section 30 still requires reasonable security arrangements, and an unassessed public tool is difficult to defend as one. It may also be used to train AI models, shared with third parties, or disclosed in ways the municipality cannot control. Shadow AI is not hypothetical: KPMG Canada research shows 48% of public servants already use AI tools on the job." }
           },
           {
             "@type": "Question",
@@ -66,7 +66,7 @@
           {
             "@type": "Question",
             "name": "Our municipality already uses Microsoft 365 with Copilot. Are we compliant with FOIPPA?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Possibly not automatically. FOIPPA Section 30.1 requires data to be stored and accessed in Canada. Microsoft's data residency options are complex — some Microsoft 365 configurations store data in Canadian data centres, others do not, and Copilot features may use different infrastructure than the base 365 services. The AI Readiness Assessment will identify exactly what tools are in use, where data goes, and whether your current setup satisfies FOIPPA's requirements. If it doesn't, we'll identify the specific remediation steps." }
+            "acceptedAnswer": { "@type": "Answer", "text": "Compliance is not a question about where the data sits. FOIPPA section 30.1, the residency rule, was repealed in 2021, so a Canadian data centre is not what makes Copilot compliant and a US one is not what makes it non-compliant. The questions that do decide it are whether the municipality has the privacy management program section 36.2 has required since February 1, 2023, whether a privacy impact assessment under section 69 was completed before deployment, whether the security arrangements are reasonable under section 30, and whether staff know what they may and may not put into the tool. The AI Readiness Assessment establishes what is actually in use and which of those are missing." }
           },
           {
             "@type": "Question",
@@ -212,7 +212,7 @@
   <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
   <ul class="nav-links">
     <li class="nav-dropdown"><a href="../../index.html#crisis">Communications ▾</a><div class="nav-dropdown-menu"><a href="../../index.html#crisis-mgmt">Crisis Management</a><a href="../../index.html#media-relations">Media Relations Training</a><a href="../../index.html#on-demand">On-Demand Communications</a></div></li>
-    <li class="nav-dropdown"><a href="../../municipal.html">AI Consulting ▾</a><div class="nav-dropdown-menu"><a href="../../municipal.html">Municipal Track</a><a href="../../small-business.html">Small Business Track</a><a href="../../non-profits.html">AI for Non-Profits Track</a></div></li>
+    <li class="nav-dropdown"><a href="../../municipal.html">AI Consulting ▾</a><div class="nav-dropdown-menu"><a href="../../municipal.html">Municipal Track</a><a href="../../small-business.html">Small Business Track</a><a href="../../non-profits.html">AI for Non-Profits Track</a><a href="../../ai-adoption-policy.html">AI Adoption Policy</a></div></li>
     <li><a href="../../index.html#about">About</a></li>
     <li><a href="../../resources/">Glossary</a></li>
     <li><a href="../../municipal.html#contact" class="nav-cta" onclick="gtag('event','cta_click',{'event_category':'nav','event_label':'get_a_consultation','page':'municipal-bc'})">Get a Consultation</a></li>
@@ -237,8 +237,8 @@
 
 <div class="foippa-callout">
   <div class="wrap">
-    <div class="foippa-callout-head">FOIPPA Section 30.1 — Data Residency</div>
-    <p>BC's FOIPPA requires that public bodies store and access personal information <strong>only in Canada</strong> and only use service providers that store and access that data in Canada. Public AI tools — ChatGPT, Gemini, many Microsoft and Google cloud services — may route and store data on US or international servers. A staff member entering citizen information into a public AI tool may be triggering a FOIPPA compliance issue right now, without knowing it.</p>
+    <div class="foippa-callout-head">FOIPPA Section 30.1 was repealed. The rule you think you have is gone.</div>
+    <p>Ask most BC municipal administrators what FOIPPA requires of an AI tool and you will hear that citizen data has to stay in Canada. That was s. 30.1 — and it was <strong>repealed on 25 November 2021</strong> by Bill 22 (SBC 2021, c. 39, s. 17). The consolidated Act now reads &#8220;30.1&#8211;30.2 [Repealed 2021-39-17.]&#8221;, and the words &#8220;outside Canada&#8221; appear nowhere in it. <strong>British Columbia has no data-residency requirement.</strong> What it does have is an obligation almost nobody is talking about: since <strong>1 February 2023</strong>, s. 36.2 has required the head of every public body — municipalities included — to develop a privacy management program. If your staff are using AI on personal information, that is the gap, not where the server sits.</p>
   </div>
 </div>
 
@@ -247,7 +247,7 @@
     <div class="leg-card">
       <div class="leg-card-acronym">FOIPPA</div>
       <div class="leg-card-name">Freedom of Information and Protection of Privacy Act (BC)</div>
-      <div class="leg-card-body">Governs access to records and protection of personal information held by BC public bodies, including local governments. Requires documented policies, employee training, and accountability structures for how personal information is collected, used, and disclosed.</div>
+      <div class="leg-card-body">Governs access to records and protection of personal information held by BC public bodies. A municipality is a &#8220;local government body&#8221; and therefore a local public body under Schedule 1. Since <strong>1 February 2023</strong>, s. 36.2 requires the head of a public body to develop a privacy management program in accordance with the minister&#8217;s directions, and s. 36.3 makes privacy breach notification mandatory. Section 30 still requires reasonable security arrangements. Sections 30.1&#8211;30.2 — the old residency rule — are repealed.</div>
     </div>
     <div class="leg-card">
       <div class="leg-card-acronym">OIPC BC</div>
@@ -262,7 +262,7 @@
     <div class="leg-card">
       <div class="leg-card-acronym">PIA</div>
       <div class="leg-card-name">Privacy Impact Assessment</div>
-      <div class="leg-card-body">A documented assessment of how a new system or process handles personal information. BC municipalities deploying any new AI tool — including a private LLM — should complete a PIA. Spencer Morley Consulting supports PIA preparation as part of the Private LLM deployment service.</div>
+      <div class="leg-card-body">Under s. 69, a privacy impact assessment determines whether a current or proposed system, project, program or activity meets the requirements of Part 3 of FIPPA. A BC municipality standing up any new AI tool — including a private LLM — is squarely in that definition. Spencer Morley Consulting supports PIA preparation as part of the policy and deployment work.</div>
     </div>
   </div>
 </div>
@@ -307,17 +307,17 @@
       <div class="svc-item">
         <div class="svc-num">03</div>
         <div>
-          <div class="svc-title">AI Policy Development</div>
-          <div class="svc-body">A formal AI Acceptable Use Policy grounded in FOIPPA and designed for BC council adoption. Covers sanctioned tools with Canadian data residency, prohibited uses involving citizen personal information, breach reporting obligations under FOIPPA, and staff expectations. Written so that a CAO without legal background can implement it — and that the OIPC BC would recognize as a genuine governance program.</div>
-          <div class="svc-tags"><span class="svc-tag">FOIPPA-Grounded</span><span class="svc-tag">Council-Ready</span></div>
+          <div class="svc-title">AI Adoption Policy &amp; Procedures</div>
+          <div class="svc-body">A formal AI adoption policy grounded in FOIPPA and designed for BC council adoption. Covers sanctioned tools and how they are assessed, prohibited uses involving citizen personal information, breach reporting obligations under FOIPPA, and staff expectations. Written so that a CAO without legal background can implement it — and that the OIPC BC would recognize as a genuine governance program. Delivered as two documents: the AI Adoption Policy council adopts, and a companion AI Adoption Procedures document setting out how staff request and approve tools, what is logged, and the exact steps when a breach is suspected — so administration can revise procedures as tools change without returning to council each time.</div>
+          <div class="svc-tags"><span class="svc-tag">FOIPPA-Grounded</span><span class="svc-tag">Council-Ready</span><span class="svc-tag">Policy + Procedures</span></div>
         </div>
       </div>
       <div class="svc-item">
         <div class="svc-num">04</div>
         <div>
           <div class="svc-title">Private LLM Deployment</div>
-          <div class="svc-body">A private AI instance hosted within Canadian infrastructure — satisfying FOIPPA's data residency requirements. Citizen data stays within your systems, under your control. Your staff get a capable AI tool that complies with BC law. No US server exposure. No IT department required to maintain it. Privacy Impact Assessment support included.</div>
-          <div class="svc-tags"><span class="svc-tag">Canadian Infrastructure</span><span class="svc-tag">FOIPPA Section 30.1</span></div>
+          <div class="svc-body">A private AI instance hosted within Canadian infrastructure. Citizen data stays within your systems, under your control. This is not about a residency rule — FOIPPA has none — it is about being able to answer, under s. 30, exactly where personal information goes and who can reach it. Your staff get a capable sanctioned tool instead of a browser tab nobody approved. Privacy impact assessment support under s. 69 included.</div>
+          <div class="svc-tags"><span class="svc-tag">Canadian Infrastructure</span><span class="svc-tag">FIPPA s. 30 &middot; s. 69</span></div>
         </div>
       </div>
       <div class="svc-item">
@@ -337,7 +337,8 @@
     <div class="faq-eyebrow">BC Municipality FAQ</div>
     <h2 class="faq-hl">Questions from BC CAOs and municipal administrators</h2>
     <div class="faq-list">
-      <div class="faq-item"><p class="faq-q">Our municipality already uses Microsoft 365 with Copilot. Are we compliant with FOIPPA?</p><p class="faq-a">Possibly not automatically. FOIPPA Section 30.1 requires data to be stored and accessed in Canada. Microsoft's data residency options are complex — some Microsoft 365 configurations store data in Canadian data centres, others do not, and Copilot features may use different infrastructure than the base 365 services. The AI Readiness Assessment will identify exactly what tools are in use, where data goes, and whether your current setup satisfies FOIPPA's requirements. If it doesn't, we'll identify the specific remediation steps.</p></div>
+      <div class="faq-item"><p class="faq-q">Doesn&#8217;t FOIPPA require citizen data to stay in Canada?</p><p class="faq-a">Not any more, and this is the single most common misunderstanding in BC local government. Section 30.1 did require it — and it was <strong>repealed on 25 November 2021</strong> by Bill 22 (SBC 2021, c. 39, s. 17). The consolidated Act now shows ss. 30.1&#8211;30.2 as repealed, and the phrase &#8220;outside Canada&#8221; does not appear in it at all. What still applies: s. 30 (reasonable security arrangements), <strong>s. 36.2 (a privacy management program, required since 1 February 2023)</strong>, s. 36.3 (mandatory breach notification) and s. 69 (privacy impact assessments). Where a tool sends data is still a real security question — it is just not a prohibition, and a policy built on the wrong section will not survive scrutiny.</p></div>
+      <div class="faq-item"><p class="faq-q">Our municipality already uses Microsoft 365 with Copilot. Are we compliant with FOIPPA?</p><p class="faq-a">Compliance here is not a question about where the data sits. Since s. 30.1 was repealed, a Canadian data centre is not what makes Copilot compliant and a US one is not what makes it non-compliant. The questions that decide it: do you have the privacy management program s. 36.2 has required since February 2023; was a PIA completed under s. 69 before deployment; are the security arrangements reasonable under s. 30; and do staff know what they may and may not put into it. The AI Readiness Assessment establishes what is actually in use and which of those are missing.</p></div>
       <div class="faq-item"><p class="faq-q">We're a small BC municipality — District of X with 3 staff. Is this service appropriate for us?</p><p class="faq-a">Yes — small municipalities are exactly who this service is built for. Large BC municipalities (Metro Vancouver member cities, City of Victoria, etc.) have legal counsel and dedicated privacy officers. Small district municipalities, villages, improvement districts, and rural communities typically don't — and generic enterprise-level compliance templates don't work for a three-person office. Spencer Morley Consulting's Municipal AI Framework is designed for small teams, delivered remotely, and sized appropriately.</p></div>
       <div class="faq-item"><p class="faq-q">Has Spencer Morley Consulting worked with BC municipalities before?</p><p class="faq-a">We work with municipalities anywhere in Canada and deliver every engagement remotely, so your location changes nothing about how the work runs. Our record is Alberta, including wildfire response for the Municipality of Jasper, crisis plans and staff training for the County of Grande Prairie No. 1, and emergency management training for the County of Minburn. You get the same team and the same method, written to FOIPPA and to BC's Office of the Information and Privacy Commissioner.</p></div>
       <div class="faq-item"><p class="faq-q">What is the UBCM's position on AI governance for BC municipalities?</p><p class="faq-a">The Union of BC Municipalities has increasingly addressed digital governance and AI risk as priorities for BC local governments. Their guidance and resolutions consistently point toward the need for formal policy, staff training, and documented accountability structures — which aligns directly with what Spencer Morley Consulting's Municipal AI Framework delivers.</p></div>

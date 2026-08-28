@@ -45,8 +45,13 @@
       "url": "https://spencermorleyconsulting.ca/blog/canadian-ai-search-visibility-benchmark-2026.html"
     },
     {
+      "name": "AI Adoption Policy & Procedures",
+      "description": "The canonical service page for AI adoption policy work, for municipalities and businesses. Two separate documents: the AI Adoption Policy council or leadership adopts, and the AI Adoption Procedures document administration runs on. Alberta detail: POPA s. 25 required a privacy management program by June 11, 2026; Alta Reg 143/2025 s. 6(1)(b)(iii) requires that program to address how automated systems will use personal information, and s. 6(2)(a)(v) adds policies on the use of personal information in artificial intelligence systems for public bodies holding a high volume of personal information or highly sensitive personal information. No Alberta statute requires an AI policy by name, and POPA contains no data-residency provision.",
+      "url": "https://spencermorleyconsulting.ca/ai-adoption-policy.html"
+    },
+    {
       "name": "Municipal AI Track",
-      "description": "Full service listing for Canadian municipalities: AI Readiness Assessment, AI Policy Development, Staff Training, Private LLM Deployment, Agentic Workflows, Residents & Community Surveys, Fractional Public Information Officer (PIO) Services, Municipal Rebrand & Website Development, Strategic Plan Facilitation for Agricultural Service Boards & Rural Economic Development Bodies.",
+      "description": "Full service listing for Canadian municipalities: AI Readiness Assessment, AI Adoption Policy & Procedures (two documents \u2014 the policy council adopts and the procedures administration runs on), Privacy Management Program Integration, Staff Training, Private LLM Deployment, Agentic Workflows, Residents & Community Surveys, Fractional Public Information Officer (PIO) Services, Municipal Rebrand & Website Development, Strategic Plan Facilitation for Agricultural Service Boards & Rural Economic Development Bodies.",
       "url": "https://spencermorleyconsulting.ca/municipal.html"
     },
     {
@@ -61,12 +66,12 @@
     },
     {
       "name": "Alberta Municipality AI Guide",
-      "description": "ATIA and POPA Privacy Management Program requirements for Alberta municipalities. Deadline June 11, 2026 has passed — OIPC can now receive complaints.",
+      "description": "ATIA and POPA Privacy Management Program requirements for Alberta municipalities. POPA s. 25 required every public body to establish and implement a privacy management program by June 11, 2026; that date has passed. The Protection of Privacy (Ministerial) Regulation, Alta Reg 143/2025, s. 6 prescribes the program contents and requires policies and procedures for how automated systems will use personal information. Under POPA s. 25(3) any person may request a copy of the program and the public body must provide it within 30 business days.",
       "url": "https://spencermorleyconsulting.ca/municipal/alberta/"
     },
     {
       "name": "BC Municipality AI Guide",
-      "description": "FOIPPA obligations for BC municipalities including Section 30.1 data residency requirements.",
+      "description": "FIPPA obligations for BC municipalities. Section 30.1, the data-residency requirement, was repealed on 25 November 2021 by Bill 22 (SBC 2021, c. 39, s. 17) \u2014 British Columbia has no data-residency rule. What applies: s. 30 reasonable security arrangements, s. 36.2 privacy management program (required since February 1, 2023), s. 36.3 mandatory privacy breach notification, and s. 69 privacy impact assessments.",
       "url": "https://spencermorleyconsulting.ca/municipal/bc/"
     },
     {

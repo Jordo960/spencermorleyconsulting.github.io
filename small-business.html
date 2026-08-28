@@ -544,6 +544,17 @@
           "@type": "Country",
           "name": "Canada"
         }
+      },
+      {
+        "@type": "Service",
+        "@id": "https://spencermorleyconsulting.ca/small-business.html#ai-adoption-policy",
+        "name": "AI Adoption Policy and Procedures for Business",
+        "provider": {"@id": "https://spencermorleyconsulting.ca/#organization"},
+        "description": "Two documents written for a Canadian business: a short AI adoption policy naming approved tools, prohibited uses, and accountability; and a companion procedures document covering how staff request tool approval, what is logged, and the response steps when client information is exposed to a public AI tool. Grounded in PIPEDA and Alberta's PIPA, sized for teams without a legal department.",
+        "areaServed": {
+          "@type": "Country",
+          "name": "Canada"
+        }
       }
     ]
   }
@@ -659,7 +670,7 @@
       <div class="nav-dropdown-menu">
         <a href="municipal.html">Municipal Track</a>
         <a href="small-business.html">Small Business Track</a>
-        <a href="non-profits.html">AI for Non-Profits Track</a>
+        <a href="non-profits.html">AI for Non-Profits Track</a><a href="ai-adoption-policy.html">AI Adoption Policy</a>
       </div>
     </li>
     <li><a href="#about">About</a></li>
@@ -798,6 +809,13 @@
     </div>
 
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;">
+      <div style="border:1px solid var(--gold-border);padding:2.2rem;display:flex;flex-direction:column;gap:0.9rem;">
+        <p style="font-family:var(--font-ui);font-size:0.62rem;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin:0;">AI adoption policy &amp; procedures</p>
+        <p style="font-family:var(--font-body);font-size:0.88rem;font-weight:300;color:rgba(247,247,245,0.62);line-height:1.75;margin:0;">The Review tells you what your team is already doing with AI. This is the document that settles it. Two of them, actually: a short <strong style="color:rgba(247,247,245,0.8);font-weight:400;">policy</strong> naming the approved tools, what may never be pasted into a public AI tool, and who owns the decision &#8212; and the <strong style="color:rgba(247,247,245,0.8);font-weight:400;">procedures</strong> that make it real, covering how someone requests a new tool, what gets logged, and exactly what happens the moment client information lands somewhere it shouldn&#8217;t.</p>
+        <p style="font-family:var(--font-body);font-size:0.88rem;font-weight:300;color:rgba(247,247,245,0.62);line-height:1.75;margin:0;">Written for a business, not a council: grounded in PIPEDA and Alberta&#8217;s PIPA, sized for a team that has no legal department and no appetite for a forty-page binder.</p>
+        <p style="font-family:var(--font-body);font-size:0.78rem;font-style:italic;color:rgba(247,247,245,0.45);margin:0;">Worth having before a client asks for it. Enterprise customers and RFPs increasingly want to know whether you have a written AI policy &#8212; and &#8220;not yet&#8221; is a weak answer with a contract on the table.</p>
+        <p style="margin:auto 0 0;padding-top:0.6rem;"><a href="ai-adoption-policy.html" style="font-family:var(--font-ui);font-size:0.7rem;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);text-decoration:none;border-bottom:1px solid var(--gold-border);padding-bottom:2px;" onclick="gtag('event', 'cta_click', {'event_category': 'ladder', 'event_label': 'ai_policy', 'page': 'small_business'})">How the two documents work &#8594;</a></p>
+      </div>
       <div style="border:1px solid var(--gold-border);padding:2.2rem;display:flex;flex-direction:column;gap:0.9rem;">
         <p style="font-family:var(--font-ui);font-size:0.62rem;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin:0;">Staff AI training</p>
         <p style="font-family:var(--font-body);font-size:0.88rem;font-weight:300;color:rgba(247,247,245,0.62);line-height:1.75;margin:0;">Training built around your team&#8217;s actual jobs &#8212; quoting, scheduling, customer replies, reporting. How to structure a prompt, give AI the right context, and handle customer information safely. Skills they use the next day, remotely or on-site.</p>
@@ -962,6 +980,7 @@
               <option value="">What are you interested in? *</option>
               <option>Discoverability Report (AI visibility)</option>
               <option>Staff AI Risk Review (internal AI)</option>
+              <option>AI adoption policy &amp; procedures</option>
               <option>Something else / not sure</option>
             </select>
             <textarea id="cf-message" placeholder="Tell us about your business and what you&#8217;re hoping AI can help with *" required></textarea>

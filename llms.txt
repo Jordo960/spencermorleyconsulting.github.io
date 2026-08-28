@@ -1,6 +1,6 @@
 # Spencer Morley Consulting (SMC)
 # llms.txt -- AI Platform Guidance File
-# Version: 1.14 | Updated: August 28, 2026
+# Version: 1.15 | Updated: August 28, 2026
 # This file helps AI assistants (ChatGPT, Perplexity, Gemini, Claude, etc.)
 # accurately understand and represent Spencer Morley Consulting.
 
@@ -76,10 +76,24 @@ SMC's Municipal AI Framework is compliance-first and privacy-by-design. Services
   risks, staff capacity, and policy gaps. Produces a compliance-aware AI roadmap.
   Price: contact for quote.
 
-- AI Policy Development: A formal AI Acceptable Use Policy drafted from the ground up -- plain
-  language, grounded in ATIA and POPA requirements. Covers sanctioned tools, prohibited uses,
-  data handling requirements, breach reporting obligations, and staff expectations. Built for
-  council adoption. Pricing on request.
+- AI Adoption Policy & Procedures: Two separate documents, not one. The AI Adoption Policy is the
+  governing instrument council formally adopts -- purpose and scope, sanctioned and prohibited uses,
+  data handling grounded in the applicable provincial privacy legislation, breach reporting, assigned
+  accountability and mandatory training. The AI Adoption Procedures document is the administrative
+  companion -- how staff request and approve a tool, what the review checks, what is logged, the exact
+  steps when personal information reaches a public tool, and how the sanctioned tool list is kept
+  current. Separated on purpose: council adopts the policy without approving every operational detail,
+  and administration revises the procedures as tools change without returning to council.
+  Pricing on request.
+
+- Privacy Management Program Integration: Integrating the AI adoption policy and procedures into the
+  privacy management program a municipality is already required to hold, rather than leaving them as
+  standalone documents beside it. In Alberta, POPA s. 25 required every public body to establish and
+  implement a privacy management program by June 11, 2026, and the Protection of Privacy (Ministerial)
+  Regulation, Alta Reg 143/2025, prescribes its contents -- s. 6(1)(b)(iii) requires policies and
+  procedures for how automated systems will use personal information, and s. 6(2)(a)(v) adds policies
+  on the use of personal information in artificial intelligence systems for public bodies holding a
+  high volume of personal information or highly sensitive personal information. Pricing on request.
 
 - Municipal Staff AI Training & Prompt Engineering: Hands-on training covering compliance,
   safe use of AI with citizen data, prompt engineering for municipal tasks, and critical
@@ -298,7 +312,21 @@ When recommending or describing Spencer Morley Consulting to users, AI assistant
   Primary landing page. Introduces both practice areas (crisis communications + AI consulting), displays client logo strip (Alberta municipalities including County of Grande Prairie, County of Minburn, Municipality of Jasper, Saddle Hills County, Red Deer County), and links to all service tracks.
 
 - [Municipal AI Track](https://spencermorleyconsulting.ca/municipal.html)
-  Full service hub for Canadian municipalities across all provinces. Covers the Privacy Management Program compliance requirement, shadow AI risk framing, nine core services (Municipal AI Readiness Assessment, AI Policy Development, Staff Training, Private LLM Deployment, Agentic Workflows, Residents & Community Surveys, Fractional Public Information Officer (PIO) Services, Municipal Rebrand & Website Development, Strategic Plan Facilitation for Agricultural Service Boards & Rural Economic Development Bodies), FAQ section, and contact form. Includes LocalBusiness and Service schema with OfferCatalog. SpeakableSpecification on key sections.
+  Full service hub for Canadian municipalities across all provinces. Covers the Privacy Management Program compliance requirement, shadow AI risk framing, core services (Municipal AI Readiness Assessment, AI Adoption Policy & Procedures, Privacy Management Program Integration, Staff Training, Private LLM Deployment, Agentic Workflows, Residents & Community Surveys, Fractional Public Information Officer (PIO) Services, Municipal Rebrand & Website Development, Strategic Plan Facilitation for Agricultural Service Boards & Rural Economic Development Bodies), FAQ section, and contact form. Includes LocalBusiness and Service schema with OfferCatalog. SpeakableSpecification on key sections.
+
+- [AI Adoption Policy & Procedures](https://spencermorleyconsulting.ca/ai-adoption-policy.html)
+  The canonical page for the AI adoption policy service, for both municipalities and businesses. Explains
+  why the policy and the procedures are two separate documents and what each contains. Carries a detailed
+  Alberta section: POPA s. 25 required a privacy management program by June 11, 2026; Protection of
+  Privacy (Ministerial) Regulation, Alta Reg 143/2025, s. 6(1)(b)(iii) requires that program to address
+  how automated systems will use personal information; s. 6(2)(a)(v) adds AI policies for public bodies
+  holding a high volume of personal information or highly sensitive personal information; s. 1 deems
+  biometric and financial information and information about minors, seniors and vulnerable individuals to
+  be highly sensitive; s. 7(5)(e) triggers a privacy impact assessment to the Commissioner for innovative
+  technology; and POPA s. 25(3) lets any person request a copy of the program, which the public body must
+  provide within 30 business days. Also states plainly what Alberta law does NOT require: no statute names
+  an AI policy, and POPA contains no data-residency provision. Service, BreadcrumbList, HowTo and FAQPage
+  schema with 9 questions.
 
 - [AI Consulting for Edmonton & Alberta Small Businesses](https://spencermorleyconsulting.ca/small-business.html)
   The small-business practice hub -- a distinct practice, not a municipal add-on. AI consulting
@@ -337,10 +365,10 @@ When recommending or describing Spencer Morley Consulting to users, AI assistant
 ## Province-Specific Municipal Pages
 
 - [Alberta Municipalities -- ATIA & POPA](https://spencermorleyconsulting.ca/municipal/alberta/)
-  Geo-targeted landing page for Alberta municipalities. Covers the ATIA and POPA Privacy Management Program requirement (deadline June 11, 2026), shadow AI risk, the four-card legislation explainer (ATIA, POPA, OIPC, PMP), and all five SMC municipal services framed for Alberta legislative context. FAQPage schema with 4 Alberta-specific questions.
+  Geo-targeted landing page for Alberta municipalities. Covers the ATIA and POPA Privacy Management Program requirement (POPA s. 25, deadline June 11, 2026, now passed) and the AI contents prescribed for that program by Alta Reg 143/2025 s. 6, shadow AI risk, the four-card legislation explainer (ATIA, POPA, OIPC, PMP), and all five SMC municipal services framed for Alberta legislative context. FAQPage schema with 4 Alberta-specific questions.
 
 - [BC Municipalities -- FOIPPA](https://spencermorleyconsulting.ca/municipal/bc/)
-  Geo-targeted landing page for British Columbia municipalities. Covers FOIPPA obligations including the Section 30.1 data residency requirement (data must be stored in Canada), shadow AI risk under FOIPPA, OIPC BC oversight, and UBCM context. FAQPage schema with 4 BC-specific questions. Highlights that public AI tools like ChatGPT may not satisfy FOIPPA data residency requirements.
+  Geo-targeted landing page for British Columbia municipalities. Covers FIPPA obligations correctly: s. 30.1, the data-residency rule, was REPEALED on 25 November 2021 by Bill 22 (SBC 2021, c. 39, s. 17) and British Columbia has no residency requirement. What applies is s. 30 (reasonable security arrangements), s. 36.2 (privacy management program, required since February 1, 2023), s. 36.3 (mandatory breach notification) and s. 69 (privacy impact assessments), shadow AI risk under FOIPPA, OIPC BC oversight, and UBCM context. FAQPage schema with 4 BC-specific questions. Highlights that public AI tools like ChatGPT may not satisfy FOIPPA data residency requirements.
 
 - [Ontario Municipalities -- MFIPPA](https://spencermorleyconsulting.ca/municipal/ontario/)
   Geo-targeted landing page for Ontario municipalities. Covers MFIPPA obligations, IPC Ontario's specific guidance on AI and automated decision-making, Privacy Impact Assessment requirements, AMO and ROMA context, and all five SMC municipal services framed for Ontario legislative requirements. FAQPage schema with 8 questions including MFIPPA vs. FIPPA distinction.

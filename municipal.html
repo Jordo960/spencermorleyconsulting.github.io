@@ -1000,8 +1000,16 @@
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "AI Policy Development",
-                "description": "A formal AI Acceptable Use Policy drafted for your municipality — plain language, grounded in ATIA and POPA requirements, covering sanctioned tools, prohibited uses, data handling requirements, breach reporting obligations, and staff expectations. Built for council adoption."
+                "name": "AI Adoption Policy and Procedures",
+                "description": "Two documents drafted for your municipality: a council-ready AI Adoption Policy covering purpose and scope, sanctioned and prohibited uses, data handling grounded in provincial privacy legislation, breach reporting, assigned accountability and mandatory training; and a companion AI Adoption Procedures document setting out how staff request and approve tools, what is logged, the exact breach response steps, and how the sanctioned tool list is kept current. Separated so council adopts the policy while administration can revise procedures without returning to council."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Privacy Management Program Integration",
+                "description": "Integration of a municipality's AI adoption policy and procedures into the Privacy Management Program required by section 25 of Alberta's Protection of Privacy Act. Maps the program contents prescribed by the Protection of Privacy (Ministerial) Regulation, Alta Reg 143/2025 — including section 6(1)(b)(iii) on how automated systems use personal information and section 6(2)(a)(v) on the use of personal information in artificial intelligence systems — against what the municipality already holds, then drafts the AI instruments as cross-referenced components of the program and prepares the amendment and adoption package."
               }
             },
             {
@@ -1113,8 +1121,8 @@
       {
         "@type": "HowToStep",
         "position": 2,
-        "name": "AI Policy Development",
-        "text": "A formal AI Acceptable Use Policy drafted from the ground up — plain language, grounded in your provincial requirements. Covers sanctioned tools, prohibited uses, data handling, breach reporting, and staff expectations. Built for council adoption."
+        "name": "AI Adoption Policy and Procedures",
+        "text": "Two documents drafted from the ground up: a council-ready AI Adoption Policy in plain language grounded in your provincial requirements, covering sanctioned tools, prohibited uses, data handling, breach reporting and staff expectations; and a companion AI Adoption Procedures document setting out how staff request and approve tools, what is logged, and the exact steps when a breach is suspected."
       },
       {
         "@type": "HowToStep",
@@ -1194,6 +1202,7 @@
           "itemListElement": [
             {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Staff AI Risk Review"}},
             {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "AI Readiness Assessment"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Privacy Management Program Integration"}},
             {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Staff AI Training and Prompt Engineering"}},
             {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "WebMCP Readiness"}},
             {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Workflow Automation"}},
@@ -1292,10 +1301,19 @@
       {
         "@type": "Service",
         "@id": "https://spencermorleyconsulting.ca/municipal.html#ai-policy-development",
-        "name": "AI Policy Development for Municipalities",
+        "name": "AI Adoption Policy and Procedures for Municipalities",
         "provider": {"@id": "https://spencermorleyconsulting.ca/#organization"},
-        "description": "Development of a documented Privacy Management Program and AI acceptable use policy that satisfies Alberta's ATIA and POPA obligations. Distinct from a general IT acceptable use policy — a purpose-built compliance document for municipalities using AI tools.",
+        "description": "Development of two separate instruments: a council-adopted AI Adoption Policy and a companion AI Adoption Procedures document for administration. Written to the provincial privacy regime that applies — ATIA and POPA in Alberta, and the equivalent legislation elsewhere — and drafted to satisfy the AI and automated-systems contents prescribed for a Privacy Management Program by the Protection of Privacy (Ministerial) Regulation, Alta Reg 143/2025, section 6. Distinct from a general IT acceptable use policy, and distinct from the Privacy Management Program itself, of which these documents form a component.",
         "areaServed": {"@type": "Country", "name": "Canada"}
+      },
+      {
+        "@type": "Service",
+        "@id": "https://spencermorleyconsulting.ca/municipal.html#pmp-integration",
+        "name": "Privacy Management Program Integration for Municipalities",
+        "provider": {"@id": "https://spencermorleyconsulting.ca/#organization"},
+        "description": "Integration of a municipality's AI adoption policy and procedures into the Privacy Management Program required by section 25 of Alberta's Protection of Privacy Act, which public bodies were required to establish and implement by June 11, 2026. The contents of that program are prescribed by the Protection of Privacy (Ministerial) Regulation, Alta Reg 143/2025: section 6(1)(b)(iii) requires policies and procedures for how automated systems will use personal information, and section 6(2)(a)(v) requires policies on the use of personal information in artificial intelligence systems for public bodies holding a high volume of personal information or highly sensitive personal information. The engagement maps those prescribed contents against the municipality's existing privacy instruments, drafts the AI policy and procedures as cross-referenced components rather than standalone documents, and prepares the amendment and adoption package.",
+        "areaServed": {"@type": "Country", "name": "Canada"},
+        "audience": {"@type": "Audience", "audienceType": "Alberta municipalities, municipal districts and counties subject to ATIA and POPA"}
       },
       {
         "@type": "Service",
@@ -1422,7 +1440,7 @@
       <div class="nav-dropdown-menu">
         <a href="municipal.html">Municipal Track</a>
         <a href="small-business.html">Small Business Track</a>
-        <a href="non-profits.html">AI for Non-Profits Track</a>
+        <a href="non-profits.html">AI for Non-Profits Track</a><a href="ai-adoption-policy.html">AI Adoption Policy</a>
       </div>
     </li>
     <li><a href="#about">About</a></li>
@@ -1558,15 +1576,38 @@
           <div class="ai-svc" id="ai-policy-development">
             <div class="ai-svc-n">03</div>
             <div>
-              <div class="ai-svc-title">AI Policy Development</div>
-              <div class="ai-svc-desc"><strong style="color:rgba(247,247,245,0.72);">A formal AI policy your council can adopt, your staff can follow.</strong></div>
-              <div class="ai-svc-desc" style="margin-top:0.6rem;">Having staff trained on responsible AI use is necessary. Having a written policy they can refer to, and that your municipality can demonstrate to provincial oversight bodies, is what closes the compliance gap entirely.</div>
-              <div class="ai-svc-desc" style="margin-top:0.6rem;">Spencer Morley Consulting drafts your AI Acceptable Use Policy from the ground up: plain language, grounded in your province&#8217;s privacy legislation (whether that&#8217;s ATIA/POPA in Alberta, FOIPPA in BC, MFIPPA in Ontario, or your provincial equivalent) and written so that a CAO with five other files can actually implement it. The policy covers sanctioned tools, prohibited uses, data handling requirements, breach reporting obligations, and staff expectations. Pricing on request.</div>
+              <div class="ai-svc-title">AI Adoption Policy &amp; Procedures</div>
+              <div class="ai-svc-desc"><strong style="color:rgba(247,247,245,0.72);">Two documents doing two different jobs: the policy council adopts, and the procedures administration runs on.</strong></div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;">A policy sets the rules. It is the document council votes on, the one you produce for a provincial oversight body, and the one that states what staff may and may not do with AI. It is necessary &#8212; and on its own it is not sufficient. Policies get adopted and then sit in a binder, because nobody wrote down what following them looks like on a Tuesday afternoon when a staff member has a tool open and a deadline.</div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;">So Spencer Morley Consulting writes both. The <strong style="color:rgba(247,247,245,0.72);">AI Adoption Policy</strong> is the council-facing instrument: purpose and scope, sanctioned and prohibited uses, data handling grounded in your province&#8217;s privacy legislation, breach reporting, assigned accountability, and mandatory training &#8212; in language a council can read, question, and approve.</div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;">The <strong style="color:rgba(247,247,245,0.72);">AI Adoption Procedures</strong> are the administrative companion: how a staff member requests a tool and who approves it, what the review actually checks, what gets logged and where, the exact steps the moment someone suspects personal information went into a public tool, and how the sanctioned tool list is kept current as the market moves.</div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;">Delivered as two separate documents on purpose. Council adopts the policy without having to approve every operational detail, and administration can revise the procedures as tools change without returning to council each time.</div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;">Written to your province &#8212; ATIA and POPA in Alberta, FOIPPA in BC, MFIPPA in Ontario, FIPPA in Manitoba, LAFOIP in Saskatchewan. Pricing on request.</div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;font-style:italic;color:rgba(247,247,245,0.55);">Currently in delivery for an Alberta municipal district: a council-ready AI adoption policy and the operating procedures that sit underneath it.</div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;"><a href="ai-adoption-policy.html" style="color:var(--gold);text-decoration:none;border-bottom:1px solid var(--gold-border);">Policy vs. procedures &#8212; what each document does</a></div>
+              <span class="legislation-tag">Province-specific</span>
               <span class="ai-svc-tag" style="margin-top:0.5rem;">Compliance</span>
+              <span class="ai-svc-tag" style="margin-top:0.5rem;">Two documents</span>
+            </div>
+          </div>
+          <div class="ai-svc" id="pmp-integration">
+            <div class="ai-svc-n">04</div>
+            <div>
+              <div class="ai-svc-title">Privacy Management Program Integration</div>
+              <div class="ai-svc-desc"><strong style="color:rgba(247,247,245,0.72);">Your AI policy belongs inside the program the legislation already requires &#8212; not beside it.</strong></div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;">Alberta public bodies were required to have a Privacy Management Program established and implemented by <strong style="color:rgba(247,247,245,0.72);">June 11, 2026</strong> under POPA s.&#8239;25. Many municipalities have one. Far fewer have one that accounts for the AI their staff had already started using.</div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;">That matters because the contents of the program are prescribed by regulation. The <em>Protection of Privacy (Ministerial) Regulation</em>, Alta Reg 143/2025, s.&#8239;6(1)(b)(iii) requires policies and procedures for how automated systems will use personal information; s.&#8239;6(2)(a)(v) adds policies on the use of personal information in artificial intelligence systems for public bodies holding high volumes of personal information or highly sensitive personal information. The AI element is not an addition to the program &#8212; it is part of what the program was always required to contain.</div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;">An AI policy drafted as a free-standing document leaves a municipality with two instruments that name different officers, define terms differently, and route approvals along different paths &#8212; and a program that still has the same hole in it.</div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;">This engagement closes that. We read your existing privacy policy, your program and your privacy impact assessment process; map the prescribed s.&#8239;6 contents against what you already hold; write the AI policy and procedures as components that cross-reference your privacy officer designation, security classification system, breach response and PIA triggers; and prepare the amendment and adoption package that puts them formally into the program.</div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;">Outside Alberta the same logic applies under the equivalent provincial regime. Pricing on request.</div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;"><a href="ai-adoption-policy.html#alberta-popa" style="color:var(--gold);text-decoration:none;border-bottom:1px solid var(--gold-border);">What POPA and Alta Reg 143/2025 actually require</a></div>
+              <span class="legislation-tag">POPA s.&#8239;25 &middot; Alta Reg 143/2025 s.&#8239;6</span>
+              <span class="ai-svc-tag" style="margin-top:0.5rem;">Compliance</span>
+              <span class="ai-svc-tag" style="margin-top:0.5rem;">Program-level</span>
             </div>
           </div>
           <div class="ai-svc" id="private-llm">
-            <div class="ai-svc-n">04</div>
+            <div class="ai-svc-n">05</div>
             <div>
               <div class="ai-svc-title">Private Large Language Model Deployment</div>
               <div class="ai-svc-desc"><strong style="color:rgba(247,247,245,0.72);">A powerful AI tool your staff can actually use, without touching a public platform.</strong></div>
@@ -1603,7 +1644,7 @@
             <div class="compliance-callout-source">KPMG in Canada, <em>&#8220;Canadian organizations turning to AI agents: KPMG poll,&#8221;</em> April 2025</div>
           </div>
           <div class="ai-svc" id="agentic-workflows">
-            <div class="ai-svc-n">05</div>
+            <div class="ai-svc-n">06</div>
             <div>
               <div class="ai-svc-title">Agentic Workflows</div>
               <div class="ai-svc-desc"><strong style="color:rgba(247,247,245,0.72);">Stop spending staff hours on tasks AI can complete in seconds.</strong></div>
@@ -1614,7 +1655,7 @@
             </div>
           </div>
           <div class="ai-svc" id="resident-surveys">
-            <div class="ai-svc-n">06</div>
+            <div class="ai-svc-n">07</div>
             <div>
               <div class="ai-svc-title">Residents &amp; Community Surveys</div>
               <div class="ai-svc-desc"><strong style="color:rgba(247,247,245,0.72);">Ask residents properly, and council gets answers it can act on.</strong></div>
@@ -1627,7 +1668,7 @@
             </div>
           </div>
           <div class="ai-svc" id="fractional-pio">
-            <div class="ai-svc-n">07</div>
+            <div class="ai-svc-n">08</div>
             <div>
               <div class="ai-svc-title">Fractional Public Information Officer (PIO) Services</div>
               <div class="ai-svc-desc"><strong style="color:rgba(247,247,245,0.72);">When a municipality needs a communications lead embedded in the team rather than advising from outside.</strong></div>
@@ -1637,7 +1678,7 @@
             </div>
           </div>
           <div class="ai-svc" id="municipal-rebrand">
-            <div class="ai-svc-n">08</div>
+            <div class="ai-svc-n">09</div>
             <div>
               <div class="ai-svc-title">Municipal Rebrand &amp; Website Development</div>
               <div class="ai-svc-desc"><strong style="color:rgba(247,247,245,0.72);">A full rebrand and new website, built for how residents find and use municipal information.</strong></div>
@@ -1647,7 +1688,7 @@
             </div>
           </div>
           <div class="ai-svc" id="strategic-plan-facilitation">
-            <div class="ai-svc-n">09</div>
+            <div class="ai-svc-n">10</div>
             <div>
               <div class="ai-svc-title">Strategic Plan Facilitation for Agricultural Service Boards &amp; Rural Economic Development Bodies</div>
               <div class="ai-svc-desc"><strong style="color:rgba(247,247,245,0.72);">Facilitated strategic planning built for agricultural service boards and rural economic development committees.</strong></div>
@@ -1657,7 +1698,7 @@
             </div>
           </div>
           <div class="ai-svc" id="permitting-intake">
-            <div class="ai-svc-n">10</div>
+            <div class="ai-svc-n">11</div>
             <div>
               <div class="ai-svc-title">AI-Assisted Permitting &amp; Licensing Intake</div>
               <div class="ai-svc-desc"><strong style="color:rgba(247,247,245,0.72);">Faster intake, fewer back-and-forth cycles, no new hires.</strong></div>
@@ -1669,7 +1710,7 @@
             </div>
           </div>
           <div class="ai-svc" id="data-readiness">
-            <div class="ai-svc-n">11</div>
+            <div class="ai-svc-n">12</div>
             <div>
               <div class="ai-svc-title">Data Readiness &amp; Migration</div>
               <div class="ai-svc-desc"><strong style="color:rgba(247,247,245,0.72);">The unglamorous work every other AI project depends on.</strong></div>
@@ -1680,7 +1721,7 @@
             </div>
           </div>
           <div class="ai-svc" id="citizen-chatbot">
-            <div class="ai-svc-n">12</div>
+            <div class="ai-svc-n">13</div>
             <div>
               <div class="ai-svc-title">Citizen-Service Chatbot &amp; Virtual Front Desk</div>
               <div class="ai-svc-desc"><strong style="color:rgba(247,247,245,0.72);">A front desk that doesn&#8217;t close at 4:30.</strong></div>
@@ -1784,7 +1825,8 @@
               <option value="" disabled selected>Which service are you interested in? *</option>
               <option value="AI Readiness Assessment — Municipal">AI Readiness Assessment</option>
               <option value="Staff AI Training — Municipal">Staff AI Training &amp; Prompt Engineering</option>
-              <option value="AI Policy Development — Municipal">AI Policy Development</option>
+              <option value="AI Adoption Policy &amp; Procedures — Municipal">AI Adoption Policy &amp; Procedures</option>
+              <option value="Privacy Management Program Integration &#8212; Municipal">Privacy Management Program Integration</option>
               <option value="Private Large Language Model Deployment">Private Large Language Model Deployment</option>
               <option value="Agentic Workflows — Municipal">Agentic Workflows</option>
               <option value="AI-Assisted Permitting &amp; Licensing Intake — Municipal">AI-Assisted Permitting &amp; Licensing Intake</option>
