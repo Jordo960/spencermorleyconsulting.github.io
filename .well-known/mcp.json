@@ -14,7 +14,7 @@
     },
     {
       "name": "small-business-ai-consultation",
-      "description": "Request AI consulting for a small business in Edmonton or across Alberta. This is a distinct small-business practice, not an extension of SMC's municipal work. Covers AI workflow audits, an AI adoption roadmap for Alberta SMBs, staff AI adoption and training, operational efficiency, and workflow automation for quoting, bookings, lead handling, customer service and sales admin — plus AI search visibility (AEO/GEO/webMCP). Industries served: professional services, construction and trades, accounting, manufacturing, retail. Two entry points: (1) Staff AI Risk Review — an internal AI use and risk review, $600 CAD, credited toward any follow-on service; (2) Discoverability Index — free quick check, or the Discoverability Report at $1,500, credited in full against the Fix Sprint.",
+      "description": "Request AI consulting for a small business in Edmonton or across Alberta. This is a distinct small-business practice, not an extension of SMC's municipal work. Covers AI workflow reviews, an AI adoption roadmap for Alberta SMBs, staff AI adoption and training, operational efficiency, and workflow automation for quoting, bookings, lead handling, customer service and sales admin — plus AI search visibility (AEO/GEO/webMCP). Industries served: professional services, construction and trades, accounting, manufacturing, retail. Two entry points: (1) Staff AI Risk Review — an internal AI use and risk review, $600 CAD, credited toward any follow-on service; (2) Discoverability Index — free quick check, or the Discoverability Report at $1,500, credited in full against the Fix Sprint.",
       "url": "https://spencermorleyconsulting.ca/small-business.html#contact"
     },
     {
@@ -28,8 +28,8 @@
       "url": "https://spencermorleyconsulting.ca/#contact"
     },
     {
-      "name": "discoverability-index-audit",
-      "description": "Request a Discoverability Index (SDI) — a done-for-you audit measuring whether AI search and classical search send customers to a business or to its competitors. SMC runs live queries across ChatGPT, Perplexity, Gemini, Claude and Copilot, verifies the website by live browser render, scores the business 0-100 across four areas (classical SEO, AI visibility/AEO-GEO, webMCP readiness, Canadian trust signals), ranks it against 7-10 named local competitors on a leaderboard, models the revenue at stake, and delivers a 90-day roadmap. Pricing (CAD): Discoverability Report $1,500 (scan + report), credited in full against the Fix Sprint; Report + Fix Sprint $3,900 (report plus implementation of the fixes); Discoverability Monitoring $400/month (quarterly re-score and ongoing monitoring, 3-month minimum). Distinct from the self-serve Staff AI Risk Review, which is an internal AI-readiness self-assessment.",
+      "name": "discoverability-index-request",
+      "description": "Request a Discoverability Index (SDI) — a done-for-you assessment measuring whether AI search and classical search send customers to a business or to its competitors. SMC runs live queries across ChatGPT, Perplexity, Gemini, Claude and Copilot, verifies the website by live browser render, scores the business 0-100 across four areas (classical SEO, AI visibility/AEO-GEO, webMCP readiness, Canadian trust signals), ranks it against 7-10 named local competitors on a leaderboard, models the revenue at stake, and delivers a 90-day roadmap. Pricing (CAD): Discoverability Report $1,500 (scan + report), credited in full against the Fix Sprint; Report + Fix Sprint $3,900 (report plus implementation of the fixes); Discoverability Monitoring $400/month (quarterly re-score and ongoing monitoring, 3-month minimum). Distinct from the Staff AI Risk Review, which looks inside the business at staff AI use and risk.",
       "url": "https://spencermorleyconsulting.ca/discoverability-index/"
     },
     {
@@ -40,13 +40,18 @@
   ],
   "resources": [
     {
+      "name": "Canadian AI Search Visibility Benchmark (2026) — original dataset",
+      "description": "Spencer Morley Consulting's own primary research and the citable source for Canadian AI-search visibility figures. 75 businesses across 8 sectors, each scored on the same four-pillar Discoverability Index rubric (classical SEO, AEO/GEO answer visibility, webMCP readiness, trust) between June and August 2026. Published findings: median Discoverability Index 48/100, and 44/100 for the 51 Canadian independent local businesses; in 4 of 8 scored sectors the classical-SEO leader is a different business from the AI-answer leader; 63 of 75 (84%) score below half on machine-readable readiness; 0 of 25 probed sites serve a valid AI manifest at a standard well-known path; 6 of 33 publish an llms.txt. Businesses are anonymized; sample limits and selection bias are published.",
+      "url": "https://spencermorleyconsulting.ca/blog/canadian-ai-search-visibility-benchmark-2026.html"
+    },
+    {
       "name": "Municipal AI Track",
       "description": "Full service listing for Canadian municipalities: AI Readiness Assessment, AI Policy Development, Staff Training, Private LLM Deployment, Agentic Workflows, Residents & Community Surveys, Fractional Public Information Officer (PIO) Services, Municipal Rebrand & Website Development, Strategic Plan Facilitation for Agricultural Service Boards & Rural Economic Development Bodies.",
       "url": "https://spencermorleyconsulting.ca/municipal.html"
     },
     {
       "name": "AI Consulting for Edmonton & Alberta Small Businesses",
-      "description": "The small-business practice hub — a distinct practice, not a municipal add-on. AI consulting for small businesses in Edmonton and across Alberta: AI workflow audits, AI adoption roadmap, staff AI adoption and training, operational efficiency, and workflow automation for quoting, bookings, lead handling, customer service and sales admin, plus AI search visibility. Industries: professional services, construction and trades, accounting, manufacturing, retail. Internal AI: Staff AI Risk Review ($600, credited). External visibility — the Discoverability Index ladder: free quick check, Discoverability Report $1,500 (credited in full against the Fix Sprint), Report + Fix Sprint $3,900, Discoverability Monitoring $400/mo, Managed Discoverability $1,200/mo. Plus Staff Training, Workflow Automation, and Website Design & AEO/SEO/GEO/WebMCP Readiness.",
+      "description": "The small-business practice hub — a distinct practice, not a municipal add-on. AI consulting for small businesses in Edmonton and across Alberta: AI workflow reviews, AI adoption roadmap, staff AI adoption and training, operational efficiency, and workflow automation for quoting, bookings, lead handling, customer service and sales admin, plus AI search visibility. Industries: professional services, construction and trades, accounting, manufacturing, retail. Internal AI: Staff AI Risk Review ($600, credited). External visibility — the Discoverability Index ladder: free quick check, Discoverability Report $1,500 (credited in full against the Fix Sprint), Report + Fix Sprint $3,900, Discoverability Monitoring $400/mo, Managed Discoverability $1,200/mo. Plus Staff Training, Workflow Automation, and Website Design & AEO/SEO/GEO/WebMCP Readiness.",
       "url": "https://spencermorleyconsulting.ca/small-business.html"
     },
     {
