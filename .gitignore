@@ -47,3 +47,16 @@ funnel/*.csv
 discoverability-index/*.md
 discoverability-index/generate-marketing-pdfs.js
 discoverability-index/outreach-list-*.xlsx
+
+campaign-ai-policy-outreach/
+
+# ── Deploy tooling & session scratch — NEVER commit ──
+# These embed the IONOS SFTP host/user and local absolute paths.
+deploy-*.sh
+commit-*.sh
+indexnow-*.sh
+*.batch
+HANDOFF-*.md
+HANDOFF-*
+COMMIT_MSG_*.txt
+RESPONSE-TO-*.md
