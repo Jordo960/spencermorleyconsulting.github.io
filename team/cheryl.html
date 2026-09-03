@@ -256,6 +256,24 @@
     .credential-issuer { font-size: 0.8rem; color: rgba(247,247,245,0.6); }
 
     /* EXPERTISE */
+    .testimonial-section { padding: 56px 2rem; background: var(--charcoal-mid); border-top: 1px solid var(--gold-border); }
+    .testimonial-inner { max-width: 1100px; margin: 0 auto; }
+    .testimonial-grid { display: grid; grid-template-columns: minmax(0, 1fr) 250px; gap: 3.5rem; align-items: start; }
+    .testimonial-grid blockquote { margin: 0; }
+    .testimonial-aside { border-left: 1px solid var(--gold-border); padding-left: 1.6rem; }
+    .testimonial-aside dt { font-family: var(--font-body); font-size: 0.66rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.4rem; }
+    .testimonial-aside dd { margin: 0 0 1.4rem; font-size: 0.86rem; line-height: 1.6; color: rgba(247,247,245,0.78); }
+    .testimonial-aside a { color: var(--gold); text-decoration: none; border-bottom: 1px solid var(--gold-border); }
+    .testimonial-aside a:hover { border-bottom-color: var(--gold); }
+    @media (max-width: 860px) {
+      .testimonial-grid { grid-template-columns: 1fr; gap: 2.2rem; }
+      .testimonial-aside { border-left: 0; border-top: 1px solid var(--gold-border); padding-left: 0; padding-top: 1.6rem; }
+    }
+    .testimonial-inner blockquote p { font-family: var(--font-display); font-size: clamp(1.1rem, 1.9vw, 1.35rem); font-style: italic; line-height: 1.58; color: rgba(247,247,245,0.9); margin: 0 0 1rem; }
+    .testimonial-inner blockquote p:last-child { margin-bottom: 0; }
+    .testimonial-attr { margin-top: 1.5rem; line-height: 1.7; padding-top: 1.25rem; border-top: 1px solid rgba(201,168,76,0.14); font-family: var(--font-ui); font-size: 0.72rem; font-weight: 800; letter-spacing: 0.13em; text-transform: uppercase; color: rgba(247,247,245,0.62); }
+    .testimonial-attr strong { color: var(--cream); font-weight: 800; }
+
     .expertise-section { padding: 56px 2rem; background: var(--charcoal); border-top: 1px solid rgba(201,168,76,0.1); }
     .expertise-inner { max-width: 1100px; margin: 0 auto; }
     .expertise-inner h2 { font-family: var(--font-display); font-size: clamp(1.4rem, 2.5vw, 1.9rem); font-weight: 600; color: var(--cream); margin-bottom: 2rem; }
@@ -461,6 +479,30 @@
         </div>
       </li>
     </ul>
+  </div>
+</section>
+
+<!-- TESTIMONIAL -->
+<section class="testimonial-section" aria-labelledby="testimonial-head">
+  <div class="testimonial-inner">
+    <div class="section-eyebrow">Jasper, 2024</div>
+    <h2 id="testimonial-head" style="font-family:var(--font-display);font-size:clamp(1.4rem,2.5vw,1.9rem);font-weight:600;color:var(--cream);margin-bottom:2rem;">What it looked like from the inside</h2>
+    <div class="testimonial-grid">
+      <div>
+        <blockquote>
+          <p>Cheryl walked into the hardest chapter of Jasper&#8217;s history and made herself part of the community within days. She wasn&#8217;t a local but you&#8217;d never have known it. She showed up for residents and business owners and earned their trust when trust was hard to come by for anyone.</p>
+          <p>What I&#8217;ll never forget is her steadiness. When our local leaders had to have the toughest conversations of the recovery, the ones that took real courage, Cheryl was in their corner. She coached them through it with a clear head and decades of experience. She ran virtual media conference after virtual media conference that allowed everyone involved to share crucial updates with media. As a bonus, she had a knack for noticing when local staff were stretched too thin where she would quietly take work off their plates so they could rest instead of burning out.</p>
+          <p>Cheryl isn&#8217;t just an emergency communications expert. She brings that same sharp thinking to strategic planning and everyday work. Put her in a room well before the crisis hits and she&#8217;ll help you see it coming.</p>
+        </blockquote>
+        <p class="testimonial-attr"><strong>Janelle Lane</strong>, Information Officer, Parks Canada</p>
+      </div>
+      <dl class="testimonial-aside">
+        <dt>The engagement</dt>
+        <dd>Lead Crisis Communications Consultant, 2024 Jasper wildfire response &mdash; roughly two and a half months embedded on the ground. <a href="../case-studies/#jasper-wildfire-recovery">Read the case study &rarr;</a></dd>
+        <dt>Corroboration</dt>
+        <dd>Invited panelist on the Jasper response, <a href="https://connect.catiq.com/catiq_events/catiq-connect-2025/" target="_blank" rel="noopener">CatIQ Connect 2025 &rarr;</a></dd>
+      </dl>
+    </div>
   </div>
 </section>
 
