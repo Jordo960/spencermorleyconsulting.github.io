@@ -695,3 +695,229 @@ body.team-page .footer-links a { font-size: 0.78rem; color: var(--muted); text-d
 @media (max-width: 768px) { body.team-page .profile-hero-inner { grid-template-columns: 1fr; gap: 2rem; } }
 @media (max-width: 768px) { body.team-page .profile-photo-col { position: static; } }
 @media (max-width: 768px) { body.team-page .profile-photo { max-width: 220px; aspect-ratio: 1; } }
+
+/* --------------------------------------------------------------------------
+   10. Municipal hub pages (municipal.html, municipal-surveys/index.html)
+   Extracted 2026-09-04 from the batch-5 heavy-tail pages. Both pages carry
+   the SAME newer design system as section 8's landing-page pages for most of
+   their rules (property-level match, after merging split group/individual
+   rules -- see smc_baseline.py), so both get body class="landing-page
+   municipal-page" -- landing-page rules apply for free. This section holds
+   only the rules genuinely COMMON to both pages (identical selector AND
+   declared value on both -- verified per-page, NOT assumed identical: each
+   page actually carries a second <style> block the two pages' own CSS
+   diverges in -- see build5.py). Whatever differs between the two pages
+   (municipal-surveys.html's older breadcrumb/page-hero/proof/faq design,
+   currently the only divergence) stays page-specific, kept in that page's
+   own <style> block instead, scoped the same way for specificity parity.
+   See DEPLOY_2026-09-04_shell-batch5.md.
+   -------------------------------------------------------------------------- */
+body.municipal-page .nav-brand-name { font-family: var(--font-ui); font-size: 0.78rem; font-weight: 900; letter-spacing: 0.14em; text-transform: uppercase; color: var(--cream); display: block; }
+body.municipal-page .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; white-space: normal; }
+body.municipal-page .nav-links > li > a { font-family: var(--font-ui); font-size: 0.72rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--cream); text-decoration: none; opacity: 0.65; transition: opacity 0.2s; position: relative; white-space: normal; }
+body.municipal-page .nav-dropdown-menu a { display: block; padding: 0.6rem 1.4rem; font-family: var(--font-body); font-size: 0.78rem; font-weight: 400; letter-spacing: 0.04em; color: var(--cream); text-decoration: none; opacity: 0.72; transition: opacity 0.2s, background 0.2s; }
+body.municipal-page .nav-dropdown-menu a:hover { opacity: 1; background: var(--gold-dim); color: var(--gold); }
+body.municipal-page .nav-cta { font-family: var(--font-ui) !important; padding: 0.5rem 1.4rem !important; border: 1px solid var(--gold) !important; color: var(--gold) !important; opacity: 1 !important; font-size: 0.68rem !important; font-weight: 800 !important; letter-spacing: 0.14em !important; text-transform: uppercase; text-decoration: none; transition: background 0.2s, color 0.2s !important; }
+body.municipal-page .hero { min-height: 100vh; display: flex; position: relative; overflow: hidden; }
+body.municipal-page .hero-watermark { position: absolute; right: -2%; top: 50%; transform: translateY(-50%); width: 62vw; height: 62vw; max-width: 900px; max-height: 900px; color: var(--gold); opacity: 0.07; pointer-events: none; z-index: 1; }
+body.municipal-page .hero-left { display: flex; flex-direction: column; justify-content: center; padding: 10rem 5rem 9rem 4rem; position: relative; z-index: 3; max-width: 700px; }
+body.municipal-page .hero-eyebrow { font-family: var(--font-ui); font-size: 0.67rem; font-weight: 800; letter-spacing: 0.24em; text-transform: uppercase; color: var(--gold); display: flex; align-items: center; gap: 0.9rem; margin-bottom: 2rem; }
+body.municipal-page .hero-eyebrow::before { content: ""; width: 36px; height: 1px; background: var(--gold); }
+body.municipal-page h1.hero-headline { font-family: var(--font-display); font-size: clamp(3rem, 4.6vw, 5.6rem); font-weight: 300; line-height: 1.06; color: var(--cream); margin-bottom: 2rem; }
+body.municipal-page h1.hero-headline em { font-style: italic; color: var(--gold-light); }
+body.municipal-page .hero-sub { font-family: var(--font-body); font-size: 1.02rem; font-weight: 300; line-height: 1.78; color: rgba(247,247,245,0.58); max-width: 440px; margin-bottom: 3rem; }
+body.municipal-page .hero-actions { display: flex; align-items: center; gap: 2rem; }
+body.municipal-page .btn-text-link { font-family: var(--font-ui); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; color: rgba(247,247,245,0.52); text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; transition: color 0.2s; }
+body.municipal-page .btn-text-link:hover { color: var(--cream); }
+body.municipal-page .btn-text-link svg { transition: transform 0.2s; }
+body.municipal-page .btn-text-link:hover svg { transform: translateX(4px); }
+body.municipal-page .hero-stats { position: absolute; bottom: 0; left: 0; z-index: 10; display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--gold-border); border-right: 1px solid var(--gold-border); background: rgba(28,28,28,0.85); backdrop-filter: blur(10px); }
+body.municipal-page .hero-stat { padding: 1.6rem 2rem; border-right: 1px solid var(--gold-border); }
+body.municipal-page .hero-stat:last-child { border-right: none; }
+body.municipal-page .stat-num { font-family: var(--font-display); font-size: 2.5rem; font-weight: 500; color: var(--gold); line-height: 1; margin-bottom: 0.3rem; }
+body.municipal-page .stat-label { font-family: var(--font-ui); font-size: 0.65rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+body.municipal-page .practices { padding: 8rem 0; background: var(--charcoal); }
+body.municipal-page .practices-header { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: end; margin-bottom: 4rem; }
+body.municipal-page .practices-hl { font-family: var(--font-display); font-size: clamp(2.4rem, 3.2vw, 3.8rem); font-weight: 300; line-height: 1.1; color: var(--cream); }
+body.municipal-page .practices-hl em { font-style: italic; color: var(--gold-light); }
+body.municipal-page .practices-body { font-family: var(--font-body); font-size: 0.94rem; line-height: 1.8; color: rgba(247,247,245,0.55); padding-top: 0.5rem; }
+body.municipal-page .practice-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--gold-border); border: 1px solid var(--gold-border); }
+body.municipal-page .practice-card { padding: 4rem; background: var(--charcoal); position: relative; overflow: hidden; transition: background 0.3s; }
+body.municipal-page .practice-card::after { content: ""; position: absolute; top: 0; left: 0; width: 3px; height: 0; background: var(--gold); transition: height 0.45s ease; }
+body.municipal-page .practice-card:hover { background: var(--charcoal-mid); }
+body.municipal-page .practice-card:hover::after { height: 100%; }
+body.municipal-page .pc-badge { font-family: var(--font-ui); display: inline-block; padding: 0.22rem 0.8rem; border: 1px solid var(--gold-border); font-size: 0.6rem; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.5rem; }
+body.municipal-page .pc-num { font-family: var(--font-display); font-size: 4.5rem; font-weight: 300; color: var(--gold-dim); line-height: 1; margin-bottom: 1.2rem; transition: color 0.3s; }
+body.municipal-page .practice-card:hover .pc-num { color: rgba(201,168,76,0.2); }
+body.municipal-page .pc-title { font-family: var(--font-display); font-size: 2rem; font-weight: 400; color: var(--cream); line-height: 1.2; margin-bottom: 1.1rem; }
+body.municipal-page .pc-desc { font-family: var(--font-body); font-size: 0.9rem; line-height: 1.78; color: rgba(247,247,245,0.55); margin-bottom: 2rem; }
+body.municipal-page .pc-link { font-family: var(--font-ui); font-size: 0.68rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); text-decoration: none; display: inline-flex; align-items: center; gap: 0.6rem; transition: gap 0.2s; }
+body.municipal-page .pc-link:hover { gap: 1rem; }
+body.municipal-page .crisis { padding: 8rem 0; background: var(--cream); color: var(--charcoal); }
+body.municipal-page .crisis-header { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: end; margin-bottom: 5rem; }
+body.municipal-page .crisis-hl { font-family: var(--font-display); font-size: clamp(2.2rem, 3vw, 3.5rem); font-weight: 400; line-height: 1.1; color: var(--charcoal); }
+body.municipal-page .crisis-body { font-family: var(--font-body); font-size: 0.94rem; line-height: 1.82; color: var(--light-text); padding-top: 0.5rem; }
+body.municipal-page .svc-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; background: rgba(50,50,50,0.1); }
+body.municipal-page .svc-tile { padding: 3rem 2.5rem; background: var(--cream); transition: background 0.3s; position: relative; }
+body.municipal-page .svc-tile:hover { background: var(--warm-white); }
+body.municipal-page .svc-icon { width: 46px; height: 46px; border: 1px solid rgba(201,168,76,0.3); display: flex; align-items: center; justify-content: center; margin-bottom: 1.8rem; transition: border-color 0.3s, background 0.3s; }
+body.municipal-page .svc-tile:hover .svc-icon { border-color: var(--gold); background: var(--gold-dim); }
+body.municipal-page .svc-icon svg { width: 19px; height: 19px; stroke: var(--gold); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+body.municipal-page .svc-name { font-family: var(--font-display); font-size: 1.4rem; font-weight: 500; color: var(--charcoal); margin-bottom: 0.7rem; }
+body.municipal-page .svc-desc { font-family: var(--font-body); font-size: 0.87rem; line-height: 1.78; color: var(--light-text); margin-bottom: 1.5rem; }
+body.municipal-page .svc-link { font-family: var(--font-ui); font-size: 0.67rem; font-weight: 800; letter-spacing: 0.13em; text-transform: uppercase; color: var(--charcoal); text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; transition: color 0.2s, gap 0.2s; }
+body.municipal-page .svc-link:hover { color: var(--gold); gap: 0.9rem; }
+body.municipal-page .ai-watermark { position: absolute; bottom: -80px; left: -80px; width: 420px; height: 420px; color: var(--gold); opacity: 0.028; pointer-events: none; }
+body.municipal-page .ai-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: end; margin-bottom: 5rem; }
+body.municipal-page .ai-hl { font-family: var(--font-display); font-size: clamp(2.2rem, 3vw, 3.5rem); font-weight: 300; line-height: 1.1; color: var(--cream); }
+body.municipal-page .ai-hl em { font-style: italic; color: var(--gold-light); }
+body.municipal-page .ai-body { font-family: var(--font-body); font-size: 0.94rem; line-height: 1.8; color: rgba(247,247,245,0.55); padding-top: 0.5rem; }
+body.municipal-page .ai-tracks { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+body.municipal-page .deadline-pill { display: inline-flex; align-items: center; gap: 0.6rem; padding: 0.4rem 1rem; margin: 1rem 2rem 0; background: rgba(201,168,76,0.1); border: 1px solid var(--gold-border); font-family: var(--font-ui); font-size: 0.62rem; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); }
+body.municipal-page .deadline-pill-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); flex-shrink: 0; animation: blink 2s ease-in-out infinite; }
+body.municipal-page .training-pillars { display: flex; flex-direction: column; gap: 0; margin-top: 0.9rem; border: 1px solid rgba(201,168,76,0.14); }
+body.municipal-page .training-pillar { padding: 0.9rem 1.1rem; border-bottom: 1px solid rgba(201,168,76,0.1); }
+body.municipal-page .training-pillar:last-child { border-bottom: none; }
+body.municipal-page .training-pillar-title { font-family: var(--font-ui); font-size: 0.7rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 0.35rem; display: flex; align-items: center; gap: 0.5rem; }
+body.municipal-page .training-pillar-title::before { content: ""; width: 4px; height: 4px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
+body.municipal-page .training-pillar-body { font-family: var(--font-body); font-size: 0.78rem; line-height: 1.65; color: rgba(247,247,245,0.42); }
+body.municipal-page .legislation-tag { display: inline-block; padding: 0.12rem 0.55rem; margin-top: 0.5rem; margin-right: 0.3rem; background: rgba(201,168,76,0.06); border: 1px solid rgba(201,168,76,0.18); font-family: var(--font-ui); font-size: 0.57rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(201,168,76,0.65); }
+body.municipal-page .placeholder-note { margin: 1.5rem 2rem 0; padding: 0.9rem 1.2rem; border-left: 2px solid var(--gold); background: var(--gold-dim); }
+body.municipal-page .placeholder-note strong { font-family: var(--font-ui); display: block; font-size: 0.62rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.3rem; }
+body.municipal-page .placeholder-note p { font-family: var(--font-body); font-size: 0.78rem; line-height: 1.6; color: var(--gold-light); }
+body.municipal-page .portrait-badge { position: absolute; bottom: 2rem; left: -2rem; padding: 1.1rem 1.6rem; background: var(--gold); color: var(--charcoal); }
+body.municipal-page .badge-num { font-family: var(--font-display); font-size: 2.4rem; font-weight: 600; line-height: 1; }
+body.municipal-page .badge-label { font-family: var(--font-ui); font-size: 0.62rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; margin-top: 0.2rem; }
+@media (max-width: 1100px) { body.municipal-page .hero { grid-template-columns: 1fr; } }
+@media (max-width: 1100px) { body.municipal-page .hero-left { padding: 9rem 2rem 5rem; } }
+@media (max-width: 1100px) { body.municipal-page .hero-right { height: 380px; } }
+@media (max-width: 1100px) { body.municipal-page .hero-watermark { display: none; } }
+@media (max-width: 1100px) { body.municipal-page .practices-header, body.municipal-page .crisis-header, body.municipal-page .ai-intro, body.municipal-page .about-grid, body.municipal-page .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; } }
+@media (max-width: 1100px) { body.municipal-page .practice-grid { grid-template-columns: 1fr; } }
+@media (max-width: 1100px) { body.municipal-page .ai-tracks { grid-template-columns: 1fr; } }
+@media (max-width: 1100px) { body.municipal-page .svc-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 1280px) { body.municipal-page nav { padding: 0 1.2rem; } }
+@media (max-width: 1280px) { body.municipal-page .wrap { padding: 0 1.2rem; } }
+@media (max-width: 1280px) { body.municipal-page .nav-brand { flex-shrink: 1; min-width: 0; overflow: hidden; max-width: calc(100% - 50px); } }
+@media (max-width: 1280px) { body.municipal-page .nav-hamburger { display: flex; position: absolute; right: 1.2rem; top: 50%; transform: translateY(-50%); } }
+@media (max-width: 1280px) { body.municipal-page .nav-links { display: none; position: fixed; top: 74px; left: 0; right: 0; height: calc(100vh - 74px); background: var(--charcoal); flex-direction: column; align-items: flex-start; padding: 1.5rem 1.2rem 3rem; gap: 0; overflow-y: auto; z-index: 199; bottom: auto; justify-content: normal; } }
+@media (max-width: 1280px) { body.municipal-page nav.nav-open .nav-links { display: flex; } }
+@media (max-width: 1280px) { body.municipal-page .nav-links > li { width: 100%; border-bottom: 1px solid rgba(201,168,76,0.15); } }
+@media (max-width: 1280px) { body.municipal-page .nav-links > li > a { display: block; padding: 1rem 0; font-size: 0.85rem !important; opacity: 1; letter-spacing: 0.08em; } }
+@media (max-width: 1280px) { body.municipal-page .nav-dropdown-menu { display: block !important; position: static !important; transform: none !important; background: none !important; border: none !important; padding: 0 0 0.75rem 0.75rem !important; min-width: auto !important; box-shadow: none !important; } }
+@media (max-width: 1280px) { body.municipal-page .nav-dropdown-menu a { padding: 0.5rem 0 !important; font-size: 0.78rem !important; opacity: 0.7; } }
+@media (max-width: 1280px) { body.municipal-page .nav-dropdown > a { padding-bottom: 0; } }
+@media (max-width: 640px) { body.municipal-page .svc-grid { grid-template-columns: 1fr; } }
+@media (max-width: 640px) { body.municipal-page .hero-stats { grid-template-columns: 1fr; right: 0; } }
+@media (max-width: 640px) { body.municipal-page .contact-actions { align-items: flex-start; } }
+
+/* --------------------------------------------------------------------------
+   11. Homepage (index.html)
+   Extracted 2026-09-04, same body.landing-page reuse as section 10 above --
+   97 of homepage's 210 rules are exact matches for existing body.landing-page
+   rules; body class="landing-page home-page". See
+   DEPLOY_2026-09-04_shell-batch5.md.
+   -------------------------------------------------------------------------- */
+body.home-page .nav-dropdown-menu a { display: block; padding: 0.6rem 1.4rem; font-family: var(--font-body); font-size: 0.78rem; font-weight: 400; letter-spacing: 0.04em; color: var(--cream); text-decoration: none; opacity: 0.72; transition: opacity 0.2s, background 0.2s; }
+body.home-page .nav-dropdown-menu a:hover { opacity: 1; background: var(--gold-dim); color: var(--gold); }
+body.home-page .hero { min-height: 100vh; display: flex; position: relative; overflow: hidden; }
+body.home-page .hero-watermark { position: absolute; right: -2%; top: 50%; transform: translateY(-50%); width: 62vw; height: 62vw; max-width: 900px; max-height: 900px; color: var(--gold); opacity: 0.07; pointer-events: none; z-index: 1; }
+body.home-page .hero-left { display: flex; flex-direction: column; justify-content: center; padding: 10rem 5rem 9rem 4rem; position: relative; z-index: 3; max-width: 700px; }
+body.home-page .hero-eyebrow { font-family: var(--font-ui); font-size: 0.67rem; font-weight: 800; letter-spacing: 0.24em; text-transform: uppercase; color: var(--gold); display: flex; align-items: center; gap: 0.9rem; margin-bottom: 2rem; }
+body.home-page .hero-eyebrow::before { content: ""; width: 36px; height: 1px; background: var(--gold); }
+body.home-page h1.hero-headline { font-family: var(--font-display); font-size: clamp(3rem, 4.6vw, 5.6rem); font-weight: 300; line-height: 1.06; color: var(--cream); margin-bottom: 2rem; }
+body.home-page h1.hero-headline em { font-style: italic; color: var(--gold-light); }
+body.home-page .hero-sub { font-family: var(--font-body); font-size: 1.02rem; font-weight: 300; line-height: 1.78; color: rgba(247,247,245,0.58); max-width: 440px; margin-bottom: 3rem; }
+body.home-page .hero-actions { display: flex; align-items: center; gap: 2rem; }
+body.home-page .btn-text-link { font-family: var(--font-ui); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; color: rgba(247,247,245,0.52); text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; transition: color 0.2s; }
+body.home-page .btn-text-link:hover { color: var(--cream); }
+body.home-page .btn-text-link svg { transition: transform 0.2s; }
+body.home-page .btn-text-link:hover svg { transform: translateX(4px); }
+body.home-page .hero-stats { position: absolute; bottom: 0; left: 0; z-index: 10; display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--gold-border); border-right: 1px solid var(--gold-border); background: rgba(28,28,28,0.85); backdrop-filter: blur(10px); }
+body.home-page .hero-stat { padding: 1.6rem 2rem; border-right: 1px solid var(--gold-border); }
+body.home-page .hero-stat:last-child { border-right: none; }
+body.home-page .stat-num { font-family: var(--font-display); font-size: 2.5rem; font-weight: 500; color: var(--gold); line-height: 1; margin-bottom: 0.3rem; }
+body.home-page .stat-label { font-family: var(--font-ui); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+body.home-page .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+body.home-page .practices { padding: 8rem 0; background: var(--charcoal); }
+body.home-page .practices-header { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: end; margin-bottom: 4rem; }
+body.home-page .practices-hl { font-family: var(--font-display); font-size: clamp(2.4rem, 3.2vw, 3.8rem); font-weight: 300; line-height: 1.1; color: var(--cream); }
+body.home-page .practices-hl em { font-style: italic; color: var(--gold-light); }
+body.home-page .practices-body { font-family: var(--font-body); font-size: 0.94rem; line-height: 1.8; color: rgba(247,247,245,0.55); padding-top: 0.5rem; }
+body.home-page .canadian-badge { display: inline-flex; align-items: center; gap: 0.45rem; margin-top: 1rem; }
+body.home-page .canadian-badge svg { flex-shrink: 0; }
+body.home-page .canadian-badge span { font-family: var(--font-ui); font-weight: 600; font-size: 0.75rem; letter-spacing: 0.06em; color: var(--gold); text-transform: uppercase; }
+body.home-page .practice-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--gold-border); border: 1px solid var(--gold-border); }
+body.home-page .practice-card { padding: 4rem; background: var(--charcoal); position: relative; overflow: hidden; transition: background 0.3s; }
+body.home-page .practice-card::after { content: ""; position: absolute; top: 0; left: 0; width: 3px; height: 0; background: var(--gold); transition: height 0.45s ease; }
+body.home-page .practice-card:hover { background: var(--charcoal-mid); }
+body.home-page .practice-card:hover::after { height: 100%; }
+body.home-page .pc-badge { font-family: var(--font-ui); display: inline-block; padding: 0.22rem 0.8rem; border: 1px solid var(--gold-border); font-size: 0.6rem; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.5rem; }
+body.home-page .pc-num { font-family: var(--font-display); font-size: 4.5rem; font-weight: 300; line-height: 1; margin-bottom: 1.2rem; transition: color 0.3s; }
+body.home-page .pc-num::before { content: attr(data-num); color: var(--gold-dim); transition: color 0.3s; }
+body.home-page .practice-card:hover .pc-num::before { color: rgba(201,168,76,0.2); }
+body.home-page .pc-title { font-family: var(--font-display); font-size: 2rem; font-weight: 400; color: var(--cream); line-height: 1.2; margin-bottom: 1.1rem; }
+body.home-page .pc-desc { font-family: var(--font-body); font-size: 0.9rem; line-height: 1.78; color: rgba(247,247,245,0.55); margin-bottom: 2rem; }
+body.home-page .pc-link { font-family: var(--font-ui); font-size: 0.68rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); text-decoration: none; display: inline-flex; align-items: center; gap: 0.6rem; transition: gap 0.2s; }
+body.home-page .pc-link:hover { gap: 1rem; }
+body.home-page .crisis { padding: 8rem 0; background: var(--cream); color: var(--charcoal); }
+body.home-page .crisis-header { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: end; margin-bottom: 5rem; }
+body.home-page .crisis-hl { font-family: var(--font-display); font-size: clamp(2.2rem, 3vw, 3.5rem); font-weight: 400; line-height: 1.1; color: var(--charcoal); }
+body.home-page .crisis-body { font-family: var(--font-body); font-size: 0.94rem; line-height: 1.82; color: var(--light-text); padding-top: 0.5rem; }
+body.home-page .svc-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; background: rgba(50,50,50,0.1); }
+body.home-page .svc-tile { padding: 3rem 2.5rem; background: var(--cream); transition: background 0.3s; position: relative; }
+body.home-page .svc-tile:hover { background: var(--warm-white); }
+body.home-page .svc-icon { width: 46px; height: 46px; border: 1px solid rgba(201,168,76,0.3); display: flex; align-items: center; justify-content: center; margin-bottom: 1.8rem; transition: border-color 0.3s, background 0.3s; }
+body.home-page .svc-tile:hover .svc-icon { border-color: var(--gold); background: var(--gold-dim); }
+body.home-page .svc-icon svg { width: 19px; height: 19px; stroke: var(--gold); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+body.home-page .svc-name { font-family: var(--font-display); font-size: 1.4rem; font-weight: 500; color: var(--charcoal); margin-bottom: 0.7rem; }
+body.home-page .svc-desc { font-family: var(--font-body); font-size: 0.87rem; line-height: 1.78; color: var(--light-text); margin-bottom: 1.5rem; }
+body.home-page .svc-link { font-family: var(--font-ui); font-size: 0.67rem; font-weight: 800; letter-spacing: 0.13em; text-transform: uppercase; color: var(--charcoal); text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; transition: color 0.2s, gap 0.2s; }
+body.home-page .svc-link:hover { color: var(--gold); gap: 0.9rem; }
+body.home-page .ai-watermark { position: absolute; bottom: -80px; left: -80px; width: 420px; height: 420px; color: var(--gold); opacity: 0.028; pointer-events: none; }
+body.home-page .ai-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: end; margin-bottom: 5rem; }
+body.home-page .ai-hl { font-family: var(--font-display); font-size: clamp(2.2rem, 3vw, 3.5rem); font-weight: 300; line-height: 1.1; color: var(--cream); }
+body.home-page .ai-hl em { font-style: italic; color: var(--gold-light); }
+body.home-page .ai-body { font-family: var(--font-body); font-size: 0.94rem; line-height: 1.8; color: rgba(247,247,245,0.55); padding-top: 0.5rem; }
+body.home-page .ai-gateway { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
+body.home-page .gateway-card { display: block; text-decoration: none; border: 1px solid var(--gold-border); background: rgba(28,28,28,0.35); transition: border-color 0.3s, background 0.3s, transform 0.3s; position: relative; overflow: hidden; }
+body.home-page .gateway-card::before { content: ""; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(201,168,76,0.04) 0%, transparent 60%); opacity: 0; transition: opacity 0.3s; }
+body.home-page .gateway-card:hover { border-color: rgba(201,168,76,0.5); background: rgba(28,28,28,0.55); transform: translateY(-3px); }
+body.home-page .gateway-card:hover::before { opacity: 1; }
+body.home-page .gateway-card-inner { padding: 2.2rem 2rem 2rem; }
+body.home-page .gateway-icon { width: 36px; height: 36px; margin-bottom: 1.4rem; color: var(--gold); opacity: 0.7; }
+body.home-page .gateway-icon svg { width: 100%; height: 100%; }
+body.home-page .gateway-track-label { font-family: var(--font-ui); font-size: 0.68rem; font-weight: 800; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.3rem; }
+body.home-page .gateway-track-sub { font-family: var(--font-body); font-size: 0.75rem; font-weight: 300; color: rgba(247,247,245,0.4); margin-bottom: 1.2rem; letter-spacing: 0.02em; }
+body.home-page .gateway-desc { font-family: var(--font-body); font-size: 0.88rem; font-weight: 300; line-height: 1.75; color: rgba(247,247,245,0.65); margin-bottom: 1.5rem; }
+body.home-page .gateway-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.8rem; }
+body.home-page .gateway-tags span { font-family: var(--font-ui); font-size: 0.6rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.25rem 0.7rem; border: 1px solid rgba(201,168,76,0.25); color: rgba(247,247,245,0.45); }
+body.home-page .gateway-tags .tag-new { border-color: rgba(201,168,76,0.55); color: var(--gold); }
+body.home-page .gateway-cta { display: flex; align-items: center; gap: 0.5rem; font-family: var(--font-ui); font-size: 0.68rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: var(--cream); opacity: 0.55; transition: opacity 0.2s, gap 0.2s; border-top: 1px solid rgba(201,168,76,0.15); padding-top: 1.4rem; }
+body.home-page .gateway-card:hover .gateway-cta { opacity: 1; gap: 0.75rem; }
+body.home-page .portrait-badge { position: absolute; bottom: 2rem; left: -2rem; padding: 1.1rem 1.6rem; background: var(--gold); color: var(--charcoal); }
+body.home-page .badge-num { font-family: var(--font-display); font-size: 2.4rem; font-weight: 600; line-height: 1; }
+body.home-page .badge-label { font-family: var(--font-ui); font-size: 0.62rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; margin-top: 0.2rem; }
+body.home-page .contact-sub { font-family: var(--font-body); font-size: 0.93rem; color: rgba(28,28,28,0.82); margin-top: 0.8rem; }
+body.home-page .form-note { font-family: var(--font-body); font-size: 0.7rem; color: rgba(28,28,28,0.75); text-align: center; }
+body.home-page .footer-name { font-family: var(--font-ui); font-size: 0.68rem; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase; color: var(--cream); opacity: 0.6; }
+@media (max-width: 1100px) { body.home-page .hero { grid-template-columns: 1fr; } }
+@media (max-width: 1100px) { body.home-page .hero-left { padding: 9rem 2rem 5rem; } }
+@media (max-width: 1100px) { body.home-page .hero-right { height: 380px; } }
+@media (max-width: 1100px) { body.home-page .hero-watermark { display: none; } }
+@media (max-width: 1100px) { body.home-page .practices-header, body.home-page .crisis-header, body.home-page .ai-intro, body.home-page .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; } }
+@media (max-width: 1100px) { body.home-page .practice-grid { grid-template-columns: 1fr; } }
+@media (max-width: 1100px) { body.home-page .ai-gateway { grid-template-columns: 1fr; } }
+@media (max-width: 1100px) { body.home-page .svc-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 1380px) { body.home-page .nav-dropdown-menu a { padding: 0.5rem 0 !important; font-size: 0.78rem !important; opacity: 0.7; } }
+@media (max-width: 760px) { body.home-page .about-grid { grid-template-columns: 1fr !important; gap: 2.5rem !important; } }
+@media (max-width: 640px) { body.home-page .svc-grid { grid-template-columns: 1fr; } }
+@media (max-width: 640px) { body.home-page .hero { flex-direction: column; min-height: auto; } }
+@media (max-width: 640px) { body.home-page .hero-stats { position: static; grid-template-columns: 1fr; right: auto; border-right: 0; backdrop-filter: none; background: rgba(28,28,28,0.55); } }
+@media (max-width: 640px) { body.home-page .hero-stat { border-right: 0; border-bottom: 1px solid var(--gold-border); padding: 1.1rem 1.5rem; } }
+@media (max-width: 640px) { body.home-page .hero-stat:last-child { border-bottom: 0; } }
+@media (max-width: 640px) { body.home-page .contact-actions { align-items: flex-start; } }
+@media (max-width: 640px) { body.home-page .hero-actions { flex-direction: column; align-items: flex-start; gap: 1rem; } }
+@media (max-width: 640px) { body.home-page .portrait-badge { position: relative !important; left: auto !important; bottom: auto !important; display: inline-block; margin-top: 0.75rem; } }
+@media (max-width: 640px) { body.home-page .svc-link { display: block; padding: 0.6rem 0; } }
+@media (max-width: 1380px) { body.home-page .nav-links { bottom: auto; justify-content: normal; } }
