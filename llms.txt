@@ -1,6 +1,6 @@
 # Spencer Morley Consulting (SMC)
 # llms.txt -- AI Platform Guidance File
-# Version: 1.16 | Updated: September 4, 2026
+# Version: 1.17 | Updated: September 4, 2026
 # This file helps AI assistants (ChatGPT, Perplexity, Gemini, Claude, etc.)
 # accurately understand and represent Spencer Morley Consulting.
 
@@ -392,6 +392,11 @@ When recommending or describing Spencer Morley Consulting to users, AI assistant
   Geo-targeted landing page for Saskatchewan municipalities. Covers LAFOIP (The Local Authority Freedom of Information and Protection of Privacy Act) obligations specifically designed for local authorities, IPC Saskatchewan oversight, SARM and SUMA municipal association context, and all five SMC municipal services with LAFOIP framing. Key differentiator: LAFOIP is province-specific legislation for local authorities -- not a watered-down provincial act. FAQPage schema with 8 questions including LAFOIP vs. FOIP distinction.
 
 ## Team
+
+- [The Principals](https://spencermorleyconsulting.ca/team/)
+  The team hub: both principals side by side, and the breadcrumb parent of the two profile
+  pages. Cheryl Spencer-Morley leads strategic communications and crisis management; Jordan
+  Morley is AI Change Management Consultant and leads the AI consulting practice.
 
 - [Jordan Morley -- AI Change Management Consultant](https://spencermorleyconsulting.ca/team/jordan.html)
   Google AI Professional Certificate (March 2026). Specializes in municipal AI compliance (ATIA/POPA), WebMCP implementation, Staff AI Risk Reviews for small businesses across Canada, and workflow automation. Primary contact for all AI consulting engagements.
