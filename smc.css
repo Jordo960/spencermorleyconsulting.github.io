@@ -921,3 +921,263 @@ body.home-page .footer-name { font-family: var(--font-ui); font-size: 0.68rem; f
 @media (max-width: 640px) { body.home-page .portrait-badge { position: relative !important; left: auto !important; bottom: auto !important; display: inline-block; margin-top: 0.75rem; } }
 @media (max-width: 640px) { body.home-page .svc-link { display: block; padding: 0.6rem 0; } }
 @media (max-width: 1380px) { body.home-page .nav-links { bottom: auto; justify-content: normal; } }
+
+/* --------------------------------------------------------------------------
+   12. 2026 shell — the redesign's visual language, chrome layer.
+   Added 2026-09-04 (Option C, pass 1).
+
+   Scope: nav, footer, buttons and the browser surfaces only. Page bodies are
+   deliberately untouched — heroes, cards, stat grids and service lists keep
+   the styling their family block gives them. This is the "chrome only" pass
+   Jordan chose; the body-level rollout is a separate decision.
+
+   Source of truth for every value here: index.html's inline block, which is
+   the shipped 2026 homepage. Where a value is intentionally different from
+   the homepage it is commented.
+
+   HOW THIS LAYERS. Sections 4-11 above each carry their own copy of the nav
+   and footer, scoped to a body class (body.blog-page nav, body.landing-page
+   .nav-links > li > a, and so on). Rather than surgically delete rules out of
+   six blocks in the same pass that changes how the site looks, this section
+   sits last and overrides them: every selector below is written to match or
+   exceed the specificity of its counterpart, so source order decides. That
+   keeps the diff reviewable and the rollback a single deletion.
+   Deleting the now-superseded chrome out of sections 4-11 is pass 2, and it
+   is a pure refactor with a real baseline — this render — so it gets the
+   batch-5 pixel-diff treatment rather than this one's screenshot review.
+
+   WHAT IS DELIBERATELY NOT OVERRIDDEN. The mobile menu. Each family collapses
+   its nav at its own breakpoint (860px for blog/foi/team, 1380px for
+   landing/municipal) and positions the open panel with rules inside its own
+   @media block. Nothing here sets position, display, top, height or z-index on
+   .nav-links or .nav-dropdown-menu, so that machinery is untouched and keeps
+   working exactly as it does today.
+   -------------------------------------------------------------------------- */
+
+/* -- browser surfaces. The homepage treats these as part of the design system;
+      they are cheap, and they are the first thing that reads as "one site". -- */
+:root { accent-color: var(--gold); caret-color: var(--gold); }
+::selection { background: var(--gold); color: var(--charcoal); }
+body:not(.doc-page) :focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+
+/* -- NAV ------------------------------------------------------------------ */
+body:not(.doc-page) nav {
+  height: 72px;
+  background: rgba(28,28,28,0.94);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid var(--gold-border);
+  transition: height 0.35s cubic-bezier(0.4,0,0.2,1), box-shadow 0.35s;
+}
+body:not(.doc-page) nav.scrolled { height: 58px; background: rgba(28,28,28,0.98); box-shadow: 0 4px 40px rgba(0,0,0,0.45); }
+
+body:not(.doc-page) .nav-brand-icon { width: 32px; height: 32px; color: var(--gold); }
+body:not(.doc-page) .nav-brand-name {
+  font-family: var(--font-ui); font-size: 0.76rem; font-weight: 900;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--cream); display: block;
+}
+body:not(.doc-page) .nav-brand-tagline {
+  font-family: var(--font-body); font-size: 0.58rem; font-weight: 300;
+  letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); display: block;
+}
+
+body:not(.doc-page) .nav-links { align-items: center; gap: 1.6rem; }
+
+/* 12px, not the homepage's 0.75rem-of-16px — same computed size, and it is the
+   WCAG 2.2 target-size floor the homepage pass established: 12px plus 0.4rem of
+   block padding clears 24px. */
+body:not(.doc-page) .nav-links > li > a {
+  font-family: var(--font-ui); font-size: 12px; font-weight: 800;
+  letter-spacing: 0.07em; text-transform: uppercase; text-decoration: none;
+  color: var(--cream); opacity: 0.65; white-space: nowrap;
+  padding-block: 0.4rem; position: relative; transition: opacity 0.2s;
+}
+body:not(.doc-page) .nav-links > li > a:hover,
+body:not(.doc-page) .nav-links > li > a[aria-current] { opacity: 1; }
+
+/* The gold sweep. transform, not width, so it runs on the compositor.
+   Desktop only: below each family's collapse breakpoint the links become
+   full-width rows in a panel and a 100%-wide rule under each one reads as a
+   divider, not an underline. 861px clears blog/foi/team; landing and municipal
+   stay open to 1380px and get the sweep across that range, which is correct. */
+@media (min-width: 861px) {
+  body:not(.doc-page) .nav-links > li > a::after {
+    content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 1px;
+    background: var(--gold); transform: scaleX(0); transform-origin: left;
+    transition: transform 0.3s;
+  }
+  body:not(.doc-page) .nav-links > li > a:hover::after,
+  body:not(.doc-page) .nav-links > li > a[aria-current]::after { transform: scaleX(1); }
+  body:not(.doc-page) .nav-links > li > a.nav-cta::after { display: none; }
+}
+
+/* !important throughout: sections 4 and 10 set colour, size and padding on
+   .nav-cta with !important, and specificity alone cannot beat that. */
+body:not(.doc-page) .nav-links > li > a.nav-cta {
+  border: 1px solid var(--gold) !important;
+  border-radius: 0 !important;
+  color: var(--gold) !important;
+  background: transparent;
+  padding: 0.5rem 1.2rem !important;
+  font-size: 12px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.1em !important;
+  opacity: 1 !important;
+  transition: background 0.2s, color 0.2s;
+}
+body:not(.doc-page) .nav-links > li > a.nav-cta:hover {
+  background: var(--gold) !important;
+  color: var(--charcoal) !important;
+}
+
+/* Dropdowns: appearance only. No position, display, min-width or box-shadow —
+   the mobile @media blocks flatten these menus with !important and must keep
+   winning. Square corners are the whole tell of the new language. */
+body:not(.doc-page) .nav-dropdown-menu {
+  background: var(--charcoal-mid);
+  border: 1px solid var(--gold-border);
+  border-radius: 0;
+  padding: 0.4rem 0;
+}
+body:not(.doc-page) .nav-dropdown-menu a {
+  font-family: var(--font-ui); font-size: 12px; font-weight: 700;
+  letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none;
+  color: var(--cream); opacity: 0.72; padding: 0.7rem 1.2rem; display: block;
+  transition: opacity 0.2s, background 0.2s, color 0.2s;
+}
+body:not(.doc-page) .nav-dropdown-menu a:hover { opacity: 1; background: var(--gold-dim); color: var(--gold); }
+
+/* Hamburger: 44px hit area, bars stay 26x18 inside the padding. Display is left
+   to the family @media blocks — this only resizes what they reveal. */
+body:not(.doc-page) .nav-hamburger {
+  box-sizing: border-box; width: 44px; height: 44px; padding: 13px 9px;
+  background: none; border: none; cursor: pointer;
+}
+body:not(.doc-page) .nav-hamburger span { height: 2px; width: 100%; background: var(--cream); }
+
+/* -- BUTTONS -------------------------------------------------------------- */
+/* Square, tighter, and they lift. Colours are left alone: .btn-outline keeps
+   its gold text so it cannot fail contrast wherever a page happens to put it. */
+body:not(.doc-page) .btn-gold {
+  font-family: var(--font-ui); font-size: 0.72rem; font-weight: 800;
+  letter-spacing: 0.13em; text-transform: uppercase; border-radius: 0;
+  padding: 0.9rem 2.1rem;
+  transition: background 0.2s, color 0.2s, border-color 0.2s, transform 0.15s;
+}
+body:not(.doc-page) .btn-gold:hover { background: var(--gold-light); transform: translateY(-2px); }
+body:not(.doc-page) .btn-outline {
+  font-family: var(--font-ui); font-size: 0.72rem; font-weight: 800;
+  letter-spacing: 0.13em; text-transform: uppercase; border-radius: 0;
+  border: 1px solid var(--gold-border); color: var(--gold); background: transparent;
+  padding: 0.9rem 2.1rem;
+  transition: background 0.2s, color 0.2s, border-color 0.2s, transform 0.15s;
+}
+body:not(.doc-page) .btn-outline:hover {
+  background: transparent; color: var(--gold-light); border-color: var(--gold);
+  transform: translateY(-2px);
+}
+
+/* -- FOOTER --------------------------------------------------------------- */
+/* #141414 rather than --charcoal-mid: the homepage sets the footer a step
+   darker than the page so it reads as a floor. */
+body:not(.doc-page) footer { background: #141414; border-top: 1px solid var(--gold-border); }
+/* opacity: 1 on both, deliberately. Section 8 dims the landing footer's mark to
+   0.3 and its wordmark to 0.35 as element opacity; layering this file's alpha
+   colours on top of that took the wordmark to 1.88:1 on those four pages — it
+   was already under the floor at 3.07:1 before this pass, and compounding it
+   would have made a pre-existing failure worse. The alpha now lives in the
+   colour alone: 6.55:1. */
+body:not(.doc-page) .footer-sym,
+body:not(.doc-page) .footer-brand-icon { width: 20px; height: 20px; color: rgba(247,247,245,0.3); opacity: 1; }
+body:not(.doc-page) .footer-name,
+body:not(.doc-page) .footer-brand-name {
+  font-family: var(--font-ui); font-size: 0.66rem; font-weight: 800;
+  letter-spacing: 0.1em; text-transform: uppercase; color: rgba(247,247,245,0.6);
+  opacity: 1;
+}
+body:not(.doc-page) .footer-links { gap: 0.25rem 1.5rem; }
+/* 12px in a 24px-tall target, same fix the homepage pass made: these were
+   0.78rem in an 11px-tall box, under WCAG 2.2 AA target size. */
+body:not(.doc-page) .footer-links a {
+  font-family: var(--font-ui); font-size: 12px; font-weight: 700;
+  letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted);
+  text-decoration: none; display: inline-block; padding-block: 0.35rem;
+  transition: color 0.2s;
+}
+body:not(.doc-page) .footer-links a:hover { color: var(--gold); }
+body:not(.doc-page) .footer-copy { font-family: var(--font-body); font-size: 0.68rem; font-weight: 300; color: var(--muted); }
+
+/* municipal.html and municipal-surveys never collapsed at any width. Section 8
+   hides .nav-links below 1380px, but section 10's body.municipal-page
+   .nav-links comes later with the same specificity and re-asserts display:flex,
+   so those two pages carried a fixed-position half-panel from 1380px all the
+   way down to 390px. They are landing pages; they collapse with the rest of
+   that family now. Pre-existing bug, fixed here because it is nav. */
+@media (max-width: 1380px) {
+  body.municipal-page .nav-links { display: none; }
+  body.municipal-page nav.nav-open .nav-links { display: flex; }
+}
+
+/* Reclaim width before collapsing, the same two steps the homepage takes: the
+   nav sheds its outer padding and tightens the link gap at 1440px, and drops
+   the brand tagline at 1320px. Without these, discoverability-index broke
+   between 1245 and 1285 and the two municipal pages between 1285 and 1380 —
+   all above the 1240px collapse, where there is no menu to fall back to. */
+@media (max-width: 1440px) {
+  body:not(.doc-page) nav { padding: 0 2.5rem; }
+  body:not(.doc-page) .nav-links { gap: 1.25rem; }
+}
+@media (max-width: 1320px) { body:not(.doc-page) .nav-brand-tagline { display: none; } }
+
+/* -- ONE COLLAPSE BREAKPOINT ---------------------------------------------- */
+/* Measured 2026-09-04, before any of this section existed: 29 of the 31 pages
+   with a nav already broke it between 865px and 1195px — labels wrapped to two
+   lines and the brand collided with the link list — because every family
+   collapses at 860px but none of these navs fits below ~1200px. municipal.html
+   and municipal-surveys never collapsed at all: section 10's
+   body.municipal-page .nav-links comes after the landing @media block and
+   re-asserts display:flex at every width, so those two carried a desktop nav
+   down to 390px. Both are pre-existing; the nowrap above turns the first from
+   a wrap into an overflow, which is worse, so it is fixed here rather than
+   left for pass 2.
+
+   1240px is the homepage's number and the site now shares it. The panel is the
+   full-screen overlay these pages already use at 860px, not a new design — the
+   only change is the width at which it takes over. Dropdown menus stay hidden
+   in it, exactly as they are today; surfacing those children on small screens
+   is an IA question, not a chrome one. */
+@media (max-width: 1240px) {
+  body:not(.doc-page) nav { padding: 0 1.5rem; }
+  body:not(.doc-page) .nav-hamburger { display: flex; flex-direction: column; justify-content: space-between; }
+  body:not(.doc-page) .nav-links { display: none; }
+  /* The open state carries the whole panel, not just display: three pages
+     (discoverability-index, resources, case-studies) still have their own
+     nav CSS inline, and a page rule like nav.nav-open .nav-links would
+     otherwise win the position and top of a panel this file is sizing.
+     resources/index.html toggles .open on the list instead of .nav-open on the
+     nav — its menu has not opened at any width since it was written; both
+     hooks are honoured here. municipal-surveys toggles body.nav-open rather
+     than nav.nav-open, so that is a third hook — its menu had never opened
+     either, because that page's nav never collapsed at any width. */
+  body:not(.doc-page) nav.nav-open .nav-links,
+  body.nav-open:not(.doc-page) nav .nav-links,
+  body:not(.doc-page) nav .nav-links.open {
+    display: flex; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+    height: auto; width: auto; max-height: none; overflow-y: auto;
+    background: var(--charcoal); flex-direction: column; align-items: center;
+    justify-content: center; gap: 2rem; padding: 5rem 1.5rem; z-index: 100;
+    border: 0;
+  }
+  body:not(.doc-page) nav.nav-open .nav-links > li,
+  body.nav-open:not(.doc-page) nav .nav-links > li,
+  body:not(.doc-page) nav .nav-links.open > li { width: auto; border: 0; padding: 0; text-align: center; }
+  /* nowrap is a desktop rule. "Communications and Crisis Management" is 462px
+     wide as one line and ran off both edges of a 390px panel. */
+  body:not(.doc-page) nav.nav-open .nav-links > li > a,
+  body.nav-open:not(.doc-page) nav .nav-links > li > a,
+  body:not(.doc-page) nav .nav-links.open > li > a {
+    white-space: normal; max-width: 100%; text-align: center;
+  }
+  body:not(.doc-page) .nav-links > li > a { font-size: 1.05rem; opacity: 1; letter-spacing: 0.1em; }
+  body:not(.doc-page) .nav-links > li > a.nav-cta { font-size: 0.95rem !important; padding: 0.8rem 1.6rem !important; }
+  body:not(.doc-page) .nav-dropdown-menu { display: none !important; }
+}
