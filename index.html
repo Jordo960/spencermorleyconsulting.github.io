@@ -650,8 +650,11 @@
     .trust-quote { font-family: var(--font-display); font-size: clamp(1.4rem, 2.4vw, 2rem); font-weight: 400; font-style: italic; line-height: 1.35; color: var(--charcoal); max-width: 26em; }
     .trust-attr { margin-top: 1rem; font-family: var(--font-ui); font-size: 0.66rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: var(--light-text); }
     .logo-row { display: flex; flex-wrap: wrap; align-items: center; gap: 2.6rem 3.4rem; margin-top: 3.2rem; }
-    .logo-row .logo { height: 44px; width: auto; filter: grayscale(1); opacity: 0.6; transition: filter 0.25s, opacity 0.25s; }
-    .logo-row .logo:hover { filter: none; opacity: 1; }
+    /* Full colour, full opacity. These are the proof on the page: seven real
+       clients. Greyscale-until-hover reads as decoration, and on a phone there
+       is no hover at all, so half the visitors only ever saw the dull version.
+       max-width keeps the wide wordmarks from dominating the narrow marks. */
+    .logo-row .logo { height: 52px; width: auto; max-width: 190px; object-fit: contain; }
     
     /* selected work (light band) */
     .people-head { font-size: clamp(2.1rem, 3.4vw, 3.4rem); color: var(--charcoal); margin-bottom: 3rem; }
@@ -835,7 +838,7 @@
       .work-desc, .person-cred { font-size: 0.94rem; line-height: 1.65; }
       .track-body { font-size: 0.94rem; line-height: 1.6; }
       .logo-row { gap: 1.8rem 2.2rem; }
-      .logo-row .logo { height: 34px; }
+      .logo-row .logo { height: 40px; max-width: 140px; }
       .foot-links a { display: inline-block; padding: 0.55rem 0; }
 
     }
