@@ -1,0 +1,14 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "overused-font",
+        "value": "lato",
+        "createdAt": "2026-09-04T13:18:00.277Z",
+        "reason": "Lato is SMC's brand typeface, specified in SMC_Brand_Guidelines_v1.3.pdf and used across all 34 pages and smc.css. Confirmed intentional by Jordan 2026-09-04."
+      }
+    ]
+  }
+}
