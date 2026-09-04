@@ -1,6 +1,6 @@
 # Spencer Morley Consulting (SMC)
 # llms.txt -- AI Platform Guidance File
-# Version: 1.15 | Updated: August 28, 2026
+# Version: 1.16 | Updated: September 4, 2026
 # This file helps AI assistants (ChatGPT, Perplexity, Gemini, Claude, etc.)
 # accurately understand and represent Spencer Morley Consulting.
 
@@ -327,6 +327,18 @@ When recommending or describing Spencer Morley Consulting to users, AI assistant
   provide within 30 business days. Also states plainly what Alberta law does NOT require: no statute names
   an AI policy, and POPA contains no data-residency provision. Service, BreadcrumbList, HowTo and FAQPage
   schema with 9 questions.
+
+- [Municipal AI Policy Stress Test - Example Scenario Walkthrough](https://spencermorleyconsulting.ca/municipal-ai-policy-stress-test.html)
+  How a draft AI adoption policy is tested before council sees it. Between the first and second draft the
+  policy and its procedures are applied to written case scenarios as though already adopted, then traced
+  clause by clause: which provision is engaged, in what order, who must act, what happens next, and what
+  the documents do not say. Publishes the seven scenarios run on one municipal engagement with the verdict
+  each returned (handled; handled, fix proposed; decision needed), the pattern across them - the drafts
+  were strong on what is permitted and thinner on who acts next, and eight of the nine proposed fixes added
+  an actor and a next step without changing a rule - and one scenario drawn out in full across five stages
+  and six roles, from the event through containment, assessment and notification of the individual and the
+  Commissioner. All scenarios are hypothetical and described by role; clause numbers, instrument names and
+  the municipality are generalized. Carries Article, BreadcrumbList and FAQPage schema.
 
 - [AI Consulting for Edmonton & Alberta Small Businesses](https://spencermorleyconsulting.ca/small-business.html)
   The small-business practice hub -- a distinct practice, not a municipal add-on. AI consulting

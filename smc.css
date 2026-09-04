@@ -946,6 +946,12 @@ body.home-page .footer-name { font-family: var(--font-ui); font-size: 0.68rem; f
    is a pure refactor with a real baseline — this render — so it gets the
    batch-5 pixel-diff treatment rather than this one's screenshot review.
 
+   NAV SELECTORS USE THE CHILD COMBINATOR. The site nav is a direct child of
+   body on all 31 pages that have one (verified). Written as a descendant
+   selector, these rules also caught any nested <nav> — a breadcrumb marked up
+   as <nav class="breadcrumb">, for instance — and turned it into a second
+   fixed 72px bar across the page. Narrowed 2026-09-04.
+
    WHAT IS DELIBERATELY NOT OVERRIDDEN. The mobile menu. Each family collapses
    its nav at its own breakpoint (860px for blog/foi/team, 1380px for
    landing/municipal) and positions the open panel with rules inside its own
@@ -961,14 +967,14 @@ body.home-page .footer-name { font-family: var(--font-ui); font-size: 0.68rem; f
 body:not(.doc-page) :focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
 
 /* -- NAV ------------------------------------------------------------------ */
-body:not(.doc-page) nav {
+body:not(.doc-page) > nav {
   height: 72px;
   background: rgba(28,28,28,0.94);
   backdrop-filter: blur(18px);
   border-bottom: 1px solid var(--gold-border);
   transition: height 0.35s cubic-bezier(0.4,0,0.2,1), box-shadow 0.35s;
 }
-body:not(.doc-page) nav.scrolled { height: 58px; background: rgba(28,28,28,0.98); box-shadow: 0 4px 40px rgba(0,0,0,0.45); }
+body:not(.doc-page) > nav.scrolled { height: 58px; background: rgba(28,28,28,0.98); box-shadow: 0 4px 40px rgba(0,0,0,0.45); }
 
 body:not(.doc-page) .nav-brand-icon { width: 32px; height: 32px; color: var(--gold); }
 body:not(.doc-page) .nav-brand-name {
@@ -1123,7 +1129,7 @@ body:not(.doc-page) .footer-copy { font-family: var(--font-body); font-size: 0.6
    between 1245 and 1285 and the two municipal pages between 1285 and 1380 —
    all above the 1240px collapse, where there is no menu to fall back to. */
 @media (max-width: 1440px) {
-  body:not(.doc-page) nav { padding: 0 2.5rem; }
+  body:not(.doc-page) > nav { padding: 0 2.5rem; }
   body:not(.doc-page) .nav-links { gap: 1.25rem; }
 }
 @media (max-width: 1320px) { body:not(.doc-page) .nav-brand-tagline { display: none; } }
@@ -1146,7 +1152,7 @@ body:not(.doc-page) .footer-copy { font-family: var(--font-body); font-size: 0.6
    in it, exactly as they are today; surfacing those children on small screens
    is an IA question, not a chrome one. */
 @media (max-width: 1240px) {
-  body:not(.doc-page) nav { padding: 0 1.5rem; }
+  body:not(.doc-page) > nav { padding: 0 1.5rem; }
   body:not(.doc-page) .nav-hamburger { display: flex; flex-direction: column; justify-content: space-between; }
   body:not(.doc-page) .nav-links { display: none; }
   /* The open state carries the whole panel, not just display: three pages
@@ -1158,23 +1164,23 @@ body:not(.doc-page) .footer-copy { font-family: var(--font-body); font-size: 0.6
      hooks are honoured here. municipal-surveys toggles body.nav-open rather
      than nav.nav-open, so that is a third hook — its menu had never opened
      either, because that page's nav never collapsed at any width. */
-  body:not(.doc-page) nav.nav-open .nav-links,
-  body.nav-open:not(.doc-page) nav .nav-links,
-  body:not(.doc-page) nav .nav-links.open {
+  body:not(.doc-page) > nav.nav-open .nav-links,
+  body.nav-open:not(.doc-page) > nav .nav-links,
+  body:not(.doc-page) > nav .nav-links.open {
     display: flex; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
     height: auto; width: auto; max-height: none; overflow-y: auto;
     background: var(--charcoal); flex-direction: column; align-items: center;
     justify-content: center; gap: 2rem; padding: 5rem 1.5rem; z-index: 100;
     border: 0;
   }
-  body:not(.doc-page) nav.nav-open .nav-links > li,
-  body.nav-open:not(.doc-page) nav .nav-links > li,
-  body:not(.doc-page) nav .nav-links.open > li { width: auto; border: 0; padding: 0; text-align: center; }
+  body:not(.doc-page) > nav.nav-open .nav-links > li,
+  body.nav-open:not(.doc-page) > nav .nav-links > li,
+  body:not(.doc-page) > nav .nav-links.open > li { width: auto; border: 0; padding: 0; text-align: center; }
   /* nowrap is a desktop rule. "Communications and Crisis Management" is 462px
      wide as one line and ran off both edges of a 390px panel. */
-  body:not(.doc-page) nav.nav-open .nav-links > li > a,
-  body.nav-open:not(.doc-page) nav .nav-links > li > a,
-  body:not(.doc-page) nav .nav-links.open > li > a {
+  body:not(.doc-page) > nav.nav-open .nav-links > li > a,
+  body.nav-open:not(.doc-page) > nav .nav-links > li > a,
+  body:not(.doc-page) > nav .nav-links.open > li > a {
     white-space: normal; max-width: 100%; text-align: center;
   }
   body:not(.doc-page) .nav-links > li > a { font-size: 1.05rem; opacity: 1; letter-spacing: 0.1em; }

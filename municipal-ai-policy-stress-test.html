@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Municipal AI Policy Stress Test &#8212; Example Scenario Walkthrough | Spencer Morley Consulting</title>
+  <meta name="description" content="Before a draft AI adoption policy goes to council, it is run against written case scenarios and traced clause by clause. Seven scenarios from one municipal engagement, the verdict each returned, and one drawn out in full." />
+  <link rel="canonical" href="https://spencermorleyconsulting.ca/municipal-ai-policy-stress-test.html" />
+
+  <meta property="og:title" content="Municipal AI Policy Stress Test &#8212; Example Scenario Walkthrough" />
+  <meta property="og:description" content="What a stress test finds before your council sees the draft: seven scenarios, their verdicts, and one traced clause by clause from the event to the commissioner." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://spencermorleyconsulting.ca/municipal-ai-policy-stress-test.html" />
+  <meta property="og:image" content="https://spencermorleyconsulting.ca/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": "https://spencermorleyconsulting.ca/municipal-ai-policy-stress-test.html#article",
+        "headline": "Municipal AI policy stress test: an example scenario walkthrough",
+        "description": "Before a draft AI adoption policy goes to council, Spencer Morley Consulting runs it against written case scenarios and traces each one clause by clause. This page shows the seven scenarios from one municipal engagement, the verdict each returned, and one scenario drawn out in full.",
+        "author": {"@id": "https://spencermorleyconsulting.ca/#organization"},
+        "publisher": {"@id": "https://spencermorleyconsulting.ca/#organization"},
+        "datePublished": "2026-09-04",
+        "dateModified": "2026-09-04",
+        "about": {"@type": "Thing", "name": "Municipal AI governance policy testing"},
+        "isPartOf": {"@id": "https://spencermorleyconsulting.ca/ai-adoption-policy.html#service"},
+        "mainEntityOfPage": "https://spencermorleyconsulting.ca/municipal-ai-policy-stress-test.html"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://spencermorleyconsulting.ca/" },
+          { "@type": "ListItem", "position": 2, "name": "AI Consulting", "item": "https://spencermorleyconsulting.ca/municipal.html" },
+          { "@type": "ListItem", "position": 3, "name": "AI Adoption Policy & Procedures", "item": "https://spencermorleyconsulting.ca/ai-adoption-policy.html" },
+          { "@type": "ListItem", "position": 4, "name": "Stress test walkthrough" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is a policy stress test?",
+            "acceptedAnswer": {"@type": "Answer", "text": "A written case scenario is applied to a draft policy and its procedures as though both were already adopted and in force, then traced clause by clause: which provision is engaged, in what order, who must act, what happens next, and what the documents do not say. Every clause relied on is quoted before it is relied on, and any other instrument the draft leans on is read rather than taken on trust."}
+          },
+          {
+            "@type": "Question",
+            "name": "Why stress test a draft AI policy before council sees it?",
+            "acceptedAnswer": {"@type": "Answer", "text": "A policy that reads well can still fail the first time someone has to apply it. Testing before adoption finds the missing actor or the missing next step while the wording can still be changed, rather than during a live privacy breach when the document is already in force."}
+          },
+          {
+            "@type": "Question",
+            "name": "What do the stress test verdicts mean?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Handled means the drafts produce a clear, correct result with nothing added. Handled, fix proposed means the substantive rule is right but a step, an actor or a mechanism is missing, and replacement wording is supplied. Decision needed means the result turns on a choice only administration or council can make."}
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Nunito:wght@700;800;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/smc.css" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" href="/SMC_symbol_gold_transparent.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <style>
+    /* Page-specific. Shared rules live in /smc.css (body.policy-page) */
+    html { scroll-behavior:smooth; overflow-x:hidden; }
+    body.policy-page .nav-dropdown-menu a { display:block; padding:8px 16px; font-size:0.78rem; }
+    body.policy-page .nav-dropdown-menu a:hover { background:var(--gold-dim); color:var(--gold); }
+    body.policy-page .section { padding:64px 2rem; }
+    body.policy-page .section.alt { background:var(--charcoal-mid); border-top:1px solid var(--gold-border); }
+    body.policy-page .prose p { font-size:1rem; line-height:1.8; color:rgba(247,247,245,0.8); max-width:760px; margin-bottom:1.2rem; }
+    body.policy-page .prose p strong { color:var(--cream); }
+    body.policy-page .lede { font-size:1.05rem; line-height:1.8; color:rgba(247,247,245,0.8); max-width:820px; margin-bottom:1.6rem; }
+    body.policy-page .note { font-size:0.82rem; line-height:1.7; color:rgba(247,247,245,0.5); max-width:820px; }
+
+    /* ── counts ── */
+    body.policy-page .counts { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; margin:2.2rem 0 0; }
+    body.policy-page .count { border:1px solid var(--gold-border); border-top:2px solid var(--gold); background:var(--charcoal); padding:1.2rem 1.2rem 1.3rem; }
+    body.policy-page .count-n { font-family:var(--font-display); font-size:2.4rem; font-weight:300; line-height:1; color:var(--gold); }
+    body.policy-page .count-l { font-family:var(--font-ui); font-size:0.66rem; font-weight:800; letter-spacing:0.14em; text-transform:uppercase; color:var(--cream); margin:0.6rem 0 0.4rem; }
+    body.policy-page .count-d { font-size:0.83rem; line-height:1.6; color:rgba(247,247,245,0.6); }
+
+    /* ── scenario table ── */
+    body.policy-page .sc-table { width:100%; border-collapse:collapse; margin-top:1.8rem; }
+    body.policy-page .sc-table th { font-family:var(--font-ui); font-size:0.62rem; font-weight:800; letter-spacing:0.16em; text-transform:uppercase; color:var(--gold); text-align:left; padding:0 0.9rem 0.7rem; border-bottom:1px solid var(--gold-border); }
+    body.policy-page .sc-table td { padding:1.1rem 0.9rem; border-bottom:1px solid rgba(201,168,76,0.14); vertical-align:top; font-size:0.86rem; line-height:1.65; color:rgba(247,247,245,0.7); }
+    body.policy-page .sc-n { font-family:var(--font-display); font-size:1.2rem; color:var(--gold); width:3.2rem; }
+    body.policy-page .sc-t { color:var(--cream); font-weight:400; width:24%; }
+    body.policy-page .sc-v { width:9rem; }
+    body.policy-page .verdict { display:inline-block; font-family:var(--font-ui); font-size:0.6rem; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; padding:0.35rem 0.55rem; border:1px solid; line-height:1.3; }
+    body.policy-page .verdict--fix { color:var(--gold-light); border-color:rgba(217,188,122,0.5); }
+    body.policy-page .verdict--decision { color:#E4A06A; border-color:rgba(228,160,106,0.5); }
+    body.policy-page .sc-label { display:none; }
+
+    /* ── walkthrough grid ── */
+    body.policy-page .wt-wrap { margin-top:1.8rem; }
+    body.policy-page .wt-table { width:100%; border-collapse:separate; border-spacing:0.55rem; table-layout:fixed; }
+    body.policy-page .wt-table > thead th { font-family:var(--font-ui); font-size:0.6rem; font-weight:800; letter-spacing:0.14em; text-transform:uppercase; color:var(--gold); text-align:left; padding:0 0 0.4rem; vertical-align:bottom; }
+    body.policy-page .wt-table > thead th:first-child { width:9.5rem; }
+    body.policy-page .wt-role { text-align:left; vertical-align:top; padding:0.7rem 0.6rem 0 0; }
+    body.policy-page .wt-role-n { display:block; font-family:var(--font-ui); font-size:0.74rem; font-weight:800; letter-spacing:0.04em; color:var(--cream); line-height:1.3; }
+    body.policy-page .wt-role-d { display:block; font-size:0.72rem; line-height:1.45; color:rgba(247,247,245,0.58); margin-top:0.25rem; font-weight:400; }
+    body.policy-page .wt { border:1px solid rgba(201,168,76,0.22); background:rgba(37,37,37,0.55); padding:0.75rem 0.8rem 0.85rem; vertical-align:top; }
+    body.policy-page .wt-empty { padding:0; }
+    body.policy-page .wt-stage { display:none; }
+    body.policy-page .wt-h { display:block; font-family:var(--font-ui); font-size:0.72rem; font-weight:800; letter-spacing:0.02em; color:var(--cream); line-height:1.35; margin-bottom:0.35rem; }
+    body.policy-page .wt-b { display:block; font-size:0.76rem; line-height:1.55; color:rgba(247,247,245,0.66); }
+    body.policy-page .wt-b em { color:var(--cream); font-style:italic; }
+    body.policy-page .wt--event { border-color:#B4614A; background:rgba(180,97,74,0.1); }
+    body.policy-page .wt--event .wt-h { color:#E8A48F; }
+    body.policy-page .wt--rules { border-color:var(--gold); background:var(--gold-dim); }
+    body.policy-page .wt--rules .wt-h { color:var(--gold-light); }
+    body.policy-page .wt--proposed { border:1px dashed var(--gold-light); background:rgba(217,188,122,0.07); }
+    body.policy-page .wt--proposed .wt-h { color:var(--gold-light); }
+    body.policy-page .wt--outside { border-color:rgba(247,247,245,0.16); background:rgba(247,247,245,0.03); }
+    body.policy-page .wt-legend { display:flex; flex-wrap:wrap; gap:0.8rem 1.6rem; margin-top:1.4rem; padding-top:1.2rem; border-top:1px solid rgba(201,168,76,0.14); }
+    body.policy-page .wt-key { display:flex; align-items:center; gap:0.5rem; font-family:var(--font-ui); font-size:0.66rem; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; color:rgba(247,247,245,0.62); }
+    body.policy-page .wt-swatch { width:16px; height:16px; border:1px solid rgba(201,168,76,0.22); background:rgba(37,37,37,0.55); flex-shrink:0; }
+    body.policy-page .wt-swatch--event { border-color:#B4614A; background:rgba(180,97,74,0.18); }
+    body.policy-page .wt-swatch--rules { border-color:var(--gold); background:var(--gold-dim); }
+    body.policy-page .wt-swatch--proposed { border:1px dashed var(--gold-light); background:rgba(217,188,122,0.07); }
+    body.policy-page .wt-swatch--outside { border-color:rgba(247,247,245,0.16); background:rgba(247,247,245,0.03); }
+
+    /* ── verdict panel ── */
+    body.policy-page .verdict-panel { border-left:2px solid var(--gold); background:var(--gold-dim); padding:1.5rem 1.7rem; margin-top:2rem; }
+    body.policy-page .verdict-panel h3 { font-family:var(--font-display); font-size:1.4rem; font-weight:400; color:var(--cream); margin:0 0 0.7rem; }
+    body.policy-page .verdict-panel p { font-size:0.92rem; line-height:1.75; color:rgba(247,247,245,0.8); max-width:840px; margin:0 0 0.9rem; }
+    body.policy-page .verdict-panel p:last-child { margin-bottom:0; }
+    body.policy-page .verdict-panel strong { color:var(--cream); }
+
+    body.policy-page .related { display:flex; flex-wrap:wrap; gap:1rem; margin-top:1.6rem; }
+    body.policy-page .related a { flex:1 1 240px; background:var(--gold-dim); border:1px solid var(--gold-border); padding:1rem 1.25rem; text-decoration:none; color:var(--cream); font-family:var(--font-ui); font-size:0.9rem; font-weight:700; transition:background 0.2s; }
+    body.policy-page .related a:hover { background:rgba(201,168,76,0.2); }
+    body.policy-page .related a span { display:block; font-family:var(--font-body); font-size:0.78rem; font-weight:400; color:rgba(247,247,245,0.6); margin-top:0.3rem; }
+
+    /* ── the diagram becomes a stack of role timelines on a narrow screen.
+          Same cells, same order, each one carrying the stage it belongs to. ── */
+    @media (max-width:1100px) {
+      body.policy-page .wt-b { font-size:0.74rem; }
+      body.policy-page .counts { grid-template-columns:1fr; }
+    }
+    @media (max-width:900px) {
+      body.policy-page .wt-table, body.policy-page .wt-table tbody, body.policy-page .wt-table tr,
+      body.policy-page .wt-table th, body.policy-page .wt-table td { display:block; width:auto; }
+      body.policy-page .wt-table { border-spacing:0; }
+      body.policy-page .wt-table > thead { position:absolute; left:-9999px; }
+      body.policy-page .wt-table tr { margin-bottom:1.8rem; }
+      body.policy-page .wt-role { padding:0 0 0.7rem; border-bottom:1px solid var(--gold-border); margin-bottom:0.8rem; }
+      body.policy-page .wt-role-n { font-size:0.8rem; }
+      body.policy-page .wt-empty { display:none; }
+      body.policy-page .wt { margin-bottom:0.6rem; }
+      body.policy-page .wt-stage { display:block; font-family:var(--font-ui); font-size:0.58rem; font-weight:800; letter-spacing:0.16em; text-transform:uppercase; color:var(--gold); margin-bottom:0.4rem; }
+      body.policy-page .wt-h { font-size:0.8rem; }
+      body.policy-page .wt-b { font-size:0.82rem; line-height:1.6; }
+
+      body.policy-page .sc-table, body.policy-page .sc-table tbody, body.policy-page .sc-table tr, body.policy-page .sc-table td { display:block; width:auto; }
+      body.policy-page .sc-table thead { position:absolute; left:-9999px; }
+      body.policy-page .sc-table tr { border:1px solid var(--gold-border); border-top:2px solid var(--gold); padding:1.1rem 1.1rem 1.2rem; margin-bottom:1rem; }
+      body.policy-page .sc-table td { border:0; padding:0 0 0.7rem; }
+      body.policy-page .sc-n { font-size:1rem; padding-bottom:0.2rem; }
+      body.policy-page .sc-t { font-size:1rem; }
+      body.policy-page .sc-label { display:block; font-family:var(--font-ui); font-size:0.58rem; font-weight:800; letter-spacing:0.16em; text-transform:uppercase; color:var(--gold); margin-bottom:0.3rem; }
+    }
+    @media (max-width:640px) {
+      body.policy-page .section, body.policy-page .cta-section { padding:48px 1.5rem; }
+    }
+  </style>
+  <script src="/consent.js" defer></script>
+</head>
+<body class="policy-page">
+
+<nav>
+  <a href="index.html" class="nav-brand">
+    <span class="nav-brand-icon"><svg class="smc-sym" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M50,5C25.2,5,5,25.2,5,50c0,24.8,20.2,45,45,45c24.8,0,45-20.2,45-45C95,25.2,74.8,5,50,5z M50,91C27.4,91,9,72.6,9,50S27.4,9,50,9s41,18.4,41,41S72.6,91,50,91z M84.4,51.4l-6,6C78,57.8,77.5,58,77,58s-1-0.2-1.4-0.6c-0.8-0.8-0.8-2,0-2.8l2.6-2.6H54.8l9.2,9.2V60c0-1.1,0.9-2,2-2s2,0.9,2,2v6c0,0.4-0.2,0.8-0.6,1c-0.2,0.2-0.5,0.4-0.8,0.4h-6c-1.1,0-2-0.9-2-2s0.9-2,2-2h1.2L52,54.8v23.3l2.6-2.6c0.8-0.8,2-0.8,2.8,0s0.8,2,0,2.8l-6,6c-0.4,0.4-0.9,0.6-1.4,0.6s-1-0.2-1.4-0.6l-6-6c-0.8-0.8-0.8-2,0-2.8c0.8-0.8,2-0.8,2.8,0l2.6,2.6V54.8L38.8,64H40c1.1,0,2,0.9,2,2s-0.9,2-2,2h-6c-0.3,0-0.6-0.1-0.8-0.4C33.8,67.4,33.6,67,33.6,66.6v-6c0-1.1,0.9-2,2-2s2,0.9,2,2v1.2l9.2-9.2H21.8l2.6,2.6c0.8,0.8,0.8,2,0,2.8C24,57.8,23.5,58,23,58s-1-0.2-1.4-0.6l-6-6c-0.8-0.8-0.8-2,0-2.8l6-6c0.8-0.8,2-0.8,2.8,0c0.8,0.8,0.8,2,0,2.8L21.8,48h23.3L36,38.8V40c0,1.1-0.9,2-2,2s-2-0.9-2-2v-6c0-0.4,0.1-0.8,0.4-1c0.3-0.3,0.6-0.4,1-0.4h6c1.1,0,2,0.9,2,2s-0.9,2-2,2h-1.2l9.2,9.2V21.8l-2.6,2.6c-0.8,0.8-2,0.8-2.8,0c-0.8-0.8-0.8-2,0-2.8l6-6c0.4-0.4,0.9-0.6,1.4-0.6s1,0.2,1.4,0.6l6,6c0.8,0.8,0.8,2,0,2.8C57,24.8,56.5,25,56,25s-1-0.2-1.4-0.6L52,21.8v23.3l9.2-9.2H60c-1.1,0-2-0.9-2-2s0.9-2,2-2h6c0.4,0,0.7,0.1,1,0.4c0.3,0.2,0.4,0.6,0.4,1v6c0,1.1-0.9,2-2,2s-2-0.9-2-2v-1.2L54.8,48h23.3l-2.6-2.6c-0.8-0.8-0.8-2,0-2.8c0.8-0.8,2-0.8,2.8,0l6,6C85.2,49.4,85.2,50.6,84.4,51.4z"/></svg></span>
+    <span><span class="nav-brand-name">Spencer Morley Consulting</span><span class="nav-brand-tagline">Helping You Navigate the Chaos</span></span>
+  </a>
+  <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  <ul class="nav-links">
+    <li class="nav-dropdown"><a href="index.html#crisis">Communications ▾</a><div class="nav-dropdown-menu"><a href="index.html#crisis-mgmt">Crisis Management</a><a href="index.html#media-relations">Media Relations Training</a><a href="index.html#on-demand">On-Demand Communications</a></div></li>
+    <li class="nav-dropdown"><a href="municipal.html">AI Consulting ▾</a><div class="nav-dropdown-menu"><a href="municipal.html">Municipal Track</a><a href="small-business.html">Small Business Track</a><a href="non-profits.html">AI for Non-Profits Track</a><a href="ai-adoption-policy.html">AI Adoption Policy</a></div></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="resources/">Glossary</a></li>
+    <li><a href="municipal.html#contact" class="nav-cta" onclick="gtag('event','cta_click',{'event_category':'nav','event_label':'get_a_consultation','page':'stress-test-walkthrough'})">Get a Consultation</a></li>
+  </ul>
+</nav>
+
+<section class="page-hero">
+  <div class="page-hero-watermark" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a> &rsaquo; <a href="municipal.html">AI Consulting</a> &rsaquo; <a href="ai-adoption-policy.html">AI Adoption Policy</a> &rsaquo; Stress test
+    </div>
+    <div class="province-badge"><span class="province-badge-dot"></span>Example scenario walkthrough</div>
+    <h1>What a stress test finds<em> before</em> your council sees the draft.</h1>
+    <p class="page-hero-sub">A policy that reads well can still fail the first time someone has to apply it. Between the first and second draft, every AI adoption policy we write is run against written case scenarios. This is what that produced on one municipal engagement.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-eyebrow">How the test is run</div>
+    <h2 class="section-hl">The documents are used, not read.</h2>
+    <div class="prose">
+      <p>Each scenario is written as though the policy and its procedures had already been adopted and were in force, then walked through the way a CAO or privacy officer would actually use them: <strong>which provision is engaged, in what order, who must act, what happens next, and what the documents do not say.</strong> Every clause relied on is quoted before it is relied on. Where a draft leans on another instrument &#8212; the privacy policy, the acceptable-use policy, an HR policy &#8212; that instrument is read too, so a cross-reference is never taken on trust.</p>
+      <p>Three rules govern the exercise. No problem is manufactured: where the documents handle a situation, the result says so. Every fix is written as replacement or additional text that keeps the existing clause numbers, so nothing has to be renumbered. And where a gap sits outside what a municipal policy can fix &#8212; a provincial sanction regime that does not yet exist, for example &#8212; the result says that plainly rather than proposing a clause that would overreach.</p>
+    </div>
+    <div class="counts">
+      <div class="count"><div class="count-n">7</div><div class="count-l">Scenarios run</div><div class="count-d">Council, front counter, the CAO, a permit decision, a contractor, the IT provider, and council meeting transcription.</div></div>
+      <div class="count"><div class="count-n">9</div><div class="count-l">Fixes proposed</div><div class="count-d">Eight of the nine added an actor and a next step. <strong>None changed a rule.</strong></div></div>
+      <div class="count"><div class="count-n">3</div><div class="count-l">Decisions returned to the client</div><div class="count-d">Questions only administration or council can answer, surfaced before adoption rather than during an incident.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="wrap">
+    <div class="section-eyebrow">Results at a glance</div>
+    <h2 class="section-hl">Seven scenarios, and what each one found.</h2>
+    <p class="lede">Every scenario is hypothetical and described by role. Clause numbers, instrument names and the municipality itself are generalized here; in the working paper each one is cited exactly.</p>
+    <table class="sc-table">
+      <thead>
+        <tr><th>#</th><th>Scenario</th><th>What held</th><th>What needed attention</th><th>Verdict</th></tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td class="sc-n">01</td>
+        <td class="sc-t">A council member enters closed-session material into a personal AI tool</td>
+        <td class="sc-r"><span class="sc-label">What held</span>The prohibition is unambiguous and the reporting route works. The drafts also decline to invent a councillor sanction the province has not created.</td>
+        <td class="sc-a"><span class="sc-label">What needed attention</span>The suspension power has nothing to act on when a personal account was used. The documents should say what the entry means: a release of information beyond the municipality&#8217;s control.</td>
+        <td class="sc-v"><span class="verdict verdict--fix">Handled, fix proposed</span></td>
+      </tr>
+      <tr>
+        <td class="sc-n">02</td>
+        <td class="sc-t">A front-counter employee pastes a ratepayer&#8217;s tax complaint into a free AI tool</td>
+        <td class="sc-r"><span class="sc-label">What held</span>Two independent prohibitions catch it, the interim permission gives no cover, and the breach response and discipline routes are complete.</td>
+        <td class="sc-a"><span class="sc-label">What needed attention</span>Training and acknowledgment only trigger on being issued an approved tool &#8212; so the employee most likely to breach is the one never trained. Directors&#8217; duties do not name incident reporting.</td>
+        <td class="sc-v"><span class="verdict verdict--fix">Handled, fix proposed</span></td>
+      </tr>
+      <tr>
+        <td class="sc-n">03</td>
+        <td class="sc-t">The CAO uses an approved tool on a director&#8217;s performance material</td>
+        <td class="sc-r"><span class="sc-label">What held</span>High-risk activity correctly identified, and the report goes to the head of council rather than to the CAO &#8212; the best-drafted clause in either document.</td>
+        <td class="sc-a"><span class="sc-label">What needed attention</span>After the report is received, the documents fall silent on who reviews, decides and applies a consequence. The breach response still runs through an officer who reports to the CAO.</td>
+        <td class="sc-v"><span class="verdict verdict--decision">Decision needed</span></td>
+      </tr>
+      <tr>
+        <td class="sc-n">04</td>
+        <td class="sc-t">A development permit is refused with AI assistance; the applicant asks whether a machine decided</td>
+        <td class="sc-r"><span class="sc-label">What held</span>The verification record and the &#8220;no final decision by AI&#8221; rule together show that a person decided, and show the working. A strong position to be in.</td>
+        <td class="sc-a"><span class="sc-label">What needed attention</span>Read literally, the high-risk rule would require privacy-officer approval on every permit file, which no department can operate. Nothing directs anyone to fix the collection notices on the municipality&#8217;s forms.</td>
+        <td class="sc-v"><span class="verdict verdict--decision">Decision needed</span></td>
+      </tr>
+      <tr>
+        <td class="sc-n">05A</td>
+        <td class="sc-t">A contracted engineering firm uses its own AI tool on municipal road data</td>
+        <td class="sc-r"><span class="sc-label">What held</span>Scope and consequence provisions reach the contractor correctly.</td>
+        <td class="sc-a"><span class="sc-label">What needed attention</span>The approved-tool appendix is the wrong instrument for a contractor&#8217;s internal tooling. The contract should govern it, and the drafts do not say so.</td>
+        <td class="sc-v"><span class="verdict verdict--fix">Handled, fix proposed</span></td>
+      </tr>
+      <tr>
+        <td class="sc-n">05B</td>
+        <td class="sc-t">The IT provider switches on an AI feature inside licensed help-desk software</td>
+        <td class="sc-r"><span class="sc-label">What held</span>The integrated-AI rule is exactly on point, and the breach is identified and routed correctly.</td>
+        <td class="sc-a"><span class="sc-label">What needed attention</span>Nothing requires the IT provider to ask first, nothing names who orders it off, and the procurement gate does not open on a vendor-initiated change.</td>
+        <td class="sc-v"><span class="verdict verdict--fix">Handled, fix proposed</span></td>
+      </tr>
+      <tr>
+        <td class="sc-n">06</td>
+        <td class="sc-t">AI note-taking and transcription of council meetings</td>
+        <td class="sc-r"><span class="sc-label">What held</span>The public portion has a usable, lawful path: standing approval from the chair, notice, minutes remain the record, verification before release. Personal note-takers are prohibited outright.</td>
+        <td class="sc-a"><span class="sc-label">What needed attention</span>The procedural bylaw was read and is silent on recording, so nothing conflicts. The in-camera position is a council choice, and it should be made knowingly rather than inherited from a template.</td>
+        <td class="sc-v"><span class="verdict verdict--decision">Decision needed</span></td>
+      </tr>
+      </tbody>
+    </table>
+    <div class="verdict-panel">
+      <h3>The pattern was consistent.</h3>
+      <p>The drafts were strong at saying what is and is not permitted. Every prohibition, every characterisation and every reporting route landed correctly, and in three places they handled a hard case better than they had to.</p>
+      <p><strong>Where they were thinner is in saying who acts next</strong> &#8212; after a report reaches the head of council, when a vendor feature must be switched off, when a collection notice on a form is wrong, when a high-risk activity recurs daily. That is the shape of the thing a stress test finds and a careful read does not.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="walkthrough">
+  <div class="wrap">
+    <div class="section-eyebrow">One scenario, drawn out</div>
+    <h2 class="section-hl">A front-counter employee pastes a ratepayer&#8217;s letter into a free AI tool.</h2>
+    <p class="lede">Hypothetical. Roles only; no person described is a real person. Follow it role by role, or across the five stages: what happened, who is told, what the privacy officer does, who is notified, and what follows. Each box names the instrument that authorizes the step. Solid boxes are what the first drafts already do; dashed boxes are the two fixes that went into the second draft.</p>
+    <div class="wt-wrap">
+      <table class="wt-table">
+        <thead>
+          <tr><th scope="col">Role</th><th scope="col">1 &middot; What happened</th><th scope="col">2 &middot; Who is told</th><th scope="col">3 &middot; Containment</th><th scope="col">4 &middot; Assessment</th><th scope="col">5 &middot; Notify, follow through</th></tr>
+        </thead>
+        <tbody>
+      <tr>
+        <th scope="row" class="wt-role"><span class="wt-role-n">Front-counter employee</span><span class="wt-role-d">on a municipal workstation</span></th>
+<td class="wt wt--event"><span class="wt-stage">1 &middot; What happened</span><span class="wt-h">Day 1 &#8212; the event</span><span class="wt-b">Pastes a ratepayer&#8217;s tax complaint &#8212; name, roll number, address, a description of financial hardship &#8212; into a free web AI tool on a municipal workstation, using a personal login created that morning, to draft a reply.</span></td><td class="wt wt--rules"><span class="wt-stage">2 &middot; Who is told</span><span class="wt-h">Rules engaged</span><span class="wt-b">AI procedure &#8212; not an approved AI service (the approved list is empty) &middot; interim permission excludes an identifiable ratepayer &middot; a personal AI account &middot; high-sensitivity information (financial) without approval &middot; AI policy &#8212; approved services only</span></td><td class="wt wt--does"><span class="wt-stage">3 &middot; Containment</span><span class="wt-h">Workstation activity may be examined</span><span class="wt-b">Acceptable-use policy: no expectation of privacy, breaches investigated; privacy policy logs show what was pasted</span></td><td class="wt-empty"></td><td class="wt wt--proposed"><span class="wt-stage">5 &middot; Notify, follow through</span><span class="wt-h">Proposed &#8212; training reaches everyone</span><span class="wt-b">In the first draft, training and sign-off trigger only when someone is <em>given</em> an approved tool. This employee never was, so was never trained and never signed. Proposed: every employee, within 30 days.</span></td>
+      </tr>
+      <tr>
+        <th scope="row" class="wt-role"><span class="wt-role-n">Director</span><span class="wt-role-d">of the employee&#8217;s department</span></th>
+<td class="wt wt--does"><span class="wt-stage">1 &middot; What happened</span><span class="wt-h">Day 2 &#8212; hears about it</span><span class="wt-b">The employee mentions it, pleased with the result. The director now knows of a suspected breach.</span></td><td class="wt wt--does"><span class="wt-stage">2 &middot; Who is told</span><span class="wt-h">Reports immediately</span><span class="wt-b">To the privacy officer or the CAO &#8212; AI policy; AI procedure; privacy and access policy (breach reporting); HR policy</span></td><td class="wt wt--proposed"><span class="wt-stage">3 &middot; Containment</span><span class="wt-h">Proposed &#8212; name the duty</span><span class="wt-b">The directors&#8217; row lists &#8220;gaps or new AI-related risks&#8221;, not incidents. The duty exists; the row people read should name it.</span></td><td class="wt-empty"></td><td class="wt-empty"></td>
+      </tr>
+      <tr>
+        <th scope="row" class="wt-role"><span class="wt-role-n">Privacy and access officer</span><span class="wt-role-d">delegated under the privacy and access policy</span></th>
+<td class="wt-empty"></td><td class="wt wt--does"><span class="wt-stage">2 &middot; Who is told</span><span class="wt-h">Opens the breach file</span><span class="wt-b">Privacy and access policy &#8212; breach file and form. A breach is any unauthorized disclosure of municipal <em>information</em>, personal or not.</span></td><td class="wt wt--does"><span class="wt-stage">3 &middot; Containment</span><span class="wt-h">Contains</span><span class="wt-b">Asks the provider to delete the upload and chat history; preserves the workstation logs &#8212; privacy and access policy (containment)</span></td><td class="wt wt--does"><span class="wt-stage">4 &middot; Assessment</span><span class="wt-h">Assesses the level</span><span class="wt-b">Confidential-class information to an external recipient. Real-risk-of-harm factors: POPA s.&#8239;10(2); Alta Reg 143/2025 s.&#8239;4</span></td><td class="wt wt--does"><span class="wt-stage">5 &middot; Notify, follow through</span><span class="wt-h">Decides the notifications</span><span class="wt-b">The privacy officer decides &#8212; not the director, not the employee. Then documents findings and reports to the CAO.</span></td>
+      </tr>
+      <tr>
+        <th scope="row" class="wt-role"><span class="wt-role-n">Outside the municipality</span><span class="wt-role-d">AI provider &middot; ratepayer &middot; commissioner</span></th>
+<td class="wt-empty"></td><td class="wt-empty"></td><td class="wt wt--outside"><span class="wt-stage">3 &middot; Containment</span><span class="wt-h">AI provider</span><span class="wt-b">Deletion requested. No agreement binds it, so nothing can be compelled &#8212; the whole problem.</span></td><td class="wt wt--outside"><span class="wt-stage">4 &middot; Assessment</span><span class="wt-h">Ratepayer notified</span><span class="wt-b">Privacy and access policy; notice contents POPA s.&#8239;10(2)(a), Reg s.&#8239;4(3)</span></td><td class="wt wt--outside"><span class="wt-stage">5 &middot; Notify, follow through</span><span class="wt-h">Commissioner notified</span><span class="wt-b">Privacy and access policy; POPA s.&#8239;10(2)(b), Reg s.&#8239;4(4)</span></td>
+      </tr>
+      <tr>
+        <th scope="row" class="wt-role"><span class="wt-role-n">CAO</span><span class="wt-role-d">head under the access and privacy statutes</span></th>
+<td class="wt wt--does"><span class="wt-stage">1 &middot; What happened</span><span class="wt-h">Nothing to suspend</span><span class="wt-b">Suspension under the AI policy reaches <em>approved</em> services; the employee had none. Acceptable-use rules apply instead.</span></td><td class="wt wt--does"><span class="wt-stage">2 &middot; Who is told</span><span class="wt-h">Informed</span><span class="wt-b">AI procedure; AI policy. No conflict, so the council route is not engaged.</span></td><td class="wt-empty"></td><td class="wt wt--does"><span class="wt-stage">4 &middot; Assessment</span><span class="wt-h">Steers the follow-through</span><span class="wt-b">Receives the findings; discipline runs on its own track; considers whether training or the approved-services list needs to change.</span></td><td class="wt-empty"></td>
+      </tr>
+      <tr>
+        <th scope="row" class="wt-role"><span class="wt-role-n">Management and human resources</span><span class="wt-role-d">separate track from the breach file</span></th>
+<td class="wt-empty"></td><td class="wt-empty"></td><td class="wt wt--does" colspan="2"><span class="wt-stage">3 &middot; Containment</span><span class="wt-h">Discipline &#8212; separately from the breach file</span><span class="wt-b">The privacy policy passes discipline to management and HR. AI policy: corrective or disciplinary action up to termination &#8212; the standard the acceptable-use and HR policies already set. Mitigation the employee will raise: never trained, never signed.</span></td><td class="wt wt--does"><span class="wt-stage">5 &middot; Notify, follow through</span><span class="wt-h">Then: training and sign-off</span><span class="wt-b">AI awareness training and the acknowledgment &#8212; AI procedure</span></td>
+      </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="wt-legend">
+      <span class="wt-key"><span class="wt-swatch wt-swatch--event"></span>The event</span>
+      <span class="wt-key"><span class="wt-swatch wt-swatch--rules"></span>Rules engaged</span>
+      <span class="wt-key"><span class="wt-swatch"></span>What the drafts already do</span>
+      <span class="wt-key"><span class="wt-swatch wt-swatch--proposed"></span>Proposed for the second draft</span>
+      <span class="wt-key"><span class="wt-swatch wt-swatch--outside"></span>Outside the municipality</span>
+    </div>
+    <div class="verdict-panel">
+      <h3>Verdict &#8212; handled, fix proposed.</h3>
+      <p>Every rule, characterisation and reporting route lands, and nobody has to invent a process. <strong>Nothing here turns on where the tool&#8217;s servers are:</strong> the failure is the disclosure to a service the municipality does not control &#8212; no agreement, no safeguards, no authority to disclose &#8212; and the privacy policy&#8217;s breach process is built for exactly that.</p>
+      <p>The two dashed boxes are the gaps. The training and acknowledgment gates miss the very employee this scenario describes, and the directors&#8217; row does not name the reporting duty. Both were wording changes for the second draft, not changes of rule.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="wrap">
+    <div class="section-eyebrow">Where this sits</div>
+    <h2 class="section-hl">Between the first draft and the second.</h2>
+    <div class="prose">
+      <p>The stress test is not a separate product. It runs between phase four and phase five of the municipal method, after the two documents are drafted and before administration and council review them &#8212; which is the last point at which changing the wording costs nothing.</p>
+    </div>
+    <div class="related">
+      <a href="ai-adoption-policy.html#method" onclick="gtag('event','cta_click',{'event_category':'related','event_label':'method','page':'stress-test-walkthrough'})">The municipal method<span>Six phases, from first conversation to a council-ready draft.</span></a>
+      <a href="municipal-ai-policy-template.html" onclick="gtag('event','cta_click',{'event_category':'related','event_label':'framework','page':'stress-test-walkthrough'})">Municipal AI policy framework<span>What the two documents contain, section by section.</span></a>
+      <a href="municipal-ai-readiness-assessment.html" onclick="gtag('event','cta_click',{'event_category':'related','event_label':'assessment','page':'stress-test-walkthrough'})">AI readiness assessment<span>Where the work starts if nothing has been documented yet. No cost.</span></a>
+    </div>
+    <p class="note" style="margin-top:1.6rem;">Drawn from live work for an Alberta municipal district and published with the scenarios, clause references and instrument names generalized. Every situation is hypothetical; no person or event described is real.</p>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="wrap">
+    <div class="cta-eyebrow">Municipalities across Canada</div>
+    <h2 class="cta-hl">Have a draft that has never been <em>used</em>?</h2>
+    <p class="cta-sub">Whether we wrote it or you did, a policy is worth applying to a handful of real situations before council adopts it. That conversation is free and it takes about fifteen minutes.</p>
+    <a class="btn-gold" href="https://calendly.com/jordan-spencermorleyconsulting/15min" target="_blank" rel="noopener" onclick="gtag('event','cta_click',{'event_category':'cta','event_label':'book_a_call','page':'stress-test-walkthrough'})">Book a 15-minute call</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+      <div class="footer-brand"><span class="footer-sym"><svg class="smc-sym" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M50,5C25.2,5,5,25.2,5,50c0,24.8,20.2,45,45,45c24.8,0,45-20.2,45-45C95,25.2,74.8,5,50,5z M50,91C27.4,91,9,72.6,9,50S27.4,9,50,9s41,18.4,41,41S72.6,91,50,91z"/></svg></span><span class="footer-name">Spencer Morley Consulting</span></div>
+      <ul class="footer-links"><li><a href="index.html#crisis">Crisis Communications</a></li><li><a href="municipal.html">Municipal AI Track</a></li><li><a href="ai-consultant-for-municipalities-canada.html">Municipal AI Overview</a></li><li><a href="small-business.html">Small Business Track</a></li><li><a href="municipal-ai-policy-template.html">Municipal AI Policy Framework</a></li><li><a href="resources/">Glossary</a></li></ul>
+    </div>
+    <div class="footer-copy">&copy; 2026 Spencer Morley Consulting · Edmonton, Alberta · Serving Canadian Municipalities · Last updated: June 2026</div>
+  </div>
+</footer>
+
+
+<script>
+(function(){const n=document.querySelector('nav');window.addEventListener('scroll',()=>n.classList.toggle('scrolled',scrollY>40),{passive:true});})();
+(function(){var h=document.querySelector('.nav-hamburger'),n=document.querySelector('nav');if(!h)return;h.addEventListener('click',function(){var o=n.classList.toggle('nav-open');h.setAttribute('aria-expanded',o);h.setAttribute('aria-label',o?'Close menu':'Open menu');document.body.style.overflow=o?'hidden':'';});document.querySelectorAll('.nav-links a').forEach(l=>l.addEventListener('click',()=>{n.classList.remove('nav-open');document.body.style.overflow='';}));})();
+</script>
+</body>
+</html>
