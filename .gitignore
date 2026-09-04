@@ -60,3 +60,6 @@ HANDOFF-*.md
 HANDOFF-*
 COMMIT_MSG_*.txt
 RESPONSE-TO-*.md
+
+# QA screenshots and staging candidates (never deployed)
+_qa/
