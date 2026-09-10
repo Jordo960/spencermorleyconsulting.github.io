@@ -650,6 +650,9 @@ body.team-page .credential-item { display: flex; align-items: flex-start; gap: 1
 body.team-page .credential-icon { color: var(--gold); flex-shrink: 0; margin-top: 2px; }
 body.team-page .credential-name { font-weight: 700; font-size: 0.9rem; color: var(--cream); display: block; margin-bottom: 0.2rem; }
 body.team-page .credential-issuer { font-size: 0.8rem; color: rgba(247,247,245,0.6); }
+body.team-page .credential-name-link { font-weight: 700; font-size: 0.9rem; color: var(--cream); display: inline-flex; align-items: center; gap: 0.4rem; margin-bottom: 0.2rem; text-decoration: none; transition: color 0.2s; }
+body.team-page .credential-name-link:hover { color: var(--gold); }
+body.team-page .credential-name-link svg { flex-shrink: 0; opacity: 0.65; }
 body.team-page .expertise-section { padding: 56px 2rem; background: var(--charcoal); border-top: 1px solid rgba(201,168,76,0.1); }
 body.team-page .expertise-inner { max-width: 1100px; margin: 0 auto; }
 body.team-page .expertise-inner h2 { font-family: var(--font-display); font-size: clamp(1.4rem, 2.5vw, 1.9rem); font-weight: 600; color: var(--cream); margin-bottom: 2rem; }
