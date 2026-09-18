@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Municipal AI Consulting — Spencer Morley Consulting</title>
+  <meta name="description" content="Spencer Morley Consulting helps small and rural Canadian municipalities navigate AI adoption and ATIA/POPA compliance. Practical guidance from Jordan Morley — no jargon, no software sales." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Nunito:wght@700;800;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+      <link rel="stylesheet" href="/smc.css" />
+  <style>
+    /* Page-specific. Shared rules live in /smc.css (body.landing-page / body.municipal-page) */
+    html { scroll-behavior: smooth; overflow-x: hidden; }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: 0.25; }
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(22px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    body.municipal-page .page-hero-actions { display: flex; align-items: center; gap: 2rem; }
+  </style>
+
+  <!-- ══ WebMCP / AI-CRAWLER STRUCTURED DATA ══ Municipal Track ══ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://spencermorleyconsulting.ca/municipal.html#webpage",
+        "url": "https://spencermorleyconsulting.ca/municipal.html",
+        "name": "Municipal AI Consulting — Spencer Morley Consulting",
+        "description": "Compliance-first AI consulting for small and rural municipalities across Canada. The Spencer Morley Consulting Municipal AI Framework covers privacy legislation, shadow AI risks, workflow automation, and responsible governance. Based in Edmonton, Alberta.",
+        "isPartOf": {
+          "@id": "https://spencermorleyconsulting.ca/#website"
+        },
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://spencermorleyconsulting.ca/" },
+            { "@type": "ListItem", "position": 2, "name": "AI Consulting", "item": "https://spencermorleyconsulting.ca/#ai-section" },
+            { "@type": "ListItem", "position": 3, "name": "Municipal Track", "item": "https://spencermorleyconsulting.ca/municipal.html" }
+          ]
+        },
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": [".page-hero-hl", ".page-hero-sub", ".compliance-callout", ".track-intro", ".service-name", ".service-desc"]
+        }
+      },
+      {
+        "@type": "Service",
+        "@id": "https://spencermorleyconsulting.ca/municipal.html#service",
+        "name": "Municipal AI Consulting — Spencer Morley Consulting Municipal Track",
+        "url": "https://spencermorleyconsulting.ca/municipal.html",
+        "provider": {
+          "@id": "https://spencermorleyconsulting.ca/#organization"
+        },
+        "description": "Spencer Morley Consulting's Municipal AI Framework guides small and rural Canadian municipalities through responsible AI adoption. Services include AI Readiness Assessments, policy and governance frameworks compliant with provincial privacy legislation, staff training, and workflow automation — all designed for smaller teams and tighter budgets.",
+        "areaServed": {
+          "@type": "Country",
+          "name": "Canada"
+        },
+        "audience": {
+          "@type": "Audience",
+          "audienceType": "Small and rural municipalities, town administrators, CAOs, municipal councils across Canada"
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Municipal AI Services",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Municipal AI Readiness Assessment",
+                "description": "Diagnostic of a municipality's current AI exposure, shadow AI risks, staff capacity, and technology gaps. Produces a prioritized, compliance-aware AI roadmap."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Municipal Staff AI Training",
+                "description": "Hands-on training for municipal staff on responsible AI use in their specific roles. Covers prompt engineering, handling citizen data safely, evaluating AI output, and recognizing AI limitations in public service contexts."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "AI Adoption Policy and Procedures",
+                "description": "Two documents drafted for your municipality: a council-ready AI Adoption Policy covering purpose and scope, sanctioned and prohibited uses, data handling grounded in provincial privacy legislation, breach reporting, assigned accountability and mandatory training; and a companion AI Adoption Procedures document setting out how staff request and approve tools, what is logged, the exact breach response steps, and how the sanctioned tool list is kept current. Separated so council adopts the policy while administration can revise procedures without returning to council."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Privacy Management Program Integration",
+                "description": "Integration of a municipality's AI adoption policy and procedures into the Privacy Management Program required by section 25 of Alberta's Protection of Privacy Act. Maps the program contents prescribed by the Protection of Privacy (Ministerial) Regulation, Alta Reg 143/2025 — including section 6(1)(b)(iii) on how automated systems use personal information and section 6(2)(a)(v) on the use of personal information in artificial intelligence systems — against what the municipality already holds, then drafts the AI instruments as cross-referenced components of the program and prepares the amendment and adoption package."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Private Large Language Model Deployment",
+                "description": "A private large language model scoped entirely to your municipality. Citizen data stays within municipal systems under your control, subject to your provincial privacy obligations. No public cloud exposure."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Agentic Workflows",
+                "description": "Identify and automate repetitive municipal tasks — meeting minutes, council agendas, bylaw drafting, permit correspondence, ratepayer communications — with human oversight and privacy-by-design built in from the start."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "WebMCP Readiness Assessment for Municipalities",
+                "description": "Optimize your municipality's digital presence for discovery by AI platforms. Ensures residents and regional partners can find your municipality's services through AI-powered searches."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Residents & Community Surveys",
+                "description": "End-to-end resident survey design and delivery, hosted on SMC's own Canadian-based infrastructure. Delivered for the County of Minburn: the Policing Services Residents Survey and the Strategic Planning Residents Survey."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Fractional Public Information Officer (PIO) Services",
+                "description": "Embedded, hands-on communications capacity for a municipality managing an active crisis, a recovery period, or a staffing gap — council communications, stakeholder relations, social media, and website updates. Delivered for the Municipality of Jasper during its 2024 wildfire response."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Municipal Rebrand & Website Development",
+                "description": "A full rebrand — new visual identity, messaging, and a redeveloped website — paired with the social media strategy to bring it to residents. Delivered for the County of Minburn."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Strategic Plan Facilitation for Agricultural Service Boards & Rural Economic Development Bodies",
+                "description": "Facilitated strategic planning sessions that turn board priorities into a workable plan. Delivered for the County of Minburn's Agricultural Service Board."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "AI-Assisted Permitting & Licensing Intake",
+                "description": "Intake triage, completeness checking, and routing for permitting and licensing applications, integrated with existing municipal permitting and GIS platforms. Scoped to intake and routing, not automated approval decisions."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Data Readiness & Migration",
+                "description": "Cleansing, deduplication, and structuring of legacy spreadsheets, GIS layers, and municipal records so they're usable for AI tools and other systems. Typically delivered as Phase 1 of a larger engagement."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Citizen-Service Chatbot & Virtual Front Desk",
+                "description": "A resident-facing chatbot built on a staff-curated knowledge base covering bylaws, utility billing, waste schedules, and permit FAQs, with a defined human escalation path."
+              }
+            }
+          ]
+        },
+        "telephone": "+1-780-868-8272",
+        "image": "https://spencermorleyconsulting.ca/SMC_logo_gold_transparent.png",
+        "priceRange": "$$",
+        "keywords": "municipal AI consulting Canada, small municipality AI policy, rural municipality technology, AI governance for municipalities, provincial privacy compliance AI, shadow AI risk municipalities, agentic workflows municipalities, AI policy development municipalities, ATIA POPA compliance Alberta"
+      }
+    ]
+  }
+  </script>
+
+  <!-- HowTo: Municipal AI Framework -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to achieve municipal AI compliance in Canada",
+    "description": "Spencer Morley Consulting's Municipal AI Framework: a step-by-step process for Canadian municipalities to close the AI compliance gap and build responsible AI capacity.",
+    "estimatedCost": { "@type": "MonetaryAmount", "currency": "CAD", "value": "Contact for quote" },
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Municipal AI Readiness Assessment",
+        "text": "A structured diagnostic of your municipality's current AI exposure, shadow AI risks, staff capacity, and policy gaps. Produces a compliance-aware AI roadmap tailored to your province's privacy legislation (ATIA/POPA in Alberta, MFIPPA in Ontario, FOIPPA in BC, FIPPA in Manitoba)."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "AI Adoption Policy and Procedures",
+        "text": "Two documents drafted from the ground up: a council-ready AI Adoption Policy in plain language grounded in your provincial requirements, covering sanctioned tools, prohibited uses, data handling, breach reporting and staff expectations; and a companion AI Adoption Procedures document setting out how staff request and approve tools, what is logged, and the exact steps when a breach is suspected."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "Staff AI Training & Prompt Engineering",
+        "text": "Hands-on training covering compliance, safe use of AI with citizen data, prompt engineering for municipal tasks, and critical evaluation of AI output. Available remotely or on-site."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 4,
+        "name": "Private LLM Deployment or Workflow Automation",
+        "text": "Deploy a private large language model scoped entirely to your municipality — citizen data stays within your systems — or automate repetitive tasks like meeting minutes, council agendas, and permit correspondence with privacy-by-design built in."
+      }
+    ]
+  }
+  </script>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://spencermorleyconsulting.ca/municipal.html" />
+  <meta property="og:title" content="Municipal AI Consulting — Spencer Morley Consulting" />
+  <meta property="og:description" content="Compliance-first AI consulting for small and rural municipalities across Canada. The Spencer Morley Consulting Municipal AI Framework — privacy-by-design, built for smaller teams." />
+  <meta property="og:image" content="https://spencermorleyconsulting.ca/og-image.jpg" />
+  <meta property="og:locale" content="en_CA" />
+  <meta property="og:site_name" content="Spencer Morley Consulting" />
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Municipal AI Consulting — Spencer Morley Consulting" />
+  <meta name="twitter:description" content="Compliance-first AI consulting for small and rural Canadian municipalities." />
+  <meta name="twitter:image" content="https://spencermorleyconsulting.ca/og-image.jpg" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://spencermorleyconsulting.ca/municipal.html" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="author" content="Cheryl Spencer-Morley, Spencer Morley Consulting" />
+  <meta name="geo.region" content="CA-AB" />
+  <meta name="geo.placename" content="Edmonton, Alberta" />
+
+  <!-- ══ Block 1 — Organization + Person ══ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://spencermorleyconsulting.ca/#organization",
+        "name": "Spencer Morley Consulting",
+        "url": "https://spencermorleyconsulting.ca",
+        "logo": "https://spencermorleyconsulting.ca/SMC_logo_gold_transparent.png",
+        "description": "Spencer Morley Consulting helps Canadian municipalities and small businesses across Canada adopt AI without the risk, jargon, or guesswork. The firm also provides strategic communications and crisis management services across federal, provincial, and municipal environments.",
+        "areaServed": [
+          {
+            "@type": "Country",
+            "name": "Canada"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Alberta"
+          }
+        ],
+        "knowsAbout": [
+          "AI readiness assessment",
+          "municipal AI compliance",
+          "ATIA privacy management",
+          "POPA compliance",
+          "staff AI training",
+          "workflow automation",
+          "ethical and safe AI use for non-profits",
+          "private local AI deployment",
+          "crisis communications",
+          "strategic communications"
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "SMC Services",
+          "itemListElement": [
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Staff AI Risk Review"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "AI Readiness Assessment"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Privacy Management Program Integration"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Staff AI Training and Prompt Engineering"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "WebMCP Readiness"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Workflow Automation"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Ethical and Safe AI Training for Non-Profits"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Private Local AI Deployment"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Crisis Management"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Media Relations Training"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Retained Communications Counsel"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Fractional Public Information Officer (PIO) Services"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Municipal Rebrand & Website Development"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Risk Management Framework Development & Facilitation"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Strategic Plan Facilitation for Agricultural Service Boards & Rural Economic Development Bodies"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Website Design & AEO/SEO/GEO/WebMCP Readiness"}}
+          ]
+        },
+        "founder": [
+          {"@id": "https://spencermorleyconsulting.ca/#jordan-morley"},
+          {"@id": "https://spencermorleyconsulting.ca/#cheryl-spencer-morley"}
+        ],
+        "sameAs": [
+          "https://www.linkedin.com/company/spencer-morley-consulting",
+          "https://www.instagram.com/spencermorleyconsulting/",
+          "https://maps.app.goo.gl/ERxu5eUhXKKQ3rEG9"
+        ]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://spencermorleyconsulting.ca/#jordan-morley",
+        "name": "Jordan Morley",
+        "jobTitle": "AI Change Management Consultant",
+        "worksFor": {"@id": "https://spencermorleyconsulting.ca/#organization"},
+        "url": "https://spencermorleyconsulting.ca",
+        "knowsAbout": [
+          "AI consulting for Canadian municipalities",
+          "AI readiness assessment",
+          "ATIA compliance and AI",
+          "POPA privacy management programs",
+          "municipal AI training",
+          "small business AI adoption Alberta",
+          "WebMCP readiness",
+          "workflow automation"
+        ],
+        "description": "Jordan Morley is an AI Change Management Consultant serving Canadian municipalities and small businesses across Canada. He leads the AI practice at Spencer Morley Consulting, helping organizations navigate AI adoption, privacy compliance, and staff training.",
+        "sameAs": [
+          "https://www.linkedin.com/in/jordanrmorley/"
+        ]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://spencermorleyconsulting.ca/#cheryl-spencer-morley",
+        "name": "Cheryl Spencer-Morley",
+        "jobTitle": "Strategic Communications and Crisis Management Practice Lead and Co-Principal",
+        "worksFor": {"@id": "https://spencermorleyconsulting.ca/#organization"},
+        "url": "https://spencermorleyconsulting.ca",
+        "knowsAbout": [
+          "crisis communications",
+          "media relations training",
+          "strategic communications",
+          "government communications Canada",
+          "emergency communications Alberta"
+        ],
+        "sameAs": [
+          "https://www.instagram.com/spencermorleyconsulting/",
+          "https://www.linkedin.com/in/cheryl-spencer-morley-61b069293/"
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- ══ Block 2 — Municipal Services ══ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Service",
+        "@id": "https://spencermorleyconsulting.ca/municipal.html#ai-readiness-assessment",
+        "name": "AI Readiness Assessment for Municipalities",
+        "provider": {"@id": "https://spencermorleyconsulting.ca/#organization"},
+        "description": "A structured assessment of a municipality's current AI use, compliance obligations under ATIA and POPA, and readiness to adopt AI tools safely. Produces a written brief suitable for internal decision-making or council presentation. Scoped to complete within two to three weeks of booking.",
+        "areaServed": {"@type": "Country", "name": "Canada"},
+        "audience": {
+          "@type": "Audience",
+          "audienceType": "Municipal administrators, CAOs, and elected officials at small and rural Canadian municipalities"
+        }
+      },
+      {
+        "@type": "Service",
+        "@id": "https://spencermorleyconsulting.ca/municipal.html#staff-ai-training",
+        "name": "Staff AI Training and Prompt Engineering for Municipal Staff",
+        "provider": {"@id": "https://spencermorleyconsulting.ca/#organization"},
+        "description": "Practical AI training for municipal staff — how to use AI tools safely and effectively in day-to-day government operations. Tailored to the municipality's tools, risk profile, and existing workflows. Not a coding course — a practical session on responsible AI use in the public sector.",
+        "areaServed": {"@type": "Country", "name": "Canada"}
+      },
+      {
+        "@type": "Service",
+        "@id": "https://spencermorleyconsulting.ca/municipal.html#ai-policy-development",
+        "name": "AI Adoption Policy and Procedures for Municipalities",
+        "provider": {"@id": "https://spencermorleyconsulting.ca/#organization"},
+        "description": "Development of two separate instruments: a council-adopted AI Adoption Policy and a companion AI Adoption Procedures document for administration. Written to the provincial privacy regime that applies — ATIA and POPA in Alberta, and the equivalent legislation elsewhere — and drafted to satisfy the AI and automated-systems contents prescribed for a Privacy Management Program by the Protection of Privacy (Ministerial) Regulation, Alta Reg 143/2025, section 6. Distinct from a general IT acceptable use policy, and distinct from the Privacy Management Program itself, of which these documents form a component.",
+        "areaServed": {"@type": "Country", "name": "Canada"}
+      },
+      {
+        "@type": "Service",
+        "@id": "https://spencermorleyconsulting.ca/municipal.html#pmp-integration",
+        "name": "Privacy Management Program Integration for Municipalities",
+        "provider": {"@id": "https://spencermorleyconsulting.ca/#organization"},
+        "description": "Integration of a municipality's AI adoption policy and procedures into the Privacy Management Program required by section 25 of Alberta's Protection of Privacy Act, which public bodies were required to establish and implement by June 11, 2026. The contents of that program are prescribed by the Protection of Privacy (Ministerial) Regulation, Alta Reg 143/2025: section 6(1)(b)(iii) requires policies and procedures for how automated systems will use personal information, and section 6(2)(a)(v) requires policies on the use of personal information in artificial intelligence systems for public bodies holding a high volume of personal information or highly sensitive personal information. The engagement maps those prescribed contents against the municipality's existing privacy instruments, drafts the AI policy and procedures as cross-referenced components rather than standalone documents, and prepares the amendment and adoption package.",
+        "areaServed": {"@type": "Country", "name": "Canada"},
+        "audience": {"@type": "Audience", "audienceType": "Alberta municipalities, municipal districts and counties subject to ATIA and POPA"}
+      },
+      {
+        "@type": "Service",
+        "@id": "https://spencermorleyconsulting.ca/municipal.html#private-llm",
+        "name": "Private LLM Deployment — MuniMind",
+        "provider": {"@id": "https://spencermorleyconsulting.ca/#organization"},
+        "description": "Deployment of a private language model for municipalities handling sensitive ratepayer data. AI that stays within the municipality's control — answering questions using internal information without sending data to public AI platforms.",
+        "areaServed": {"@type": "Country", "name": "Canada"}
+      }
+    ]
+  }
+  </script>
+
+  <!-- ══ Block 3 — Municipal FAQ ══ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the June 11 2026 Privacy Management Program deadline for Alberta municipalities?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "June 11, 2026 was the deadline by which Alberta municipalities were required to have a documented Privacy Management Program in place under the Access to Information Act (ATIA) and Protection of Privacy Act (POPA). That deadline has now passed, and any municipality without a program in place is overdue. An existing IT acceptable use policy does not satisfy this requirement. The program must specifically address how the municipality manages personal information, including information processed using AI tools."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is shadow AI and why does it matter for municipalities?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Shadow AI refers to the use of public AI tools — such as ChatGPT, Gemini, or Microsoft Copilot — by municipal staff without formal approval, policy, or training. Research indicates that approximately 48% of public servants are already using these tools with work data, including ratepayer information. This creates compliance exposure under ATIA and POPA, and potential reputational risk for the municipality."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does an IT acceptable use policy satisfy the ATIA AI compliance requirement?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. An existing IT acceptable use policy does not satisfy Alberta's Privacy Management Program requirement under ATIA and POPA. Municipalities need a purpose-built program that specifically addresses AI tool use, data handling, staff accountability, and privacy risk management."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does the AI Readiness Assessment take for a small municipality?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Spencer Morley Consulting's AI Readiness Assessment is a two-session engagement, scoped to complete within two to three weeks of booking. It produces a written brief suitable for internal decision-making or council presentation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you work with small and rural municipalities?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Spencer Morley Consulting works specifically with small and rural Canadian municipalities. Jordan Morley's AI practice is designed for organizations with lean administrative teams and limited internal IT resources — not for large urban municipalities with dedicated technology departments."
+        }
+      }
+    ]
+  }
+  </script>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" href="/SMC_symbol_gold_transparent.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "@id": "https://spencermorleyconsulting.ca/municipal.html#breadcrumb",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://spencermorleyconsulting.ca/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "AI Consulting",
+        "item": "https://spencermorleyconsulting.ca/#ai-section"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Municipal Track",
+        "item": "https://spencermorleyconsulting.ca/municipal.html"
+      }
+    ]
+  }
+  </script>
+  <script src="/consent.js" defer></script>
+</head>
+<body class="landing-page municipal-page">
+
+<nav>
+  <a href="./" class="nav-brand">
+    <span class="nav-brand-icon">
+      <svg class="smc-sym" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M50,5C25.2,5,5,25.2,5,50c0,24.8,20.2,45,45,45c24.8,0,45-20.2,45-45C95,25.2,74.8,5,50,5z M50,91C27.4,91,9,72.6,9,50S27.4,9,50,9s41,18.4,41,41S72.6,91,50,91z M84.4,51.4l-6,6C78,57.8,77.5,58,77,58s-1-0.2-1.4-0.6c-0.8-0.8-0.8-2,0-2.8l2.6-2.6H54.8l9.2,9.2V60c0-1.1,0.9-2,2-2s2,0.9,2,2v6c0,0.1,0,0.3,0,0.4c-0.1,0.3-0.3,0.6-0.6,0.8c0,0-0.1,0.1-0.1,0.1c-0.1,0.1-0.3,0.1-0.6,0.1h-6c-1.1,0-2-0.9-2-2s0.9-2,2-2h1.2L52,54.8v23.3l2.6-2.6c0.8-0.8,2-0.8,2.8,0s0.8,2,0,2.8l-6,6c-0.4,0.4-0.9,0.6-1.4,0.6s-1-0.2-1.4-0.6l-6-6c-0.8-0.8-0.8-2,0-2.8c0.8-0.8,2-0.8,2.8,0l2.6,2.6V54.8L38.8,64H40c1.1,0,2,0.9,2,2s-0.9,2-2,2h-6c-0.3,0-0.5-0.1-0.7-0.2c-0.3-0.2-0.5-0.5-0.6-0.8c0-0.1,0-0.3,0-0.4v-6c0-1.1,0.9-2,2-2s2,0.9,2,2v1.2l9.2-9.2H21.8l2.6,2.6c0.8,0.8,0.8,2,0,2.8C24,57.8,23.5,58,23,58s-1-0.2-1.4-0.6l-6-6c-0.8-0.8-0.8-2,0-2.8l6-6c0.8-0.8,2-0.8,2.8,0c0.8,0.8,0.8,2,0,2.8L21.8,48h23.3L36,38.8V40c0,1.1-0.9,2-2,2s-2-0.9-2-2v-6c0-0.1,0-0.3,0-0.4c0.2-0.6,0.7-1.1,1.3-1.2c0.1,0,0.2,0,0.3,0h6c1.1,0,2,0.9,2,2s-0.9,2-2,2h-1.2l9.2,9.2V21.8l-2.6,2.6c-0.8,0.8-2,0.8-2.8,0c-0.8-0.8-0.8-2,0-2.8l6-6c0.4-0.4,0.9-0.6,1.4-0.6s1,0.2,1.4,0.6l6,6c0.8,0.8,0.8,2,0,2.8C57,24.8,56.5,25,56,25s-1-0.2-1.4-0.6L52,21.8v23.3l9.2-9.2H60c-1.1,0-2-0.9-2-2s0.9-2,2-2h6c0.1,0,0.2,0,0.3,0c0.6,0.1,1.1,0.6,1.3,1.2c0,0.1,0,0.3,0,0.4v6c0,1.1-0.9,2-2,2s-2-0.9-2-2v-1.2L54.8,48h23.3l-2.6-2.6c-0.8-0.8-0.8-2,0-2.8c0.8-0.8,2-0.8,2.8,0l6,6C85.2,49.4,85.2,50.6,84.4,51.4z"/>
+      </svg>
+    </span>
+    <span class="nav-brand-text">
+      <span class="nav-brand-name">Spencer Morley Consulting</span>
+      <span class="nav-brand-tagline">Helping You Navigate the Chaos</span>
+    </span>
+  </a>
+
+  <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links">
+    <li class="nav-dropdown">
+      <a href="./#crisis">Communications and Crisis Management ▾</a>
+      <div class="nav-dropdown-menu">
+        <a href="./#crisis-mgmt">Crisis Management</a>
+        <a href="./#media-relations">Media Relations Training</a>
+        <a href="./#on-demand">On-Demand Communications</a>
+      </div>
+    </li>
+    <li class="nav-dropdown">
+      <a href="#ai-section">AI Consulting ▾</a>
+      <div class="nav-dropdown-menu">
+        <a href="municipal.html">Municipal Track</a>
+        <a href="small-business.html">Small Business Track</a>
+        <a href="non-profits.html">AI for Non-Profits Track</a><a href="ai-adoption-policy.html">AI Adoption Policy</a>
+      </div>
+    </li>
+    <li><a href="#about">About</a></li>
+    <li><a href="resources/">Glossary</a></li>
+    <li><a href="#contact" class="nav-cta" onclick="gtag('event', 'cta_click', {'event_category': 'nav', 'event_label': 'get_a_consultation', 'page': 'municipal'})">Get a Consultation</a></li>
+  </ul>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-watermark">
+    <svg class="smc-sym" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <path d="M50,5C25.2,5,5,25.2,5,50c0,24.8,20.2,45,45,45c24.8,0,45-20.2,45-45C95,25.2,74.8,5,50,5z M50,91C27.4,91,9,72.6,9,50S27.4,9,50,9s41,18.4,41,41S72.6,91,50,91z M84.4,51.4l-6,6C78,57.8,77.5,58,77,58s-1-0.2-1.4-0.6c-0.8-0.8-0.8-2,0-2.8l2.6-2.6H54.8l9.2,9.2V60c0-1.1,0.9-2,2-2s2,0.9,2,2v6c0,0.4-0.2,0.8-0.6,1c-0.2,0.2-0.5,0.4-0.8,0.4h-6c-1.1,0-2-0.9-2-2s0.9-2,2-2h1.2L52,54.8v23.3l2.6-2.6c0.8-0.8,2-0.8,2.8,0s0.8,2,0,2.8l-6,6c-0.4,0.4-0.9,0.6-1.4,0.6s-1-0.2-1.4-0.6l-6-6c-0.8-0.8-0.8-2,0-2.8c0.8-0.8,2-0.8,2.8,0l2.6,2.6V54.8L38.8,64H40c1.1,0,2,0.9,2,2s-0.9,2-2,2h-6c-0.3,0-0.6-0.1-0.8-0.4c-0.4-0.2-0.6-0.6-0.6-1v-6c0-1.1,0.9-2,2-2s2,0.9,2,2v1.2l9.2-9.2H21.8l2.6,2.6c0.8,0.8,0.8,2,0,2.8C24,57.8,23.5,58,23,58s-1-0.2-1.4-0.6l-6-6c-0.8-0.8-0.8-2,0-2.8l6-6c0.8-0.8,2-0.8,2.8,0c0.8,0.8,0.8,2,0,2.8L21.8,48h23.3L36,38.8V40c0,1.1-0.9,2-2,2s-2-0.9-2-2v-6c0-0.4,0.1-0.8,0.4-1c0.3-0.3,0.6-0.4,1-0.4h6c1.1,0,2,0.9,2,2s-0.9,2-2,2h-1.2l9.2,9.2V21.8l-2.6,2.6c-0.8,0.8-2,0.8-2.8,0c-0.8-0.8-0.8-2,0-2.8l6-6c0.4-0.4,0.9-0.6,1.4-0.6s1,0.2,1.4,0.6l6,6c0.8,0.8,0.8,2,0,2.8C57,24.8,56.5,25,56,25s-1-0.2-1.4-0.6L52,21.8v23.3l9.2-9.2H60c-1.1,0-2-0.9-2-2s0.9-2,2-2h6c0.4,0,0.7,0.1,1,0.4c0.3,0.2,0.4,0.6,0.4,1v6c0,1.1-0.9,2-2,2s-2-0.9-2-2v-1.2L54.8,48h23.3l-2.6-2.6c-0.8-0.8-0.8-2,0-2.8c0.8-0.8,2-0.8,2.8,0l6,6C85.2,49.4,85.2,50.6,84.4,51.4z"/>
+    </svg>
+  </div>
+  <div class="wrap">
+    <div class="breadcrumb">
+      <a href="./">Home</a> › <a href="./#ai-section">AI Consulting</a> › <span>Municipal Track</span>
+    </div>
+    <div class="page-hero-eyebrow">AI Consulting — Municipal Track</div>
+    <h1>Your staff are using AI.<br/><em>Your policy isn&#8217;t ready.</em></h1>    <p class="page-hero-sub">Half your team may already be using public AI tools with ratepayer data. Provincial legislation requires a formal response &#8212; and in Alberta, the June 11, 2026 deadline has already passed. Spencer Morley Consulting&#8217;s framework closes the compliance gap and builds a genuine AI capability at the same time.</p>
+    <div class="page-hero-actions">
+      <a href="#contact" class="btn-gold" onclick="gtag('event', 'cta_click', {'event_category': 'hero', 'event_label': 'book_consultation', 'page': 'municipal'})">Check Your Compliance Position</a>
+      <a href="https://calendly.com/jordan-spencermorleyconsulting" target="_blank" rel="noopener" style="font-family:var(--font-ui);font-size:0.78rem;font-weight:900;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);text-decoration:underline;text-underline-offset:4px;align-self:center;" onclick="gtag('event','cta_click',{'event_category':'hero','event_label':'calendly_book_call','page':'municipal'})">Book a call directly</a>
+      
+    </div>
+  </div>
+</section>
+
+<!-- LEAD MAGNET: ATIA/POPA CHECKLIST -->
+<section id="checklist" style="background:var(--charcoal-mid);border-top:1px solid var(--gold-border);border-bottom:1px solid var(--gold-border);padding:3.5rem 2rem;">
+  <div style="max-width:760px;margin:0 auto;text-align:center;">
+    <div style="font-family:var(--font-ui);font-size:0.68rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.75rem;">Free download</div>
+    <h2 style="font-family:var(--font-display);font-size:clamp(1.5rem,3vw,2.2rem);font-weight:600;color:var(--cream);margin-bottom:0.75rem;">The ATIA/POPA AI compliance checklist</h2>
+    <p style="font-size:0.95rem;line-height:1.7;color:rgba(247,247,245,0.72);max-width:34em;margin:0 auto 1.5rem;">The 8 documents your municipality must have in place under Alberta's Privacy Management Program requirement &mdash; on one page, ready for your next council meeting.</p>
+    <form id="chk-gate" onsubmit="return false;" style="display:flex;gap:0.6rem;max-width:26rem;margin:0 auto;flex-wrap:wrap;justify-content:center;">
+      <input type="email" id="chk-gate-email" placeholder="Work email *" required style="flex:1 1 200px;background:rgba(255,255,255,0.06);border:1px solid var(--gold-border);border-radius:4px;padding:0.8rem 0.9rem;color:var(--cream);font-size:0.9rem;" />
+      <span class="cfield-err" id="err-chk-gate-email" style="flex:1 1 100%;text-align:center;">Enter a work email we can reply to, like name@yourmunicipality.ca.</span>
+      <button class="btn-gold" style="border:none;cursor:pointer;" onclick="handleChecklistGate(event,'municipal')">Get the checklist</button>
+    </form>
+    <p id="chk-gate-done" style="display:none;font-family:var(--font-ui);font-size:0.9rem;font-weight:700;color:var(--gold);margin-top:1rem;">
+      Sent &mdash; and here&rsquo;s your copy: <a href="/downloads/smc-atia-popa-ai-compliance-checklist.pdf" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:underline;text-underline-offset:3px;" onclick="gtag('event','cta_click',{'event_category':'lead_magnet','event_label':'checklist_download','page':'municipal'})">Download the checklist (PDF)</a>
+    </p>
+    <p style="font-size:0.72rem;color:rgba(247,247,245,0.4);margin-top:0.9rem;">No spam. One email with the checklist link &mdash; that&rsquo;s it.</p>
+  </div>
+</section>
+
+<!-- MUNICIPAL TRACK CONTENT -->
+<section class="ai-section" style="padding: 5rem 0 7rem;">
+  <div class="wrap">
+    <div class="track-full">
+      <!-- ── MUNICIPAL TRACK ── -->
+      <div class="track" id="municipal-track">
+        <div class="track-header">
+          <div class="track-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <div>
+            <div class="track-label">Municipal Track</div>
+            <div class="track-sublabel">Municipalities across Canada</div>
+          </div>
+        </div>
+
+        <!-- Shadow AI stats callout -->
+        <div class="compliance-callout">
+          <div class="shadow-ai-label">
+            <span class="shadow-ai-badge">Shadow AI</span>
+            The compliance gap hiding in plain sight
+          </div>
+          <div class="shadow-ai-stats">
+            <div class="shadow-stat">
+              <div class="shadow-stat-num">48%</div>
+              <div class="shadow-stat-desc">of public servants are already using AI tools on the job</div>
+            </div>
+            <div class="shadow-stat shadow-stat--highlight">
+              <div class="shadow-stat-num">22%</div>
+              <div class="shadow-stat-desc">of organizations have a formal AI adoption policy in place</div>
+            </div>
+            <div class="shadow-stat">
+              <div class="shadow-stat-num">50%</div>
+              <div class="shadow-stat-desc">of those AI users rely on publicly available tools — ChatGPT, Gemini, Copilot</div>
+            </div>
+            <div class="shadow-stat">
+              <div class="shadow-stat-num">85%</div>
+              <div class="shadow-stat-desc">of Canadians lack confidence in how the public service will develop and use AI</div>
+            </div>
+          </div>
+          <div class="compliance-callout-source"><a href="https://kpmg.com/ca/en/media/2025/09/half-of-public-servants-turn-to-ai-raising-risks.html" target="_blank" rel="noopener" style="color: #C9A84C;">2025 KPMG Canada survey of 349 public servants</a>, <em>"Half of public servants turn to AI, raising risks"</em> — co-published with Microsoft</div>
+        </div>
+
+        <!-- Province-specific deadline pill -->
+        <div class="deadline-pill" style="margin-top:1.2rem;">
+          <span class="deadline-pill-dot"></span>
+          Alberta municipalities: the June 11, 2026 ATIA &amp; POPA deadline has passed · Every Canadian province has equivalent privacy obligations for municipalities
+        </div>
+
+        <div class="track-intro">
+          <p class="lead">Nearly half of your staff are probably already using AI &#8212; right now, today, without a policy, without training, and without knowing what happens to the data they enter.</p>
+          <p>The Federation of Canadian Municipalities and the Alberta Urban Municipalities Association have both identified AI governance as an active priority for 2025–2026. Spencer Morley Consulting's Municipal AI Framework is built around the specific compliance obligations in your province — not a generic template adapted from elsewhere.</p>
+          <p>Half of them are using publicly available tools. ChatGPT. Gemini. Copilot. Tools that were not built for municipal government and offer no guarantees about where your data goes.</p>
+          <p>This is Shadow AI. It is not a future risk. It is a present one &#8212; and provincial privacy legislation has a deadline attached.</p>
+          <p>An existing IT acceptable use policy does not satisfy the Privacy Management Program requirements under your province&#8217;s legislation &#8212; in Alberta, that&#8217;s ATIA and POPA; in BC, FOIPPA; in Ontario, MFIPPA. These are distinct obligations in every province. Spencer Morley Consulting&#8217;s Municipal Framework addresses all of them.</p>
+        </div>
+
+        <div class="track-services">
+          <div class="ai-svc" id="ai-readiness-assessment">
+            <div class="ai-svc-n">01</div>
+            <div>
+              <div class="ai-svc-title">AI Readiness Assessment</div>
+              <div class="ai-svc-desc"><strong style="color:rgba(247,247,245,0.72);">Know exactly where your compliance risk is &#8212; before your auditor does.</strong></div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;">Before spending a dollar on AI, and before your next privacy review, you need to know where you stand. Spencer Morley Consulting conducts a structured diagnostic of your municipality&#8217;s current workflows, data practices, and staff AI usage. We surface your Shadow AI exposure: which tools your staff are already using, what information may be at risk, and where your policy gaps are.</div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;">Then we identify where AI can save your team the most time, and deliver a plain-language roadmap your council can understand and approve. Delivered remotely, with minimal demands on your team&#8217;s time.</div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;font-style:italic;color:rgba(247,247,245,0.55);">Our assessment adapts to your province &#8212; the questions, compliance benchmarks, and roadmap reflect your specific provincial legislation, not a generic Alberta template.</div>
+              <span class="ai-svc-tag" style="margin-top:0.5rem;">Start Here</span>
+              <span class="ai-svc-tag" style="margin-top:0.5rem;">Province-Adaptive</span>
+              <div style="margin-top:1rem;">
+                <a href="https://audit.spencermorleyconsulting.ca" class="btn-gold" style="padding:0.7rem 1.5rem;" onclick="gtag('event', 'cta_click', {'event_category': 'ai_svc', 'event_label': 'readiness_assessment_free', 'page': 'municipal'})">Start Your Free Assessment &#8212;</a>
+                <span style="display:block;margin-top:0.5rem;font-size:0.72rem;color:rgba(247,247,245,0.5);">No cost. Takes 15&#8211;20 minutes.</span>
+              </div>
+            </div>
+          </div>
+          <div class="ai-svc" id="staff-ai-training">
+            <div class="ai-svc-n">02</div>
+            <div>
+              <div class="ai-svc-title">Staff AI Training &amp; Prompt Engineering</div>
+              <div class="ai-svc-desc"><strong style="color:rgba(247,247,245,0.72);">Turn your team from a compliance liability into your municipality&#8217;s most effective AI users.</strong></div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;">83% of Canadian employees want to use AI better. Only 48% say their employer gave them what they needed to get there.</div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;">In a municipality, that gap is more than a productivity issue. A staff member who enters ratepayer personal information into a public AI tool may be triggering a reportable privacy breach under your province&#8217;s legislation. And with 85% of Canadians already lacking confidence in how the public service uses AI, one incident can become a council issue fast.</div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;">Spencer Morley Consulting&#8217;s training covers both sides of the problem: what your staff are and are not allowed to use AI for, how to handle personal information safely, and how to get useful output so staff actually use the sanctioned tools well.</div>
+              <div class="ai-svc-desc" style="margin-top:0.8rem; font-style:italic; color:rgba(247,247,245,0.38);">Available remotely or on-site. No jargon. Skills your team uses the next day.</div>
+              <span class="ai-svc-tag" style="margin-top:0.5rem;">Foundation</span>
+            </div>
+          </div>
+          <div class="ai-svc" id="ai-policy-development">
+            <div class="ai-svc-n">03</div>
+            <div>
+              <div class="ai-svc-title">AI Adoption Policy &amp; Procedures</div>
+              <div class="ai-svc-desc"><strong style="color:rgba(247,247,245,0.72);">Two documents doing two different jobs: the policy council adopts, and the procedures administration runs on.</strong></div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;">A policy sets the rules. It is the document council votes on, the one you produce for a provincial oversight body, and the one that states what staff may and may not do with AI. It is necessary &#8212; and on its own it is not sufficient. Policies get adopted and then sit in a binder, because nobody wrote down what following them looks like on a Tuesday afternoon when a staff member has a tool open and a deadline.</div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;">So Spencer Morley Consulting writes both. The <strong style="color:rgba(247,247,245,0.72);">AI Adoption Policy</strong> is the council-facing instrument: purpose and scope, sanctioned and prohibited uses, data handling grounded in your province&#8217;s privacy legislation, breach reporting, assigned accountability, and mandatory training &#8212; in language a council can read, question, and approve.</div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;">The <strong style="color:rgba(247,247,245,0.72);">AI Adoption Procedures</strong> are the administrative companion: how a staff member requests a tool and who approves it, what the review actually checks, what gets logged and where, the exact steps the moment someone suspects personal information went into a public tool, and how the sanctioned tool list is kept current as the market moves.</div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;">Delivered as two separate documents on purpose. Council adopts the policy without having to approve every operational detail, and administration can revise the procedures as tools change without returning to council each time.</div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;">Written to your province &#8212; ATIA and POPA in Alberta, FOIPPA in BC, MFIPPA in Ontario, FIPPA in Manitoba, LAFOIP in Saskatchewan. Pricing on request.</div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;font-style:italic;color:rgba(247,247,245,0.55);">Currently in delivery for an Alberta municipal district: a council-ready AI adoption policy and the operating procedures that sit underneath it.</div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;"><a href="ai-adoption-policy.html" style="color:var(--gold);text-decoration:none;border-bottom:1px solid var(--gold-border);">Policy vs. procedures &#8212; what each document does</a></div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;"><a href="municipal-ai-policy-stress-test.html" style="color:var(--gold);text-decoration:none;border-bottom:1px solid var(--gold-border);">How a draft is stress tested before council sees it</a></div>
+              <span class="legislation-tag">Province-specific</span>
+              <span class="ai-svc-tag" style="margin-top:0.5rem;">Compliance</span>
+              <span class="ai-svc-tag" style="margin-top:0.5rem;">Two documents</span>
+            </div>
+          </div>
+          <div class="ai-svc" id="pmp-integration">
+            <div class="ai-svc-n">04</div>
+            <div>
+              <div class="ai-svc-title">Privacy Management Program Integration</div>
+              <div class="ai-svc-desc"><strong style="color:rgba(247,247,245,0.72);">Your AI policy belongs inside the program the legislation already requires &#8212; not beside it.</strong></div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;">Alberta public bodies were required to have a Privacy Management Program established and implemented by <strong style="color:rgba(247,247,245,0.72);">June 11, 2026</strong> under POPA s.&#8239;25. Many municipalities have one. Far fewer have one that accounts for the AI their staff had already started using.</div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;">That matters because the contents of the program are prescribed by regulation. The <em>Protection of Privacy (Ministerial) Regulation</em>, Alta Reg 143/2025, s.&#8239;6(1)(b)(iii) requires policies and procedures for how automated systems will use personal information; s.&#8239;6(2)(a)(v) adds policies on the use of personal information in artificial intelligence systems for public bodies holding high volumes of personal information or highly sensitive personal information. The AI element is not an addition to the program &#8212; it is part of what the program was always required to contain.</div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;">An AI policy drafted as a free-standing document leaves a municipality with two instruments that name different officers, define terms differently, and route approvals along different paths &#8212; and a program that still has the same hole in it.</div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;">This engagement closes that. We read your existing privacy policy, your program and your privacy impact assessment process; map the prescribed s.&#8239;6 contents against what you already hold; write the AI policy and procedures as components that cross-reference your privacy officer designation, security classification system, breach response and PIA triggers; and prepare the amendment and adoption package that puts them formally into the program.</div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;">Outside Alberta the same logic applies under the equivalent provincial regime. Pricing on request.</div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;"><a href="ai-adoption-policy.html#alberta-popa" style="color:var(--gold);text-decoration:none;border-bottom:1px solid var(--gold-border);">What POPA and Alta Reg 143/2025 actually require</a></div>
+              <span class="legislation-tag">POPA s.&#8239;25 &middot; Alta Reg 143/2025 s.&#8239;6</span>
+              <span class="ai-svc-tag" style="margin-top:0.5rem;">Compliance</span>
+              <span class="ai-svc-tag" style="margin-top:0.5rem;">Program-level</span>
+            </div>
+          </div>
+          <div class="ai-svc" id="private-llm">
+            <div class="ai-svc-n">05</div>
+            <div>
+              <div class="ai-svc-title">Private Large Language Model Deployment</div>
+              <div class="ai-svc-desc"><strong style="color:rgba(247,247,245,0.72);">A powerful AI tool your staff can actually use, without touching a public platform.</strong></div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;">Your staff need an alternative. Without one, telling them to stop using ChatGPT only means they use it more carefully, which isn&#8217;t the same as not using it.</div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;">Spencer Morley Consulting deploys a private AI instance scoped entirely to your municipality. Your data stays within your systems, under your control, subject to your provincial privacy obligations. Your staff get a sanctioned, capable AI tool to use instead of the public ones &#8212; one that your municipality controls completely. No public cloud exposure. No IT department required to maintain it.</div>
+              <span class="legislation-tag">Data sovereignty</span>
+              <span class="legislation-tag">Province-compliant architecture</span>
+              <span class="ai-svc-tag" style="margin-top:0.5rem;">Infrastructure</span>
+            </div>
+          </div>
+          <div class="compliance-callout" style="margin: 1.5rem 0;">
+            <div class="shadow-ai-label">
+              <span class="shadow-ai-badge">Agentic AI</span>
+              What Canadian organizations are saying
+            </div>
+            <div class="shadow-ai-stats">
+              <div class="shadow-stat">
+                <div class="shadow-stat-num">88%</div>
+                <div class="shadow-stat-desc">say Agentic AI is critical for keeping their competitive edge and driving productivity</div>
+              </div>
+              <div class="shadow-stat shadow-stat--highlight">
+                <div class="shadow-stat-num">92%</div>
+                <div class="shadow-stat-desc">believe Agentic AI will help achieve cost savings and increase efficiency</div>
+              </div>
+              <div class="shadow-stat">
+                <div class="shadow-stat-num">89%</div>
+                <div class="shadow-stat-desc">say Agentic AI will help address labour gaps in their organization</div>
+              </div>
+              <div class="shadow-stat">
+                <div class="shadow-stat-num">69%</div>
+                <div class="shadow-stat-desc">are concerned about Agentic AI cutting the human out of the loop &#8212; Spencer Morley Consulting designs human oversight in from the start</div>
+              </div>
+            </div>
+            <div class="compliance-callout-source">KPMG in Canada, <em>&#8220;Canadian organizations turning to AI agents: KPMG poll,&#8221;</em> April 2025</div>
+          </div>
+          <div class="ai-svc" id="agentic-workflows">
+            <div class="ai-svc-n">06</div>
+            <div>
+              <div class="ai-svc-title">Agentic Workflows</div>
+              <div class="ai-svc-desc"><strong style="color:rgba(247,247,245,0.72);">Stop spending staff hours on tasks AI can complete in seconds.</strong></div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;">Spencer Morley Consulting builds municipal agentic workflows with human oversight designed in from the start. Your staff don&#8217;t get replaced. They get relieved of the administrative burden that prevents them from doing the work that requires a human.</div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;">Workflows we automate for municipalities: meeting minutes and council agendas, bylaw drafting, permit correspondence, access-to-information request triage and response drafting under ATIA/POPA (or your province&#8217;s equivalent), report generation, ratepayer communications, onboarding documentation, and more. Every workflow is privacy-by-design.</div>
+              <span class="legislation-tag">Privacy-by-design</span>
+              <span class="ai-svc-tag" style="margin-top:0.5rem;">Transformation</span>
+            </div>
+          </div>
+          <div class="ai-svc" id="resident-surveys">
+            <div class="ai-svc-n">07</div>
+            <div>
+              <div class="ai-svc-title">Residents &amp; Community Surveys</div>
+              <div class="ai-svc-desc"><strong style="color:rgba(247,247,245,0.72);">Ask residents properly, and council gets answers it can act on.</strong></div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;">Whether the question is policing services, strategic planning, or how residents feel about a decision council is facing, a well-run survey turns opinion into evidence. Spencer Morley Consulting designs and delivers resident surveys end to end &#8212; so your administration gets the answers without taking on the workload.</div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;">How we run them: we design the questionnaire with your administration, so every question maps to a decision council actually has to make. The survey runs online, built and hosted on SMC&#8217;s own infrastructure. Resident responses stay in Canada, on systems we control, not on a third-party survey platform (see <a href="data-security-residency.html" style="color:var(--gold);">data security &amp; residency</a>). We handle the fielding, then analyze the results and deliver a plain-language report to council: what residents said, what it means, and what to do next.</div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;font-style:italic;color:rgba(247,247,245,0.55);">Delivered for the County of Minburn: the Policing Services Residents Survey and the Strategic Planning Residents Survey.</div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;"><a href="municipal-surveys/" style="color:var(--gold);text-decoration:none;border-bottom:1px solid var(--gold-border);">How a resident survey engagement works &#8212; security, privacy and reporting</a></div>
+              <span class="legislation-tag">Canadian data residency</span>
+              <span class="ai-svc-tag" style="margin-top:0.5rem;">Delivered for Alberta counties</span>
+            </div>
+          </div>
+          <div class="ai-svc" id="fractional-pio">
+            <div class="ai-svc-n">08</div>
+            <div>
+              <div class="ai-svc-title">Fractional Public Information Officer (PIO) Services</div>
+              <div class="ai-svc-desc"><strong style="color:rgba(247,247,245,0.72);">When a municipality needs a communications lead embedded in the team rather than advising from outside.</strong></div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;">For municipalities managing an active crisis, a recovery period, or a staffing gap, Spencer Morley Consulting can embed directly as a fractional or interim Public Information Officer &#8212; handling council communications, stakeholder relations, social media, and website updates day to day. This is hands-on delivery, not just strategic counsel.</div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;font-style:italic;color:rgba(247,247,245,0.55);">Delivered for the Municipality of Jasper during its 2024 wildfire response, where Cheryl Spencer-Morley spent roughly two and a half months on the ground effectively serving as the municipality's communications liaison and Public Information Officer.</div>
+              <span class="ai-svc-tag" style="margin-top:0.5rem;">Embedded delivery</span>
+            </div>
+          </div>
+          <div class="ai-svc" id="municipal-rebrand">
+            <div class="ai-svc-n">09</div>
+            <div>
+              <div class="ai-svc-title">Municipal Rebrand &amp; Website Development</div>
+              <div class="ai-svc-desc"><strong style="color:rgba(247,247,245,0.72);">A full rebrand and new website, built for how residents find and use municipal information.</strong></div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;">Spencer Morley Consulting leads municipalities through a full rebrand of visual identity, messaging, and website, paired with the social media strategy to bring it to residents.</div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;font-style:italic;color:rgba(247,247,245,0.55);">Delivered for the County of Minburn: a full rebrand and new website, alongside the social media rollout that supported it.</div>
+              <span class="ai-svc-tag" style="margin-top:0.5rem;">Delivered for Alberta counties</span>
+            </div>
+          </div>
+          <div class="ai-svc" id="strategic-plan-facilitation">
+            <div class="ai-svc-n">10</div>
+            <div>
+              <div class="ai-svc-title">Strategic Plan Facilitation for Agricultural Service Boards &amp; Rural Economic Development Bodies</div>
+              <div class="ai-svc-desc"><strong style="color:rgba(247,247,245,0.72);">Facilitated strategic planning built for agricultural service boards and rural economic development committees.</strong></div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;">Spencer Morley Consulting facilitates strategic planning sessions for agricultural service boards and similar rural economic development bodies, turning board priorities into a workable strategic plan.</div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;font-style:italic;color:rgba(247,247,245,0.55);">Delivered for the County of Minburn's Agricultural Service Board &#8212; Cheryl Spencer-Morley is named Administration Presenter to the ASB in <a href="https://minburncounty.ab.ca/vertical/sites/%7BD0C7E2CA-BDB2-4F40-86B9-3377946EC766%7D/uploads/December-Agricultural-Service-Board-Meeting.pdf" target="_blank" rel="noopener" style="color:var(--gold);">public meeting minutes</a>.</div>
+              <span class="ai-svc-tag" style="margin-top:0.5rem;">Delivered for Alberta counties</span>
+            </div>
+          </div>
+          <div class="ai-svc" id="permitting-intake">
+            <div class="ai-svc-n">11</div>
+            <div>
+              <div class="ai-svc-title">AI-Assisted Permitting &amp; Licensing Intake</div>
+              <div class="ai-svc-desc"><strong style="color:rgba(247,247,245,0.72);">Faster intake, fewer back-and-forth cycles, no new hires.</strong></div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;">Spencer Morley Consulting builds intake triage, completeness checking, and routing against your existing permitting or GIS platform, catching missing documents and misrouted applications before they cost your staff a phone call. This is not automated approval. A person still makes every decision; the AI just gets the file to them faster and cleaner.</div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;">Built to work alongside the systems you already run (Esri ArcGIS, Diamond/CentralSquare, Questica), not to replace them.</div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;font-style:italic;color:rgba(247,247,245,0.55);">Edmonton&#8217;s AutoReview program has shown this approach can cut typical review cycles from weeks to days for eligible applications &#8212; the documented pattern we&#8217;re building from, not an SMC-delivered result.</div>
+              <span class="ai-svc-tag" style="margin-top:0.5rem;">Permitting &amp; Licensing</span>
+              <span class="ai-svc-tag" style="margin-top:0.5rem;">New</span>
+            </div>
+          </div>
+          <div class="ai-svc" id="data-readiness">
+            <div class="ai-svc-n">12</div>
+            <div>
+              <div class="ai-svc-title">Data Readiness &amp; Migration</div>
+              <div class="ai-svc-desc"><strong style="color:rgba(247,247,245,0.72);">The unglamorous work every other AI project depends on.</strong></div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;">Fragmented spreadsheets, inconsistent GIS layers, and legacy records are the reason most AI projects stall before they start. Spencer Morley Consulting cleanses, deduplicates, and structures your existing data so it&#8217;s usable, by AI tools or anything else.</div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;">This is usually Phase 1 of a larger engagement, not a service on its own &#8212; the right starting point if your municipality isn&#8217;t ready for anything else on this list yet.</div>
+              <span class="ai-svc-tag" style="margin-top:0.5rem;">Foundational</span>
+              <span class="ai-svc-tag" style="margin-top:0.5rem;">New</span>
+            </div>
+          </div>
+          <div class="ai-svc" id="citizen-chatbot">
+            <div class="ai-svc-n">13</div>
+            <div>
+              <div class="ai-svc-title">Citizen-Service Chatbot &amp; Virtual Front Desk</div>
+              <div class="ai-svc-desc"><strong style="color:rgba(247,247,245,0.72);">A front desk that doesn&#8217;t close at 4:30.</strong></div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;">Built on a knowledge base your staff curate and approve (bylaws, utility billing, waste schedules, permit FAQs), with a clear handoff to a person whenever a question needs one. We design the escalation path and the update process together, so the answers stay current after launch instead of going stale six months in.</div>
+              <div class="ai-svc-desc" style="margin-top:0.6rem;font-style:italic;color:rgba(247,247,245,0.55);">Both Alberta Municipalities and the Rural Municipalities of Alberta point to resident-facing chatbots as a sound low-risk starting point for municipal AI &#8212; Alberta-specific results are still early, and we&#8217;ll tell you that plainly rather than oversell it.</div>
+              <span class="ai-svc-tag" style="margin-top:0.5rem;">Citizen Services</span>
+              <span class="ai-svc-tag" style="margin-top:0.5rem;">New</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROVINCE PAGES -->
+<section style="background:var(--charcoal);padding:48px 2rem;border-top:1px solid var(--gold-border);">
+  <div style="max-width:1100px;margin:0 auto;">
+    <div style="font-family:var(--font-body);font-size:0.68rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;">Province-Specific Guides</div>
+    <p style="font-size:0.9rem;color:rgba(247,247,245,0.6);margin-bottom:1.5rem;max-width:620px;">Every province has different legislation. Select yours for a tailored breakdown of your obligations, the oversight body you answer to, and how the Municipal AI Framework applies in your jurisdiction. New here? Start with our overview of <a href="ai-consultant-for-municipalities-canada.html" style="color:var(--gold);text-decoration:none;border-bottom:1px solid var(--gold-border);">AI consulting for municipalities in Canada</a>.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:1rem;">
+      <a href="municipal/alberta/" style="display:flex;flex-direction:column;gap:0.3rem;flex:1 1 180px;background:var(--charcoal-mid);border:1px solid var(--gold-border);border-radius:4px;padding:1rem 1.25rem;text-decoration:none;transition:background 0.2s,border-color 0.2s;" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--gold-border)'">
+        <span style="font-family:var(--font-body);font-size:0.62rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);">Alberta</span>
+        <span style="font-family:var(--font-ui);font-size:0.88rem;font-weight:800;color:var(--cream);">ATIA &amp; POPA</span>
+        <span style="font-size:0.78rem;color:rgba(247,247,245,0.55);margin-top:0.25rem;">Deadline passed — act now &rarr;</span>
+      </a>
+      <a href="municipal/bc/" style="display:flex;flex-direction:column;gap:0.3rem;flex:1 1 180px;background:var(--charcoal-mid);border:1px solid var(--gold-border);border-radius:4px;padding:1rem 1.25rem;text-decoration:none;transition:background 0.2s,border-color 0.2s;" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--gold-border)'">
+        <span style="font-family:var(--font-body);font-size:0.62rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);">British Columbia</span>
+        <span style="font-family:var(--font-ui);font-size:0.88rem;font-weight:800;color:var(--cream);">FOIPPA</span>
+        <span style="font-size:0.78rem;color:rgba(247,247,245,0.55);margin-top:0.25rem;">Data residency requirements &rarr;</span>
+      </a>
+      <a href="municipal/ontario/" style="display:flex;flex-direction:column;gap:0.3rem;flex:1 1 180px;background:var(--charcoal-mid);border:1px solid var(--gold-border);border-radius:4px;padding:1rem 1.25rem;text-decoration:none;transition:background 0.2s,border-color 0.2s;" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--gold-border)'">
+        <span style="font-family:var(--font-body);font-size:0.62rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);">Ontario</span>
+        <span style="font-family:var(--font-ui);font-size:0.88rem;font-weight:800;color:var(--cream);">MFIPPA</span>
+        <span style="font-size:0.78rem;color:rgba(247,247,245,0.55);margin-top:0.25rem;">IPC PIA requirements &rarr;</span>
+      </a>
+      <a href="municipal/manitoba/" style="display:flex;flex-direction:column;gap:0.3rem;flex:1 1 180px;background:var(--charcoal-mid);border:1px solid var(--gold-border);border-radius:4px;padding:1rem 1.25rem;text-decoration:none;transition:background 0.2s,border-color 0.2s;" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--gold-border)'">
+        <span style="font-family:var(--font-body);font-size:0.62rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);">Manitoba</span>
+        <span style="font-family:var(--font-ui);font-size:0.88rem;font-weight:800;color:var(--cream);">FIPPA</span>
+        <span style="font-size:0.78rem;color:rgba(247,247,245,0.55);margin-top:0.25rem;">Ombudsman oversight &rarr;</span>
+      </a>
+      <a href="municipal/saskatchewan/" style="display:flex;flex-direction:column;gap:0.3rem;flex:1 1 180px;background:var(--charcoal-mid);border:1px solid var(--gold-border);border-radius:4px;padding:1rem 1.25rem;text-decoration:none;transition:background 0.2s,border-color 0.2s;" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--gold-border)'">
+        <span style="font-family:var(--font-body);font-size:0.62rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);">Saskatchewan</span>
+        <span style="font-family:var(--font-ui);font-size:0.88rem;font-weight:800;color:var(--cream);">LAFOIP</span>
+        <span style="font-size:0.78rem;color:rgba(247,247,245,0.55);margin-top:0.25rem;">Built for local authorities &rarr;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FURTHER READING -->
+<section style="background:var(--charcoal-mid);padding:48px 2rem;border-top:1px solid var(--gold-border);border-bottom:1px solid var(--gold-border);">
+  <div style="max-width:1100px;margin:0 auto;">
+    <div style="font-family:var(--font-body);font-size:0.68rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;">Further Reading</div>
+    <div style="display:flex;flex-wrap:wrap;gap:1.5rem;align-items:stretch;">
+      <a href="blog/atia-popa-compliance-alberta-municipalities.html" style="display:flex;flex-direction:column;gap:0.5rem;flex:1 1 260px;background:var(--gold-dim);border:1px solid var(--gold-border);border-radius:4px;padding:1.25rem 1.5rem;text-decoration:none;transition:background 0.2s;">
+        <span style="font-family:var(--font-body);font-size:0.68rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);">Compliance Guide</span>
+        <span style="font-family:var(--font-display);font-size:1.15rem;font-weight:600;color:var(--cream);line-height:1.3;">Alberta's ATIA/POPA Deadline Has Arrived. Here's What Your Municipality Needs.</span>
+        <span style="font-size:0.82rem;color:rgba(247,247,245,0.6);margin-top:auto;">The 8-step Privacy Management Program checklist — and what to do if you're not compliant today. &rarr;</span>
+      </a>
+      <a href="blog/shadow-ai-in-municipalities.html" style="display:flex;flex-direction:column;gap:0.5rem;flex:1 1 260px;background:var(--gold-dim);border:1px solid var(--gold-border);border-radius:4px;padding:1.25rem 1.5rem;text-decoration:none;transition:background 0.2s;">
+        <span style="font-family:var(--font-body);font-size:0.68rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);">Risk Management</span>
+        <span style="font-family:var(--font-display);font-size:1.15rem;font-weight:600;color:var(--cream);line-height:1.3;">What Is Shadow AI in Municipalities? The Risk Your Policy Hasn't Addressed.</span>
+        <span style="font-size:0.82rem;color:rgba(247,247,245,0.6);margin-top:auto;">48% of Canadian public servants already use AI tools on the job. Most municipalities have no policy governing it. &rarr;</span>
+      </a>
+      <a href="blog/ai-policy-for-small-municipalities-canada.html" style="display:flex;flex-direction:column;gap:0.5rem;flex:1 1 260px;background:var(--gold-dim);border:1px solid var(--gold-border);border-radius:4px;padding:1.25rem 1.5rem;text-decoration:none;transition:background 0.2s;">
+        <span style="font-family:var(--font-body);font-size:0.68rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);">How-To Guide</span>
+        <span style="font-family:var(--font-display);font-size:1.15rem;font-weight:600;color:var(--cream);line-height:1.3;">How to Build an AI Policy for Your Municipality — A Plain-Language Framework</span>
+        <span style="font-size:0.82rem;color:rgba(247,247,245,0.6);margin-top:auto;">7 steps to a policy that staff will actually follow and council will adopt. →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT CTA -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div>
+        <div class="eyebrow dark">Get in Touch</div>
+        <h2 class="contact-hl">Ready to close your compliance gap?</h2>
+        <p class="contact-sub">The June 11, 2026 deadline for Alberta municipalities has <strong id="deadline-counter">passed</strong>. Other provinces are moving in the same direction. Let&#8217;s talk about where your municipality stands.</p>
+        <p class="contact-sub" style="margin-top:1rem;">Fill out the form and we&#8217;ll be in touch within one business day. Prefer to talk it through? <a href="https://calendly.com/jordan-spencermorleyconsulting" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:underline;text-underline-offset:3px;" onclick="gtag('event','cta_click',{'event_category':'contact','event_label':'calendly_book_call','page':'municipal'})">Book a call directly</a>.</p>
+      </div>
+      <div>
+        <div id="contact-form-wrap">
+          <form
+  tool-name="municipal-consultation-request"
+  tool-description="Request a consultation with Spencer Morley Consulting about AI readiness, compliance, or staff training for your municipality."
+  onsubmit="return false;">
+          <div class="contact-form">
+            <div class="contact-form-row">
+              <input type="text" id="cf-name" placeholder="Your name *" required />
+              <span class="cfield-err" id="err-cf-name">Please enter your name.</span>
+              <input type="email" id="cf-email" placeholder="Email address *" required />
+              <span class="cfield-err" id="err-cf-email">Enter an email we can reply to, like name@example.com.</span>
+            </div>
+            <div class="contact-form-row">
+              <input type="tel" id="cf-phone" placeholder="Phone number (optional)" />
+              <input type="text" id="cf-org" placeholder="Municipality name *" required />
+              <span class="cfield-err" id="err-cf-org">Please enter your municipality's name.</span>
+            </div>
+            <select id="cf-service" required>
+              <option value="" disabled selected>Which service are you interested in? *</option>
+              <option value="AI Readiness Assessment — Municipal">AI Readiness Assessment</option>
+              <option value="Staff AI Training — Municipal">Staff AI Training &amp; Prompt Engineering</option>
+              <option value="AI Adoption Policy &amp; Procedures — Municipal">AI Adoption Policy &amp; Procedures</option>
+              <option value="Privacy Management Program Integration &#8212; Municipal">Privacy Management Program Integration</option>
+              <option value="Private Large Language Model Deployment">Private Large Language Model Deployment</option>
+              <option value="Agentic Workflows — Municipal">Agentic Workflows</option>
+              <option value="AI-Assisted Permitting &amp; Licensing Intake — Municipal">AI-Assisted Permitting &amp; Licensing Intake</option>
+              <option value="Data Readiness &amp; Migration — Municipal">Data Readiness &amp; Migration</option>
+              <option value="Citizen-Service Chatbot &amp; Virtual Front Desk — Municipal">Citizen-Service Chatbot &amp; Virtual Front Desk</option>
+              <option value="General Municipal Inquiry">General Inquiry</option>
+            </select>
+            <span class="cfield-err" id="err-cf-service">Choose the option closest to your situation.</span>
+            <textarea id="cf-message" placeholder="Tell us about your municipality and what you're looking to achieve *" required></textarea>
+            <span class="cfield-err" id="err-cf-message">Tell us a little about what you're looking for.</span>
+            <p class="cform-status" id="cf-status" role="status" aria-live="polite"></p>
+            <button class="btn-submit" onclick="handleFormSubmit(event)">Get a Compliance Assessment</button>
+            <p class="form-note">We respect your privacy. Your information will never be shared.</p>
+          </div>
+          </form>
+        </div>
+        <div class="form-success" id="form-success">
+          <div class="form-success-title">Message received.</div>
+          <div class="form-success-body">Thank you for reaching out. We&#8217;ll be in touch within one business day.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+
+      <div class="footer-brand">
+        <span class="footer-sym">
+          <svg class="smc-sym" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <path d="M50,5C25.2,5,5,25.2,5,50c0,24.8,20.2,45,45,45c24.8,0,45-20.2,45-45C95,25.2,74.8,5,50,5z M50,91C27.4,91,9,72.6,9,50S27.4,9,50,9s41,18.4,41,41S72.6,91,50,91z M84.4,51.4l-6,6C78,57.8,77.5,58,77,58s-1-0.2-1.4-0.6c-0.8-0.8-0.8-2,0-2.8l2.6-2.6H54.8l9.2,9.2V60c0-1.1,0.9-2,2-2s2,0.9,2,2v6c0,0.4-0.2,0.8-0.6,1c-0.2,0.2-0.5,0.4-0.8,0.4h-6c-1.1,0-2-0.9-2-2s0.9-2,2-2h1.2L52,54.8v23.3l2.6-2.6c0.8-0.8,2-0.8,2.8,0s0.8,2,0,2.8l-6,6c-0.4,0.4-0.9,0.6-1.4,0.6s-1-0.2-1.4-0.6l-6-6c-0.8-0.8-0.8-2,0-2.8c0.8-0.8,2-0.8,2.8,0l2.6,2.6V54.8L38.8,64H40c1.1,0,2,0.9,2,2s-0.9,2-2,2h-6c-0.3,0-0.6-0.1-0.8-0.4c-0.4-0.2-0.6-0.6-0.6-1v-6c0-1.1,0.9-2,2-2s2,0.9,2,2v1.2l9.2-9.2H21.8l2.6,2.6c0.8,0.8,0.8,2,0,2.8C24,57.8,23.5,58,23,58s-1-0.2-1.4-0.6l-6-6c-0.8-0.8-0.8-2,0-2.8l6-6c0.8-0.8,2-0.8,2.8,0c0.8,0.8,0.8,2,0,2.8L21.8,48h23.3L36,38.8V40c0,1.1-0.9,2-2,2s-2-0.9-2-2v-6c0-0.4,0.1-0.8,0.4-1c0.3-0.3,0.6-0.4,1-0.4h6c1.1,0,2,0.9,2,2s-0.9,2-2,2h-1.2l9.2,9.2V21.8l-2.6,2.6c-0.8,0.8-2,0.8-2.8,0c-0.8-0.8-0.8-2,0-2.8l6-6c0.4-0.4,0.9-0.6,1.4-0.6s1,0.2,1.4,0.6l6,6c0.8,0.8,0.8,2,0,2.8C57,24.8,56.5,25,56,25s-1-0.2-1.4-0.6L52,21.8v23.3l9.2-9.2H60c-1.1,0-2-0.9-2-2s0.9-2,2-2h6c0.4,0,0.7,0.1,1,0.4c0.3,0.2,0.4,0.6,0.4,1v6c0,1.1-0.9,2-2,2s-2-0.9-2-2v-1.2L54.8,48h23.3l-2.6-2.6c-0.8-0.8-0.8-2,0-2.8c0.8-0.8,2-0.8,2.8,0l6,6C85.2,49.4,85.2,50.6,84.4,51.4z"/>
+          </svg>
+        </span>
+        <span class="footer-name">Spencer Morley Consulting</span>
+      </div>
+
+      <ul class="footer-links">
+        <li><a href="./#crisis">Crisis Communications</a></li>
+        <li><a href="./#ai-section">AI Consulting</a></li>
+        <li><a href="#about">About</a></li>
+    <li><a href="resources/">Glossary</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="terms.html">Terms</a></li>
+      </ul>
+
+      <div class="footer-copy">
+  © 2026 Spencer Morley Consulting · Edmonton, AB · Serving Canada
+<time datetime="2026-04" style="font-size: 0.75rem; color: #888; display: block; margin-top: 4px;">
+  Last updated: June 2026
+</time>
+  <a
+    href="https://www.instagram.com/spencermorleyconsulting/"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Spencer Morley Consulting on Instagram"
+    class="smc-social-link"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+    </svg>
+  </a>
+</div>
+
+    </div>
+  </div>
+</footer>
+
+<script>
+function handleFormSubmit(e) {
+  e.preventDefault();
+  var name    = document.getElementById('cf-name').value.trim();
+  var email   = document.getElementById('cf-email').value.trim();
+  var org     = document.getElementById('cf-org').value.trim();
+  var service = document.getElementById('cf-service').value;
+  var message = document.getElementById('cf-message').value.trim();
+  var fields = [
+    { id: 'cf-name', val: name },
+    { id: 'cf-email', val: email },
+    { id: 'cf-org', val: org },
+    { id: 'cf-service', val: service },
+    { id: 'cf-message', val: message }
+  ];
+  var bad = fields.filter(function (f) { return !f.val; });
+  var emailBad = email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  if (emailBad) bad.push({ id: 'cf-email', val: email });
+  fields.forEach(function (f) {
+    var el = document.getElementById(f.id);
+    var err = document.getElementById('err-' + f.id);
+    if (el) el.classList.remove('is-invalid');
+    if (err) err.classList.remove('show');
+  });
+  var status = document.getElementById('cf-status');
+  if (bad.length) {
+    var seen = {};
+    bad.forEach(function (f) {
+      if (seen[f.id]) return;
+      seen[f.id] = true;
+      var el = document.getElementById(f.id);
+      var err = document.getElementById('err-' + f.id);
+      if (el) el.classList.add('is-invalid');
+      if (err) err.classList.add('show');
+    });
+    var firstId = bad[0].id;
+    var firstEl = document.getElementById(firstId);
+    if (status) {
+      status.textContent = bad.length === 1
+        ? 'Check that field and send again.'
+        : 'Check ' + bad.length + ' fields and send again.';
+    }
+    if (firstEl) firstEl.focus();
+    return;
+  }
+  if (status) status.textContent = '';
+  var btn = e.target;
+  btn.disabled = true;
+  btn.textContent = 'Sending\u2026';
+  fetch('https://formspree.io/f/xojpaekn', {
+    method: 'POST',
+    headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      name: name,
+      email: email,
+      phone: document.getElementById('cf-phone').value || 'Not provided',
+      municipality: org,
+      service: service,
+      message: message,
+      _subject: 'Spencer Morley Consulting Municipal Inquiry \u2014 ' + service,
+      source: 'Municipal Track'
+    })
+  })
+  .then(function(r) {
+    if (r.ok) {
+      document.getElementById('contact-form-wrap').style.display = 'none';
+      document.getElementById('form-success').style.display = 'block';
+      gtag('event', 'generate_lead', {
+        'event_category': 'contact_form',
+        'event_label': service,
+        'page': 'municipal'
+      });
+    } else {
+      btn.disabled = false;
+      btn.textContent = 'Get a Compliance Assessment';
+      if (status) status.textContent = 'Something went wrong. Please try again or email jordan@spencermorleyconsulting.ca directly.';
+    }
+  })
+  .catch(function() {
+    btn.disabled = false;
+    btn.textContent = 'Get a Compliance Assessment';
+    if (status) status.textContent = 'Something went wrong. Please try again or email jordan@spencermorleyconsulting.ca directly.';
+  });
+}
+
+(function () {
+  var ids = ['cf-name', 'cf-email', 'cf-org', 'cf-service', 'cf-message'];
+  ids.forEach(function (id) {
+    var el = document.getElementById(id);
+    if (!el) return;
+    el.addEventListener('input', function () {
+      if (el.value.trim()) {
+        el.classList.remove('is-invalid');
+        var err = document.getElementById('err-' + id);
+        if (err) err.classList.remove('show');
+      }
+    });
+  });
+})();
+
+// ── Scroll-aware nav compression ──
+(function () {
+  const nav = document.querySelector('nav');
+  const onScroll = () => {
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+})();
+
+// ── Dynamic deadline counter ──
+(function() {
+  var el = document.getElementById('deadline-counter');
+  if (!el) return;
+  var deadline = new Date('2026-06-11T07:00:00Z'); // June 11, 2026 00:00 MDT
+  var today = new Date();
+  var days = Math.ceil((deadline - today) / (1000 * 60 * 60 * 24));
+  if (days > 1) {
+    el.textContent = days + ' days away';
+  } else if (days === 1) {
+    el.textContent = 'tomorrow';
+  } else if (days === 0) {
+    el.textContent = 'today';
+  } else {
+    el.textContent = 'passed';
+  }
+})();
+(function() {
+  var hamburger = document.querySelector('.nav-hamburger');
+  var navEl = document.querySelector('nav');
+  if (!hamburger) return;
+  hamburger.addEventListener('click', function() {
+    var isOpen = navEl.classList.toggle('nav-open');
+    hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    hamburger.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && navEl.classList.contains('nav-open')) {
+      navEl.classList.remove('nav-open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      hamburger.setAttribute('aria-label', 'Open menu');
+      document.body.style.overflow = '';
+    }
+  });
+  document.querySelectorAll('.nav-links a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      navEl.classList.remove('nav-open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      hamburger.setAttribute('aria-label', 'Open menu');
+      document.body.style.overflow = '';
+    });
+  });
+})();
+</script>
+
+<script>
+function handleChecklistGate(e, page) {
+  e.preventDefault();
+  var form = e.target.closest('form');
+  var input = form.querySelector('input[type="email"]');
+  var err = document.getElementById('err-' + input.id);
+  var email = input.value.trim();
+  var emailOk = email && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  input.classList.remove('is-invalid');
+  if (err) err.classList.remove('show');
+  if (!emailOk) {
+    input.classList.add('is-invalid');
+    if (err) err.classList.add('show');
+    input.focus();
+    return;
+  }
+  var btn = e.target;
+  btn.disabled = true; btn.textContent = 'Sending\u2026';
+  fetch('https://formspree.io/f/xojpaekn', {
+    method: 'POST',
+    headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: email, _subject: 'ATIA/POPA checklist download \u2014 ' + email, source: 'ATIA/POPA Checklist \u2014 ' + page })
+  }).then(function(r) {
+    if (r.ok) {
+      form.style.display = 'none';
+      document.getElementById(form.id + '-done').style.display = 'block';
+      gtag('event', 'generate_lead', { 'event_category': 'lead_magnet', 'event_label': 'atia_popa_checklist', 'page': page });
+    } else {
+      btn.disabled = false; btn.textContent = 'Get the checklist';
+      if (err) { err.textContent = 'Something went wrong. Please try again or email jordan@spencermorleyconsulting.ca.'; err.classList.add('show'); }
+    }
+  }).catch(function() {
+    btn.disabled = false; btn.textContent = 'Get the checklist';
+    if (err) { err.textContent = 'Something went wrong. Please try again or email jordan@spencermorleyconsulting.ca.'; err.classList.add('show'); }
+  });
+}
+</script>
+
+<div class="sticky-mobile-cta" id="stickyMobileCta">
+  <a class="btn btn-gold" href="#contact" onclick="gtag('event', 'cta_click', {'event_category': 'sticky_mobile', 'event_label': 'get_a_consultation', 'page': 'municipal'})">Get a Consultation</a>
+  <button type="button" class="sticky-mobile-cta-close" aria-label="Hide this bar" onclick="document.getElementById('stickyMobileCta').hidden = true; try { sessionStorage.setItem('smc-sticky-cta-dismissed','1'); } catch (e) {}">&times;</button>
+</div>
+<script>
+  (function () {
+    try {
+      if (sessionStorage.getItem('smc-sticky-cta-dismissed')) {
+        var el = document.getElementById('stickyMobileCta');
+        if (el) el.hidden = true;
+      }
+    } catch (e) {}
+  })();
+</script>
+</body>
+</html>
