@@ -8,6 +8,9 @@
 # resolves to the exact file instead of triggering a 300 Multiple Choices
 Options -Indexes -MultiViews
 
+# ── CUSTOM 404 ────────────────────────────────────────────────────────────
+ErrorDocument 404 /404.html
+
 # ── SECURITY: block source-control + env files (keep .well-known accessible) ──
 # Bots probe /.git/ and /.env/; 404 them so they are never served even if uploaded.
 RedirectMatch 404 (?i)/\.git(/|$)
@@ -27,13 +30,15 @@ RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
 # which was de-indexing the site. 301 the real pages to their current homes; 410
 # the leftover WordPress theme/demo and system paths so Google drops them fast.
 # Specific service rules first, generic /services/ last. NE preserves the # anchor.
-RewriteRule ^services/crisis-management/?$ /index.html#crisis-mgmt [R=301,L,NE]
-RewriteRule ^services/on-demand-communications/?$ /index.html#on-demand [R=301,L,NE]
-RewriteRule ^services/media-relations-training-and-coaching/?$ /index.html#media-relations [R=301,L,NE]
-RewriteRule ^services/?$ /index.html#practices [R=301,L,NE]
+# 2026-09-16: targets changed from /index.html#x to /#x. /index.html canonicalises
+# to /, so the old targets sent Google through a redirect into a duplicate URL.
+RewriteRule ^services/crisis-management/?$ /#crisis-mgmt [R=301,L,NE]
+RewriteRule ^services/on-demand-communications/?$ /#on-demand [R=301,L,NE]
+RewriteRule ^services/media-relations-training-and-coaching/?$ /#media-relations [R=301,L,NE]
+RewriteRule ^services/?$ /#practices [R=301,L,NE]
 RewriteRule ^why-us/?$ / [R=301,L]
-RewriteRule ^about/?$ /index.html#about [R=301,L,NE]
-RewriteRule ^contact/?$ /index.html#contact [R=301,L,NE]
+RewriteRule ^about/?$ /#about [R=301,L,NE]
+RewriteRule ^contact/?$ /#contact [R=301,L,NE]
 
 # Legacy/renamed blog URLs Google still crawls (added 2026-06-30). 301 to current homes.
 RewriteRule ^blog/seo-in-the-ai-era-alberta-non-profits\.html$ /blog/seo-in-the-ai-era-alberta-small-business.html [R=301,L]

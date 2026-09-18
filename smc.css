@@ -1175,3 +1175,60 @@ body:not(.doc-page) .footer-copy { font-family: var(--font-body); font-size: 0.6
   body:not(.doc-page) .nav-links > li > a.nav-cta { font-size: 0.95rem !important; padding: 0.8rem 1.6rem !important; }
   body:not(.doc-page) .nav-dropdown-menu { display: none !important; }
 }
+
+/* --------------------------------------------------------------------------
+   Sticky mobile CTA — persistent bottom bar, mobile only (<=640px).
+   Added 2026-09-13 (site gap audit: no persistent conversion path below the
+   fold on phones). Scoped to body:not(.doc-page) — the doc-page template
+   (privacy, 404, terms, data-security-residency) and the province template
+   are informational, not conversion pages, so they don't get one. Reuses
+   the existing .btn-gold look rather than inventing new button styling.
+   Dismiss is per-tab (sessionStorage) so declining it doesn't hide it on a
+   later visit; JS lives inline on each page since there is no shared <script>
+   include across the site. -------------------------------------------------- */
+.sticky-mobile-cta { display: none; }
+@media (max-width: 640px) {
+  body:not(.doc-page) .sticky-mobile-cta[hidden] { display: none; }
+  body:not(.doc-page) .sticky-mobile-cta {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    position: fixed;
+    left: 0; right: 0; bottom: 0;
+    z-index: 190; /* below nav's 200, above page content */
+    padding: 0.65rem 0.85rem calc(0.65rem + env(safe-area-inset-bottom));
+    background: rgba(20,20,20,0.97);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-top: 1px solid var(--gold-border);
+    box-shadow: 0 -4px 24px rgba(0,0,0,0.35);
+  }
+  body:not(.doc-page) .sticky-mobile-cta .btn-gold {
+    display: block;
+    flex: 1 1 auto;
+    text-align: center;
+  }
+  body:not(.doc-page) .sticky-mobile-cta-close {
+    flex: 0 0 auto;
+    width: 2.1rem; height: 2.1rem;
+    display: flex; align-items: center; justify-content: center;
+    background: transparent; border: 1px solid var(--gold-border);
+    color: var(--muted); font-size: 1rem; line-height: 1; cursor: pointer;
+  }
+  body:not(.doc-page) .sticky-mobile-cta-close:hover { color: var(--gold-light); border-color: var(--gold); }
+}
+
+/* --------------------------------------------------------------------------
+   Form error states — contact forms across templates that had none (site gap
+   audit, 2026-09-13): the three body.landing-page tracks (municipal.html,
+   small-business.html, non-profits.html), the discoverability-index quick-
+   check + consultation forms, the municipal-surveys request form, and the
+   two checklist-gate email forms. Colour matches index.html's own --error
+   (#5C2214) for visual consistency across the two templates; smc.css itself
+   defines no --error token.
+   -------------------------------------------------------------------------- */
+.cfield-err { display: none; font-family: var(--font-body); font-size: 0.78rem; color: #5C2214; margin: 0.3rem 0 0; }
+.cfield-err.show { display: block; }
+.is-invalid { border-color: #5C2214 !important; border-width: 2px !important; background: rgba(92,34,20,0.06) !important; }
+.cform-status { font-family: var(--font-ui); font-size: 0.72rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: #5C2214; min-height: 1em; text-align: center; margin: 0.4rem 0; }
+.cform-status:empty { min-height: 0; margin: 0; }
