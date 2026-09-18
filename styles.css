@@ -224,3 +224,27 @@ body:has(.page-home) .brand small{display:none}
 .checklist-done{font:600 15px/1.6 var(--body);color:var(--gold-light);margin-top:22px}
 .checklist-done a{color:var(--gold-light);text-decoration:underline;text-underline-offset:3px}
 .checklist-fine{font-size:13px;color:var(--cream-mid);margin-top:16px}
+
+/* 2026-09-19: individual team profile pages (team/cheryl.html, team/jordan.html).
+   Recognition-list is the existing single-item .recognition component repeated per
+   <li> — same visual treatment (label, text, link, hairline top border), list
+   semantics stripped rather than introducing a new "card" style. */
+.recognition-list{list-style:none;padding:0;margin:0}
+.recognition-list .recognition{margin-top:0}
+.recognition-list li+li{margin-top:34px}
+
+/* "What Cheryl/Jordan Works On" consolidated service list. Hairline-divided rows,
+   consistent with the site's existing divider language (.work-feature,
+   .engagement-meta) rather than a boxed card component the design system doesn't
+   otherwise use. */
+.work-on-grid{display:grid;gap:0}
+.work-on-grid>div{padding:28px 0;border-top:1px solid var(--line)}
+.work-on-grid>div:first-child{border-top:0;padding-top:0}
+.work-on-grid h3{font:500 22px/1.2 var(--body);letter-spacing:0;color:var(--charcoal);margin-bottom:10px}
+.dark .work-on-grid h3{color:var(--cream)}
+.work-on-grid p{font-size:15px;line-height:1.65;color:var(--light-text);max-width:56ch;margin:0}
+.dark .work-on-grid p{color:var(--cream-mid)}
+@media(min-width:760px){
+  .work-on-grid{grid-template-columns:1fr 1fr;column-gap:6%}
+  .work-on-grid>div:nth-child(2){border-top:0;padding-top:0}
+}
