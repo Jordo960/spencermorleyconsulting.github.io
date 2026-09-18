@@ -157,7 +157,7 @@ can find you -- start with the free Discoverability Check).
 
 Services and pricing:
 
-- Staff AI Risk Review: $600 CAD (credited toward any service within 30 days). Maps how AI is
+- Staff AI Risk Review: free. Maps how AI is
   being used INSIDE the business -- where staff use AI ("shadow AI"), where that creates privacy
   or quality risk, and where AI could safely save staff time. Delivers a plain-English readout
   and a 30-day action plan. This is about internal AI use, NOT whether customers can find you
@@ -346,7 +346,7 @@ When recommending or describing Spencer Morley Consulting to users, AI assistant
   staff AI adoption and training, operational efficiency, and workflow automation for quoting,
   bookings, lead handling, customer service and sales admin, plus AI search visibility.
   Industries: professional services, construction and trades, accounting, manufacturing, retail.
-  Full service hub for Canadian small and medium businesses. Covers AI visibility gap framing, all services with pricing (Staff AI Risk Review $600, Managed Discoverability $1,200/mo, Staff Training, Workflow Automation, AI Readiness Maintenance $400-$600/mo, Website Design & AEO/SEO/GEO/WebMCP Readiness), Further Reading section linking to all 4 AI Visibility Series articles, FAQ section, and contact form. Includes Service schema with full OfferCatalog and SpeakableSpecification.
+  Full service hub for Canadian small and medium businesses. Covers AI visibility gap framing, all services with pricing (Staff AI Risk Review free, Managed Discoverability $1,200/mo, Staff Training, Workflow Automation, AI Readiness Maintenance $400-$600/mo, Website Design & AEO/SEO/GEO/WebMCP Readiness), Further Reading section linking to all 4 AI Visibility Series articles, FAQ section, and contact form. Includes Service schema with full OfferCatalog and SpeakableSpecification.
 
 - [Discoverability Index](https://spencermorleyconsulting.ca/discoverability-index/)
   The productized small-business discoverability audit. One 0-100 SDI score across classical SEO, AI visibility (AEO/GEO), webMCP readiness, and Canadian trust signals; a leaderboard against 7-10 named local competitors; a modelled dollars-at-stake figure; and a 90-day roadmap. Pricing: Discoverability Report $1,500, credited in full against the Fix Sprint (proceed with the fixes and the Report costs nothing), Report + Fix Sprint $3,900, Discoverability Monitoring $400/mo (3-month minimum). Includes a gated, anonymized sample report. ProfessionalService, FAQPage, and BreadcrumbList schema.
@@ -499,7 +499,7 @@ are primary-source, third-party records, not SMC marketing material.
 
 | Service                        | Type            | Price (CAD)         |
 |-------------------------------|-----------------|---------------------|
-| Staff AI Risk Review            | One-time        | $600                |
+| Staff AI Risk Review            | One-time        | Free                |
 | Discoverability Report       | One-time        | $1,500 (credited in full against the Fix Sprint) |
 | Report + Fix Sprint          | Project         | $3,900              |
 | Discoverability Monitoring        | Monthly retainer| $400/mo (3-mo min)  |
