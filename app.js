@@ -7,34 +7,60 @@ menu.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')
 nav.addEventListener('click',event=>{if(event.target.closest('a'))closeMenu();});
 document.addEventListener('keydown',event=>{if(event.key==='Escape'&&menu.getAttribute('aria-expanded')==='true')closeMenu(true);});
 document.addEventListener('click',event=>{if(!event.target.closest('.site-header'))closeMenu();});
-const form = document.querySelector('form[data-kind]');
-function previewForm(values){
- if(!form)return {ok:false,message:'This page has no request form.'};
- if(values){for(const [key,value] of Object.entries(values)){const input=form.elements.namedItem(key);if(input && typeof value==='string') input.value=value;}}
- if(!form.reportValidity())return {ok:false,message:'Complete the required fields with a valid email address and, for a Check, a full website URL.'};
- const status=form.querySelector('.form-status');
- status.textContent=form.dataset.kind==='check'?'Preview complete. Your Discoverability Check request has not been sent. This mockup stores nothing. Use Book a 15-minute call to talk with SMC.':'Preview complete. Your call request has not been sent and no time is booked. This mockup stores nothing. Use Book a 15-minute call to choose a time on Calendly.';
- status.focus();
- return {ok:true,message:status.textContent,bookingUrl:'https://calendly.com/jordan-spencermorleyconsulting/15min'};
-}
-if(form)form.addEventListener('submit',event=>{event.preventDefault();previewForm();});
-// Progressive enhancement. Current API plus the navigator API requested in the brief.
+// WebMCP tools for the live site. Progressive enhancement: if the browser has no
+// model context API, nothing here runs and every visible link and form still works.
 // Reference: https://developer.chrome.com/docs/ai/webmcp/imperative-api
 const modelContext=document.modelContext||navigator.modelContext;
-const common={name:{type:'string',description:'Your name'},email:{type:'string',format:'email',description:'Email address'},organization:{type:'string',description:'Business or organization'},message:{type:'string',description:'Optional discussion topic'}};
+const BOOKING_URL='https://calendly.com/jordan-spencermorleyconsulting/15min';
+const CONTACT_FORM_ID='smc-contact-form';
+const CONTACT_PAGES={municipal:'/municipal.html#contact','small-business':'/small-business.html#contact','non-profit':'/non-profits.html#contact',general:'/#contact'};
+function contactForm(){return document.getElementById(CONTACT_FORM_ID);}
+function matchNeed(select,wanted){
+ if(!select||!select.options||!wanted)return null;
+ const target=String(wanted).toLowerCase();
+ const options=Array.from(select.options).filter(option=>option.value);
+ return (options.find(option=>option.value.toLowerCase()===target)
+  ||options.find(option=>option.value.toLowerCase().includes(target))
+  ||options.find(option=>target.includes(option.value.toLowerCase().split(' ')[0]))
+  ||null);
+}
 const toolDefinitions=[
- {name:'book_call',description:'Preview the visible call request. This does not send data or book a time. The visible Book a 15-minute call link opens Calendly.',inputSchema:{type:'object',properties:common,required:['name','email','organization'],additionalProperties:false},execute:async args=>{
-  if(form?.dataset.kind!=='call')return JSON.stringify({ok:false,message:'Use the call request form on the home page, or the visible Calendly link.',url:new URL('index.html#contact',document.baseURI).href});
-  return JSON.stringify(previewForm(args));
+ {name:'list_smc_services',description:"List Spencer Morley Consulting's services, practice tracks and published resources, with the page URL for each. Read-only.",inputSchema:{type:'object',properties:{practice:{type:'string',description:"Optional filter: 'municipal', 'small-business', 'non-profit' or 'crisis'."}},additionalProperties:false},annotations:{readOnlyHint:true},execute:async args=>{
+  try{
+   const manifest=await (await fetch('/.well-known/mcp.json',{headers:{accept:'application/json'}})).json();
+   const filter=args&&args.practice?String(args.practice).toLowerCase():'';
+   const pick=entry=>!filter||(entry.name+' '+entry.description).toLowerCase().includes(filter);
+   return JSON.stringify({
+    organization:manifest.name,
+    summary:manifest.description,
+    services:(manifest.tools||[]).filter(pick).map(entry=>({name:entry.name,description:entry.description,url:entry.url})),
+    resources:(manifest.resources||[]).filter(pick).map(entry=>({name:entry.name,url:entry.url}))
+   });
+  }catch{
+   return JSON.stringify({ok:false,message:'Service directory unavailable. See https://spencermorleyconsulting.ca/ for the current services.'});
+  }
  }},
- {name:'request_discoverability_check',description:'Preview the visible Discoverability Check request. Mockup only: no request is sent and no information is saved.',inputSchema:{type:'object',properties:{...common,website:{type:'string',format:'uri',description:'Full business website URL'}},required:['name','email','organization','website'],additionalProperties:false},execute:async args=>{
-  if(form?.dataset.kind!=='check')return JSON.stringify({ok:false,message:'Open the small-business page to preview the visible Discoverability Check form.',url:new URL('small-business.html#contact',document.baseURI).href});
-  return JSON.stringify(previewForm(args));
+ {name:'get_booking_link',description:'Return the link for a 15-minute introductory call with Spencer Morley Consulting. Read-only: this returns a URL and does not book anything.',inputSchema:{type:'object',properties:{},additionalProperties:false},annotations:{readOnlyHint:true},execute:async()=>JSON.stringify({bookingUrl:BOOKING_URL,duration:'15 minutes',note:'Nothing is booked until the visitor chooses a time on that page.'})},
+ {name:'fill_contact_inquiry',description:'Fill the visible contact form on this page and scroll it into view so the visitor can check it and press send. Never submits the form and sends nothing.',inputSchema:{type:'object',properties:{name:{type:'string',description:'Full name of the person making contact'},email:{type:'string',format:'email',description:'Reply-to email address'},organization:{type:'string',description:'Municipality, business or organization'},need:{type:'string',description:"What they need, for example 'AI - municipal track', 'AI - small business track', 'crisis' or 'rebrand'"},message:{type:'string',description:'What they want to discuss'}},additionalProperties:false},execute:async args=>{
+  const form=contactForm();
+  if(!form)return JSON.stringify({ok:false,message:'This page has no contact form. Open a contact page and call this tool again.',urls:CONTACT_PAGES,bookingUrl:BOOKING_URL});
+  const values=args||{};
+  const filled=[];
+  for(const field of ['name','email','organization','message','phone']){
+   const input=form.elements.namedItem(field);
+   if(input&&typeof values[field]==='string'&&values[field]){input.value=values[field];filled.push(field);}
+  }
+  const select=form.elements.namedItem('need');
+  if(select&&values.need){const option=matchNeed(select,values.need);if(option){select.value=option.value;filled.push('need');}}
+  form.scrollIntoView({behavior:'smooth',block:'center'});
+  const missing=Array.from(form.elements).filter(element=>element.required&&!element.value).map(element=>element.name);
+  return JSON.stringify({ok:true,filled,missing,submitted:false,message:'The form is filled in and in view. The visitor sends it themselves with the send button. Nothing has been sent.',bookingUrl:BOOKING_URL});
  }}
 ];
 if(modelContext&&typeof modelContext.registerTool==='function'){
- for(const tool of toolDefinitions){try{Promise.resolve(modelContext.registerTool(tool)).catch(()=>{});}catch{/* The visible forms remain available if the experimental API rejects registration. */}}
+ for(const tool of toolDefinitions){try{Promise.resolve(modelContext.registerTool(tool)).catch(()=>{});}catch{/* The visible forms and links remain available if the experimental API rejects registration. */}}
 }
+
 /* Bearings: progressive, once-only presentation. No requests, storage or dependencies. */
 (() => {
   const preference=matchMedia('(prefers-reduced-motion: reduce)');
