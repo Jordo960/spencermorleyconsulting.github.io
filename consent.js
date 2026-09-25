@@ -30,7 +30,8 @@
   /* Basic Consent Mode v2: queue a denied default before any measurement
      command, but do not load Google's script until the visitor accepts. */
   window.dataLayer = window.dataLayer || [];
-  window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+  /* Always queue consent commands on this page's dataLayer. */
+  window.gtag = function () { window.dataLayer.push(arguments); };
   window.gtag("consent", "default", {
     analytics_storage: "denied",
     ad_storage: "denied",
