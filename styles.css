@@ -55,7 +55,7 @@
 .page-home .portrait-frame img{position:absolute;inset:12px 0 0;width:100%;height:calc(100% - 12px);aspect-ratio:auto;object-fit:cover;object-position:50% 25%;transform:scale(1.04);transform-origin:50% 25%;background:var(--charcoal)}
 .signature-chapter::before{inset:auto -25% 0 auto;width:90%;height:25%}
 .home-hero .compass-field,.page-hero .hero-compass{display:none}
-.page-municipal .hero-aside::before,.page-business .hero-aside::before{display:none}
+.page-municipal .hero-aside::before,.page-business .hero-aside::before,.page-nonprofits .hero-aside::before{display:none}
 .home-hero .hero-compass{width:min(18vw,40svh);top:24px;right:6%}
 @media(min-width:900px){.home-hero .hero-compass{width:min(25vw,40svh);top:150px;right:5%}}
 /* The complete supplied header lockup remains visible, including its symbol and tagline. */
@@ -248,3 +248,32 @@ body:has(.page-home) .brand small{display:none}
   .work-on-grid{grid-template-columns:1fr 1fr;column-gap:6%}
   .work-on-grid>div:nth-child(2){border-top:0;padding-top:0}
 }
+/* FAQ layout fix (2026-09-25): the section compass marker (.section>.wrap::before) was taking the first cell of the two-column FAQ grid, pushing the heading right and the answers below it. Same treatment as .directory-layout, .risk-layout and .contact-grid. */
+.faq .split::before{grid-column:1/-1}
+/* Non-profits track page (2026-09-25). Additive and scoped to .page-nonprofits; no shared rule changed. */
+.page-nonprofits .gap-layout,.page-nonprofits .readiness-layout{display:grid;gap:44px}
+.page-nonprofits .gap-copy .large-copy{margin-top:28px}
+.page-nonprofits .gap-copy .recognition{max-width:52ch}
+.gap-figures,.readiness-steps{list-style:none;margin:0;padding:0;border-bottom:1px solid var(--line)}
+.gap-figures li{display:grid;gap:4px;padding:26px 0 28px;border-top:1px solid var(--dark-link-gold)}
+.gap-figures strong{font:400 clamp(84px,24vw,120px)/.9 var(--display);letter-spacing:-.045em;color:var(--dark-link-gold)}
+.gap-figures span{font-size:17px;line-height:1.55;max-width:30ch}
+.page-nonprofits .process-intro{font-size:20px;line-height:1.6;max-width:54ch}
+.page-nonprofits .process article .section-label{margin-bottom:14px;color:var(--dark-link-gold)}
+.page-nonprofits .process article .text-link{margin-top:14px}
+.signature-note{font-size:16px;line-height:1.7;max-width:46ch;margin:26px auto 0;color:var(--cream-mid)}
+.page-nonprofits .signature-chapter .large-copy strong{font-weight:650;color:var(--gold-light)}
+.readiness-intro .large-copy{margin-top:28px}
+.readiness-fine{font-size:14px;color:var(--light-text);margin-top:18px}
+.readiness-intro .button{margin-top:30px}
+.readiness-steps{counter-reset:ready}
+.readiness-steps li{counter-increment:ready;display:grid;grid-template-columns:48px minmax(0,1fr);column-gap:18px;padding:28px 0;border-top:1px solid var(--line)}
+.readiness-steps li::before{content:'0' counter(ready);grid-row:1/span 2;font:400 38px/1 var(--display);color:var(--dark-link-gold)}
+.readiness-steps h3{font-size:28px;line-height:1.1}
+.readiness-steps h3+p{font-size:16px;margin-top:10px}
+.page-nonprofits .practice-layout h3+p{font-size:17px;margin:0 0 28px;max-width:52ch}
+@media(min-width:600px){.gap-figures li{grid-template-columns:minmax(0,200px) minmax(0,1fr);align-items:center;gap:28px}.gap-figures strong{font-size:clamp(96px,13vw,124px)}}
+@media(min-width:900px){.page-nonprofits .gap-layout,.page-nonprofits .readiness-layout{grid-template-columns:1fr 1fr;gap:9%;align-items:start}.page-nonprofits .gap-layout::before,.page-nonprofits .readiness-layout::before{grid-column:1/-1}.page-nonprofits .gap-figures{margin-top:8px}.page-nonprofits .process-heading{margin-bottom:28px}.page-nonprofits .process-intro{margin-bottom:64px}.readiness-intro{position:sticky;top:138px}.readiness-steps li{grid-template-columns:64px minmax(0,1fr);padding:34px 0}.readiness-steps li::before{font-size:48px}.readiness-steps h3{font-size:34px}.signature-note{font-size:17px}}
+.page-nonprofits .signature-chapter .section-label{margin:0 auto 22px}
+.page-nonprofits .practice-layout .service-group>h3{max-width:none}
+@media(min-width:900px){.page-nonprofits .process-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:60px 9%}}
