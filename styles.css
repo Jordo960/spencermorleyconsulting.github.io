@@ -55,7 +55,7 @@
 .page-home .portrait-frame img{position:absolute;inset:12px 0 0;width:100%;height:calc(100% - 12px);aspect-ratio:auto;object-fit:cover;object-position:50% 25%;transform:scale(1.04);transform-origin:50% 25%;background:var(--charcoal)}
 .signature-chapter::before{inset:auto -25% 0 auto;width:90%;height:25%}
 .home-hero .compass-field,.page-hero .hero-compass{display:none}
-.page-municipal .hero-aside::before,.page-business .hero-aside::before,.page-nonprofits .hero-aside::before{display:none}
+.page-municipal .hero-aside::before,.page-business .hero-aside::before,.page-nonprofits .hero-aside::before,.page-comms .hero-aside::before{display:none}
 .home-hero .hero-compass{width:min(18vw,40svh);top:24px;right:6%}
 @media(min-width:900px){.home-hero .hero-compass{width:min(25vw,40svh);top:150px;right:5%}}
 /* The complete supplied header lockup remains visible, including its symbol and tagline. */
@@ -259,7 +259,7 @@ body:has(.page-home) .brand small{display:none}
 .gap-figures strong{font:400 clamp(84px,24vw,120px)/.9 var(--display);letter-spacing:-.045em;color:var(--dark-link-gold)}
 .gap-figures span{font-size:17px;line-height:1.55;max-width:30ch}
 .page-nonprofits .process-intro{font-size:20px;line-height:1.6;max-width:54ch}
-.page-nonprofits .process article .section-label{margin-bottom:14px;color:var(--dark-link-gold)}
+.page-nonprofits .process article .section-label{margin-bottom:14px}
 .page-nonprofits .process article .text-link{margin-top:14px}
 .signature-note{font-size:16px;line-height:1.7;max-width:46ch;margin:26px auto 0;color:var(--cream-mid)}
 .page-nonprofits .signature-chapter .large-copy strong{font-weight:650;color:var(--gold-light)}
@@ -277,3 +277,34 @@ body:has(.page-home) .brand small{display:none}
 .page-nonprofits .signature-chapter .section-label{margin:0 auto 22px}
 .page-nonprofits .practice-layout .service-group>h3{max-width:none}
 @media(min-width:900px){.page-nonprofits .process-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:60px 9%}}
+/* Communications page (2026-09-25). Additive and scoped to .page-comms; no shared rule changed. */
+.page-comms .intro-layout{display:grid;gap:44px}
+.page-comms .intro-layout h2{max-width:14ch}
+.page-comms .intro-layout .large-copy+p{margin-top:24px}
+.page-comms .intro-layout>div>.text-link{margin-top:14px}
+.comms-list{list-style:none;margin:0;padding:0;border-bottom:1px solid var(--line)}
+.comms-list li{padding:30px 0;border-top:1px solid var(--line)}
+.comms-list li .section-label{margin-bottom:12px;color:var(--dark-link-gold)}
+.comms-list h3{font-size:30px;line-height:1.1}
+.comms-list h3+p{font-size:17px;margin-top:14px;max-width:58ch}
+.comms-list .text-link{margin-top:12px}
+.comms-more{font-size:16px;margin-top:30px;max-width:58ch}
+.comms-more .text-link{display:flex;width:max-content;margin-top:6px}
+@media(min-width:900px){.page-comms .intro-layout{grid-template-columns:.9fr 1.1fr;gap:9%;align-items:start}.page-comms .intro-layout::before{grid-column:1/-1}.comms-list li{padding:36px 0}.comms-list h3{font-size:38px}}
+/* Form select fix (2026-09-25): selects were never styled in the redesign, so they rendered as native white boxes sized to their longest option, which pushed the homepage contact form wider than a phone screen. Matches the existing input/textarea treatment. */
+select{appearance:none;-webkit-appearance:none;border:1px solid var(--gold-light);border-radius:0;padding:12px 44px 12px 12px;background:var(--charcoal-mid) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23D9BC7A' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat right 16px center;color:var(--cream);width:100%;max-width:100%;min-height:52px;line-height:1.5;text-overflow:ellipsis;cursor:pointer}
+select option{color:var(--charcoal);background:var(--cream)}
+select:focus-visible{outline:3px solid var(--gold-light);outline-offset:5px}
+/* Team profile "On the record" + "In the media" as two columns (2026-09-25). Additive. */
+.record-layout{display:grid;gap:56px}
+.recognition .text-link+.text-link{margin-left:22px}
+@media(min-width:900px){.record-layout{grid-template-columns:1fr 1fr;gap:9%;align-items:start}.record-layout::before{grid-column:1/-1}}
+/* Readable accents on light sections (2026-09-25). The recognition label, credential "Verify" tag and
+   case testimonial were styled for dark sections only (pale gold / pale grey), so on cream they fell to
+   1.1-1.7:1 contrast. They now take their colour from variables that dark contexts redefine, the same
+   way --line already works. Dark sections render exactly as before. */
+:root{--accent-text:var(--dark-link-gold);--quote-text:var(--charcoal);--quiet-text:var(--light-text)}
+.dark,.selected,.contact,.site-footer{--accent-text:var(--gold-light);--quote-text:var(--gold-light);--quiet-text:var(--cream-mid)}
+.recognition .recognition-label,.credentials .verify{color:var(--accent-text)}
+.case-testimonial blockquote p{color:var(--quote-text)}
+.case-attribution{color:var(--quiet-text)}
