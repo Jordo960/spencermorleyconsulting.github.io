@@ -12,6 +12,9 @@
   var KEY = "smc-consent";
   var MAX_AGE_DAYS = 365;
   var CURRENCY = "CAD";
+  var analyticsGranted = false;
+  var gaLoaded = false;
+  var metaLoaded = false;
 
   /* GA4 event name -> Meta event. standard:true sends a Meta *standard* event
      via fbq("track") — those are directly selectable as an ad objective.
@@ -24,10 +27,17 @@
     cta_click:                  { name: "CTAClick",         standard: false }
   };
 
-  /* Always define a gtag stub so inline onclick="gtag(...)" handlers never throw,
-     even when consent is absent or declined. Events go nowhere unless GA loads. */
+  /* Basic Consent Mode v2: queue a denied default before any measurement
+     command, but do not load Google's script until the visitor accepts. */
   window.dataLayer = window.dataLayer || [];
   window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+  window.gtag("consent", "default", {
+    analytics_storage: "denied",
+    ad_storage: "denied",
+    ad_user_data: "denied",
+    ad_personalization: "denied",
+    wait_for_update: 500
+  });
 
   /* ---- Meta event mirror -------------------------------------------------
      Wraps the gtag stub so any gtag("event", name, params) call anywhere on the
@@ -59,9 +69,31 @@
   var _gtag = window.gtag;
   window.gtag = function () {
     if (arguments[0] === "event") {
+      var params = arguments[2] || {};
+      if (!analyticsGranted || !gaLoaded) {
+        /* Some conversion links use event_callback before navigating. Preserve
+           their UX without queueing a pre-consent analytics event. */
+        if (typeof params.event_callback === "function") {
+          try { setTimeout(params.event_callback, 0); } catch (e) {}
+        }
+        return false;
+      }
       try { mirrorToMeta(arguments[1], arguments[2]); } catch (e) {}
     }
     return _gtag.apply(this, arguments);
+  };
+
+  window.smcTrackEvent = function (name, params) {
+    return window.gtag("event", name, params || {});
+  };
+
+  window.smcAnalyticsStatus = function () {
+    return {
+      consent: analyticsGranted ? "granted" : "denied",
+      gaLoaded: gaLoaded,
+      metaLoaded: metaLoaded,
+      measurementId: GA_ID
+    };
   };
 
   /* Calendly posts a message to the parent window when a booking completes.
@@ -99,16 +131,33 @@
     try { localStorage.setItem(KEY, JSON.stringify({ choice: choice, ts: Date.now() })); } catch (e) {}
   }
 
-  function loadTrackers() {
-    /* GA4 */
+  function loadGoogleAnalytics() {
+    if (gaLoaded) return;
+    gaLoaded = true;
+
     var s = document.createElement("script");
     s.async = true;
+    s.setAttribute("data-smc-ga", GA_ID);
     s.src = "https://www.googletagmanager.com/gtag/js?id=" + GA_ID;
+    s.onerror = function () { gaLoaded = false; };
     document.head.appendChild(s);
-    gtag("js", new Date());
-    gtag("config", GA_ID);
+    window.gtag("js", new Date());
+    window.gtag("config", GA_ID, {
+      allow_google_signals: false,
+      allow_ad_personalization_signals: false,
+      send_page_view: true
+    });
+  }
 
-    /* Meta Pixel */
+  function loadMetaPixel() {
+    if (metaLoaded) {
+      if (typeof window.fbq === "function") {
+        try { window.fbq("consent", "grant"); } catch (e) {}
+      }
+      return;
+    }
+    metaLoaded = true;
+
     !function (f, b, e, v, n, t, sc) {
       if (f.fbq) return; n = f.fbq = function () {
         n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
@@ -117,8 +166,34 @@
       t = b.createElement(e); t.async = !0; t.src = v;
       sc = b.getElementsByTagName(e)[0]; sc.parentNode.insertBefore(t, sc);
     }(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
-    fbq("init", PIXEL_ID);
-    fbq("track", "PageView");
+    window.fbq("init", PIXEL_ID);
+    window.fbq("consent", "grant");
+    window.fbq("track", "PageView");
+  }
+
+  function grantConsentAndLoad() {
+    analyticsGranted = true;
+    window.gtag("consent", "update", {
+      analytics_storage: "granted",
+      ad_storage: "denied",
+      ad_user_data: "denied",
+      ad_personalization: "denied"
+    });
+    loadGoogleAnalytics();
+    loadMetaPixel();
+  }
+
+  function denyConsent() {
+    analyticsGranted = false;
+    window.gtag("consent", "update", {
+      analytics_storage: "denied",
+      ad_storage: "denied",
+      ad_user_data: "denied",
+      ad_personalization: "denied"
+    });
+    if (typeof window.fbq === "function") {
+      try { window.fbq("consent", "revoke"); } catch (e) {}
+    }
   }
 
   function removeBanner() {
@@ -152,10 +227,10 @@
       '</div>';
     document.body.appendChild(wrap);
     wrap.querySelector(".smc-accept").addEventListener("click", function () {
-      saveChoice("granted"); removeBanner(); loadTrackers();
+      saveChoice("granted"); removeBanner(); grantConsentAndLoad();
     });
     wrap.querySelector(".smc-decline").addEventListener("click", function () {
-      saveChoice("denied"); removeBanner();
+      saveChoice("denied"); removeBanner(); denyConsent();
     });
   }
 
@@ -168,9 +243,9 @@
   function init() {
     watchCalendly();
     var choice = readChoice();
-    if (choice === "granted") { loadTrackers(); }
+    if (choice === "granted") { grantConsentAndLoad(); }
+    else if (choice === "denied") { denyConsent(); }
     else if (choice === null) { showBanner(); }
-    /* "denied": do nothing — stub gtag keeps onclick handlers safe */
   }
 
   if (document.readyState === "loading") {
